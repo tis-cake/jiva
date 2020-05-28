@@ -26,13 +26,13 @@
             <div class="logo__img-wrap">
               <img class="logo__img" src="img/logo/logo.svg" width="92" height="92" alt="Логотип портала «Ji+Va»">
             </div>
-            <p class="logo__title">Ji <span class="logo__title-decor"></span> Va</p>
+            <p class="logo__title"><span class="logo__title--red">J</span>i <span class="logo__title-decor"></span> Va</p>
           </a>
 
           <div class="header__rows-wrap">
             <div class="header__row-top">
-              <form class="header__form-lang" action=".php" method="post">
-                <select class="header__select-lang" name="SELECT-LANG">
+              <form class="header__form-lang select-lang" action=".php" method="post">
+                <select class="select-lang__select custom-select-js" name="SELECT-LANG">
                   <option value="LANG-RUSSIAN" selected>RU</option>
                   <option value="LANG-ENGLISH">EN</option>
                   <option value="LANG-FRENCH">FR</option>
@@ -45,8 +45,8 @@
                 <p class="header__text-item">
                   Помощь 24/7 в России
                 </p>
-                <p class="header__text-item">
-                  Все звонки бесплатные и конфиденциальные
+                <p class="header__text-item header__text-item--gray">
+                  Все звонки бесплатные и конфиденциальные.
                 </p>
               </div>
               <a href="#" class="header__link-call-back"></a>
@@ -369,8 +369,13 @@
 
     <div class="overlay"></div>
 
-    <!-- <script src="js/libs/swiper.min.js"></script>
-    <script src="js/libs/inputmask.min.js"></script> -->
+    <script src="js/libs/jquery-3.4.1.min.js"></script>
+    <!-- <script src="js/libs/jquery.custom-select.js"></script> -->
+    <script src="js/libs/jquery.custom-select.min.js"></script>
+    <script src="js/libs/jquery.maskedinput.min.js"></script>
+    <script src="js/libs/jquery.fancybox.min.js"></script>
+
+    <script src="js/libs/swiper.min.js"></script>
 
     <script src="js/main.js"></script>
     <script src="js/slider.js"></script>

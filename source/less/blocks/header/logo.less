@@ -1,0 +1,76 @@
+.logo {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  font-family: @canvas;
+  // font-size: 3rem;
+  font-size: 41px;
+  letter-spacing: 0.04em;
+
+  // .text-stroke(#fff, 0px);
+  .text-stroke(@brown, 1px);
+
+  -webkit-text-stroke-color: #fff;
+  -webkit-text-stroke-width: 0.6px;
+
+  cursor: pointer;
+}
+
+.logo__img-wrap {
+  width: 127px;
+  height: 127px;
+  // width: 92px;
+  // height: 92px;
+}
+
+.logo__img {
+  .img-cover;
+  // object-position: 2px -1px;
+  font-size: 1.6rem;
+}
+
+.logo__title {
+
+  position: absolute;
+  bottom: 27px;
+  left: 66px;
+  width: 110px;
+
+  &--red {
+    color: @red;
+
+    text-shadow: none;
+    .text-stroke(@brown, 1px);
+    // -webkit-text-stroke-width: 0;
+    -webkit-text-stroke-color: @red;
+    -webkit-text-stroke-width: 0.6px;
+  }
+  &-decor {
+    position: relative;
+    // width: 6px;
+    // height: 6px;
+    &::before {
+      content: '';
+      z-index: 1;
+      position: absolute;
+      // top: 50%;
+      top: 43%;
+      left: -10px;
+
+      width: 14px;
+      height: 14px;
+
+      background-image: url('../img/svg/logo-star.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+  }
+}
+
+// @media (max-width: @tablet-width) {
+//   .logo {
+//     font-size: 2rem;
+//   }
+// }
