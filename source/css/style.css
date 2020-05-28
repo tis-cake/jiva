@@ -251,10 +251,14 @@ input[type="radio"].visually-hidden {
 .header__wrap {
   display: flex;
 }
+.header__logo {
+  margin-top: 14px;
+  margin-left: 20px;
+}
 .header__rows-wrap {
   display: flex;
   flex-direction: column;
-  width: 1182px;
+  width: 1178px;
   margin-left: auto;
   margin-right: 19px;
   padding-top: 11px;
@@ -262,6 +266,7 @@ input[type="radio"].visually-hidden {
 .header__row-top {
   display: flex;
   align-items: center;
+  margin-bottom: 30px;
 }
 .header__form-lang {
   margin-right: 22px;
@@ -296,8 +301,8 @@ input[type="radio"].visually-hidden {
   cursor: pointer;
 }
 .logo__img-wrap {
-  width: 127px;
-  height: 127px;
+  width: 93px;
+  height: 93px;
 }
 .logo__img {
   width: 100%;
@@ -308,8 +313,8 @@ input[type="radio"].visually-hidden {
 }
 .logo__title {
   position: absolute;
-  bottom: 27px;
-  left: 66px;
+  left: 46px;
+  bottom: 7px;
   width: 110px;
 }
 .logo__title--red {
@@ -334,6 +339,9 @@ input[type="radio"].visually-hidden {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+}
+.main-nav {
+  display: flex;
 }
 .main-nav__list {
   display: flex;
@@ -380,10 +388,7 @@ input[type="radio"].visually-hidden {
   display: block;
 }
 .main-nav__search-toggle {
-  display: none;
-}
-.main-nav__search {
-  display: none;
+  margin-left: auto;
 }
 @media (max-width: 48em) {
   .main-nav {
@@ -516,6 +521,52 @@ input[type="radio"].visually-hidden {
   position: absolute;
   z-index: 10;
   background-color: #291C22;
+}
+.search-toggle {
+  color: inherit;
+}
+.search__form {
+  position: relative;
+}
+.search__input {
+  box-sizing: border-box;
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 4.5rem;
+  font-size: 1.6rem;
+  border-radius: 0.2rem;
+  border: 0.1rem solid #D3D3D3;
+  color: #777;
+}
+.search__icon {
+  position: absolute;
+  top: 1rem;
+  right: 1.7rem;
+  cursor: pointer;
+}
+.main-nav__search {
+  display: none;
+}
+@media (max-width: 420px) {
+  .search__input {
+    padding-top: 0.9rem;
+    padding-bottom: 0.9rem;
+    padding-left: 1.5rem;
+    padding-right: 4.5rem;
+    font-size: 1.6rem;
+    line-height: 2.3rem;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+  }
+  .search__icon {
+    top: 50%;
+    transform: translateY(-50%);
+    right: 2.381vw;
+  }
 }
 .menu-toggle {
   position: relative;
