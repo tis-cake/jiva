@@ -2,7 +2,30 @@
 }
 
 .search-toggle {
-  color: inherit;
+  position: relative;
+
+  width: 23px;
+  height: 23px;
+  .o;
+
+  font-size: 5px;
+  color: transparent;
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 23px;
+    height: 23px;
+
+    background-image: url('../img/svg/icon-search.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
 }
 
 .search__form {

@@ -21,7 +21,7 @@
 }
 @font-face {
   font-display: swap;
-  font-family: 'Canvas';
+  font-family: 'MADECanvas';
   src: local('MADE Canvas'), local('MADECanvas'), local('MADECanvas Regular'), local('MADECanvas-Regular'), url('../fonts/MADECanvas/regular/MADECanvas.woff2') format('woff2'), url('../fonts/MADECanvas/regular/MADECanvas.woff') format('woff'), url('../fonts/MADECanvas/regular/MADECanvas.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
@@ -292,7 +292,7 @@ input[type="radio"].visually-hidden {
   position: relative;
   display: flex;
   align-items: center;
-  font-family: 'Canvas';
+  font-family: 'MADECanvas', 'Times', serif;
   font-size: 41px;
   letter-spacing: 0.04em;
   text-shadow: #291C22 1px 1px 0, #291C22 -1px -1px 0, #291C22 -1px 1px 0, #291C22 1px -1px 0;
@@ -315,7 +315,7 @@ input[type="radio"].visually-hidden {
   position: absolute;
   left: 46px;
   bottom: 7px;
-  width: 110px;
+  width: 100px;
 }
 .logo__title--red {
   color: #E13D3E;
@@ -335,7 +335,7 @@ input[type="radio"].visually-hidden {
   left: -10px;
   width: 14px;
   height: 14px;
-  background-image: url('../img/svg/logo-star.svg');
+  background-image: url('../img/svg/icon-logo-star.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -346,7 +346,7 @@ input[type="radio"].visually-hidden {
 .main-nav__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  max-width: 1130px;
 }
 .main-nav__item {
   position: relative;
@@ -363,6 +363,7 @@ input[type="radio"].visually-hidden {
 .main-nav__link {
   display: block;
   position: relative;
+  padding-bottom: 2.6rem;
   color: inherit;
   cursor: pointer;
 }
@@ -370,13 +371,14 @@ input[type="radio"].visually-hidden {
   box-sizing: border-box;
   position: absolute;
   z-index: 5;
-  top: 7.2rem;
+  top: 4.6rem;
   visibility: hidden;
   opacity: 0;
-  transition-duration: 0.3s;
+  transition-duration: 0.6s;
   width: 30.1rem;
   padding: 2.6rem;
-  background-color: #F5F5F5;
+  background-color: #413B4A;
+  border-radius: 0px 0px 30px 30px;
 }
 .main-nav__subitem {
   margin-bottom: 2rem;
@@ -388,6 +390,7 @@ input[type="radio"].visually-hidden {
   display: block;
 }
 .main-nav__search-toggle {
+  align-self: flex-start;
   margin-left: auto;
 }
 @media (max-width: 48em) {
@@ -523,7 +526,25 @@ input[type="radio"].visually-hidden {
   background-color: #291C22;
 }
 .search-toggle {
-  color: inherit;
+  position: relative;
+  width: 23px;
+  height: 23px;
+  outline: 1px solid red;
+  font-size: 5px;
+  color: transparent;
+  cursor: pointer;
+}
+.search-toggle::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 23px;
+  height: 23px;
+  background-image: url('../img/svg/icon-search.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .search__form {
   position: relative;
