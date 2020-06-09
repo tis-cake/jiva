@@ -196,22 +196,68 @@
 
                 <div class="main-nav__search search">
                   <form class="search__form" action=".php" method="post">
-                    <label class="search__icon" for="search-field">
+                    <label class="search__label-icon" for="search-field">
                     </label>
                     <input class="search__input" id="search-field" list="ice-cream-flavors" type="search" name="SEARCH" placeholder="Поиск">
                   </form>
 
-                  <datalist id="ice-cream-flavors">
+                  <div class="search__datalist-wrap">
+                    <ul class="search__datalist">
+                      <li class="search__datalist-item">
+                        <a href="#" class="search__datalist-link">
+                          Наркомания
+                        </a>
+                      </li>
+                      <li class="search__datalist-item">
+                        <a href="#" class="search__datalist-link">
+                          Наркотическая зависимость
+                        </a>
+                      </li>
+                      <li class="search__datalist-item">
+                        <a href="#" class="search__datalist-link">
+                          Наркомания
+                        </a>
+                      </li>
+                      <li class="search__datalist-item">
+                        <a href="#" class="search__datalist-link">
+                          Наркотическая зависимость
+                        </a>
+                      </li>
+                      <li class="search__datalist-item">
+                        <a href="#" class="search__datalist-link">
+                          Наркомания
+                        </a>
+                      </li>
+                      <li class="search__datalist-item">
+                        <a href="#" class="search__datalist-link">
+                          Наркотическая зависимость
+                        </a>
+                      </li>
+                      <li class="search__datalist-item">
+                        <a href="#" class="search__datalist-link">
+                          Наркомания
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- <datalist id="ice-cream-flavors">
                     <option value="Chocolate">
                     <option value="Coconut">
                     <option value="Mint">
                     <option value="Strawberry">
                     <option value="Vanilla">
-                  </datalist>
+                  </datalist> -->
                 </div>
 
                 <button class="main-nav__search-toggle search-toggle" title="Поиск по сайту">
                   Поиск по сайту
+                  <svg class="search__icon search__icon--search icon-search" width="23" height="23">
+                    <use xlink:href="img/sprite.svg#icon-search"></use>
+                  </svg>
+                  <svg class="search__icon search__icon--close icon-close" width="23" height="23">
+                    <use xlink:href="img/sprite.svg#icon-plus"></use>
+                  </svg>
                 </button>
 
               </nav>

@@ -4,6 +4,7 @@ $('.custom-select').length != 0 ? $('.select-lang').addClass('custom') : $('.sel
 
 $('.search-toggle').click(function() {
   $(this).toggleClass('active');
+  $(this).blur();
   $('.main-nav__list').toggleClass('search-active');
   $('.search').toggleClass('active');
 
@@ -28,4 +29,16 @@ $('.main-nav-sub').on('keydown', function (evt) {
       }
     });
   }
+});
+
+//
+$('.search__input').on('keyup', function (evt) {
+  let dataList = $('.search__datalist-wrap');
+  dataList.addClass('active');
+
+  $(document).on('mouseup', function (evt) {
+    if (!dataList.is(evt.target) && dataList.has(evt.target).length === 0) {
+      dataList.removeClass('active');
+    }
+  });
 });
