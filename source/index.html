@@ -62,7 +62,7 @@
                     <a class="main-nav__link" href="#">Клиники</a>
                   </li>
                   <li class="main-nav__item">
-                    <span class="main-nav__link main-nav-sub">Наркомания</span>
+                    <a href="#" class="main-nav__link main-nav-sub">Наркомания</a>
                     <ul class="main-nav__sublist">
                       <li class="main-nav__subitem">
                         <a class="main-nav__sublink" href="service-detail.html">Детоксикация в клинике</a>
@@ -100,7 +100,7 @@
                     </ul>
                   </li>
                   <li class="main-nav__item">
-                    <span class="main-nav__link main-nav-sub">Алкоголизм</span>
+                    <a href="#" class="main-nav__link main-nav-sub">Алкоголизм</a>
                     <ul class="main-nav__sublist">
                       <li class="main-nav__subitem">
                         <a class="main-nav__sublink" href="service-detail.html">Детоксикация в клинике</a>
@@ -138,7 +138,7 @@
                     </ul>
                   </li>
                   <li class="main-nav__item">
-                    <span class="main-nav__link main-nav-sub">Игромания</span>
+                    <a href="#" class="main-nav__link main-nav-sub">Игромания</a>
                     <ul class="main-nav__sublist">
                       <li class="main-nav__subitem">
                         <a class="main-nav__sublink" href="service-detail.html">Лечение подростков</a>
@@ -194,20 +194,26 @@
                   </li>
                 </ul>
 
+                <div class="main-nav__search search">
+                  <form class="search__form" action=".php" method="post">
+                    <label class="search__icon" for="search-field">
+                    </label>
+                    <input class="search__input" id="search-field" list="ice-cream-flavors" type="search" name="SEARCH" placeholder="Поиск">
+                  </form>
+
+                  <datalist id="ice-cream-flavors">
+                    <option value="Chocolate">
+                    <option value="Coconut">
+                    <option value="Mint">
+                    <option value="Strawberry">
+                    <option value="Vanilla">
+                  </datalist>
+                </div>
+
                 <button class="main-nav__search-toggle search-toggle" title="Поиск по сайту">
                   Поиск по сайту
                 </button>
 
-                <div class="main-nav__search search">
-                  <form class="search__form" action=".php" method="post">
-                    <input class="search__input" id="search-field" type="search" name="SEARCH" placeholder="Поиск по сайту">
-                    <label class="search__icon" for="search-field">
-                      <svg class="icon-search search__icon-item" width="20" height="20">
-                        <use xlink:href="img/sprite.svg#icon-search"></use>
-                      </svg>
-                    </label>
-                  </form>
-                </div>
               </nav>
             </div>
           </div>

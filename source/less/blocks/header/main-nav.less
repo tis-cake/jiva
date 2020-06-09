@@ -4,13 +4,28 @@
 }
 
 .main-nav__list {
+  position: relative;
+  z-index: 0;
+
   display: flex;
   flex-wrap: wrap;
   // justify-content: space-between;
 
   max-width: 1130px;
 
+  visibility: visible;
+  opacity: 1;
+  transition: @s;
+
   // font-size: 1.6rem;
+
+  &.search-active {
+    position: absolute;
+    z-index: -1;
+    // display: none;
+    visibility: hidden;
+    opacity: 0;
+  }
 }
 
 .main-nav__item {
@@ -23,6 +38,8 @@
   }
 }
 
+// .main-nav-sub.selected-on-tab + .main-nav__sublist,
+.main-nav__item.selected-on-tab .main-nav__sublist,
 .main-nav__item:hover .main-nav__sublist,
 .main-nav__link:focus + .main-nav__sublist {
   visibility: visible;
