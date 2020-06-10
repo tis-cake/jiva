@@ -31,11 +31,17 @@ $('.main-nav-sub').on('keydown', function (evt) {
   }
 });
 
-//
+// блок предложений для поиска
 $('.search__input').on('keyup', function (evt) {
   let dataList = $('.search__datalist-wrap');
   dataList.addClass('active');
 
+  // скрыть если ничего нет
+  if($(this).val().length === 0) {
+    dataList.removeClass('active');
+  }
+
+  // скрыть если клик вне блока
   $(document).on('mouseup', function (evt) {
     if (!dataList.is(evt.target) && dataList.has(evt.target).length === 0) {
       dataList.removeClass('active');
