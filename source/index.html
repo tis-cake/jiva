@@ -197,8 +197,11 @@
                 <div class="main-nav__search search">
                   <form class="search__form" action=".php" method="post">
                     <label class="search__label-icon" for="search-field">
+                      <svg class="search__icon search__icon--label-search icon-search" width="23" height="23">
+                        <use xlink:href="img/sprite.svg#icon-search"></use>
+                      </svg>
                     </label>
-                    <input class="search__input" id="search-field" list="ice-cream-flavors" type="search" name="SEARCH" placeholder="Поиск">
+                    <input class="search__input" id="search-field" type="search" name="SEARCH" placeholder="Поиск">
                   </form>
 
                   <div class="search__datalist-wrap">
@@ -240,14 +243,6 @@
                       </li>
                     </ul>
                   </div>
-
-                  <!-- <datalist id="ice-cream-flavors">
-                    <option value="Chocolate">
-                    <option value="Coconut">
-                    <option value="Mint">
-                    <option value="Strawberry">
-                    <option value="Vanilla">
-                  </datalist> -->
                 </div>
 
                 <button class="main-nav__search-toggle search-toggle" title="Поиск по сайту">
@@ -267,9 +262,15 @@
       </div>
     </header>
 
-    <!-- <main class="main">
-
-    </main> -->
+    <main class="main">
+      <aside class="aside-link">
+        <div class="aside-link__wrap">
+          <a class="aside-link__link" href="tel: +78006003960">
+            8 800 600-39-60
+          </a>
+        </div>
+      </aside>
+    </main>
 
     <!-- <footer class="footer">
       <div class="container">
