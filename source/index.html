@@ -181,9 +181,6 @@
                       <li class="main-nav__subitem">
                         <a class="main-nav__sublink" href="reviews.html">Отзывы</a>
                       </li>
-                      <!-- <li class="main-nav__subitem mobile-block">
-                        <a class="main-nav__sublink" href="about.html">О центре</a>
-                      </li> -->
                       <li class="main-nav__subitem">
                         <a class="main-nav__sublink" href="masters.html">Специалисты</a>
                       </li>
@@ -201,7 +198,12 @@
                         <use xlink:href="img/sprite.svg#icon-search"></use>
                       </svg>
                     </label>
-                    <input class="search__input" id="search-field" type="search" name="SEARCH" placeholder="Поиск">
+                    <input class="search__input" id="search-field" type="search" name="SEARCH" placeholder="Поиск" required>
+                    <button class="search__btn-submit btn-submit">
+                      <svg class=" btn-submit__icon btn-submit__icon--right" width="13" height="11">
+                        <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+                      </svg>
+                    </button>
                   </form>
 
                   <div class="search__datalist-wrap">
@@ -262,14 +264,21 @@
       </div>
     </header>
 
+    <aside class="aside-link">
+      <div class="aside-link__bg-wrap">
+        <svg class="aside-link__bg-img" width="447" height="45">
+          <use xlink:href="img/sprite.svg#figure-aside-d"></use>
+        </svg>
+      </div>
+      <div class="aside-link__wrap">
+        <a class="aside-link__link" href="tel: +78006003960">
+          8 800 600-39-60
+        </a>
+      </div>
+    </aside>
+
     <main class="main">
-      <aside class="aside-link">
-        <div class="aside-link__wrap">
-          <a class="aside-link__link" href="tel: +78006003960">
-            8 800 600-39-60
-          </a>
-        </div>
-      </aside>
+
     </main>
 
     <!-- <footer class="footer">

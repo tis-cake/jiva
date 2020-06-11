@@ -1,0 +1,186 @@
+html {
+  font-size: 62.5%;
+  // 1 rem = 16px * 62.5% / 100 = 10px
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: @circe;
+  font-weight: 400;
+  font-size: 1.8rem;
+  // background-color: @bgc;
+
+  color: @dark;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+
+  transition: @s;
+
+  &:hover {
+    // color: rgba(currentColor, 0.7);
+    opacity: 0.7;
+  }
+}
+
+ul,
+ol {
+  .reset-list();
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  font-weight: 400;
+  .mp-reset(0,0);
+}
+
+input,
+button {
+  box-sizing: border-box;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: @circe;
+}
+
+button {
+  cursor: pointer;
+}
+
+.noscroll {
+  overflow: hidden !important;
+  height: 100% !important;
+}
+
+.overlay {
+  // display: none;
+
+  // z-index: 99;
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  // opacity: 1;
+  // visibility: visible;
+  opacity: 0;
+  visibility: hidden;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0,0,0,.5);
+
+  transition: 400ms;
+
+  &.active {
+    // display: block;
+
+    z-index: 99;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.hide {
+  opacity: 0;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container,
+.container-inside {
+  position: relative;
+  .margin-inline(@a);
+  .padding-inline(2rem);
+}
+
+.container {
+  width: 138.5rem;
+}
+
+.container-inside {
+  width: 119.6rem;
+  &--deeper {
+    width: 111.4rem;
+  }
+}
+
+.mobile-block {
+  display: none;
+}
+
+.desktop-block {
+  display: block;
+}
+
+// .phone-mask:-moz-submit-invalid,
+.phone-mask:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+@media (max-width: @tablet-width) {
+  .container,
+  .container-outside,
+  .container-inside {
+    width: @a;
+    .padding-inline(2.5rem);
+  }
+
+  .desktop-block {
+    display: none;
+  }
+
+
+  .mobile-block {
+    display: block;
+  }
+
+  .link {
+    font-size: 35px;
+    line-height: 35px;
+  }
+}
+
+@media (max-width: 330px) {
+  .link {
+    font-size: 26px;
+    line-height: 26px;
+  }
+}

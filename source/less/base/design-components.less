@@ -1,0 +1,48 @@
+// .link {
+//   // font-family: @cinema;
+//   font-weight: 300;
+//   font-size: 3.5rem;
+
+//   text-decoration-line: underline;
+// }
+
+.btn-submit {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 37px;
+  height: 37px;
+
+  border-radius: 50%;
+  background-color: @white;
+
+  transition: @s;
+
+  &:hover,
+  &:focus {
+    background-color: @white-hover;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: -1px;
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background-color: @emerald;
+  }
+}
+
+.btn-submit__icon {
+  fill: @dark;
+  &--right {
+
+  }
+}

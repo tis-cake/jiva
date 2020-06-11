@@ -1,0 +1,127 @@
+@circe: 'Circe', 'Arial', sans-serif;
+@canvas: 'MADECanvas', 'Times', serif;
+@blaster: 'Blaster', 'Arial', sans-serif;
+// @droid: 'Droid', 'Arial', sans-serif;
+// @dina: 'DINAlternate', 'Arial', sans-serif;
+// @cinema: 'Cinematografica', 'Arial', sans-serif;
+// @dance: 'DancingScript', 'Arial', sans-serif;
+
+@white: #F0F7FF;
+@dark: #393544;
+@brown: #291C22;
+@gray: #D5D5D5;
+@dark-gray: #413B4A;
+@gold: #F5D087;
+@emerald: #41C4A5;
+@red: #E13D3E;
+
+@white-hover: rgba(240,247,255,0.8);
+@icon-white-hover: rgba(255,255,255,0.6);
+
+@mobile-width: 420px;
+// @tablet-width: 755px;
+@tablet-width: 48em;
+@desktop-width: 1690px;
+@max-desktop-width: 1921px;
+
+@retina-dpi: 144dpi;
+@retina-dppx: 1.5dppx;
+
+@s: 0.5s;
+
+@a: auto;
+
+@solid: 1px solid red;
+
+.o {
+  outline: 1px solid red;
+}
+
+.o(@color) {
+  outline: 1px solid @color;
+}
+
+.b {
+  border: 1px solid red;
+}
+
+.b(@color) {
+  border: 1px solid @color;
+}
+
+.text-stroke {
+  text-shadow: #000 1px 1px 0,
+               #000 -1px -1px 0,
+               #000 -1px 1px 0,
+               #000 1px -1px 0;
+}
+
+.text-stroke(@color, @offset) {
+  text-shadow: @color @offset @offset 0,
+               @color -@offset -@offset 0,
+               @color -@offset @offset 0,
+               @color @offset -@offset 0;
+}
+
+.reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mp-reset(@margin; @padding) {
+  margin: @margin;
+  padding: @padding;
+}
+
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.img-contain {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.margin-block(@value) {
+  margin-top: @value;
+  margin-bottom: @value;
+}
+
+.margin-block(@value1, @value2) {
+  margin-top: @value1;
+  margin-bottom: @value2;
+}
+
+.margin-inline(@value) {
+  margin-left: @value;
+  margin-right: @value;
+}
+
+.margin-inline(@value1, @value2) {
+  margin-left: @value1;
+  margin-right: @value2;
+}
+
+.padding-block(@value) {
+  padding-top: @value;
+  padding-bottom: @value;
+}
+
+.padding-block(@value1, @value2) {
+  padding-top: @value1;
+  padding-bottom: @value2;
+}
+
+.padding-inline(@value) {
+  padding-left: @value;
+  padding-right: @value;
+}
+
+.padding-inline(@value1, @value2) {
+  padding-left: @value1;
+  padding-right: @value2;
+}
