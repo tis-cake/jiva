@@ -24,7 +24,11 @@
 }
 
 .blaster {
+  display: inline-block;
   font-family: @blaster;
+  &--green {
+    color: @emerald;
+  }
 }
 
 .btn-submit {
@@ -133,6 +137,17 @@
       background-color: @brown;
     }
   }
+  &--white {
+    color: @dark;
+    background-color: @btn-white-bg;
+    border: 2px solid @btn-white-border;
+    box-shadow: #C8D9EC;
+    &:hover,
+    &:focus {
+      background-color: @btn-white-border;
+      // background-color: #fff;
+    }
+  }
 }
 
 .btn-link {
@@ -164,7 +179,11 @@
   }
 }
 
-.section-title {}
+.section-title {
+  font-weight: bold;
+  font-size: 38px;
+  line-height: 40px;
+}
 
 .section-desc {
   color: @light-gray;

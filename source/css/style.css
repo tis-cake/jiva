@@ -277,7 +277,11 @@ input[type="radio"].visually-hidden {
   transform: rotate(-5.91deg);
 }
 .blaster {
+  display: inline-block;
   font-family: 'Blaster', 'Arial', sans-serif;
+}
+.blaster--green {
+  color: #41C4A5;
 }
 .btn-submit {
   position: relative;
@@ -362,6 +366,16 @@ input[type="radio"].visually-hidden {
 .btn-modal--dark:focus {
   background-color: #291C22;
 }
+.btn-modal--white {
+  color: #393544;
+  background-color: #EDF6FF;
+  border: 2px solid #F4FAFF;
+  box-shadow: #C8D9EC;
+}
+.btn-modal--white:hover,
+.btn-modal--white:focus {
+  background-color: #F4FAFF;
+}
 .btn-link {
   display: flex;
   justify-content: center;
@@ -385,6 +399,11 @@ input[type="radio"].visually-hidden {
 .btn-link:hover .btn-link__icon,
 .btn-link:focus .btn-link__icon {
   fill: rgba(53, 53, 68, 0.6);
+}
+.section-title {
+  font-weight: bold;
+  font-size: 38px;
+  line-height: 40px;
 }
 .section-desc {
   color: #A6B2C6;
@@ -954,7 +973,7 @@ input[type="radio"].visually-hidden {
   position: relative;
   display: flex;
   justify-content: center;
-  padding-bottom: 240px;
+  padding-bottom: 277px;
   color: #fff;
   z-index: 0;
 }
@@ -1035,8 +1054,8 @@ input[type="radio"].visually-hidden {
   }
 }
 .services {
-  padding-top: 112px;
-  padding-bottom: 112px;
+  padding-top: 75px;
+  margin-bottom: 75px;
 }
 .services__list {
   display: flex;
@@ -1094,6 +1113,45 @@ input[type="radio"].visually-hidden {
 }
 .services__btn-link {
   margin-top: 20px;
+}
+.b-one {
+  position: relative;
+  display: flex;
+  height: 543px;
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+.b-one__bg-img-wrap {
+  position: absolute;
+  z-index: -1;
+  width: 1350px;
+  height: 543px;
+}
+.b-one__bg-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.b-one__text-wrap {
+  box-sizing: border-box;
+  width: 630px;
+  margin-top: 205px;
+  margin-left: auto;
+  margin-right: 66px;
+}
+.b-one__title {
+  margin-bottom: 30px;
+}
+.b-one__title-item {
+  margin-left: 8px;
+}
+.b-one__desc {
+  font-size: 19px;
+  line-height: 28px;
+}
+.b-one__btn-modal {
+  margin-top: 34px;
 }
 .aside-link {
   box-sizing: border-box;
