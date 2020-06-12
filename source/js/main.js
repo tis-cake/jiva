@@ -48,3 +48,13 @@ $('.search__input').on('keyup', function (evt) {
     }
   });
 });
+
+// стилевое затемнение для телефона в шапке, если в фокусе с tab
+$('.aside-link__link').on({
+  focus: () => {
+    $('.aside-link').addClass('tab-focus');
+  },
+  blur: () => {
+    $('.aside-link').removeClass('tab-focus');
+  }
+});

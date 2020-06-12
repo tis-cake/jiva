@@ -2,6 +2,7 @@
   box-sizing: border-box;
 
   position: absolute;
+  z-index: 45;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -25,9 +26,13 @@
   // background-position: center;
   // background-size: cover;
 
+  &.tab-focus,
   &:hover {
     .aside-link__bg-img {
-      fill: rgba(65,59,74,0.8);;
+      fill: rgba(65,59,74,0.7);
+    }
+    .aside-link__link {
+      opacity: 1;
     }
   }
 }
