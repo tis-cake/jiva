@@ -6,6 +6,27 @@
 //   text-decoration-line: underline;
 // }
 
+.DaVinci {
+  position: relative;
+
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
+
+  font-family: @daVinci;
+  font-size: 44px;
+  // line-height: 77px;
+  letter-spacing: -0.02em;
+  text-transform: initial;
+  color: @gold;
+
+  transform: rotate(-5.91deg);
+}
+
+.blaster {
+  font-family: @blaster;
+}
+
 .btn-submit {
   position: relative;
 
@@ -20,6 +41,10 @@
   background-color: @white;
 
   transition: @s;
+
+  &__icon {
+    fill: @dark;
+  }
 
   &:hover,
   &:focus {
@@ -40,31 +65,7 @@
   }
 }
 
-.btn-submit__icon {
-  fill: @dark;
-  &--right {
-
-  }
-}
-
-.DaVinci {
-  position: relative;
-
-  display: inline-block;
-  margin-left: 10px;
-  margin-right: 10px;
-
-  font-family: @daVinci;
-  font-size: 44px;
-  // line-height: 77px;
-  letter-spacing: -0.02em;
-  text-transform: initial;
-  color: @gold;
-
-  transform: rotate(-5.91deg);
-}
-
-.modal-btn {
+.btn-modal {
   box-sizing: border-box;
   position: relative;
 
@@ -117,7 +118,7 @@
   &:hover,
   &:focus {
     outline: none;
-    .modal-btn__decor-line {
+    .btn-modal__decor-line {
       width: 55%;
     }
   }
@@ -127,12 +128,49 @@
     background-color: @btn-dark-bg;
     border: 2px solid @btn-dark-border;
     box-shadow: 10px 10px 40px rgba(62, 53, 75, 0.29);
-    &__decor-line {
-
-    }
     &:hover,
     &:focus {
       background-color: @brown;
     }
   }
 }
+
+.btn-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 70px;
+  height: 82px;
+
+  background-color: #FFFFFF;
+  box-shadow: 8px 8px 15px #D5E1F3;
+  border-radius: 90px;
+
+  transition: @s;
+
+  &__icon {
+    fill: @dark;
+    transition: inherit;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    box-shadow: none;
+    .btn-link__icon {
+      fill: @icon-dark-hover;
+    }
+  }
+}
+
+.section-title {}
+
+.section-desc {
+  color: @light-gray;
+}
+
+// .icon-close
+// .icon-search
+// .icon-arrow (--right / --left)
+// .icon-arrow-short (--right)
