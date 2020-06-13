@@ -1,0 +1,165 @@
+.swiper-container {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.swiper-arrows-wrap {
+}
+.swiper-button-next {
+}
+.swiper-arrow-icon {
+}
+.swiper-arrow-icon--left {
+}
+.swiper-button-prev {
+}
+.swiper-arrow-icon--right {
+}
+
+.swiper-arrows-wrap {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  // right: 0;
+
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+  height: 82px;
+}
+
+// .swiper-arrows-text-wrap {
+//   .swiper-button-prev,
+//   .swiper-button-next {
+//     width: 11.5rem;
+//   }
+//   .swiper-arrow-next {
+//     margin-left: 1.5rem;
+//   }
+//   .swiper-arrow-prev {
+//     margin-right: 1.5rem;
+//   }
+// }
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: relative;
+  top: auto;
+  margin-top: 0;
+  // width: 5rem;
+  // height: 5rem;
+
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #000;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 0;
+}
+
+.swiper-icon-arrow {
+  // width: 5rem;
+  // height: 5rem;
+}
+
+.hidden.swiper-pagination-current-zero {
+  display: none;
+}
+
+// .swiper {
+// }
+
+// .swiper__slide-wrap {
+//   height: 26rem;
+// }
+
+// .swiper__img {
+//   .img-cover;
+// }
+
+// .swiper__button {
+//   z-index: 2;
+//   position: absolute;
+//   bottom: 50%;
+//   transform: translateY(50%);
+
+//   width: 2.7rem;
+//   height: 6.5rem;
+
+//   background-color: #272727;
+//   background-repeat: no-repeat;
+//   background-size: 1.3rem;
+//   background-position: 50%;
+
+//   cursor: pointer;
+// }
+
+// .swiper__button-next {
+//   right: -2.5rem;
+//   background-image: url('../img/svg/btn-next-white.svg');
+// }
+
+// .swiper__button-prev {
+//   left: -2.5rem;
+//   background-image: url('../img/svg/btn-prev-white.svg');
+// }
+
+// .swiper__scrollbar {
+//   visibility: hidden;
+// }
+
+// .swiper-button-disabled {
+//   opacity: 0.5;
+// }
+
+@media (max-width: @tablet-width) {
+  .swiper {
+  }
+
+  .swiper__slide-wrap {
+    height: 19.6rem;
+  }
+
+  .swiper__scrollbar {
+    visibility: visible;
+    // background-color: rgba(0,0,0,0);
+    background-color: #F7F7F7;
+
+    .swiper-scrollbar-drag {
+      // background-color: rgba(0,0,0,.1);
+      background-color: #222222;
+      border-radius: 0;
+    }
+  }
+
+  .swiper__container .swiper-wrapper {
+    padding-bottom: 3.9rem;
+  }
+
+  .swiper__container.swiper-container-horizontal>.swiper-scrollbar {
+    left: 10%;
+    bottom: 0.3rem;
+    width: 80%;
+    height: 0.6rem;
+  }
+
+  .swiper__button {
+    bottom: 1rem;
+    width: 2.7rem;
+    height: 3.4rem;
+
+    background-size: 1.3rem;
+  }
+
+  .swiper__button-next {
+    right: 2.5rem;
+  }
+
+  .swiper__button-prev {
+    left: 2.5rem;
+  }
+}

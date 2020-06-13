@@ -1,0 +1,134 @@
+.rehab-swiper {
+  padding-top: 125px;
+
+  padding-bottom: 300px;
+}
+
+.rehab-swiper__main-text-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 35px;
+}
+
+.rehab-swiper__main-title {
+}
+
+.rehab-swiper__btn-region {
+  padding-top: 5px;
+}
+
+.rehab-swiper__swiper-container {
+
+}
+
+.rehab-swiper__item {
+  position: relative;
+  box-sizing: border-box;
+  width: 305px;
+  height: 505px;
+
+  background-image: linear-gradient(180deg, #FFFFFF 0%, #E6F1FD 100%);
+  // box-shadow: inset 20px 40px 60px rgba(0, 0, 0, 0.25);
+  border-radius: 70px;
+  // .b;
+
+  overflow: hidden;
+}
+
+.rehab-swiper__slide {
+
+}
+
+.rehab-swiper__text-wrap {
+  // position: relative;
+  z-index: 1;
+  padding-top: 50px;
+  padding-inline: 32px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+
+    bottom: -28px;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    border-radius: 70px;
+
+    background-color: #fff;
+    // .b;
+  }
+}
+
+.rehab-swiper__title {
+  margin-bottom: 7px;
+
+  font-family: @blaster;
+  font-style: italic;
+  font-size: 25px;
+  line-height: 35px;
+}
+
+.rehab-swiper__desc {
+  margin-bottom: 10px;
+}
+
+.rehab-swiper__cost {
+  font-weight: bold;
+  font-size: 22px;
+  // line-height: 32px;
+}
+
+.rehab-swiper__img-wrap {
+  position: absolute;
+  bottom: 0;
+  z-index: 0;
+
+  // clip-path: url(#clip-small-top);
+  // filter: url(#filter-small-top);
+  clip-path: url(../#clip-small-top);
+  filter: url(../#filter-small-top);
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+  }
+
+  &::before {
+    bottom: 0;
+    left: 0;
+
+    height: 324px;
+
+    border-radius: 70px 0 70px 70px;
+    box-shadow: inset 20px 40px 60px rgba(0, 0, 0, 0.25);
+  }
+
+  &::after {
+    top: 0px;
+    right: 0;
+
+    height: 70px;
+
+    transform: rotate(180deg);
+    box-shadow:
+      20px 40px 60px rgba(0, 0, 0, 0.25),
+      20px 40px 60px rgba(0, 0, 0, 0.25) inset;
+  }
+}
+
+.rehab-swiper__img {
+  .img-cover;
+}
+
+.rehab-swiper__arrows-wrap {
+}
+
+.rehab-swiper__button-next {
+}
+
+.rehab-swiper__button-prev {
+}
