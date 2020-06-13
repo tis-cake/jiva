@@ -49,12 +49,32 @@ $('.search__input').on('keyup', function (evt) {
   });
 });
 
-// стилевое затемнение для телефона в шапке, если в фокусе с tab
-$('.aside-link__link').on({
-  focus: () => {
-    $('.aside-link').addClass('tab-focus');
-  },
-  blur: () => {
-    $('.aside-link').removeClass('tab-focus');
-  }
+// стилевое затемнение, если в фокусе с tab
+$(document).ready(function () {
+  // для телефона в шапке
+  $('.aside-link__link').on({
+    focus: () => {
+      $('.aside-link').addClass('tab-focus');
+    },
+    blur: () => {
+      $('.aside-link').removeClass('tab-focus');
+    }
+  });
+  // для рехабов
+  $('.rehab-swiper__link').on({
+    focus: function() {
+      $(this).closest('.rehab-swiper__item').addClass('tab-focus');
+    },
+    blur: function() {
+      $(this).closest('.rehab-swiper__item').removeClass('tab-focus');
+    }
+  });
 });
+
+// сравнить центр
+$('.btn-compare').on('click', function() {
+  $(this).toggleClass('selected');
+  $(this).prev().toggleClass('selected');
+  $(this).blur();
+})
+

@@ -17,8 +17,24 @@
 .swiper-arrow-icon--right {
 }
 
+.swiper-container-big-container {
+  box-sizing: border-box;
+  width: 143rem;
+  overflow: hidden;
+
+  .swiper-container {
+    overflow: initial;
+    margin-left: 20px;
+  }
+
+  .swiper-button-next {
+    right: 20px;
+  }
+}
+
 .swiper-arrows-wrap {
-  position: absolute;
+  // position: absolute;
+  position: relative;
   z-index: 1;
   bottom: 0;
   // right: 0;
@@ -28,32 +44,31 @@
 
   width: 100%;
   height: 82px;
-}
 
-// .swiper-arrows-text-wrap {
-//   .swiper-button-prev,
-//   .swiper-button-next {
-//     width: 11.5rem;
-//   }
-//   .swiper-arrow-next {
-//     margin-left: 1.5rem;
-//   }
-//   .swiper-arrow-prev {
-//     margin-right: 1.5rem;
-//   }
-// }
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
 
 .swiper-button-prev,
 .swiper-button-next {
   position: relative;
   top: auto;
   margin-top: 0;
-  // width: 5rem;
-  // height: 5rem;
 
   font-weight: 700;
   font-size: 1.8rem;
   color: #000;
+}
+
+.swiper-button-prev {
+  left: 0;
+}
+
+.swiper-button-next {
+  right: 0;
+  // из-за теней у элементов слайдера - контейнер свайпера
+  //  больше, отступ слева больше на текущеезначение right
+  //  у swiper-button-next
 }
 
 .swiper-button-prev::after,

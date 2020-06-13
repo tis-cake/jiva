@@ -7,43 +7,60 @@
 .rehab-swiper__main-text-wrap {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 35px;
+  margin-bottom: 15px;
 }
 
-.rehab-swiper__main-title {
-}
+.rehab-swiper__main-title {}
 
 .rehab-swiper__btn-region {
   padding-top: 5px;
 }
 
-.rehab-swiper__swiper-container {
+.rehab-swiper__big-container {}
 
+.rehab-swiper__swiper-container {}
+
+.rehab-swiper__hover {
+  width: 305px;
+  border-radius: 70px;
 }
 
 .rehab-swiper__item {
-  position: relative;
   box-sizing: border-box;
-  width: 305px;
+
+  overflow: hidden;
+  position: relative;
+
+  // width: 305px;
+  width: 100%;
   height: 505px;
 
   background-image: linear-gradient(180deg, #FFFFFF 0%, #E6F1FD 100%);
-  // box-shadow: inset 20px 40px 60px rgba(0, 0, 0, 0.25);
   border-radius: 70px;
-  // .b;
 
-  overflow: hidden;
+  transition: @s;
+
+  &.tab-focus,
+  &:hover {
+    // box-shadow: 9px 30px 50px #B7C3DF;
+    box-shadow: 0px 30px 50px #B7C3DF;
+  }
 }
 
-.rehab-swiper__slide {
-
+.rehab-swiper__link {
+  &:focus {
+    // box-shadow: 9px 30px 50px #B7C3DF;
+  }
 }
+
+.rehab-swiper__slide {}
 
 .rehab-swiper__text-wrap {
   // position: relative;
   z-index: 1;
   padding-top: 50px;
-  padding-inline: 32px;
+  padding-left: 32px;
+  padding-right: 32px;
 
   &::before {
     content: '';
@@ -75,7 +92,7 @@
 }
 
 .rehab-swiper__cost {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 22px;
   // line-height: 32px;
 }
@@ -84,6 +101,10 @@
   position: absolute;
   bottom: 0;
   z-index: 0;
+
+  display: flex;
+  width: 100%;
+  height: 398px;
 
   // clip-path: url(#clip-small-top);
   // filter: url(#filter-small-top);
@@ -101,7 +122,8 @@
     bottom: 0;
     left: 0;
 
-    height: 324px;
+    // height: 319px;
+    height: 328px;
 
     border-radius: 70px 0 70px 70px;
     box-shadow: inset 20px 40px 60px rgba(0, 0, 0, 0.25);
@@ -122,13 +144,24 @@
 
 .rehab-swiper__img {
   .img-cover;
+  border-radius: 70px 0 70px 70px;
 }
 
-.rehab-swiper__arrows-wrap {
+.rehab-swiper__btn-compare {
+  position: absolute;
+  z-index: 1;
+  bottom: 10px;
+  left: 35px;
+
+  // &:hover {
+    // &+.rehab-swiper__item {
+    //   box-shadow: none;
+    // }
+  // }
 }
 
-.rehab-swiper__button-next {
-}
+.rehab-swiper__arrows-wrap {}
 
-.rehab-swiper__button-prev {
-}
+.rehab-swiper__button-next {}
+
+.rehab-swiper__button-prev {}

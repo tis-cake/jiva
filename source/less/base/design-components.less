@@ -204,7 +204,7 @@
   // width: 304px;
   width: 273px;
 
-  font-weight: bold;
+  font-weight: 700;
   font-size: 17px;
 
   transition: @s;
@@ -240,10 +240,73 @@
   }
 }
 
+.btn-compare {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  width: 148px;
+  height: 29px;
+  // padding-left: 20px;
+  padding-left: 27px;
+
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff;
+
+  background-color: rgba(35, 46, 62, 0.64);
+  border-radius: 90px;
+
+  transition: @s;
+
+  &__icon {
+    position: absolute;
+    top: 4px;
+    left: 7px;
+    fill: #fff;
+
+    transition: inherit;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    color: @icon-white-hover;
+    .btn-compare__icon {
+      fill: @icon-white-hover;
+    }
+  }
+
+  &__desc {
+    position: absolute;
+    transition: @s;
+  }
+
+  &__selected {
+    // display: none;
+    // position: absolute;
+    // top: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &.selected {
+    .btn-compare__selected {
+      opacity: 1;
+      visibility: visible;
+    }
+    .btn-compare__not-selected {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+}
+
 /* text */
 
 .section-title {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 38px;
   line-height: 40px;
 }
@@ -258,8 +321,9 @@
  .icon-close
  .icon-search
  .icon-region-1
- .icon-arrow (--right / --left)
- .icon-arrow-short (--right)
+ .icon-region-2
+ .icon-arrow (--right)
+ .icon-arrow-short (--right / --left)
 */
 
 #icon-region-1 {
