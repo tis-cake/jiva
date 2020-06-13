@@ -175,8 +175,69 @@
   }
 }
 
-.btn-region {
+.btn-region-1 {
+  position: relative;
+  display: flex;
+  align-items: center;
 
+  color: inherit;
+
+  transition: @s;
+
+  &__icon {
+    margin-right: 4px;
+    transition: inherit;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.6;
+  }
+}
+
+.btn-region-2 {
+  position: relative;
+  display: flex;
+  align-self: flex-start;
+
+  // width: 304px;
+  width: 273px;
+
+  font-weight: bold;
+  font-size: 17px;
+
+  transition: @s;
+
+  &__icon {
+    position: absolute;
+    left: -30px;
+
+    // margin-right: 4px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    // left: 33px;
+    // bottom: 9px;
+    bottom: -6px;
+
+    // width: 270px;
+    width: 100%;
+    height: 3px;
+
+    background-color: @red;
+    border-radius: 9px;
+
+    transition: inherit;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.6;
+  }
 }
 
 /* text */
@@ -202,12 +263,19 @@
 */
 
 #icon-region-1 {
-  // .icon-region-pin,
+  transition: @s;
   path {
-    fill: #cacaca;
+    // fill: red;
   }
-  // .icon-region-circle,
   circle {
-    stroke: #cacaca;
+    // stroke: red;
+  }
+}
+
+#icon-region-2 {
+  transition: @s;
+  // fill: red;
+  path {
+    // stroke: red;
   }
 }
