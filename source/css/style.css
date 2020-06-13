@@ -264,6 +264,7 @@ input[type="radio"].visually-hidden {
   -o-object-fit: contain;
      object-fit: contain;
 }
+/* fonts */
 .DaVinci {
   position: relative;
   display: inline-block;
@@ -283,6 +284,7 @@ input[type="radio"].visually-hidden {
 .blaster--green {
   color: #41C4A5;
 }
+/* buttons */
 .btn-submit {
   position: relative;
   display: flex;
@@ -400,6 +402,7 @@ input[type="radio"].visually-hidden {
 .btn-link:focus .btn-link__icon {
   fill: rgba(53, 53, 68, 0.6);
 }
+/* text */
 .section-title {
   font-weight: bold;
   font-size: 38px;
@@ -407,6 +410,20 @@ input[type="radio"].visually-hidden {
 }
 .section-desc {
   color: #A6B2C6;
+}
+/* icons */
+/*
+ .icon-close
+ .icon-search
+ .icon-region-1
+ .icon-arrow (--right / --left)
+ .icon-arrow-short (--right)
+*/
+#icon-region-1 path {
+  fill: #cacaca;
+}
+#icon-region-1 circle {
+  stroke: #cacaca;
 }
 /*header*/
 .header {
@@ -443,7 +460,18 @@ input[type="radio"].visually-hidden {
   margin-bottom: 30px;
 }
 .header__form-lang {
-  margin-right: 22px;
+  margin-right: 26px;
+}
+.header__link-modal-region {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.header__link-modal-region:focus {
+  opacity: 0.7;
+}
+.header__link-modal-region-icon {
+  margin-right: 4px;
 }
 .header__text-wrap {
   margin-left: auto;
