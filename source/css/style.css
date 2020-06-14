@@ -1413,6 +1413,25 @@ input[type="radio"].visually-hidden {
   margin-left: 0;
   margin-right: 8px;
 }
+.b-three {
+  height: 481px;
+}
+.b-three .b__bg-img-wrap {
+  height: 481px;
+}
+.b-three .b__text-wrap {
+  width: 640px;
+  margin-top: 84px;
+  margin-right: 60px;
+}
+.b-three .b__title {
+  font-size: 36px;
+  line-height: 45px;
+  margin-bottom: 23px;
+}
+.b-three .b__title-item {
+  margin-left: 0;
+}
 .aside-item {
   box-sizing: border-box;
   position: absolute;
