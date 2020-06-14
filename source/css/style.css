@@ -630,6 +630,7 @@ input[type="radio"].visually-hidden {
 }
 .section-desc {
   color: #A6B2C6;
+  line-height: 27px;
 }
 /* icons */
 /*
@@ -1324,7 +1325,7 @@ input[type="radio"].visually-hidden {
   fill: rgba(53, 53, 68, 0.6);
 }
 .services__item-title {
-  margin-bottom: 19px;
+  margin-bottom: 14px;
   padding-left: 30px;
   padding-right: 30px;
   font-weight: 700;
@@ -1348,7 +1349,7 @@ input[type="radio"].visually-hidden {
      object-fit: cover;
 }
 .services__subtitle {
-  margin-bottom: 13px;
+  margin-bottom: 8px;
   font-weight: 700;
   font-size: 22px;
 }
@@ -1406,7 +1407,7 @@ input[type="radio"].visually-hidden {
   margin-right: 178px;
 }
 .b-two .b__title {
-  margin-bottom: 20px;
+  margin-bottom: 23px;
 }
 .b-two .b__title-item {
   margin-left: 0;
@@ -1442,6 +1443,77 @@ input[type="radio"].visually-hidden {
   font-weight: 700;
   font-size: 15px;
   word-spacing: 3px;
+}
+.stages {
+  padding-top: 99px;
+  padding-bottom: 99px;
+}
+.stages__main-text-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 72px;
+}
+.stages__list {
+  display: flex;
+  justify-content: space-between;
+}
+.stages__item {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.stages__title {
+  align-self: flex-start;
+  margin-bottom: 14px;
+  font-family: 'Blaster', 'Arial', sans-serif;
+  font-style: italic;
+  font-size: 30px;
+  line-height: 35px;
+}
+.stages__title-count {
+  color: #41C4A5;
+}
+.stages__subtitle {
+  margin-bottom: 14px;
+  font-weight: 700;
+  font-size: 20px;
+}
+.stages__desc {
+  margin-bottom: 16px;
+}
+.stages__link:hover,
+.stages__link:focus {
+  box-shadow: none;
+}
+.stages__link:hover .btn-link__icon,
+.stages__link:focus .btn-link__icon {
+  fill: rgba(53, 53, 68, 0.6);
+}
+.stages__img-wrap {
+  position: relative;
+  left: -6px;
+  width: 100%;
+  height: 417px;
+  background-image: url('../img/svg/union.svg');
+}
+.stages__img {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.stages__btn-link {
+  position: absolute;
+  bottom: 6px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .rehab-swiper {
   padding-top: 125px;
@@ -1491,7 +1563,6 @@ input[type="radio"].visually-hidden {
   background-color: #fff;
 }
 .rehab-swiper__title {
-  margin-bottom: 7px;
   font-family: 'Blaster', 'Arial', sans-serif;
   font-style: italic;
   font-size: 25px;
@@ -1581,10 +1652,10 @@ input[type="radio"].visually-hidden {
   position: relative;
   width: 657px;
   margin: 0;
-  padding-top: 43px;
+  padding-top: 40px;
   padding-left: 36px;
   padding-right: 36px;
-  padding-bottom: 43px;
+  padding-bottom: 40px;
   background-color: #FFF;
   border-radius: 70px;
   box-shadow: 0px 20px 30px #D4E2F1;
