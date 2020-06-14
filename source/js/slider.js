@@ -39,3 +39,9 @@ let reviewsSwiper = new Swiper('#reviews-swiper', {
     }
   }
 });
+
+// reviewsSwiper.on('slideChange', function () {
+//   let prevSlide = $('.swiper-slide-active').prev();
+//   $('.swiper-slide').not(prevSlide).removeClass('box-shadow-no')
+//   prevSlide.addClass('box-shadow-no');
+// });

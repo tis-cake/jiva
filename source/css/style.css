@@ -241,7 +241,7 @@ input[type="radio"].visually-hidden {
 .o {
   outline: 1px solid red;
 }
-.b {
+.r {
   border: 1px solid red;
 }
 .text-stroke {
@@ -1355,44 +1355,62 @@ input[type="radio"].visually-hidden {
 .services__btn-link {
   margin-top: 20px;
 }
-.b-one {
+.b {
   position: relative;
   display: flex;
   height: 543px;
   padding-top: 75px;
   padding-bottom: 75px;
 }
-.b-one__bg-img-wrap {
+.b__bg-img-wrap {
   position: absolute;
   z-index: -1;
   width: 1350px;
   height: 543px;
 }
-.b-one__bg-img {
+.b__bg-img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.b-one__text-wrap {
+.b__text-wrap {
   box-sizing: border-box;
   width: 630px;
   margin-top: 205px;
   margin-left: auto;
   margin-right: 66px;
 }
-.b-one__title {
+.b__title {
   margin-bottom: 30px;
 }
-.b-one__title-item {
+.b__title-item {
   margin-left: 8px;
 }
-.b-one__desc {
+.b__desc {
   font-size: 19px;
   line-height: 28px;
 }
-.b-one__btn-modal {
+.b__btn-modal {
   margin-top: 34px;
+}
+.b-two {
+  height: 368px;
+}
+.b-two .b__bg-img-wrap {
+  height: 368px;
+}
+.b-two .b__text-wrap {
+  width: 670px;
+  margin-top: 67px;
+  margin-right: 178px;
+}
+.b-two .b__title {
+  margin-bottom: 20px;
+}
+.b-two .b__title-item {
+  margin-left: 0;
+  margin-right: 8px;
 }
 .aside-item {
   box-sizing: border-box;
