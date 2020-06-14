@@ -69,6 +69,10 @@
   box-sizing: border-box;
   position: relative;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   width: 255px;
   height: 57px;
 
@@ -137,12 +141,20 @@
     color: @dark;
     background-color: @btn-white-bg;
     border: 2px solid @btn-white-border;
-    box-shadow: #C8D9EC;
+    // box-shadow: #C8D9EC;
+    box-shadow: 10px 10px 40px #C8D9EC;
+    .btn-modal__decor-line {
+      width: 130px;
+    }
     &:hover,
     &:focus {
+      box-shadow: none;
       background-color: @btn-white-border;
       // background-color: #fff;
     }
+  }
+  &--longer {
+    width: 305px;
   }
 }
 
@@ -301,6 +313,12 @@
       visibility: hidden;
     }
   }
+}
+
+/* shapes */
+
+.aside-item {
+  position: absolute;
 }
 
 /* text */
