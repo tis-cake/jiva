@@ -1,0 +1,125 @@
+.database-sections {
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  // padding-top: 180px;
+  // padding-bottom: 180px;
+}
+
+.database-sections__main-text-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 44px;
+}
+
+.database-sections__main-title {
+}
+
+.database-sections__btn-modal {}
+
+.database-sections__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.database-sections__item {
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  width: 300px;
+  height: 376px;
+  padding-top: 40px;
+
+  border-radius: 50px;
+  box-shadow: 5px 60px 90px #D0E0F1;
+  background-image: linear-gradient(34.55deg, #F3F9FF 41.98%, #D9EAFC 137.05%);
+
+  transition: @s;
+
+  &::before {
+    position: absolute;
+    content: '';
+    z-index: -1;
+    bottom: -46px;
+
+    width: 206px;
+    height: 206px;
+
+    background-image: url('../img/database-sections/figure-database-sections.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &:hover,
+  &:focus {
+    // box-shadow: none;
+    .database-sections__img-wrap {
+      // background-image: linear-gradient(36.18deg, @emerald 41.98%, @emerald 137.05%);
+      box-shadow: none;
+    }
+    .database-sections__desc {
+      color: #acc8e8;
+    }
+  }
+}
+
+.database-sections__link {
+}
+
+.database-sections__img-wrap {
+  width: 126px;
+  height: 197px;
+  margin-bottom: 24px;
+
+  border-radius: 2px;
+  box-shadow: -10px 30px 40px #C9DBEF;
+
+  transition: @s;
+
+  // background-image: linear-gradient(36.18deg, #5CC594 41.98%, #D9EAFC 137.05%);
+  // background-image: linear-gradient(36.18deg, #7F9DBF 41.98%, #D9EAFC 137.05%);
+  // background-image: linear-gradient(36.18deg, #F8CE7E 41.98%, #D9EAFC 137.05%);
+  // background-image: linear-gradient(36.18deg, #E13D3E 41.98%, #D9EAFC 137.05%);
+}
+
+.database-sections__img {
+  .img-cover;
+}
+
+.database-sections__title {
+  margin-bottom: 11px;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 44px;
+}
+
+.database-sections__count {
+  font-weight: 300;
+  font-size: 16px;
+  // line-height: 24px;
+}
+
+.database-sections__desc {
+  position: absolute;
+  top: 108px;
+  right: -65px;
+
+  font-weight: 800;
+  font-size: 50px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  color: #D2E1F2;
+
+  transform: rotate(-90deg);
+  transition: @s;
+}
