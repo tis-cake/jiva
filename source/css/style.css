@@ -1818,6 +1818,19 @@ input[type="radio"].visually-hidden {
   padding-left: 3.2rem;
   padding-right: 3.2rem;
 }
+.rehab-swiper__text-wrap::before {
+  position: absolute;
+  content: '';
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 51rem;
+  background-image: url('../img/figure/clip-small-top.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 .rehab-swiper__title {
   font-family: 'BlasterIt', 'Arial', sans-serif;
   font-style: italic;
@@ -1839,8 +1852,6 @@ input[type="radio"].visually-hidden {
   width: 100%;
   height: 39.8rem;
   /* свг-маска */
-  -webkit-clip-path: url(../#clip-small-top);
-          clip-path: url(../#clip-small-top);
   -webkit-filter: url(../img/sprite.svg#filter-small-top);
           filter: url(../img/sprite.svg#filter-small-top);
 }
