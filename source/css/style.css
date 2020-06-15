@@ -655,14 +655,34 @@ input[type="radio"].visually-hidden {
   line-height: 2.7rem;
 }
 /* icons */
-/*
- .icon-close
- .icon-search
- .icon-region-1
- .icon-region-2
- .icon-arrow (--right)
- .icon-arrow-short (--right / --left)
-*/
+.icon-search {
+  width: 2.3rem;
+  height: 2.3rem;
+}
+.icon-close {
+  width: 2.3rem;
+  height: 2.3rem;
+}
+.icon-region-1 {
+  width: 1.8rem;
+  height: 2.3rem;
+}
+.icon-region-2 {
+  width: 2.6rem;
+  height: 3.2rem;
+}
+.icon-arrow {
+  width: 3.1rem;
+  height: 1.1rem;
+}
+.icon-arrow-short {
+  width: 1.3rem;
+  height: 2.5rem;
+}
+.icon-compare {
+  width: 1.5rem;
+  height: 1.5rem;
+}
 /* меняем цвет через color, так как внутри currentColor */
 #icon-region-1 {
   transition: 0.5s;
@@ -735,17 +755,9 @@ input[type="radio"].visually-hidden {
   cursor: pointer;
   z-index: 0;
 }
-.logo__img-wrap--small {
+.logo__img-wrap {
   width: 9.3rem;
   height: 9.3rem;
-}
-.logo__img-wrap--middle {
-  width: 21.6rem;
-  height: 21.6rem;
-}
-.logo__img-wrap--big {
-  width: 31.2rem;
-  height: 31.2rem;
 }
 .logo__img {
   width: 100%;
@@ -796,6 +808,8 @@ input[type="radio"].visually-hidden {
 }
 .logo-big .logo__img-wrap {
   margin-bottom: 2.9rem;
+  width: 31.2rem;
+  height: 31.2rem;
 }
 .logo-big .logo__title {
   text-shadow: #291C22 0.3rem 0.3rem 0, #291C22 -0.3rem -0.3rem 0, #291C22 -0.3rem 0.3rem 0, #291C22 0.3rem -0.3rem 0;
@@ -817,6 +831,10 @@ input[type="radio"].visually-hidden {
 }
 .logo-middle {
   font-size: 6.8rem;
+}
+.logo-middle .logo__img-wrap {
+  width: 21.6rem;
+  height: 21.6rem;
 }
 .logo-middle .logo__img {
   -o-object-position: -0.5rem -1.9rem;
@@ -1503,10 +1521,12 @@ input[type="radio"].visually-hidden {
 .aside-item__bg-wrap {
   position: absolute;
   transform: rotate(90deg);
-  top: -7.2rem;
+  top: -7.3rem;
   left: 5.7rem;
 }
 .aside-item__bg-img {
+  width: 3.2rem;
+  height: 17.1rem;
   fill: #fff;
 }
 .aside-item__desc {
@@ -1791,21 +1811,24 @@ input[type="radio"].visually-hidden {
   box-shadow: 0px 30px 50px #B7C3DF;
 }
 .rehab-swiper__text-wrap {
+  position: relative;
   z-index: 1;
   padding-top: 5rem;
   padding-left: 3.2rem;
   padding-right: 3.2rem;
 }
 .rehab-swiper__text-wrap::before {
-  content: '';
   position: absolute;
+  content: '';
   z-index: -1;
-  bottom: -2.8rem;
+  top: 0;
   left: 0;
   width: 100%;
-  height: 15rem;
-  border-radius: 7rem;
-  background-color: #fff;
+  height: 51rem;
+  background-image: url('../img/figure/clip-small-top.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .rehab-swiper__title {
   font-family: 'Blaster', 'Arial', sans-serif;
@@ -1828,8 +1851,6 @@ input[type="radio"].visually-hidden {
   width: 100%;
   height: 39.8rem;
   /* свг-маска */
-  -webkit-clip-path: url(../#clip-small-top);
-          clip-path: url(../#clip-small-top);
   -webkit-filter: url(../#filter-small-top);
           filter: url(../#filter-small-top);
 }
@@ -1842,16 +1863,11 @@ input[type="radio"].visually-hidden {
 .rehab-swiper__img-wrap::before {
   bottom: 0;
   left: 0;
-  height: 32.8rem;
+  height: 33rem;
+  height: 100%;
+  height: 37.8rem;
   border-radius: 7rem 0 7rem 7rem;
   box-shadow: inset 20px 40px 60px rgba(0, 0, 0, 0.25);
-}
-.rehab-swiper__img-wrap::after {
-  top: 0;
-  right: 0;
-  height: 7rem;
-  transform: rotate(180deg);
-  box-shadow: 20px 40px 60px rgba(0, 0, 0, 0.25), 20px 40px 60px rgba(0, 0, 0, 0.25) inset;
 }
 .rehab-swiper__img {
   width: 100%;

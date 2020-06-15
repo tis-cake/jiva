@@ -55,25 +55,38 @@
 .rehab-swiper__slide {}
 
 .rehab-swiper__text-wrap {
-  // position: relative;
+  position: relative;
   z-index: 1;
   padding-top: 5rem;
   padding-left: 3.2rem;
   padding-right: 3.2rem;
 
   &::before {
-    content: '';
+    // content: '';
+    // position: absolute;
+    // z-index: -1;
+
+    // bottom: -2.8rem;
+    // left: 0;
+    // width: 100%;
+    // height: 15rem;
+    // border-radius: 7rem;
+
+    // background-color: #fff;
+
     position: absolute;
+    content: '';
     z-index: -1;
-
-    bottom: -2.8rem;
+    top: 0;
     left: 0;
-    width: 100%;
-    height: 15rem;
-    border-radius: 7rem;
 
-    background-color: #fff;
-    // .b;
+    width: 100%;
+    height: 51rem;
+
+    background-image: url('../img/figure/clip-small-top.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 }
 
@@ -109,22 +122,8 @@
   // filter: url(#filter-small-top);
 
   /* свг-маска */
-  clip-path: url(../#clip-small-top);
+  // clip-path: url(../#clip-small-top);
   filter: url(../#filter-small-top);
-
-
-  // &::before {
-  //   position: absolute;
-  //   content: '';
-  //   z-index: 0;
-  //   top: 0;
-  //   left: 0;
-
-  //   width: 100%;
-  //   height: 39.8rem;
-
-  //   background-image: url('../img/swiper/1.png');
-  // }
 
   &::before,
   &::after {
@@ -137,24 +136,31 @@
     bottom: 0;
     left: 0;
 
-    // height: 319px;
-    height: 32.8rem;
+    // height: 32.8rem;
+    height: 33rem;
+    height: 100%;
+    height: 37.8rem;
 
     border-radius: 7rem 0 7rem 7rem;
     box-shadow: inset 20px 40px 60px rgba(0, 0, 0, 0.25);
+
+    // @media (max-width: 96em) {
+    //   height: 33.1rem;
+    // }
   }
 
-  &::after {
-    top: 0;
-    right: 0;
+  // &::after {
+  //   top: 0;
+  //   right: 0;
 
-    height: 7rem;
+  //   // height: 7rem;
+  //   height: 6.8rem;
 
-    transform: rotate(180deg);
-    box-shadow:
-      20px 40px 60px rgba(0, 0, 0, 0.25),
-      20px 40px 60px rgba(0, 0, 0, 0.25) inset;
-  }
+  //   transform: rotate(180deg);
+  //   box-shadow:
+  //     20px 40px 60px rgba(0, 0, 0, 0.25),
+  //     20px 40px 60px rgba(0, 0, 0, 0.25) inset;
+  // }
 }
 
 .rehab-swiper__img {

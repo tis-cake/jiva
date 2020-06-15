@@ -12,23 +12,23 @@
 }
 
 .logo__img-wrap {
-  // width: 127px;
-  // height: 127px;
-
-  &--small {
     width: 9.3rem;
     height: 9.3rem;
-  }
 
-  &--middle {
-    width: 21.6rem;
-    height: 21.6rem;
-  }
+  // &--small {
+  //   width: 9.3rem;
+  //   height: 9.3rem;
+  // }
 
-  &--big {
-    width: 31.2rem;
-    height: 31.2rem;
-  }
+  // &--middle {
+  //   width: 21.6rem;
+  //   height: 21.6rem;
+  // }
+
+  // &--big {
+  //   width: 31.2rem;
+  //   height: 31.2rem;
+  // }
 }
 
 .logo__img {
@@ -106,6 +106,8 @@
   font-size: 9.2rem;
   .logo__img-wrap {
     margin-bottom: 2.9rem;
+    width: 31.2rem;
+    height: 31.2rem;
   }
   .logo__title {
     .text-stroke(@brown, 0.3rem);
@@ -140,7 +142,11 @@
 
 .logo-middle {
   font-size: 6.8rem;
-  // color: @dark-gray;
+
+  .logo__img-wrap {
+    width: 21.6rem;
+    height: 21.6rem;
+  }
   .logo__img {
     // object-position: -13px -20px;
     object-position: -0.5rem -1.9rem;
@@ -172,9 +178,6 @@
     stroke: #fff;
   }
 }
-
-
-
 
 // @media (max-width: @tablet-width) {
 //   .logo {
