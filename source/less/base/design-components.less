@@ -20,6 +20,7 @@
 .blaster {
   display: inline-block;
   font-family: @blaster;
+  font-style: italic;
   &--green {
     color: @emerald;
   }
@@ -194,7 +195,25 @@
 
   color: inherit;
 
+  padding-left: 2rem;
+
   transition: @s;
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: -0.1rem;
+    left: -0.2rem;
+
+    width: 1.8rem;
+    height: 2.3rem;
+
+    // background-image: url('../img/svg/region-1-w.svg');
+    background-image: url('../img/svg/region-1-w.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
 
   &__icon {
     margin-right: 0.4rem;
@@ -204,21 +223,21 @@
   &:hover,
   &:focus {
     outline: none;
-    // opacity: 0.7;
-    .btn-region-1__icon {
-      color: #000;
-    }
+    opacity: 0.7;
+    // .btn-region-1__icon {
+    //   color: #000;
+    // }
   }
 
-  &--color-inherit {
-    &:hover,
-    &:focus {
-      opacity: 0.7;
-      .btn-region-1__icon {
-        color: inherit;
-      }
-    }
-  }
+  // &--color-inherit {
+  //   &:hover,
+  //   &:focus {
+  //     opacity: 0.7;
+  //     .btn-region-1__icon {
+  //       color: inherit;
+  //     }
+  //   }
+  // }
 }
 
 .btn-region-2 {
@@ -239,6 +258,7 @@
     left: -3rem;
 
     color: #CACACA;
+    transition: inherit;
 
     // margin-right: 4px;
   }
@@ -364,10 +384,17 @@
   height: 2.3rem;
 }
 
-.icon-region-1 {
-  width: 1.8rem;
-  height: 2.3rem;
-}
+// .icon-region-1 {
+//   width: 1.8rem;
+//   height: 2.3rem;
+// }
+
+// #icon-region-1 {
+//   path {
+//     // mask: url(../#mask-icon-region-1);
+//     // mask: url(../img/sprite.svg#mask-icon-region-1);
+//   }
+// }
 
 .icon-region-2 {
   width: 2.6rem;
@@ -388,6 +415,8 @@
   width: 1.5rem;
   height: 1.5rem;
 }
+
+.icon-logo-star {}
 
 /* меняем цвет через color, так как внутри currentColor */
 #icon-region-1 {

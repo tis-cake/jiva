@@ -6,7 +6,7 @@
     <meta name="description" content="«Ji+Va»">
     <title>Ji+Va</title>
 
-    <link rel="shortcut icon" type="image/x-icon" href="./fav.ico">
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="./fav.ico"> -->
 
     <link rel="preload" href="fonts/Circe/regular/Circe-Regular.woff2" as="font" type="font/woff2" crossorigin="">
 
@@ -42,10 +42,7 @@
                   <option value="LANG-FRENCH">FR</option>
                 </select>
               </form>
-              <button class="header__link-modal-region btn-region-1 btn-region-1--color-inherit modal-region">
-                <svg class="btn-region-1__icon icon-region-1" width="18" height="23">
-                  <use xlink:href="img/sprite.svg#icon-region-1"></use>
-                </svg>
+              <button class="header__link-modal-region btn-region-1 modal-region">
                 Россия
               </button>
               <div class="header__text-wrap">
@@ -424,56 +421,27 @@
           </button>
         </div>
 
-        <svg width="0" height="0">
-          <clipPath id="clip-small-top" >
-            <path d="M0 138.799C0 100.139 31.3401 68.7987 70 68.7987H152.23H238.204C275.513 68.7987 305.47 38.019 304.46 0.724609V331C304.46 369.66 273.12 401 234.46 401H70C31.34 401 0 369.66 0 331V138.799Z"/>
-          </clipPath>
-
-          <defs>
-            <!-- тень сверху -->
-            <filter id="filter-small-top" x="0" y="0.724609" width="370" height="440.275" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-              <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-              <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-              <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-              <feOffset dx="20" dy="40"/>
-              <feGaussianBlur stdDeviation="30"/>
-              <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
-              <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-              <feBlend mode="normal" in2="shape" result="effect1_innerShadow"/>
-            </filter>
-          </defs>
-        </svg>
-
         <div class="rehab-swiper__big-container swiper-container-big-container container">
           <div class="rehab-swiper__swiper-container swiper-container" id="rehab-swiper">
             <div class="swiper-wrapper">
 
-              <div class="swiper-slide">
-                <div class="rehab-swiper__hover">
+              <div class="swiper-slide rehab-swiper__slide">
+                <div class="rehab-swiper__item">
+                  <a class="rehab-swiper__link" href="rehab-page.html">
+                    <div class="rehab-swiper__text-wrap">
+                      <p class="rehab-swiper__title">Архангел Гавриил</p>
+                      <p class="rehab-swiper__desc section-desc">Россия, Москва</p>
+                      <p class="rehab-swiper__cost">80 000 руб./мес.</p>
+                    </div>
 
-                  <div class="rehab-swiper__item rehab-swiper__slide">
-                    <a class="rehab-swiper__link" href="rehab-page.html">
-                      <div class="rehab-swiper__text-wrap">
-                        <p class="rehab-swiper__title">Архангел Гавриил</p>
-                        <p class="rehab-swiper__desc section-desc">Россия, Москва</p>
-                        <p class="rehab-swiper__cost">80 000 руб./мес.</p>
-                      </div>
+                    <div class="rehab-swiper__img-wrap">
+                      <img class="rehab-swiper__img" src="img/swiper/reviews-swiper/2.jpg" alt="">
+                    </div>
 
-                      <div class="rehab-swiper__img-wrap">
-                        <img class="rehab-swiper__img" src="img/swiper/rehab-swiper/1.png" alt="">
-                      </div>
-
-                      <div class="rehab-swiper__aside-item aside-item">
-                        <div class="aside-item__bg-wrap">
-                          <svg class="aside-item__bg-img" width="32" height="171">
-                            <use xlink:href="img/sprite.svg#figure-aside-item-d"></use>
-                          </svg>
-                        </div>
-                        <p class="aside-item__desc">Партнер портала</p>
-                      </div>
-
-                    </a>
-                  </div>
+                    <div class="rehab-swiper__aside-item aside-item">
+                      <p class="aside-item__desc">Партнер портала</p>
+                    </div>
+                  </a>
 
                   <button class="rehab-swiper__btn-compare btn-compare">
                     <svg class="btn-compare__icon icon-compare" width="15" height="15">
@@ -482,40 +450,30 @@
                     <span class="btn-compare__desc btn-compare__not-selected">Сравнить центр</span>
                     <span class="btn-compare__desc btn-compare__selected">Добавлен</span>
                   </button>
-
                 </div>
               </div>
 
-              <div class="swiper-slide">
-                <div class="rehab-swiper__hover">
+              <!-- Класс "benefit" добавляет элемент "Партнёр портала".
+                Этот класс следует добавлять динамически при необходимости.
+                Для перебора через цикл этот класс можно удалить -->
 
-                  <!-- Класс "benefit" добавляет элемент "Партнёр портала".
-                  Этот класс следует добавлять динамически при необходимости.
-                  Для перебора через цикл этот класс можно удалить -->
+              <div class="benefit swiper-slide rehab-swiper__slide">
+                <div class="rehab-swiper__item">
+                  <a class="rehab-swiper__link" href="rehab-page.html">
+                    <div class="rehab-swiper__text-wrap">
+                      <p class="rehab-swiper__title">Решение</p>
+                      <p class="rehab-swiper__desc section-desc">Россия, Москва</p>
+                      <p class="rehab-swiper__cost">80 000 руб./мес.</p>
+                    </div>
 
-                  <div class="benefit rehab-swiper__item rehab-swiper__slide">
-                    <a class="rehab-swiper__link" href="rehab-page.html">
-                      <div class="rehab-swiper__text-wrap">
-                        <p class="rehab-swiper__title">Решение</p>
-                        <p class="rehab-swiper__desc section-desc">Россия, Москва</p>
-                        <p class="rehab-swiper__cost">80 000 руб./мес.</p>
-                      </div>
+                    <div class="rehab-swiper__img-wrap">
+                      <img class="rehab-swiper__img" src="img/swiper/rehab-swiper/2.png" alt="">
+                    </div>
 
-                      <div class="rehab-swiper__img-wrap">
-                        <img class="rehab-swiper__img" src="img/swiper/rehab-swiper/2.png" alt="">
-                      </div>
-
-                      <div class="rehab-swiper__aside-item aside-item">
-                        <div class="aside-item__bg-wrap">
-                          <svg class="aside-item__bg-img" width="32" height="171">
-                            <use xlink:href="img/sprite.svg#figure-aside-item-d"></use>
-                          </svg>
-                        </div>
-                        <p class="aside-item__desc">Партнер портала</p>
-                      </div>
-
-                    </a>
-                  </div>
+                    <div class="rehab-swiper__aside-item aside-item">
+                      <p class="aside-item__desc">Партнер портала</p>
+                    </div>
+                  </a>
 
                   <button class="rehab-swiper__btn-compare btn-compare">
                     <svg class="btn-compare__icon icon-compare" width="15" height="15">
@@ -524,35 +482,26 @@
                     <span class="btn-compare__desc btn-compare__not-selected">Сравнить центр</span>
                     <span class="btn-compare__desc btn-compare__selected">Добавлен</span>
                   </button>
-
                 </div>
               </div>
 
-              <div class="swiper-slide">
-                <div class="rehab-swiper__hover">
-                  <div class="rehab-swiper__item rehab-swiper__slide">
-                    <a class="rehab-swiper__link" href="rehab-page.html">
-                      <div class="rehab-swiper__text-wrap">
-                        <p class="rehab-swiper__title">Архангел Гавриил</p>
-                        <p class="rehab-swiper__desc section-desc">Россия, Москва</p>
-                        <p class="rehab-swiper__cost">80 000 руб./мес.</p>
-                      </div>
+              <div class="swiper-slide rehab-swiper__slide">
+                <div class="rehab-swiper__item">
+                  <a class="rehab-swiper__link" href="rehab-page.html">
+                    <div class="rehab-swiper__text-wrap">
+                      <p class="rehab-swiper__title">Архангел Гавриил</p>
+                      <p class="rehab-swiper__desc section-desc">Россия, Москва</p>
+                      <p class="rehab-swiper__cost">80 000 руб./мес.</p>
+                    </div>
 
-                      <div class="rehab-swiper__img-wrap">
-                        <img class="rehab-swiper__img" src="img/swiper/rehab-swiper/3.png" alt="">
-                      </div>
+                    <div class="rehab-swiper__img-wrap">
+                      <img class="rehab-swiper__img" src="img/swiper/rehab-swiper/3.png" alt="">
+                    </div>
 
-                      <div class="rehab-swiper__aside-item aside-item">
-                        <div class="aside-item__bg-wrap">
-                          <svg class="aside-item__bg-img" width="32" height="171">
-                            <use xlink:href="img/sprite.svg#figure-aside-item-d"></use>
-                          </svg>
-                        </div>
-                        <p class="aside-item__desc">Партнер портала</p>
-                      </div>
-
-                    </a>
-                  </div>
+                    <div class="rehab-swiper__aside-item aside-item">
+                      <p class="aside-item__desc">Партнер портала</p>
+                    </div>
+                  </a>
 
                   <button class="rehab-swiper__btn-compare btn-compare">
                     <svg class="btn-compare__icon icon-compare" width="15" height="15">
@@ -561,40 +510,30 @@
                     <span class="btn-compare__desc btn-compare__not-selected">Сравнить центр</span>
                     <span class="btn-compare__desc btn-compare__selected">Добавлен</span>
                   </button>
-
                 </div>
               </div>
 
-              <div class="swiper-slide">
-                <div class="rehab-swiper__hover">
+              <!-- Класс "benefit" добавляет элемент "Партнёр портала".
+                Этот класс следует добавлять динамически при необходимости.
+                Для перебора через цикл этот класс можно удалить -->
 
-                  <!-- Класс "benefit" добавляет элемент "Партнёр портала".
-                  Этот класс следует добавлять динамически при необходимости.
-                  Для перебора через цикл этот класс можно удалить -->
+              <div class="benefit swiper-slide rehab-swiper__slide">
+                <div class="rehab-swiper__item">
+                  <a class="rehab-swiper__link" href="rehab-page.html">
+                    <div class="rehab-swiper__text-wrap">
+                      <p class="rehab-swiper__title">Решение</p>
+                      <p class="rehab-swiper__desc section-desc">Россия, Москва</p>
+                      <p class="rehab-swiper__cost">80 000 руб./мес.</p>
+                    </div>
 
-                  <div class="benefit rehab-swiper__item rehab-swiper__slide">
-                    <a class="rehab-swiper__link" href="rehab-page.html">
-                      <div class="rehab-swiper__text-wrap">
-                        <p class="rehab-swiper__title">Решение</p>
-                        <p class="rehab-swiper__desc section-desc">Россия, Москва</p>
-                        <p class="rehab-swiper__cost">80 000 руб./мес.</p>
-                      </div>
+                    <div class="rehab-swiper__img-wrap">
+                      <img class="rehab-swiper__img" src="img/swiper/rehab-swiper/4.png" alt="">
+                    </div>
 
-                      <div class="rehab-swiper__img-wrap">
-                        <img class="rehab-swiper__img" src="img/swiper/rehab-swiper/4.png" alt="">
-                      </div>
-
-                      <div class="rehab-swiper__aside-item aside-item">
-                        <div class="aside-item__bg-wrap">
-                          <svg class="aside-item__bg-img" width="32" height="171">
-                            <use xlink:href="img/sprite.svg#figure-aside-item-d"></use>
-                          </svg>
-                        </div>
-                        <p class="aside-item__desc">Партнер портала</p>
-                      </div>
-
-                    </a>
-                  </div>
+                    <div class="rehab-swiper__aside-item aside-item">
+                      <p class="aside-item__desc">Партнер портала</p>
+                    </div>
+                  </a>
 
                   <button class="rehab-swiper__btn-compare btn-compare">
                     <svg class="btn-compare__icon icon-compare" width="15" height="15">
@@ -603,35 +542,26 @@
                     <span class="btn-compare__desc btn-compare__not-selected">Сравнить центр</span>
                     <span class="btn-compare__desc btn-compare__selected">Добавлен</span>
                   </button>
-
                 </div>
               </div>
 
-              <div class="swiper-slide">
-                <div class="rehab-swiper__hover">
-                  <div class="rehab-swiper__item rehab-swiper__slide">
-                    <a class="rehab-swiper__link" href="rehab-page.html">
-                      <div class="rehab-swiper__text-wrap">
-                        <p class="rehab-swiper__title">Архангел Гавриил</p>
-                        <p class="rehab-swiper__desc section-desc">Россия, Москва</p>
-                        <p class="rehab-swiper__cost">80 000 руб./мес.</p>
-                      </div>
+              <div class="swiper-slide rehab-swiper__slide">
+                <div class="rehab-swiper__item">
+                  <a class="rehab-swiper__link" href="rehab-page.html">
+                    <div class="rehab-swiper__text-wrap">
+                      <p class="rehab-swiper__title">Архангел Гавриил</p>
+                      <p class="rehab-swiper__desc section-desc">Россия, Москва</p>
+                      <p class="rehab-swiper__cost">80 000 руб./мес.</p>
+                    </div>
 
-                      <div class="rehab-swiper__img-wrap">
-                        <img class="rehab-swiper__img" src="img/swiper/rehab-swiper/1.png" alt="">
-                      </div>
+                    <div class="rehab-swiper__img-wrap">
+                      <img class="rehab-swiper__img" src="img/swiper/rehab-swiper/1.png" alt="">
+                    </div>
 
-                      <div class="rehab-swiper__aside-item aside-item">
-                        <div class="aside-item__bg-wrap">
-                          <svg class="aside-item__bg-img" width="32" height="171">
-                            <use xlink:href="img/sprite.svg#figure-aside-item-d"></use>
-                          </svg>
-                        </div>
-                        <p class="aside-item__desc">Партнер портала</p>
-                      </div>
-
-                    </a>
-                  </div>
+                    <div class="rehab-swiper__aside-item aside-item">
+                      <p class="aside-item__desc">Партнер портала</p>
+                    </div>
+                  </a>
 
                   <button class="rehab-swiper__btn-compare btn-compare">
                     <svg class="btn-compare__icon icon-compare" width="15" height="15">
@@ -640,40 +570,26 @@
                     <span class="btn-compare__desc btn-compare__not-selected">Сравнить центр</span>
                     <span class="btn-compare__desc btn-compare__selected">Добавлен</span>
                   </button>
-
                 </div>
               </div>
 
-              <div class="swiper-slide">
-                <div class="rehab-swiper__hover">
+              <div class="benefit swiper-slide rehab-swiper__slide">
+                <div class="rehab-swiper__item">
+                  <a class="rehab-swiper__link" href="rehab-page.html">
+                    <div class="rehab-swiper__text-wrap">
+                      <p class="rehab-swiper__title">Решение</p>
+                      <p class="rehab-swiper__desc section-desc">Россия, Москва</p>
+                      <p class="rehab-swiper__cost">80 000 руб./мес.</p>
+                    </div>
 
-                  <!-- Класс "benefit" добавляет элемент "Партнёр портала".
-                  Этот класс следует добавлять динамически при необходимости.
-                  Для перебора через цикл этот класс можно удалить -->
+                    <div class="rehab-swiper__img-wrap">
+                      <img class="rehab-swiper__img" src="img/swiper/rehab-swiper/2.png" alt="">
+                    </div>
 
-                  <div class="benefit rehab-swiper__item rehab-swiper__slide">
-                    <a class="rehab-swiper__link" href="rehab-page.html">
-                      <div class="rehab-swiper__text-wrap">
-                        <p class="rehab-swiper__title">Решение</p>
-                        <p class="rehab-swiper__desc section-desc">Россия, Москва</p>
-                        <p class="rehab-swiper__cost">80 000 руб./мес.</p>
-                      </div>
-
-                      <div class="rehab-swiper__img-wrap">
-                        <img class="rehab-swiper__img" src="img/swiper/rehab-swiper/2.png" alt="">
-                      </div>
-
-                      <div class="rehab-swiper__aside-item aside-item">
-                        <div class="aside-item__bg-wrap">
-                          <svg class="aside-item__bg-img" width="32" height="171">
-                            <use xlink:href="img/sprite.svg#figure-aside-item-d"></use>
-                          </svg>
-                        </div>
-                        <p class="aside-item__desc">Партнер портала</p>
-                      </div>
-
-                    </a>
-                  </div>
+                    <div class="rehab-swiper__aside-item aside-item">
+                      <p class="aside-item__desc">Партнер портала</p>
+                    </div>
+                  </a>
 
                   <button class="rehab-swiper__btn-compare btn-compare">
                     <svg class="btn-compare__icon icon-compare" width="15" height="15">
@@ -682,40 +598,26 @@
                     <span class="btn-compare__desc btn-compare__not-selected">Сравнить центр</span>
                     <span class="btn-compare__desc btn-compare__selected">Добавлен</span>
                   </button>
-
                 </div>
               </div>
 
-              <div class="swiper-slide">
-                <div class="rehab-swiper__hover">
+              <div class="swiper-slide rehab-swiper__slide">
+                <div class="rehab-swiper__item">
+                  <a class="rehab-swiper__link" href="rehab-page.html">
+                    <div class="rehab-swiper__text-wrap">
+                      <p class="rehab-swiper__title">Архангел Гавриил</p>
+                      <p class="rehab-swiper__desc section-desc">Россия, Москва</p>
+                      <p class="rehab-swiper__cost">80 000 руб./мес.</p>
+                    </div>
 
-                  <!-- Класс "benefit" добавляет элемент "Партнёр портала".
-                  Этот класс следует добавлять динамически при необходимости.
-                  Для перебора через цикл этот класс можно удалить -->
+                    <div class="rehab-swiper__img-wrap">
+                      <img class="rehab-swiper__img" src="img/swiper/rehab-swiper/3.png" alt="">
+                    </div>
 
-                  <div class="benefit rehab-swiper__item rehab-swiper__slide">
-                    <a class="rehab-swiper__link" href="rehab-page.html">
-                      <div class="rehab-swiper__text-wrap">
-                        <p class="rehab-swiper__title">Решение</p>
-                        <p class="rehab-swiper__desc section-desc">Россия, Москва</p>
-                        <p class="rehab-swiper__cost">80 000 руб./мес.</p>
-                      </div>
-
-                      <div class="rehab-swiper__img-wrap">
-                        <img class="rehab-swiper__img" src="img/swiper/rehab-swiper/2.png" alt="">
-                      </div>
-
-                      <div class="rehab-swiper__aside-item aside-item">
-                        <div class="aside-item__bg-wrap">
-                          <svg class="aside-item__bg-img" width="32" height="171">
-                            <use xlink:href="img/sprite.svg#figure-aside-item-d"></use>
-                          </svg>
-                        </div>
-                        <p class="aside-item__desc">Партнер портала</p>
-                      </div>
-
-                    </a>
-                  </div>
+                    <div class="rehab-swiper__aside-item aside-item">
+                      <p class="aside-item__desc">Партнер портала</p>
+                    </div>
+                  </a>
 
                   <button class="rehab-swiper__btn-compare btn-compare">
                     <svg class="btn-compare__icon icon-compare" width="15" height="15">
@@ -724,39 +626,26 @@
                     <span class="btn-compare__desc btn-compare__not-selected">Сравнить центр</span>
                     <span class="btn-compare__desc btn-compare__selected">Добавлен</span>
                   </button>
-
                 </div>
               </div>
-              <div class="swiper-slide">
-                <div class="rehab-swiper__hover">
 
-                  <!-- Класс "benefit" добавляет элемент "Партнёр портала".
-                  Этот класс следует добавлять динамически при необходимости.
-                  Для перебора через цикл этот класс можно удалить -->
+              <div class="benefit swiper-slide rehab-swiper__slide">
+                <div class="rehab-swiper__item">
+                  <a class="rehab-swiper__link" href="rehab-page.html">
+                    <div class="rehab-swiper__text-wrap">
+                      <p class="rehab-swiper__title">Решение</p>
+                      <p class="rehab-swiper__desc section-desc">Россия, Москва</p>
+                      <p class="rehab-swiper__cost">80 000 руб./мес.</p>
+                    </div>
 
-                  <div class="benefit rehab-swiper__item rehab-swiper__slide">
-                    <a class="rehab-swiper__link" href="rehab-page.html">
-                      <div class="rehab-swiper__text-wrap">
-                        <p class="rehab-swiper__title">Решение</p>
-                        <p class="rehab-swiper__desc section-desc">Россия, Москва</p>
-                        <p class="rehab-swiper__cost">80 000 руб./мес.</p>
-                      </div>
+                    <div class="rehab-swiper__img-wrap">
+                      <img class="rehab-swiper__img" src="img/swiper/rehab-swiper/4.png" alt="">
+                    </div>
 
-                      <div class="rehab-swiper__img-wrap">
-                        <img class="rehab-swiper__img" src="img/swiper/rehab-swiper/2.png" alt="">
-                      </div>
-
-                      <div class="rehab-swiper__aside-item aside-item">
-                        <div class="aside-item__bg-wrap">
-                          <svg class="aside-item__bg-img" width="32" height="171">
-                            <use xlink:href="img/sprite.svg#figure-aside-item-d"></use>
-                          </svg>
-                        </div>
-                        <p class="aside-item__desc">Партнер портала</p>
-                      </div>
-
-                    </a>
-                  </div>
+                    <div class="rehab-swiper__aside-item aside-item">
+                      <p class="aside-item__desc">Партнер портала</p>
+                    </div>
+                  </a>
 
                   <button class="rehab-swiper__btn-compare btn-compare">
                     <svg class="btn-compare__icon icon-compare" width="15" height="15">
@@ -765,91 +654,9 @@
                     <span class="btn-compare__desc btn-compare__not-selected">Сравнить центр</span>
                     <span class="btn-compare__desc btn-compare__selected">Добавлен</span>
                   </button>
-
                 </div>
               </div>
-              <div class="swiper-slide">
-                <div class="rehab-swiper__hover">
 
-                  <!-- Класс "benefit" добавляет элемент "Партнёр портала".
-                  Этот класс следует добавлять динамически при необходимости.
-                  Для перебора через цикл этот класс можно удалить -->
-
-                  <div class="benefit rehab-swiper__item rehab-swiper__slide">
-                    <a class="rehab-swiper__link" href="rehab-page.html">
-                      <div class="rehab-swiper__text-wrap">
-                        <p class="rehab-swiper__title">Решение</p>
-                        <p class="rehab-swiper__desc section-desc">Россия, Москва</p>
-                        <p class="rehab-swiper__cost">80 000 руб./мес.</p>
-                      </div>
-
-                      <div class="rehab-swiper__img-wrap">
-                        <img class="rehab-swiper__img" src="img/swiper/rehab-swiper/2.png" alt="">
-                      </div>
-
-                      <div class="rehab-swiper__aside-item aside-item">
-                        <div class="aside-item__bg-wrap">
-                          <svg class="aside-item__bg-img" width="32" height="171">
-                            <use xlink:href="img/sprite.svg#figure-aside-item-d"></use>
-                          </svg>
-                        </div>
-                        <p class="aside-item__desc">Партнер портала</p>
-                      </div>
-
-                    </a>
-                  </div>
-
-                  <button class="rehab-swiper__btn-compare btn-compare">
-                    <svg class="btn-compare__icon icon-compare" width="15" height="15">
-                      <use xlink:href="img/sprite.svg#icon-compare"></use>
-                    </svg>
-                    <span class="btn-compare__desc btn-compare__not-selected">Сравнить центр</span>
-                    <span class="btn-compare__desc btn-compare__selected">Добавлен</span>
-                  </button>
-
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="rehab-swiper__hover">
-
-                  <!-- Класс "benefit" добавляет элемент "Партнёр портала".
-                  Этот класс следует добавлять динамически при необходимости.
-                  Для перебора через цикл этот класс можно удалить -->
-
-                  <div class="benefit rehab-swiper__item rehab-swiper__slide">
-                    <a class="rehab-swiper__link" href="rehab-page.html">
-                      <div class="rehab-swiper__text-wrap">
-                        <p class="rehab-swiper__title">Решение</p>
-                        <p class="rehab-swiper__desc section-desc">Россия, Москва</p>
-                        <p class="rehab-swiper__cost">80 000 руб./мес.</p>
-                      </div>
-
-                      <div class="rehab-swiper__img-wrap">
-                        <img class="rehab-swiper__img" src="img/swiper/rehab-swiper/2.png" alt="">
-                      </div>
-
-                      <div class="rehab-swiper__aside-item aside-item">
-                        <div class="aside-item__bg-wrap">
-                          <svg class="aside-item__bg-img" width="32" height="171">
-                            <use xlink:href="img/sprite.svg#figure-aside-item-d"></use>
-                          </svg>
-                        </div>
-                        <p class="aside-item__desc">Партнер портала</p>
-                      </div>
-
-                    </a>
-                  </div>
-
-                  <button class="rehab-swiper__btn-compare btn-compare">
-                    <svg class="btn-compare__icon icon-compare" width="15" height="15">
-                      <use xlink:href="img/sprite.svg#icon-compare"></use>
-                    </svg>
-                    <span class="btn-compare__desc btn-compare__not-selected">Сравнить центр</span>
-                    <span class="btn-compare__desc btn-compare__selected">Добавлен</span>
-                  </button>
-
-                </div>
-              </div>
             </div>
 
             <div class="swiper-arrows-wrap rehab-swiper__arrows-wrap">
@@ -1310,9 +1117,6 @@
           </a>
 
           <button class="footer__link-modal-region btn-region-1 modal-region">
-            <svg class="btn-region-1__icon icon-region-1" width="18" height="23">
-              <use xlink:href="img/sprite.svg#icon-region-1"></use>
-            </svg>
             Россия
           </button>
 
@@ -1373,5 +1177,25 @@
 
     <script src="js/main.js"></script>
     <script src="js/slider.js"></script>
+
+    <svg style="position: absolute; z-index: -1; width: 0px; height: 0px;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <defs>
+        <clipPath id="clip-small-top" clipPathUnits="objectBoundingBox">
+          <path d=" M 0 0.345 C 0 0.248 0.103 0.17 0.23 0.17 L 0.5 0.17 L 0.782 0.17 C 0.905 0.17 1.003 0.093 1 0 L 1 0.825 C 1 0.922 0.897 1 0.77 1 L 0.23 1 C 0.103 1 0 0.922 0 0.825 L 0 0.345 Z "/>
+        </clipPath>
+        <filter id="filter-small-top" x="0" y="0.724609" width="370" height="440.275" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+          <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+          <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+          <feOffset dx="20" dy="40"/>
+          <feGaussianBlur stdDeviation="30"/>
+          <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+          <feBlend mode="normal" in2="shape" result="effect1_innerShadow"/>
+        </filter>
+      </defs>
+    </svg>
+
+
   </body>
 </html>

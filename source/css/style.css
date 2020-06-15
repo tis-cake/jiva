@@ -35,8 +35,8 @@
 }
 @font-face {
   font-display: swap;
-  font-family: 'Blaster';
-  src: local('Blaster'), local('Blaster Italic'), local('Blaster-Italic'), url('../fonts/blaster/regular/BlasterIt.ttf') format('truetype');
+  font-family: 'BlasterIt';
+  src: local('BlasterIt'), local('Blaster Italic'), local('Blaster-Italic'), url('../fonts/Blaster/regular/BlasterIt.ttf') format('truetype');
   font-weight: 400;
   font-style: italic;
 }
@@ -402,7 +402,8 @@ input[type="radio"].visually-hidden {
 }
 .blaster {
   display: inline-block;
-  font-family: 'Blaster', 'Arial', sans-serif;
+  font-family: 'BlasterIt', 'Arial', sans-serif;
+  font-style: italic;
 }
 .blaster--green {
   color: #41C4A5;
@@ -540,7 +541,20 @@ input[type="radio"].visually-hidden {
   display: flex;
   align-items: center;
   color: inherit;
+  padding-left: 2rem;
   transition: 0.5s;
+}
+.btn-region-1::before {
+  position: absolute;
+  content: '';
+  top: -0.1rem;
+  left: -0.2rem;
+  width: 1.8rem;
+  height: 2.3rem;
+  background-image: url('../img/svg/region-1-w.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .btn-region-1__icon {
   margin-right: 0.4rem;
@@ -549,18 +563,7 @@ input[type="radio"].visually-hidden {
 .btn-region-1:hover,
 .btn-region-1:focus {
   outline: none;
-}
-.btn-region-1:hover .btn-region-1__icon,
-.btn-region-1:focus .btn-region-1__icon {
-  color: #000;
-}
-.btn-region-1--color-inherit:hover,
-.btn-region-1--color-inherit:focus {
   opacity: 0.7;
-}
-.btn-region-1--color-inherit:hover .btn-region-1__icon,
-.btn-region-1--color-inherit:focus .btn-region-1__icon {
-  color: inherit;
 }
 .btn-region-2 {
   position: relative;
@@ -575,6 +578,7 @@ input[type="radio"].visually-hidden {
   position: absolute;
   left: -3rem;
   color: #CACACA;
+  transition: inherit;
 }
 .btn-region-2::before {
   content: '';
@@ -661,10 +665,6 @@ input[type="radio"].visually-hidden {
 }
 .icon-close {
   width: 2.3rem;
-  height: 2.3rem;
-}
-.icon-region-1 {
-  width: 1.8rem;
   height: 2.3rem;
 }
 .icon-region-2 {
@@ -819,7 +819,7 @@ input[type="radio"].visually-hidden {
   text-shadow: #291C22 3px 3px 0, #291C22 -3px -3px 0, #291C22 -3px 3px 0, #291C22 3px -3px 0;
   -webkit-text-stroke-width: 0.26rem;
 }
-.logo-big .logo__title .logo__icon {
+.logo-big .logo__icon {
   left: -2.2rem;
   width: 2.8rem;
   height: 2.8rem;
@@ -858,6 +858,8 @@ input[type="radio"].visually-hidden {
 }
 .logo-middle .logo__icon {
   left: -1.8rem;
+  width: 2.1rem;
+  height: 2rem;
   fill: #413B4A;
   stroke-width: 0.05rem;
   stroke: #fff;
@@ -1394,8 +1396,8 @@ input[type="radio"].visually-hidden {
 }
 .services__item-title {
   margin-bottom: 1.4rem;
-  padding-left: 3rem;
-  padding-right: 3rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
   font-weight: 700;
   font-size: 3rem;
   line-height: 3.5rem;
@@ -1518,16 +1520,18 @@ input[type="radio"].visually-hidden {
   padding-right: 1rem;
   color: #393544;
 }
-.aside-item__bg-wrap {
+.aside-item::before {
   position: absolute;
-  transform: rotate(90deg);
-  top: -7.3rem;
-  left: 5.7rem;
-}
-.aside-item__bg-img {
+  content: '';
+  top: -7rem;
+  left: 6rem;
   width: 3.2rem;
   height: 17.1rem;
-  fill: #fff;
+  background-image: url('../img/figure/figure-aside-item-d.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transform: rotate(90deg);
 }
 .aside-item__desc {
   position: relative;
@@ -1560,7 +1564,7 @@ input[type="radio"].visually-hidden {
 .stages__title {
   align-self: flex-start;
   margin-bottom: 1.4rem;
-  font-family: 'Blaster', 'Arial', sans-serif;
+  font-family: 'BlasterIt', 'Arial', sans-serif;
   font-style: italic;
   font-size: 3rem;
   line-height: 3.5rem;
@@ -1589,7 +1593,7 @@ input[type="radio"].visually-hidden {
   left: -0.6rem;
   width: 100%;
   height: 41.7rem;
-  background-image: url('../img/svg/figure-stages-d.svg');
+  background-image: url('../img/figure/figure-stages-d.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1792,22 +1796,19 @@ input[type="radio"].visually-hidden {
 .rehab-swiper__btn-region {
   padding-top: 0.5rem;
 }
-.rehab-swiper__hover {
-  width: 30.5rem;
-  border-radius: 7rem;
-}
 .rehab-swiper__item {
   box-sizing: border-box;
   overflow: hidden;
   position: relative;
-  width: 100%;
+  width: 30.5rem;
   height: 50.5rem;
   background-image: linear-gradient(180deg, #FFFFFF 0%, #E6F1FD 100%);
   border-radius: 7rem;
   transition: 0.5s;
 }
 .rehab-swiper__item.tab-focus,
-.rehab-swiper__item:hover {
+.rehab-swiper__item:hover,
+.rehab-swiper__item:focus {
   box-shadow: 0px 30px 50px #B7C3DF;
 }
 .rehab-swiper__text-wrap {
@@ -1817,27 +1818,14 @@ input[type="radio"].visually-hidden {
   padding-left: 3.2rem;
   padding-right: 3.2rem;
 }
-.rehab-swiper__text-wrap::before {
-  position: absolute;
-  content: '';
-  z-index: -1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 51rem;
-  background-image: url('../img/figure/clip-small-top.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
 .rehab-swiper__title {
-  font-family: 'Blaster', 'Arial', sans-serif;
+  font-family: 'BlasterIt', 'Arial', sans-serif;
   font-style: italic;
   font-size: 2.5rem;
   line-height: 3.5rem;
 }
 .rehab-swiper__desc {
-  margin-bottom: 1rem;
+  margin-bottom: 0.7rem;
 }
 .rehab-swiper__cost {
   font-weight: 700;
@@ -1851,8 +1839,10 @@ input[type="radio"].visually-hidden {
   width: 100%;
   height: 39.8rem;
   /* свг-маска */
-  -webkit-filter: url(../#filter-small-top);
-          filter: url(../#filter-small-top);
+  -webkit-clip-path: url(../#clip-small-top);
+          clip-path: url(../#clip-small-top);
+  -webkit-filter: url(../img/sprite.svg#filter-small-top);
+          filter: url(../img/sprite.svg#filter-small-top);
 }
 .rehab-swiper__img-wrap::before,
 .rehab-swiper__img-wrap::after {
@@ -1863,8 +1853,6 @@ input[type="radio"].visually-hidden {
 .rehab-swiper__img-wrap::before {
   bottom: 0;
   left: 0;
-  height: 33rem;
-  height: 100%;
   height: 37.8rem;
   border-radius: 7rem 0 7rem 7rem;
   box-shadow: inset 20px 40px 60px rgba(0, 0, 0, 0.25);
@@ -1879,12 +1867,12 @@ input[type="radio"].visually-hidden {
 .rehab-swiper__btn-compare {
   position: absolute;
   z-index: 1;
-  bottom: 1rem;
+  bottom: 1.4rem;
   left: 3.5rem;
 }
 .rehab-swiper__aside-item {
   display: none;
-  bottom: 13.5rem;
+  bottom: 13.7rem;
 }
 .benefit .rehab-swiper__aside-item {
   display: flex;
@@ -2023,6 +2011,9 @@ input[type="radio"].visually-hidden {
 }
 .footer__link-modal-region .btn-region-1__icon {
   color: #A6B2C6;
+}
+.footer__link-modal-region::before {
+  top: -0.5rem;
 }
 .aside-link {
   box-sizing: border-box;
