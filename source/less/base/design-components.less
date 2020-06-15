@@ -4,11 +4,11 @@
   position: relative;
 
   display: inline-block;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 1rem;
+  margin-right: 1rem;
 
   font-family: @daVinci;
-  font-size: 44px;
+  font-size: 4.4rem;
   // line-height: 77px;
   letter-spacing: -0.02em;
   text-transform: initial;
@@ -34,8 +34,8 @@
   justify-content: center;
   align-items: center;
 
-  width: 37px;
-  height: 37px;
+  width: 3.7rem;
+  height: 3.7rem;
 
   border-radius: 50%;
   background-color: @white;
@@ -54,10 +54,10 @@
   &::before {
     content: '';
     position: absolute;
-    left: -1px;
+    left: -0.1rem;
 
-    width: 7px;
-    height: 7px;
+    width: 0.7rem;
+    height: 0.7rem;
 
     border-radius: 50%;
 
@@ -73,25 +73,25 @@
   justify-content: center;
   align-items: center;
 
-  width: 255px;
-  height: 57px;
+  width: 25.5rem;
+  height: 5.7rem;
 
   font-weight: 700;
-  font-size: 17px;
+  font-size: 1.7rem;
   text-align: center;
 
-  border-radius: 10px;
+  border-radius: 1rem;
 
   transition: @s;
 
   &__decor-line {
     position: absolute;
-    bottom: -2px;
+    bottom: -0.2rem;
     left: 50%;
     transform: translateX(-50%);
 
-    width: 88px;
-    height: 5px;
+    width: 8.8rem;
+    height: 0.5rem;
 
     background-color: @emerald;
 
@@ -105,17 +105,17 @@
 
       height: 0;
       width: 0;
-      border-top: 5px solid transparent;
+      border-top: 0.5rem solid transparent;
     }
 
     &::before {
-      left: -3px;
-      border-right: 3px solid @emerald;
+      left: -0.3rem;
+      border-right: 0.3rem solid @emerald;
     }
 
     &::after {
-      right: -3px;
-      border-left: 3px solid @emerald;
+      right: -0.3rem;
+      border-left: 0.3rem solid @emerald;
     }
   }
 
@@ -130,7 +130,7 @@
   &--dark {
     color: #fff;
     background-color: @btn-dark-bg;
-    border: 2px solid @btn-dark-border;
+    border: 0.2rem solid @btn-dark-border;
     box-shadow: 10px 10px 40px rgba(62, 53, 75, 0.29);
     &:hover,
     &:focus {
@@ -140,7 +140,7 @@
   &--white {
     color: @dark;
     background-color: @btn-white-bg;
-    border: 2px solid @btn-white-border;
+    border: 0.2rem solid @btn-white-border;
     // box-shadow: #C8D9EC;
     box-shadow: 10px 10px 40px #C8D9EC;
     &:hover,
@@ -151,9 +151,9 @@
     }
   }
   &--longer {
-    width: 305px;
+    width: 30.5rem;
     .btn-modal__decor-line {
-      width: 130px;
+      width: 13.0rem;
     }
   }
 }
@@ -163,12 +163,12 @@
   justify-content: center;
   align-items: center;
 
-  width: 70px;
-  height: 82px;
+  width: 7rem;
+  height: 8.2rem;
 
   background-color: #FFFFFF;
   box-shadow: 8px 8px 15px #D5E1F3;
-  border-radius: 90px;
+  border-radius: 9rem;
 
   transition: @s;
 
@@ -197,7 +197,7 @@
   transition: @s;
 
   &__icon {
-    margin-right: 4px;
+    margin-right: 0.4rem;
     transition: inherit;
   }
 
@@ -227,16 +227,16 @@
   align-self: flex-start;
 
   // width: 304px;
-  width: 273px;
+  width: 27.3rem;
 
   font-weight: 700;
-  font-size: 17px;
+  font-size: 1.7rem;
 
   transition: @s;
 
   &__icon {
     position: absolute;
-    left: -30px;
+    left: -3rem;
 
     color: #CACACA;
 
@@ -248,14 +248,14 @@
     position: absolute;
     // left: 33px;
     // bottom: 9px;
-    bottom: -6px;
+    bottom: -0.6rem;
 
     // width: 270px;
     width: 100%;
-    height: 3px;
+    height: 0.3rem;
 
     background-color: @red;
-    border-radius: 9px;
+    border-radius: 0.9rem;
 
     transition: inherit;
   }
@@ -276,24 +276,24 @@
   display: flex;
   align-items: center;
 
-  width: 148px;
-  height: 29px;
+  width: 14.8rem;
+  height: 2.9rem;
   // padding-left: 20px;
-  padding-left: 27px;
+  padding-left: 2.7rem;
 
   font-weight: 700;
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #fff;
 
   background-color: rgba(35, 46, 62, 0.64);
-  border-radius: 90px;
+  border-radius: 9rem;
 
   transition: @s;
 
   &__icon {
     position: absolute;
-    top: 4px;
-    left: 7px;
+    top: 0.4rem;
+    left: 0.7rem;
     fill: #fff;
 
     transition: inherit;
@@ -343,13 +343,13 @@
 
 .section-title {
   font-weight: 700;
-  font-size: 38px;
-  line-height: 40px;
+  font-size: 3.8rem;
+  line-height: 4rem;
 }
 
 .section-desc {
   color: @light-gray;
-  line-height: 27px;
+  line-height: 2.7rem;
 }
 
 /* icons */
