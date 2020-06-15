@@ -20,6 +20,11 @@
     height: 93px;
   }
 
+  &--middle {
+    width: 216px;
+    height: 216px;
+  }
+
   &--big {
     width: 312px;
     height: 312px;
@@ -58,29 +63,35 @@
 
   &-decor {
     position: relative;
-    // width: 6px;
-    // height: 6px;
-    &::before {
-      content: '';
-      z-index: 1;
-      position: absolute;
-      // top: 50%;
-      top: 43%;
-      left: -10px;
+    // &::before {
+    //   content: '';
+    //   z-index: 1;
+    //   position: absolute;
+    //   // top: 50%;
+    //   top: 43%;
+    //   left: -10px;
 
-      width: 14px;
-      height: 14px;
+    //   width: 14px;
+    //   height: 14px;
 
-      background-image: url('../img/logo/icon-logo-star.svg');
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
-    }
+    //   background-image: url('../img/logo/icon-logo-star.svg');
+    //   background-repeat: no-repeat;
+    //   background-position: center;
+    //   background-size: contain;
+    // }
   }
 }
 
-.logo__desc {
+.logo__icon {
+  position: absolute;
+  top: 42%;
+  left:-11px;
+  fill: #fff;
+  stroke: @brown;
+  stroke-width: 1;
+}
 
+.logo__desc {
   font-family: @circe;
   font-size: 16px;
   text-transform: uppercase;
@@ -100,14 +111,20 @@
       .text-stroke(@brown, 3px);
       -webkit-text-stroke-width: 2.6px;
     }
-    &-decor {
-      &::before {
-        top: 40%;
-        left: -23px;
+    // &-decor {
+      // &::before {
+        // top: 40%;
+        // left: -23px;
 
-        width: 28px;
-        height: 28px;
-      }
+        // width: 28px;
+        // height: 28px;
+      // }
+    // }
+    .logo__icon {
+      // top: 40%;
+      left: -22px;
+      width: 28px;
+      height: 28px;
     }
   }
   .logo__desc {
@@ -116,6 +133,42 @@
     text-align: center;
   }
 }
+
+.logo-middle {
+  font-size: 68px;
+  // color: @dark-gray;
+  .logo__img {
+    // object-position: -13px -20px;
+    object-position: -5px -19px;
+  }
+  .logo__title {
+    .text-stroke(#fff, 2px);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: @dark-gray;
+
+    &--absolute {
+      width: auto;
+      top: 78px;
+      bottom: auto;
+      left: auto;
+      // right: 46px;
+      right: 52px;
+    }
+
+    &--red {
+      .text-stroke(#fff, 2px);
+      -webkit-text-stroke-width: 2px;
+    }
+  }
+  .logo__icon {
+    // top: 45%;
+    left: -18px;
+    fill: @dark-gray;
+    stroke-width: 0.5px;
+    stroke: #fff;
+  }
+}
+
 
 
 
