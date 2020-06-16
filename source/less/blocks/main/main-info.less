@@ -2,8 +2,9 @@
   position: relative;
 
   display: flex;
-  // align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  // justify-content: center;
 
   // margin-bottom: 100px;
   // padding-bottom: 240px;
@@ -48,12 +49,14 @@
 
 .main-info__aside-left {
   position: absolute;
-  width: 22.5rem;
 
   top: 12.2rem;
   right: 50%;
   transform: translateX(59.2rem);
 
+  display: flex;
+  flex-direction: column;
+  width: 22.5rem;
 }
 
 .main-info__aside-left-desc {
@@ -132,6 +135,91 @@
     @media (min-width: @max-desktop-width) {
       // top: 22.8125vw;
       height: 58.697vw;
+    }
+  }
+}
+
+@media (max-width: @tablet-width) {
+  .main-info {
+    // padding-bottom: 27.7rem;
+    padding-bottom: 30.4rem;
+
+    .padding-inline(2rem);
+
+    &--white-overlay {
+      &::before {
+        height: 90rem;
+      }
+    }
+  }
+
+  .main-info__bg {
+    top: -182px;
+    width: 808.23px;
+    height: 847.33px;
+  }
+
+  .main-info__logo {
+    margin-top: 1.5rem;
+  }
+
+  .main-info__aside-left {
+    position: relative;
+
+    top: auto;
+    right: auto;
+    transform: none;
+
+    width: auto;
+    margin-top: 2.1rem;
+
+    text-align: center;
+  }
+
+  .main-info__aside-left-desc {
+    margin-bottom: 8px;
+    font-size: 18px;
+    &--gold {
+      display: inline-block;
+      font-size: 20px;
+    }
+    &--light {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  .main-info__aside-btn-modal {
+    order: -1;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .main-info__decor {
+    position: absolute;
+    z-index: -1;
+
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &-one {
+      width: 368px;
+      height: 368px;
+
+      // top: 538px;
+      top: 529px;
+      // left: -4px;
+      // transform: none;
+      transform: translateX(-210px);
+    }
+
+    &-two {
+      height: 983px;
+      top: 47.3rem;
+      // left: 50%;
+      // transform: translateX(-50%);
+
+      background-image: url('../img/main-info/1-2-m.svg');
     }
   }
 }

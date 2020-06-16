@@ -353,6 +353,26 @@
   }
 }
 
+.btn-tel {
+  width: 2.8rem;
+  height: 2.8rem;
+
+  color: #000;
+
+  transition: @s;
+
+  // border-radius: 8.5px;
+  // background-color: #fff;
+
+  &__icon {}
+
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.7;
+  }
+}
+
 /* shapes */
 
 .aside-item {
@@ -420,20 +440,43 @@
 
 /* меняем цвет через color, так как внутри currentColor */
 #icon-region-1 {
-  transition: @s;
-  path {
+  // transition: @s;
+  // path {
     // fill: red;
-  }
-  circle {
+  // }
+  // circle {
     // stroke: red;
-  }
+  // }
 }
 
 /* меняем цвет через color, так как внутри currentColor */
 #icon-region-2 {
-  transition: @s;
+  // transition: @s;
   // fill: red;
-  path {
+  // path {
     // stroke: red;
+  // }
+}
+
+.icon-tel {
+  color: currentColor;
+  --btn-tel-bg: #fff;
+}
+
+@media (max-width: @tablet-width) {
+  .DaVinci {
+    font-size: 3rem;
+  }
+
+  .btn-modal {
+    width: 32.4rem;
+    height: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.5rem;
+
+    &__decor-line {
+      width: 11rem;
+    }
   }
 }

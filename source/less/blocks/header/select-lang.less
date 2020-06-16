@@ -117,3 +117,10 @@
 
   background-color: @brown;
 }
+
+@media (max-width: @tablet-width) {
+  .custom-select__option--value::after,
+  .select-lang::after {
+    right: 6px;
+  }
+}
