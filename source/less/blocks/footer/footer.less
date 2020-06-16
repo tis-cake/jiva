@@ -76,88 +76,63 @@
   }
 }
 
-// @media (max-width: @mobile-width) {
-//   .footer {
-//     padding-top: @m87px;
-//     padding-bottom: @m87px;
-//   }
+@media (max-width: @mobile-width) {
+  .footer {
+    // padding-top: 8.5rem;
+    // padding-bottom: 8.5rem;
+    // background-color: #F8FBFF;
+  }
 
-//   .footer__wrapper {
-//     flex-wrap: wrap;
-//   }
+  .footer__wrapper {
+    flex-wrap: wrap;
+  }
 
-//   .footer__list {
-//     &--right {
-//       text-align: left;
-//     }
-//   }
+  .footer__list {
+    width: 45%;
+    &--right {
+      text-align: left;
+    }
+  }
 
-//   .footer__item,
-//   .footer__item-link {
-//     font-size: @m29px;
-//   }
+  .footer__item,
+  .footer__item-link {
+    font-size: 1.5rem;
+  }
 
-//   .footer__item {
-//     margin-bottom: @m36px;
-//   }
+  .footer__item {
+    margin-bottom: 1.9rem;
+  }
 
-//   .footer__center-column {
-//     order: 3;
-//     margin-top: @m90px;
-//     margin-left: @m20px;
-//   }
+  .footer__link {}
 
-//   .footer__logo {
-//     display: flex;
-//     flex-direction: row;
+  .footer__center-column {
+    order: 1;
+    width: 100%;
+  }
 
-//     width: @a;
-//     margin-bottom: @m75px;
-//     padding-top: 0px;
-//     padding-left: 0;
+  .footer__logo {}
 
-//     text-align: left;
+  .footer__text-wrap {
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 1.9rem;
+  }
 
-//     .logo__img {
-//       width: @m88px;
-//       height: @m120px;
-//     }
+  .footer__tel-link {
+    margin-bottom: 2.7rem;
+  }
 
-//     .logo__text-wrapper {
-//       margin-left: @m20px;
-//     }
+  .footer__link-modal-region {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.7rem;
 
-//     .logo__title {
-//       margin-top: @m29px;
-//       margin-bottom: @m25px;
-//       font-size: @m50px;
-//     }
+    .btn-region-1__icon {
+      color: @light-gray;
+    }
 
-//     .logo__description {
-//       font-size: @m28px;
-//       line-height: @m35px;
-//     }
-//   }
-
-//   .footer__link {
-//     width: 100%;
-//     margin-bottom: @m100px;
-
-//     // font-family: @roboto;
-//     // font-weight: 500;
-//     font-size: @m30px;
-//   }
-
-//   .footer__phone-wrapper {
-//     text-align: left;
-//   }
-
-//   .footer__phone {
-//     margin-bottom: @m19px;
-//     font-size: @m45px;
-//   }
-
-//   .footer__phone-text {
-//     font-size: @m30px;
-//   }
-// }
+    &::before {
+      top: -0.5rem;
+    }
+  }
+}
