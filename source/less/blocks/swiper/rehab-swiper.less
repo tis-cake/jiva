@@ -57,20 +57,32 @@
   padding-left: 3.2rem;
   padding-right: 3.2rem;
 
-  &::before {
+  &::before,
+  &::after {
     position: absolute;
     content: '';
     z-index: -1;
-    top: 0;
     left: 0;
-
     width: 100%;
-    height: 51rem;
+  }
 
-    background-image: url('../img/figure/clip-small-top.svg');
+  &::before {
+    bottom: -10.6rem;
+    // top: 0;
+    // height: 51rem;
+
+    height: 25rem;
+
+    background-image: url('../img/figure/clip-small-top.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+  }
+
+  &::after {
+    top: 0;
+    height: 65%;
+    background-color: #fff;
   }
 }
 
@@ -200,4 +212,117 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 4rem;
+}
+
+@media (max-width: @tablet-width) {
+  .rehab-swiper {
+    padding-top: 9.9rem;
+    padding-bottom: 9.9rem;
+  }
+
+  .rehab-swiper__main-text-wrap {
+    flex-direction: column;
+    margin-bottom: 3.4rem;
+  }
+
+  .rehab-swiper__main-title {
+    margin-bottom: 18px;
+  }
+
+  .rehab-swiper__btn-region {
+    padding-top: 0.5rem;
+  }
+
+  .rehab-swiper__big-container {}
+
+  .rehab-swiper__swiper-container {}
+
+  .rehab-swiper__slide {}
+
+  .rehab-swiper__item {
+    width: 165px;
+    height: 269px;
+
+    border-radius: 3rem;
+
+    &.tab-focus,
+    &:hover,
+    &:focus {
+      box-shadow: 0px 30px 50px #B7C3DF;
+    }
+  }
+
+  .rehab-swiper__link {}
+
+  .rehab-swiper__text-wrap {
+    padding-top: 2.3rem;
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
+
+    &::before {
+      bottom: -5.2rem;
+      height: 13rem;
+    }
+  }
+
+  .rehab-swiper__title {
+    margin-bottom: 3px;
+
+    font-weight: 700;
+    font-family: @circe;
+    font-style: normal;
+    font-size: 17px;
+    line-height: 18px;
+  }
+
+  .rehab-swiper__desc {
+    margin-bottom: 0.3rem;
+  }
+
+  .rehab-swiper__cost {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .rehab-swiper__img-wrap {
+    height: 210px;
+    &::before {
+      bottom: 0;
+      left: 0;
+
+      height: 37.8rem;
+
+      border-radius: 0;
+    }
+  }
+
+  .rehab-swiper__img {
+    border-radius: 0;
+  }
+
+  .rehab-swiper__aside-item {}
+
+  .rehab-swiper__btn-compare {
+    bottom: 0.6rem;
+    left: 2.4rem;
+  }
+
+  .rehab-swiper__aside-item {
+    // bottom: 5.7rem;
+    bottom: 6.8rem;
+  }
+
+  .rehab-swiper__arrows-wrap {
+    margin-bottom: 2rem;
+  }
+
+  .rehab-swiper__button-next {}
+
+  .rehab-swiper__button-prev {}
+
+  .rehab-swiper__swiper-pagination {}
+
+  .rehab-swiper__btn-modal {
+    margin-bottom: 4rem;
+  }
 }

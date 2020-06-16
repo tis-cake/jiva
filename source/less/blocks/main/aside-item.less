@@ -62,3 +62,36 @@
   font-size: 1.5rem;
   word-spacing: 0.3rem;
 }
+
+@media (max-width: @tablet-width) {
+  .aside-item {
+    left: -3.8rem;
+
+    height: 1.7rem;
+    // width: 76.53px;
+    width: 8.8rem;
+
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+
+    &::before {
+      top: -7rem;
+      left: 6rem;
+
+      width: 3.2rem;
+      height: 17.1rem;
+
+      width: 1.7rem;
+      // height: 76.53px;
+      height: 8.8rem;
+
+      top: -3.4rem;
+      left: 3.6rem;
+    }
+  }
+  .aside-item__desc {
+    font-size: 0.8rem;
+    word-spacing: 0.2rem;
+  }
+
+}
