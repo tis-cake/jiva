@@ -719,6 +719,10 @@ input[type="radio"].visually-hidden {
     height: 42.5px;
     border-radius: 4.65rem;
   }
+  .section-title {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
   .section-desc {
     font-size: 1.1rem;
     line-height: 1.6rem;
@@ -1683,7 +1687,6 @@ input[type="radio"].visually-hidden {
 .b {
   position: relative;
   display: flex;
-  height: 54.3rem;
   padding-top: 7.5rem;
   padding-bottom: 7.5rem;
 }
@@ -1758,6 +1761,40 @@ input[type="radio"].visually-hidden {
 }
 .b-three .b__title-item {
   margin-left: 0;
+}
+@media (max-width: 48em) {
+  .b {
+    /* padding-bottom: 7.5rem; */
+    padding-top: 2.1rem;
+    padding-bottom: 2.1rem;
+  }
+  .b,
+  .b__bg-img-wrap {
+    height: 659px;
+  }
+  .b__bg-img-wrap {
+    width: 339px;
+  }
+  .b__text-wrap {
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 50px;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+  .b__title {
+    margin-bottom: 13px;
+  }
+  .b__desc {
+    font-size: 15px;
+    line-height: 22px;
+  }
+  .b__btn-modal {
+    width: 100%;
+    margin-top: 1.7rem;
+  }
 }
 .aside-item {
   box-sizing: border-box;
