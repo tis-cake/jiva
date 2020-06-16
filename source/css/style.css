@@ -714,6 +714,19 @@ input[type="radio"].visually-hidden {
   .btn-modal__decor-line {
     width: 11rem;
   }
+  .btn-link {
+    width: 36.79px;
+    height: 42.5px;
+    border-radius: 4.65rem;
+  }
+  .section-desc {
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+  }
+  .icon-arrow-short {
+    width: 11.95px;
+    height: 12.21px;
+  }
 }
 /*header*/
 .header {
@@ -1516,9 +1529,9 @@ input[type="radio"].visually-hidden {
     height: 90rem;
   }
   .main-info__bg {
-    top: -182px;
-    width: 808.23px;
-    height: 847.33px;
+    top: -18.2rem;
+    width: 80.8rem;
+    height: 84.7rem;
   }
   .main-info__logo {
     margin-top: 1.5rem;
@@ -1533,21 +1546,21 @@ input[type="radio"].visually-hidden {
     text-align: center;
   }
   .main-info__aside-left-desc {
-    margin-bottom: 8px;
-    font-size: 18px;
+    margin-bottom: 0.8rem;
+    font-size: 1.8rem;
   }
   .main-info__aside-left-desc--gold {
     display: inline-block;
-    font-size: 20px;
+    font-size: 2rem;
   }
   .main-info__aside-left-desc--light {
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 1.4rem;
+    line-height: 2rem;
   }
   .main-info__aside-btn-modal {
     order: -1;
     margin-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
   }
   .main-info__decor {
     position: absolute;
@@ -1556,13 +1569,13 @@ input[type="radio"].visually-hidden {
     background-position: center;
   }
   .main-info__decor-one {
-    width: 368px;
-    height: 368px;
-    top: 529px;
-    transform: translateX(-210px);
+    width: 36.8rem;
+    height: 36.8rem;
+    top: 52.9rem;
+    transform: translateX(-21rem);
   }
   .main-info__decor-two {
-    height: 983px;
+    height: 98.3rem;
     top: 47.3rem;
     background-image: url('../img/main-info/1-2-m.svg');
   }
@@ -1631,45 +1644,40 @@ input[type="radio"].visually-hidden {
 }
 @media (max-width: 48em) {
   .services {
-    padding-top: 7.5rem;
-    padding-bottom: 7.5rem;
+    padding-bottom: 2.2rem;
   }
   .services__list {
     flex-wrap: wrap;
   }
   .services__item {
-    width: 42%;
+    width: 15.7rem;
+  }
+  .services__link {
+    margin-bottom: 5.3rem;
   }
   .services__item-title {
     min-height: 3.6rem;
-    margin-bottom: 1.4rem;
-    padding-left: 0;
-    padding-right: 0;
-    font-size: 17px;
-    line-height: 18px;
+    margin-bottom: 0.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 1.7rem;
+    line-height: 1.8rem;
+  }
+  .services__desc {
+    font-size: 1rem;
   }
   .services__img-wrap {
-    width: 100%;
-    height: 39.7rem;
-    margin-top: 2.3rem;
-    margin-bottom: 4.9rem;
-    border-radius: 9rem;
-    box-shadow: 15px 45px 80px #ADB9D9;
-    transition: 0.5s;
-  }
-  .sesrvices__img {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    height: 20.5rem;
+    margin-top: 0.6rem;
+    margin-bottom: 1.5rem;
+    border-radius: 4.6rem;
   }
   .services__subtitle {
-    margin-bottom: 0.8rem;
-    font-weight: 700;
-    font-size: 2.2rem;
+    margin-bottom: 0.2rem;
+    font-size: 1.2rem;
   }
   .services__btn-link {
-    margin-top: 2rem;
+    margin-top: 0.9rem;
   }
 }
 .b {
