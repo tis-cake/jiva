@@ -1880,6 +1880,22 @@ input[type="radio"].visually-hidden {
     font-size: 1.6rem;
     line-height: 2.4rem;
   }
+  .b-three {
+    height: 65.5rem;
+  }
+  .b-three .b__bg-img-wrap {
+    height: 65.5rem;
+  }
+  .b-three .b__text-wrap {
+    width: auto;
+    margin-top: 34.6rem;
+    margin-right: 0;
+  }
+  .b-three .b__title {
+    margin-bottom: 1.6rem;
+    font-size: 2.4rem;
+    line-height: 3rem;
+  }
 }
 .aside-item {
   box-sizing: border-box;
