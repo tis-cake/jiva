@@ -1862,6 +1862,24 @@ input[type="radio"].visually-hidden {
     width: 100%;
     margin-top: 1.7rem;
   }
+  .b-two {
+    height: 60.4rem;
+  }
+  .b-two .b__bg-img-wrap {
+    height: 60.4rem;
+  }
+  .b-two .b__text-wrap {
+    width: 100%;
+    margin-top: 32.8rem;
+    margin-right: 0;
+  }
+  .b-two .b__title {
+    margin-bottom: 1.4rem;
+  }
+  .b-two .b__desc {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
 }
 .aside-item {
   box-sizing: border-box;
@@ -2295,14 +2313,14 @@ input[type="radio"].visually-hidden {
     margin-bottom: 3.4rem;
   }
   .rehab-swiper__main-title {
-    margin-bottom: 18px;
+    margin-bottom: 1.8rem;
   }
   .rehab-swiper__btn-region {
     padding-top: 0.5rem;
   }
   .rehab-swiper__item {
-    width: 165px;
-    height: 269px;
+    width: 16.5rem;
+    height: 26.9rem;
     border-radius: 3rem;
   }
   .rehab-swiper__item.tab-focus,
@@ -2320,22 +2338,22 @@ input[type="radio"].visually-hidden {
     height: 13rem;
   }
   .rehab-swiper__title {
-    margin-bottom: 3px;
+    margin-bottom: 0.3rem;
     font-weight: 700;
     font-family: 'Circe', 'Arial', sans-serif;
     font-style: normal;
-    font-size: 17px;
-    line-height: 18px;
+    font-size: 1.7rem;
+    line-height: 1.8rem;
   }
   .rehab-swiper__desc {
     margin-bottom: 0.3rem;
   }
   .rehab-swiper__cost {
-    font-size: 15px;
-    line-height: 22px;
+    font-size: 1.5rem;
+    line-height: 2.2rem;
   }
   .rehab-swiper__img-wrap {
-    height: 210px;
+    height: 21rem;
   }
   .rehab-swiper__img-wrap::before {
     bottom: 0;
