@@ -1832,8 +1832,8 @@ input[type="radio"].visually-hidden {
 @media (max-width: 48em) {
   .b {
     /* padding-bottom: 7.5rem; */
-    padding-top: 2.1rem;
-    padding-bottom: 2.1rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
   .b,
   .b__bg-img-wrap {
@@ -2287,8 +2287,8 @@ input[type="radio"].visually-hidden {
 }
 @media (max-width: 48em) {
   .rehab-swiper {
-    padding-top: 9.9rem;
-    padding-bottom: 9.9rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
   }
   .rehab-swiper__main-text-wrap {
     flex-direction: column;
@@ -2431,6 +2431,59 @@ input[type="radio"].visually-hidden {
 }
 .reviews-swiper__author-text {
   line-height: 2.7rem;
+}
+@media (max-width: 48em) {
+  .reviews-swiper {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  .reviews-swiper__main-text-wrap {
+    justify-content: center;
+  }
+  .reviews-swiper__count-reviews {
+    display: none;
+  }
+  .reviews-swiper__swiper-container {
+    padding-top: 8.2rem;
+  }
+  .reviews-swiper__blockquote {
+    width: auto;
+    padding-top: 8rem;
+    padding-left: 1.8rem;
+    padding-right: 1.8rem;
+    padding-bottom: 3rem;
+    border-radius: 4rem;
+  }
+  .reviews-swiper__author-block {
+    margin-bottom: 1.4rem;
+    padding-left: 0;
+    text-align: center;
+  }
+  .reviews-swiper__author-photo-wrap {
+    top: -6.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12.4rem;
+    height: 12.4rem;
+  }
+  .reviews-swiper__author-name {
+    margin-bottom: 0;
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+  }
+  .reviews-swiper__author-theme {
+    font-size: 1.5rem;
+  }
+  .reviews-swiper__btn-link {
+    box-shadow: none;
+    position: absolute;
+    top: 3.4rem;
+    right: 1.8rem;
+  }
+  .reviews-swiper__author-text {
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+  }
 }
 .footer {
   padding-top: 8.5rem;

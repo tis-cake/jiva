@@ -21,7 +21,7 @@ $(document).ready(function () {
   });
 
   let reviewsSwiper = new Swiper('#reviews-swiper', {
-    slidesPerView: '2',
+    slidesPerView: '1',
     spaceBetween: 25,
     touchRatio: 1,
 
