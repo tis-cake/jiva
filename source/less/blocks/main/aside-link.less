@@ -92,60 +92,31 @@
   .aside-link {
     position: fixed;
     top: auto;
-    bottom: -1px;
+    // bottom: -1px;
+    bottom: 1rem;
 
     height: 4.5rem;
-    width: 90%;
+    width: 100%;
 
     padding-top: 0rem;
     padding-bottom: 0rem;
 
-    .padding-inline(1.5rem);
+    // .padding-inline(1.5rem);
+    .padding-inline(3.5rem);
 
     font-size: 1.6rem;
 
-    &::before,
-    &::after {
+    &::before {
       content: '';
       position: absolute;
       z-index: -1;
-      top: 0;
+      left: 0;
+      bottom: -10px;
 
-      width: 4rem;
-      height: 4.5rem;
-
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
+      width: 100%;
+      height: 10px;
+      background-color: @dark-gray;
     }
-
-    &::before {
-      left: -2rem;
-      // left: -3.3rem;
-      background-image: url('../img/figure/figure-aside-m-l.png');
-    }
-
-    &::after {
-      right: -2rem;
-      // right: -3.3rem;
-      background-image: url('../img/figure/figure-aside-m-r.png');
-    }
-  }
-
-  .aside-link__bg-wrap {
-    display: none;
-  }
-
-  .aside-link__wrap {
-
-    // position: relative;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
-
-    background-color: @dark-gray;
 
     // &::before,
     // &::after {
@@ -163,16 +134,61 @@
     // }
 
     // &::before {
-    //   // left: -2rem;
-    //   left: -3.3rem;
+    //   left: -2rem;
+    //   // left: -3.3rem;
     //   background-image: url('../img/figure/figure-aside-m-l.png');
     // }
 
     // &::after {
-    //   // right: -2rem;
-    //   right: -3.3rem;
+    //   right: -2rem;
+    //   // right: -3.3rem;
     //   background-image: url('../img/figure/figure-aside-m-r.png');
     // }
+  }
+
+  .aside-link__bg-wrap {
+    display: none;
+  }
+
+  .aside-link__wrap {
+
+    // position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+
+    background-color: @dark-gray;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      top: 0;
+
+      width: 4rem;
+      height: 4.5rem;
+
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &::before {
+      left: 0rem;
+      // left: -2rem;
+      // left: -3.3rem;
+      background-image: url('../img/figure/figure-aside-m-l.png');
+    }
+
+    &::after {
+      right: 0;
+      // right: -2rem;
+      // right: -3.3rem;
+      background-image: url('../img/figure/figure-aside-m-r.png');
+    }
   }
 
   .aside-link__link {}
@@ -184,5 +200,11 @@
       font-weight: 400;
       color: #ADB9D9;
     }
+  }
+}
+
+@media (max-width: 23em) {
+  .aside-link {
+    bottom: 0;
   }
 }

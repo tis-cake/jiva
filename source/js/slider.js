@@ -10,7 +10,8 @@ $(document).ready(function () {
     },
     pagination: {
       el: '.rehab-swiper__swiper-pagination',
-      dynamicBullets: true,
+      clickable: true,
+      // dynamicBullets: true,
     },
     breakpoints: {
       756: {

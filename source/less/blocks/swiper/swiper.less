@@ -87,11 +87,19 @@
   background-color: @dark;
 }
 
-.swiper-pagination-bullets-dynamic .swiper-pagination-bullet,
-.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next,
-.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev,
-.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev,
-.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next {
+// .swiper-pagination-bullets-dynamic .swiper-pagination-bullet,
+// .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next,
+// .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev,
+// .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev,
+// .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next {
+//   transform: scale(0.5);
+// }
+
+.swiper-pagination-bullet,
+.swiper-pagination .swiper-pagination-bullet-active-next,
+.swiper-pagination .swiper-pagination-bullet-active-prev,
+.swiper-pagination .swiper-pagination-bullet-active-prev-prev,
+.swiper-pagination .swiper-pagination-bullet-active-next-next {
   transform: scale(0.5);
 }
 
@@ -103,13 +111,15 @@
   margin: 0 1.5rem;
 }
 
+/* все */
+.swiper-pagination-bullet,
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main,
 .swiper-pagination-bullet-active-prev,
 .swiper-pagination-bullet-active-next {
   &::before,
   &::after {
     position: absolute;
-    content: '';
+    content: none;
     top: 0.4rem;
 
     width: 5.3rem;
@@ -124,7 +134,55 @@
   }
 }
 
-.swiper-pagination-bullet-active-prev {
+/* статическая */
+.swiper-pagination-bullet {
+  // &::before,
+  &::after {
+    content: '';
+  }
+}
+
+/* динамическая */
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
+  &::before,
+  &::after {
+    content: none;
+  }
+}
+
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main,
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev,
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next {
+  &::before,
+  &::after {
+    content: '';
+  }
+}
+
+/* статическая */
+.swiper-pagination-bullet {
+  &::before {
+    content: none;
+  }
+  &::after {
+    right: -6rem;
+    // left: -6.5rem;
+  }
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+  transform: scale(1);
+  &::before,
+  &::after {
+    transform: scale(0.5);
+  }
+  &::after {
+    right: -4.2rem;
+  }
+}
+
+/* динамическая */
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev {
   &::after {
     content: none;
   }
@@ -133,7 +191,7 @@
   }
 }
 
-.swiper-pagination-bullet-active-next {
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next {
   &::after {
     right: -6.1rem;
   }
@@ -156,12 +214,15 @@
   }
 }
 
+/* все */
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet:first-of-type,
 .swiper-pagination-bullet:first-of-type {
   &::before {
     content: none;
   }
 }
 
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet:last-of-type,
 .swiper-pagination-bullet:last-of-type {
   &::after {
     content: none;
