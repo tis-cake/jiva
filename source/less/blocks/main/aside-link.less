@@ -21,10 +21,10 @@
 
   color: #fff;
 
-  // background-image: url('../img/svg/figure-aside-d.svg');
+  // background-image: url('../img/figure/figure-aside-d.svg');
   // background-repeat: no-repeat;
   // background-position: center;
-  // background-size: cover;
+  // background-size: contain;
 
   &.tab-focus,
   &:hover {
@@ -38,6 +38,7 @@
 }
 
 .aside-link__bg-wrap {
+  // display: none;
   position: absolute;
   z-index: -1;
   top: 0;
@@ -81,11 +82,107 @@
   // }
 }
 
-.aside-link__link {
+.aside-link__link {}
+
+.aside-link__desc {
+  display: none;
 }
 
 @media (max-width: @tablet-width) {
   .aside-link {
+    position: fixed;
+    top: auto;
+    bottom: -1px;
+
+    height: 4.5rem;
+    width: 90%;
+
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+
+    .padding-inline(1.5rem);
+
+    font-size: 1.6rem;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      top: 0;
+
+      width: 4rem;
+      height: 4.5rem;
+
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &::before {
+      left: -2rem;
+      // left: -3.3rem;
+      background-image: url('../img/figure/figure-aside-m-l.png');
+    }
+
+    &::after {
+      right: -2rem;
+      // right: -3.3rem;
+      background-image: url('../img/figure/figure-aside-m-r.png');
+    }
+  }
+
+  .aside-link__bg-wrap {
     display: none;
+  }
+
+  .aside-link__wrap {
+
+    // position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+
+    background-color: @dark-gray;
+
+    // &::before,
+    // &::after {
+    //   content: '';
+    //   position: absolute;
+    //   z-index: -1;
+    //   top: 0;
+
+    //   width: 4rem;
+    //   height: 4.5rem;
+
+    //   background-size: cover;
+    //   background-repeat: no-repeat;
+    //   background-position: center;
+    // }
+
+    // &::before {
+    //   // left: -2rem;
+    //   left: -3.3rem;
+    //   background-image: url('../img/figure/figure-aside-m-l.png');
+    // }
+
+    // &::after {
+    //   // right: -2rem;
+    //   right: -3.3rem;
+    //   background-image: url('../img/figure/figure-aside-m-r.png');
+    // }
+  }
+
+  .aside-link__link {}
+  .aside-link__desc {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 1.3rem;
+    &--dark {
+      font-weight: 400;
+      color: #ADB9D9;
+    }
   }
 }

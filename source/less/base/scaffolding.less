@@ -148,12 +148,17 @@ html .desktop-block {
   box-shadow: none;
 }
 
+.main {
+  overflow: hidden;
+}
+
 @media (max-width: @tablet-width) {
   .container,
   .container-outside,
   .container-inside {
     width: @a;
-    .padding-inline(2rem);
+    .padding-inline(3.5rem);
+    // .padding-inline(2rem);
   }
 
   html .desktop-block {
@@ -170,9 +175,10 @@ html .desktop-block {
   }
 }
 
-@media (max-width: 330px) {
-  .link {
-    font-size: 26px;
-    line-height: 26px;
+@media (max-width: 24.4em) {
+  .container,
+  .container-outside,
+  .container-inside {
+    .padding-inline(2rem);
   }
 }
