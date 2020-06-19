@@ -26,11 +26,13 @@
             <div class="logo__img-wrap">
               <img class="logo__img" src="img/logo/logo.png" width="92" height="92" alt="Логотип портала «Ji+Va»">
             </div>
-            <p class="logo__title logo__title--absolute"><span class="logo__title--red">J</span>i <span class="logo__title-decor">
-              <svg class="logo__icon icon-logo-star" width="14" height="14">
-              <use xlink:href="img/sprite.svg#icon-logo-star"></use>
-            </svg>
-            </span> Va</p>
+            <p class="logo__title logo__title--absolute">
+              <span class="logo__title--red">J</span>i <span class="logo__title-decor" aria-hidden="true">
+              <svg class="logo__icon icon-logo-star" width="14" height="14" role="img">
+                <use xlink:href="img/sprite.svg#icon-logo-star"></use>
+              </svg>
+              </span> Va
+            </p>
           </a>
 
           <div class="header__rows-wrap">
@@ -42,8 +44,9 @@
                   <option value="LANG-FRENCH">FR</option>
                 </select>
               </form>
-              <button class="header__link-modal-region btn-region-1 modal-region">
+              <button class="header__link-modal-region btn-region-1 modal-region" type="button" title="Выбрать регион">
                 Россия
+                <span class="visually-hidden">Выбрать регион</span>
               </button>
               <div class="header__text-wrap">
                 <p class="header__text-item">
@@ -53,7 +56,7 @@
                   Все звонки бесплатные и конфиденциальные.
                 </p>
               </div>
-              <button href="#" class="header__link-call-back btn-tel modal-callback">
+              <button class="header__link-call-back btn-tel modal-callback">
                 <svg class="btn-tel__icon icon-tel" width="28" height="28">
                   <use xlink:href="img/sprite.svg#icon-tel"></use>
                 </svg>
@@ -201,14 +204,17 @@
 
                 <div class="main-nav__search search">
                   <form class="search__form" action=".php" method="post">
-                    <label class="search__label-icon" for="search-field">
-                      <svg class="search__icon search__icon--label-search icon-search" width="23" height="23">
+                    <label class="search__label-icon" for="search-field" aria-hidden="true">
+                      <svg class="search__icon search__icon--label-search icon-search" width="23" height="23" role="img">
                         <use xlink:href="img/sprite.svg#icon-search"></use>
                       </svg>
                     </label>
                     <input class="search__input" id="search-field" type="search" name="SEARCH" placeholder="Поиск" required>
-                    <button class="search__btn-submit btn-submit">
-                      <svg class="btn-submit__icon icon-arrow icon-arrow--right" width="13" height="11">
+                    <button class="search__btn-submit btn-submit" title="Отправить запрос">
+                      <span class="visually-hidden">
+                        Отправить запрос
+                      </span>
+                      <svg class="btn-submit__icon icon-arrow icon-arrow--right" width="13" height="11" role="img">
                         <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
                       </svg>
                     </button>
@@ -256,11 +262,11 @@
                 </div>
 
                 <button class="main-nav__search-toggle search-toggle" title="Поиск по сайту">
-                  Поиск по сайту
-                  <svg class="search__icon search__icon--search icon-search" width="23" height="23">
+                  <span class="visually-hidden">Поиск по сайту</span>
+                  <svg class="search__icon search__icon--search icon-search" width="23" height="23" role="img">
                     <use xlink:href="img/sprite.svg#icon-search"></use>
                   </svg>
-                  <svg class="search__icon search__icon--close icon-close" width="23" height="23">
+                  <svg class="search__icon search__icon--close icon-close" width="23" height="23" role="img">
                     <use xlink:href="img/sprite.svg#icon-plus"></use>
                   </svg>
                 </button>
@@ -296,11 +302,13 @@
           <div class="logo__img-wrap">
             <img class="logo__img" src="img/logo/logo.png" width="92" height="92" alt="Логотип портала «Ji+Va»">
           </div>
-          <p class="logo__title logo__title--big"><span class="logo__title--red">J</span>i <span class="logo__title-decor">
-            <svg class="logo__icon icon-logo-star" width="28" height="28">
-              <use xlink:href="img/sprite.svg#icon-logo-star"></use>
-            </svg>
-          </span> Va</p>
+          <p class="logo__title logo__title--big">
+            <span class="logo__title--red">J</span>i <span class="logo__title-decor" aria-hidden="true">
+              <svg class="logo__icon icon-logo-star" width="28" height="28" role="img">
+                <use xlink:href="img/sprite.svg#icon-logo-star"></use>
+              </svg>
+            </span> Va
+          </p>
 
           <p class="logo__desc">
             Международный портал <span class="DaVinci">ПоМоЩи</span> зависимым и созависимым
@@ -318,9 +326,9 @@
             Подберем программу реабилитации и поможем уговорить зависимого на лечение! Каждое употребление вашего близкого, может стать последним.
           </p>
 
-          <button class="main-info__aside-btn-modal btn-modal btn-modal--dark modal-callback">
+          <button class="main-info__aside-btn-modal btn-modal btn-modal--dark modal-callback" type="button">
             Заявка на лечение
-            <span class="btn-modal__decor-line"></span>
+            <span class="btn-modal__decor-line" aria-hidden="true"></span>
           </button>
         </div>
 
@@ -340,7 +348,7 @@
               <p class="services__subtitle">Все виды наркомании</p>
               <p class="services__desc section-desc">10 услуг</p>
               <div class="services__btn-link btn-link">
-                <svg class="btn-link__icon icon-arrow-short icon-arrow-short--right" width="13" height="25">
+                <svg class="btn-link__icon icon-arrow-short icon-arrow-short--right" width="13" height="25" role="img">
                   <use xlink:href="img/sprite.svg#icon-arrow-short-right"></use>
                 </svg>
               </div>
@@ -356,7 +364,7 @@
               <p class="services__subtitle">Все виды алкоголизма</p>
               <p class="services__desc section-desc">10 услуг</p>
               <div class="services__btn-link btn-link">
-                <svg class="btn-link__icon icon-arrow-short icon-arrow-short--right" width="13" height="25">
+                <svg class="btn-link__icon icon-arrow-short icon-arrow-short--right" width="13" height="25" role="img">
                   <use xlink:href="img/sprite.svg#icon-arrow-short-right"></use>
                 </svg>
               </div>
@@ -372,7 +380,7 @@
               <p class="services__subtitle">Все виды игромании</p>
               <p class="services__desc section-desc">10 услуг</p>
               <div class="services__btn-link btn-link">
-                <svg class="btn-link__icon icon-arrow-short icon-arrow-short--right" width="13" height="25">
+                <svg class="btn-link__icon icon-arrow-short icon-arrow-short--right" width="13" height="25" role="img">
                   <use xlink:href="img/sprite.svg#icon-arrow-short-right"></use>
                 </svg>
               </div>
@@ -388,7 +396,7 @@
               <p class="services__subtitle">Лечение родителей</p>
               <p class="services__desc section-desc">10 услуг</p>
               <div class="services__btn-link btn-link">
-                <svg class="btn-link__icon icon-arrow-short icon-arrow-short--right" width="13" height="25">
+                <svg class="btn-link__icon icon-arrow-short icon-arrow-short--right" width="13" height="25" role="img">
                   <use xlink:href="img/sprite.svg#icon-arrow-short-right"></use>
                 </svg>
               </div>
@@ -412,9 +420,9 @@
             <p class="b__desc">
               Наши специалисты помогут уговорить на лечение и подберут для вас программу лечения бесплатно!
             </p>
-            <button class="b__btn-modal btn-modal btn-modal--white modal-callback">
+            <button class="b__btn-modal btn-modal btn-modal--white modal-callback" type="button">
               Заявка на консультацию
-              <span class="btn-modal__decor-line"></span>
+              <span class="btn-modal__decor-line" aria-hidden="true"></span>
             </button>
           </div>
         </div>
@@ -425,8 +433,8 @@
           <p class="rehab-swiper__main-title section-title">
             Лучшие реабилитационные центры мира
           </p>
-          <button class="rehab-swiper__btn-region btn-region-2 modal-region">
-            <svg class="btn-region-2__icon icon-region-2" width="26" height="34">
+          <button class="rehab-swiper__btn-region btn-region-2 modal-region" type="button">
+            <svg class="btn-region-2__icon icon-region-2" width="26" height="34" role="img">
               <use xlink:href="img/sprite.svg#icon-region-2"></use>
             </svg>
             Выбрать регион
@@ -455,8 +463,8 @@
                     </div>
                   </a>
 
-                  <button class="rehab-swiper__btn-compare btn-compare">
-                    <svg class="btn-compare__icon icon-compare" width="15" height="15">
+                  <button class="rehab-swiper__btn-compare btn-compare" type="button">
+                    <svg class="btn-compare__icon icon-compare" width="15" height="15" role="img">
                       <use xlink:href="img/sprite.svg#icon-compare"></use>
                     </svg>
                     <span class="btn-compare__desc btn-compare__not-selected">Сравнить центр</span>
@@ -487,8 +495,8 @@
                     </div>
                   </a>
 
-                  <button class="rehab-swiper__btn-compare btn-compare">
-                    <svg class="btn-compare__icon icon-compare" width="15" height="15">
+                  <button class="rehab-swiper__btn-compare btn-compare" type="button">
+                    <svg class="btn-compare__icon icon-compare" width="15" height="15"role="img">
                       <use xlink:href="img/sprite.svg#icon-compare"></use>
                     </svg>
                     <span class="btn-compare__desc btn-compare__not-selected">Сравнить центр</span>
@@ -515,8 +523,8 @@
                     </div>
                   </a>
 
-                  <button class="rehab-swiper__btn-compare btn-compare">
-                    <svg class="btn-compare__icon icon-compare" width="15" height="15">
+                  <button class="rehab-swiper__btn-compare btn-compare" type="button">
+                    <svg class="btn-compare__icon icon-compare" width="15" height="15"role="img">
                       <use xlink:href="img/sprite.svg#icon-compare"></use>
                     </svg>
                     <span class="btn-compare__desc btn-compare__not-selected">Сравнить центр</span>
@@ -547,8 +555,8 @@
                     </div>
                   </a>
 
-                  <button class="rehab-swiper__btn-compare btn-compare">
-                    <svg class="btn-compare__icon icon-compare" width="15" height="15">
+                  <button class="rehab-swiper__btn-compare btn-compare" type="button">
+                    <svg class="btn-compare__icon icon-compare" width="15" height="15"role="img">
                       <use xlink:href="img/sprite.svg#icon-compare"></use>
                     </svg>
                     <span class="btn-compare__desc btn-compare__not-selected">Сравнить центр</span>
@@ -575,8 +583,8 @@
                     </div>
                   </a>
 
-                  <button class="rehab-swiper__btn-compare btn-compare">
-                    <svg class="btn-compare__icon icon-compare" width="15" height="15">
+                  <button class="rehab-swiper__btn-compare btn-compare" type="button">
+                    <svg class="btn-compare__icon icon-compare" width="15" height="15"role="img">
                       <use xlink:href="img/sprite.svg#icon-compare"></use>
                     </svg>
                     <span class="btn-compare__desc btn-compare__not-selected">Сравнить центр</span>
@@ -603,8 +611,8 @@
                     </div>
                   </a>
 
-                  <button class="rehab-swiper__btn-compare btn-compare">
-                    <svg class="btn-compare__icon icon-compare" width="15" height="15">
+                  <button class="rehab-swiper__btn-compare btn-compare" type="button">
+                    <svg class="btn-compare__icon icon-compare" width="15" height="15"role="img">
                       <use xlink:href="img/sprite.svg#icon-compare"></use>
                     </svg>
                     <span class="btn-compare__desc btn-compare__not-selected">Сравнить центр</span>
@@ -612,215 +620,17 @@
                   </button>
                 </div>
               </div>
-
-              <div class="swiper-slide rehab-swiper__slide">
-                <div class="rehab-swiper__item">
-                  <a class="rehab-swiper__link" href="rehab-page.html">
-                    <div class="rehab-swiper__text-wrap">
-                      <p class="rehab-swiper__title">Архангел Гавриил</p>
-                      <p class="rehab-swiper__desc section-desc">Россия, Москва</p>
-                      <p class="rehab-swiper__cost">80 000 руб./мес.</p>
-                    </div>
-
-                    <div class="rehab-swiper__img-wrap">
-                      <img class="rehab-swiper__img" src="img/swiper/rehab-swiper/3.png" alt="">
-                    </div>
-
-                    <div class="rehab-swiper__aside-item aside-item">
-                      <p class="aside-item__desc">Партнер портала</p>
-                    </div>
-                  </a>
-
-                  <button class="rehab-swiper__btn-compare btn-compare">
-                    <svg class="btn-compare__icon icon-compare" width="15" height="15">
-                      <use xlink:href="img/sprite.svg#icon-compare"></use>
-                    </svg>
-                    <span class="btn-compare__desc btn-compare__not-selected">Сравнить центр</span>
-                    <span class="btn-compare__desc btn-compare__selected">Добавлен</span>
-                  </button>
-                </div>
-              </div>
-
-              <div class="benefit swiper-slide rehab-swiper__slide">
-                <div class="rehab-swiper__item">
-                  <a class="rehab-swiper__link" href="rehab-page.html">
-                    <div class="rehab-swiper__text-wrap">
-                      <p class="rehab-swiper__title">Решение</p>
-                      <p class="rehab-swiper__desc section-desc">Россия, Москва</p>
-                      <p class="rehab-swiper__cost">80 000 руб./мес.</p>
-                    </div>
-
-                    <div class="rehab-swiper__img-wrap">
-                      <img class="rehab-swiper__img" src="img/swiper/rehab-swiper/4.png" alt="">
-                    </div>
-
-                    <div class="rehab-swiper__aside-item aside-item">
-                      <p class="aside-item__desc">Партнер портала</p>
-                    </div>
-                  </a>
-
-                  <button class="rehab-swiper__btn-compare btn-compare">
-                    <svg class="btn-compare__icon icon-compare" width="15" height="15">
-                      <use xlink:href="img/sprite.svg#icon-compare"></use>
-                    </svg>
-                    <span class="btn-compare__desc btn-compare__not-selected">Сравнить центр</span>
-                    <span class="btn-compare__desc btn-compare__selected">Добавлен</span>
-                  </button>
-                </div>
-              </div>
-
-
-
-
-
-
-              <div class="benefit swiper-slide rehab-swiper__slide">
-                <div class="rehab-swiper__item">
-                  <a class="rehab-swiper__link" href="rehab-page.html">
-                    <div class="rehab-swiper__text-wrap">
-                      <p class="rehab-swiper__title">Решение</p>
-                      <p class="rehab-swiper__desc section-desc">Россия, Москва</p>
-                      <p class="rehab-swiper__cost">80 000 руб./мес.</p>
-                    </div>
-
-                    <div class="rehab-swiper__img-wrap">
-                      <img class="rehab-swiper__img" src="img/swiper/rehab-swiper/4.png" alt="">
-                    </div>
-
-                    <div class="rehab-swiper__aside-item aside-item">
-                      <p class="aside-item__desc">Партнер портала</p>
-                    </div>
-                  </a>
-
-                  <button class="rehab-swiper__btn-compare btn-compare">
-                    <svg class="btn-compare__icon icon-compare" width="15" height="15">
-                      <use xlink:href="img/sprite.svg#icon-compare"></use>
-                    </svg>
-                    <span class="btn-compare__desc btn-compare__not-selected">Сравнить центр</span>
-                    <span class="btn-compare__desc btn-compare__selected">Добавлен</span>
-                  </button>
-                </div>
-              </div>
-              <div class="benefit swiper-slide rehab-swiper__slide">
-                <div class="rehab-swiper__item">
-                  <a class="rehab-swiper__link" href="rehab-page.html">
-                    <div class="rehab-swiper__text-wrap">
-                      <p class="rehab-swiper__title">Решение</p>
-                      <p class="rehab-swiper__desc section-desc">Россия, Москва</p>
-                      <p class="rehab-swiper__cost">80 000 руб./мес.</p>
-                    </div>
-
-                    <div class="rehab-swiper__img-wrap">
-                      <img class="rehab-swiper__img" src="img/swiper/rehab-swiper/4.png" alt="">
-                    </div>
-
-                    <div class="rehab-swiper__aside-item aside-item">
-                      <p class="aside-item__desc">Партнер портала</p>
-                    </div>
-                  </a>
-
-                  <button class="rehab-swiper__btn-compare btn-compare">
-                    <svg class="btn-compare__icon icon-compare" width="15" height="15">
-                      <use xlink:href="img/sprite.svg#icon-compare"></use>
-                    </svg>
-                    <span class="btn-compare__desc btn-compare__not-selected">Сравнить центр</span>
-                    <span class="btn-compare__desc btn-compare__selected">Добавлен</span>
-                  </button>
-                </div>
-              </div>
-              <div class="benefit swiper-slide rehab-swiper__slide">
-                <div class="rehab-swiper__item">
-                  <a class="rehab-swiper__link" href="rehab-page.html">
-                    <div class="rehab-swiper__text-wrap">
-                      <p class="rehab-swiper__title">Решение</p>
-                      <p class="rehab-swiper__desc section-desc">Россия, Москва</p>
-                      <p class="rehab-swiper__cost">80 000 руб./мес.</p>
-                    </div>
-
-                    <div class="rehab-swiper__img-wrap">
-                      <img class="rehab-swiper__img" src="img/swiper/rehab-swiper/4.png" alt="">
-                    </div>
-
-                    <div class="rehab-swiper__aside-item aside-item">
-                      <p class="aside-item__desc">Партнер портала</p>
-                    </div>
-                  </a>
-
-                  <button class="rehab-swiper__btn-compare btn-compare">
-                    <svg class="btn-compare__icon icon-compare" width="15" height="15">
-                      <use xlink:href="img/sprite.svg#icon-compare"></use>
-                    </svg>
-                    <span class="btn-compare__desc btn-compare__not-selected">Сравнить центр</span>
-                    <span class="btn-compare__desc btn-compare__selected">Добавлен</span>
-                  </button>
-                </div>
-              </div>
-              <div class="benefit swiper-slide rehab-swiper__slide">
-                <div class="rehab-swiper__item">
-                  <a class="rehab-swiper__link" href="rehab-page.html">
-                    <div class="rehab-swiper__text-wrap">
-                      <p class="rehab-swiper__title">Решение</p>
-                      <p class="rehab-swiper__desc section-desc">Россия, Москва</p>
-                      <p class="rehab-swiper__cost">80 000 руб./мес.</p>
-                    </div>
-
-                    <div class="rehab-swiper__img-wrap">
-                      <img class="rehab-swiper__img" src="img/swiper/rehab-swiper/4.png" alt="">
-                    </div>
-
-                    <div class="rehab-swiper__aside-item aside-item">
-                      <p class="aside-item__desc">Партнер портала</p>
-                    </div>
-                  </a>
-
-                  <button class="rehab-swiper__btn-compare btn-compare">
-                    <svg class="btn-compare__icon icon-compare" width="15" height="15">
-                      <use xlink:href="img/sprite.svg#icon-compare"></use>
-                    </svg>
-                    <span class="btn-compare__desc btn-compare__not-selected">Сравнить центр</span>
-                    <span class="btn-compare__desc btn-compare__selected">Добавлен</span>
-                  </button>
-                </div>
-              </div>
-              <div class="benefit swiper-slide rehab-swiper__slide">
-                <div class="rehab-swiper__item">
-                  <a class="rehab-swiper__link" href="rehab-page.html">
-                    <div class="rehab-swiper__text-wrap">
-                      <p class="rehab-swiper__title">Решение</p>
-                      <p class="rehab-swiper__desc section-desc">Россия, Москва</p>
-                      <p class="rehab-swiper__cost">80 000 руб./мес.</p>
-                    </div>
-
-                    <div class="rehab-swiper__img-wrap">
-                      <img class="rehab-swiper__img" src="img/swiper/rehab-swiper/4.png" alt="">
-                    </div>
-
-                    <div class="rehab-swiper__aside-item aside-item">
-                      <p class="aside-item__desc">Партнер портала</p>
-                    </div>
-                  </a>
-
-                  <button class="rehab-swiper__btn-compare btn-compare">
-                    <svg class="btn-compare__icon icon-compare" width="15" height="15">
-                      <use xlink:href="img/sprite.svg#icon-compare"></use>
-                    </svg>
-                    <span class="btn-compare__desc btn-compare__not-selected">Сравнить центр</span>
-                    <span class="btn-compare__desc btn-compare__selected">Добавлен</span>
-                  </button>
-                </div>
-              </div>
-
             </div>
 
             <div class="swiper-arrows-wrap rehab-swiper__arrows-wrap">
               <div class="swiper-button-prev rehab-swiper__button-prev btn-link">
-                <svg class="swiper-arrow-icon swiper-arrow-icon--left icon-arrow-short icon-arrow-short--left" width="13" height="25">
+                <svg class="swiper-arrow-icon swiper-arrow-icon--left icon-arrow-short icon-arrow-short--left" width="13" height="25" role="img">
                   <use xlink:href="img/sprite.svg#icon-arrow-short-left"></use>
                 </svg>
               </div>
 
               <div class="swiper-button-next rehab-swiper__button-next btn-link">
-                <svg class="swiper-arrow-icon swiper-arrow-icon--right icon-arrow-short icon-arrow-short--right" width="13" height="25">
+                <svg class="swiper-arrow-icon swiper-arrow-icon--right icon-arrow-short icon-arrow-short--right" width="13" height="25" role="img">
                   <use xlink:href="img/sprite.svg#icon-arrow-short-right"></use>
                 </svg>
               </div>
@@ -861,7 +671,7 @@
                       <p class="reviews-swiper__author-theme">Созависимость</p>
 
                       <div class="reviews-swiper__btn-link btn-link">
-                        <svg class="btn-link__icon icon-arrow-short icon-arrow-short--right" width="13" height="25">
+                        <svg class="btn-link__icon icon-arrow-short icon-arrow-short--right" width="13" height="25" role="img">
                           <use xlink:href="img/sprite.svg#icon-arrow-short-right"></use>
                         </svg>
                       </div>
@@ -882,7 +692,7 @@
                       <p class="reviews-swiper__author-theme">Созависимость</p>
 
                       <div class="reviews-swiper__btn-link btn-link">
-                        <svg class="btn-link__icon icon-arrow-short icon-arrow-short--right" width="13" height="25">
+                        <svg class="btn-link__icon icon-arrow-short icon-arrow-short--right" width="13" height="25" role="img">
                           <use xlink:href="img/sprite.svg#icon-arrow-short-right"></use>
                         </svg>
                       </div>
@@ -903,7 +713,7 @@
                       <p class="reviews-swiper__author-theme">Созависимость</p>
 
                       <div class="reviews-swiper__btn-link btn-link">
-                        <svg class="btn-link__icon icon-arrow-short icon-arrow-short--right" width="13" height="25">
+                        <svg class="btn-link__icon icon-arrow-short icon-arrow-short--right" width="13" height="25" role="img">
                           <use xlink:href="img/sprite.svg#icon-arrow-short-right"></use>
                         </svg>
                       </div>
@@ -924,7 +734,7 @@
                       <p class="reviews-swiper__author-theme">Созависимость</p>
 
                       <div class="reviews-swiper__btn-link btn-link">
-                        <svg class="btn-link__icon icon-arrow-short icon-arrow-short--right" width="13" height="25">
+                        <svg class="btn-link__icon icon-arrow-short icon-arrow-short--right" width="13" height="25" role="img">
                           <use xlink:href="img/sprite.svg#icon-arrow-short-right"></use>
                         </svg>
                       </div>
@@ -938,13 +748,13 @@
 
             <div class="swiper-arrows-wrap reviews-swiper__arrows-wrap">
               <div class="swiper-button-prev reviews-swiper__button-prev btn-link">
-                <svg class="swiper-arrow-icon swiper-arrow-icon--left icon-arrow-short icon-arrow-short--left" width="13" height="25">
+                <svg class="swiper-arrow-icon swiper-arrow-icon--left icon-arrow-short icon-arrow-short--left" width="13" height="25" role="img">
                   <use xlink:href="img/sprite.svg#icon-arrow-short-left"></use>
                 </svg>
               </div>
 
               <div class="swiper-button-next reviews-swiper__button-next btn-link">
-                <svg class="swiper-arrow-icon swiper-arrow-icon--right icon-arrow-short icon-arrow-short--right" width="13" height="25">
+                <svg class="swiper-arrow-icon swiper-arrow-icon--right icon-arrow-short icon-arrow-short--right" width="13" height="25" role="img">
                   <use xlink:href="img/sprite.svg#icon-arrow-short-right"></use>
                 </svg>
               </div>
@@ -973,9 +783,9 @@
             <p class="b__desc">
               Необходимо сделать одно простое действие, чтобы спасти родного человека.
             </p>
-            <button class="b__btn-modal btn-modal btn-modal--white modal-callback">
+            <button class="b__btn-modal btn-modal btn-modal--white modal-callback" type="button">
               Мне нужна помощь!
-              <span class="btn-modal__decor-line"></span>
+              <span class="btn-modal__decor-line" aria-hidden="true"></span>
             </button>
           </div>
         </div>
@@ -986,9 +796,9 @@
           <p class="stages__main-title section-title">
             Этапы лечения зависимости
           </p>
-          <button class="stages__btn-modal btn-modal btn-modal--white btn-modal--longer modal-callback">
+          <button class="stages__btn-modal btn-modal btn-modal--white btn-modal--longer modal-callback" type="button">
             Заявка на консультацию
-            <span class="btn-modal__decor-line"></span>
+            <span class="btn-modal__decor-line" aria-hidden="true"></span>
           </button>
         </div>
 
@@ -1007,7 +817,7 @@
               <img class="stages__img" src="img/stages/1.png" alt="Мотивация на лечение">
 
               <div class="stages__btn-link btn-link">
-                <svg class="btn-link__icon icon-arrow-short icon-arrow-short--right" width="13" height="25">
+                <svg class="btn-link__icon icon-arrow-short icon-arrow-short--right" width="13" height="25" role="img">
                   <use xlink:href="img/sprite.svg#icon-arrow-short-right"></use>
                 </svg>
               </div>
@@ -1027,7 +837,7 @@
               <img class="stages__img" src="img/stages/2.png" alt="Детоксикация в клинике">
 
               <div class="stages__btn-link btn-link">
-                <svg class="btn-link__icon icon-arrow-short icon-arrow-short--right" width="13" height="25">
+                <svg class="btn-link__icon icon-arrow-short icon-arrow-short--right" width="13" height="25" role="img">
                   <use xlink:href="img/sprite.svg#icon-arrow-short-right"></use>
                 </svg>
               </div>
@@ -1047,7 +857,7 @@
               <img class="stages__img" src="img/stages/3.png" alt="Реабилитация в центре">
 
               <div class="stages__btn-link btn-link">
-                <svg class="btn-link__icon icon-arrow-short icon-arrow-short--right" width="13" height="25">
+                <svg class="btn-link__icon icon-arrow-short icon-arrow-short--right" width="13" height="25" role="img">
                   <use xlink:href="img/sprite.svg#icon-arrow-short-right"></use>
                 </svg>
               </div>
@@ -1067,7 +877,7 @@
               <img class="stages__img" src="img/stages/4.png" alt="Амбулаторное лечение">
 
               <div class="stages__btn-link btn-link">
-                <svg class="btn-link__icon icon-arrow-short icon-arrow-short--right" width="13" height="25">
+                <svg class="btn-link__icon icon-arrow-short icon-arrow-short--right" width="13" height="25" role="img">
                   <use xlink:href="img/sprite.svg#icon-arrow-short-right"></use>
                 </svg>
               </div>
@@ -1091,9 +901,9 @@
             <p class="b__desc">
               Подберем программу реабилитации и поможем уговорить зависимого на лечение! Круглосуточная горячая линия.
             </p>
-            <button class="b__btn-modal btn-modal btn-modal--dark modal-callback">
+            <button class="b__btn-modal btn-modal btn-modal--dark modal-callback" type="button">
               Мне нужна помощь!
-              <span class="btn-modal__decor-line"></span>
+              <span class="btn-modal__decor-line" aria-hidden="true"></span>
             </button>
           </div>
         </div>
@@ -1116,9 +926,9 @@
               </p>
             </div>
 
-            <button class="article-part__aside-btn-modal btn-modal btn-modal--dark btn-modal--longer modal-callback">
+            <button class="article-part__aside-btn-modal btn-modal btn-modal--dark btn-modal--longer modal-callback" type="button">
               Мне нужна помощь!
-              <span class="btn-modal__decor-line"></span>
+              <span class="btn-modal__decor-line" aria-hidden="true"></span>
             </button>
           </div>
           <div class="article-part__content">
@@ -1264,11 +1074,13 @@
             <div class="logo__img-wrap">
               <img class="logo__img" src="img/logo/middle-logo.svg" width="216" height="216" alt="Логотип портала «Ji+Va»">
             </div>
-            <p class="logo__title logo__title--absolute"><span class="logo__title--red">J</span>i <span class="logo__title-decor">
-              <svg class="logo__icon icon-logo-star" width="21" height="20">
-                <use xlink:href="img/sprite.svg#icon-logo-star"></use>
-              </svg>
-            </span> Va</p>
+            <p class="logo__title logo__title--absolute">
+              <span class="logo__title--red">J</span>i <span class="logo__title-decor" aria-hidden="true">
+                <svg class="logo__icon icon-logo-star" width="21" height="20" role="img">
+                  <use xlink:href="img/sprite.svg#icon-logo-star"></use>
+                </svg>
+              </span> Va
+            </p>
           </a>
 
           <div class="footer__text-wrap">
@@ -1284,8 +1096,9 @@
             8 800 600-39-60
           </a>
 
-          <button class="footer__link-modal-region btn-region-1 modal-region">
+          <button class="footer__link-modal-region btn-region-1 modal-region" type="button" title="Выбрать регион">
             Россия
+            <span class="visually-hidden">Выбрать регион</span>
           </button>
 
         </div>

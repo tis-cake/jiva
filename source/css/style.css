@@ -465,12 +465,14 @@ html .desktop-block {
   .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
     margin: 0 1.5rem;
   }
+  .swiper-pagination-bullet::before,
   .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main::before,
-  .swiper-pagination-bullet-active-prev::before,
-  .swiper-pagination-bullet-active-next::before,
+  .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev::before,
+  .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next::before,
+  .swiper-pagination-bullet::after,
   .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main::after,
-  .swiper-pagination-bullet-active-prev::after,
-  .swiper-pagination-bullet-active-next::after {
+  .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev::after,
+  .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next::after {
     top: 0.2rem;
   }
 }
