@@ -1,3 +1,5 @@
+.swiper-container-two-row-container {}
+
 .swiper-container-big-container {
   box-sizing: border-box;
   width: 143rem;
@@ -70,6 +72,13 @@
 }
 
 .swiper-pagination {}
+
+.swiper-container .swiper-pagination {
+// .swiper-container-horizontal > .swiper-pagination-bullets.swiper-pagination {
+  width: 85%;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
 .swiper-container-horizontal > .swiper-pagination {
   bottom: 3.2rem;
@@ -229,7 +238,41 @@
   }
 }
 
+// числовая пагинация
+.swiper-pagination-numeric {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 26px;
+}
+
+.swiper-pagination-numeric .swiper-pagination-bullet {
+  height: auto;
+  font-size: 15px;
+  font-weight: 700;
+
+  transform: scale(1);
+
+  color: @light-gray;
+  background-color: transparent;
+
+  &-active {
+    font-size: 25px;
+    color: @dark;
+  }
+
+  &::before,
+  &::after {
+    top: 1.1rem;
+    transform: scale(0.5);
+    // top: 50%;
+    // content: none;
+  }
+}
+
 @media (max-width: @tablet-width) {
+  .swiper-container-two-row-container {}
+
   .swiper-container-big-container {
     width: auto;
 
@@ -266,6 +309,10 @@
   }
 
   .swiper-pagination {}
+
+  .swiper-container .swiper-pagination {
+    width: 70%;
+  }
 
   .swiper-container-horizontal > .swiper-pagination {
     bottom: 1.6rem;

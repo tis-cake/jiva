@@ -45,6 +45,7 @@ $(document).ready(function () {
     pagination: paginationParam,
     // pagination: {
     //   el: '.rehab-swiper__swiper-pagination',
+    //   clickable: true,
     //   dynamicBullets: true,
     // },
 
@@ -86,5 +87,41 @@ $(document).ready(function () {
         spaceBetween: 30,
       }
     }
+  });
+});
+
+// свайпер рехабов
+$(document).ready(function () {
+
+  let rehabSwiper = new Swiper('#rehab-swiper-two-rows', {
+    slidesPerView: '4',
+    slidesPerColumn: '2',
+    slidesPerColumnFill: 'row',
+
+    spaceBetween: 25,
+    touchRatio: 1,
+
+    navigation: {
+      nextEl: '.rehab-swiper__button-next',
+      prevEl: '.rehab-swiper__button-prev',
+    },
+    pagination: {
+      el: '.rehab-swiper__swiper-pagination',
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + (index + 1) + '</span>';
+      }
+    },
+
+    // breakpoints: {
+    //   756: {
+    //     slidesPerView: '4',
+    //     spaceBetween: 30,
+    //   },
+    //   550: {
+    //     slidesPerView: '3',
+    //     spaceBetween: 30,
+    //   }
+    // }
   });
 });
