@@ -78,3 +78,28 @@ $('.btn-compare').on('click', function() {
   $(this).blur();
 })
 
+// фильтр центров над картой
+$(document).ready(function () {
+  $('.contacts-map__filter-handler').on('click', function(){
+
+    $(this).toggleClass('active');
+    $data = $(this).data('id');
+    $(this).find($('.contacts-map__filter-list[data-id='+$data+']').slideToggle());
+    // $('.contacts-map__filter-options').toggleClass('active');
+
+    $('.contacts-map__filter-item').click(function () {
+      $value = $(this).text();
+      $(this).addClass('active');
+
+      $(this).closest('.contacts-map__filter-options').find('.contacts-map__filter-handler').text($value); // находим ближайшее поле ввода (ссылку)
+                                                                                          //  и подставляем выбранное значение из списка
+
+      $(this).closest('.contacts-map__filter-options').find('input').val($value);        // находим поле ввода и вставляем туда же текст
+      if ($(this).closest('.contacts-map__filter-options').find('input').change()) {    // если поле было изменено - скрыть
+        $(this).closest('.contacts-map__filter-options').find('.contacts-map__filter-handler').removeClass('active');
+        $(this).closest('.contacts-map__filter-options').find('.contacts-map__filter-list').slideUp();
+      }
+    });
+  });
+});
+

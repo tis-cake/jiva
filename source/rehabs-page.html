@@ -318,7 +318,61 @@
         </button>
       </section>
 
-      <section class="rehab-swiper">
+      <section class="rehab-swiper rehab-swiper-filter">
+
+        <div class="rehab-swiper__filter filter contacts-map__container container">
+          <form class="contacts-map__filter-container" action="#" method="post">
+            <div class="contacts-map__filter-options">
+              <input class="contacts-map__input visually-hidden" type="text" name="COUNTRY" value="0" data-id="" id="filter-country">
+              <span class="contacts-map__filter-handler-desc">Страна</span>
+              <a class="contacts-map__filter-handler" href="javascript:void(0);" data-id="50">Все</a>
+              <ul class="contacts-map__filter-list" data-id="50">
+                <li class="contacts-map__filter-list-item">
+                  <a class="contacts-map__filter-item" href="javascript:void(0);" data-id="0">Россия</a>
+                </li>
+                <li class="contacts-map__filter-list-item">
+                  <a class="contacts-map__filter-item" href="javascript:void(0);" data-id="0">Израиль</a>
+                </li>
+                <li class="contacts-map__filter-list-item">
+                  <a class="contacts-map__filter-item" href="javascript:void(0);" data-id="0">КНДР</a>
+                </li>
+              </ul>
+            </div>
+            <!-- <div class="contacts-map__filter-range">
+              <p class="contacts-map__toggle-wrapper">
+                <input class="contacts-map__toggle" type="text" id="range-toggle-min" readonly value="">
+                <input class="contacts-map__toggle contacts-map__toggle--max" type="text" id="range-toggle-max" readonly value="">
+              </p>
+              <div class="contacts-map__scale" id="filter-range"></div>
+            </div> -->
+            <div class="contacts-map__filter-options">
+              <input class="contacts-map__input visually-hidden" type="text" name="REGION" value="0" data-id="" id="filter-region">
+              <span class="contacts-map__filter-handler-desc">Регион</span>
+              <a class="contacts-map__filter-handler" href="javascript:void(0);" data-id="51">Любой</a>
+              <ul class="contacts-map__filter-list" data-id="51">
+                <li class="contacts-map__filter-list-item">
+                  <a class="contacts-map__filter-item" href="javascript:void(0);" data-id="0">Москва и область</a>
+                </li>
+                <li class="contacts-map__filter-list-item">
+                  <a class="contacts-map__filter-item" href="javascript:void(0);" data-id="0">Калужская область</a>
+                </li>
+                <li class="contacts-map__filter-list-item">
+                  <a class="contacts-map__filter-item" href="javascript:void(0);" data-id="0">Курская область</a>
+                </li>
+              </ul>
+            </div>
+            <!-- <div class="contacts-map__filter-btn"> -->
+              <button class="contacts-map__btn btn">
+                Показать:
+                <span class="contacts-map__btn-count">237</span>
+              </button>
+            <!-- </div> -->
+          </form>
+        </div>
+
+        <div class="rehab-swiper__map-wrap container">
+          <div id="map" class="rehab-swiper__map"></div>
+        </div>
 
         <div class="rehab-swiper__big-container rehab-swiper__two-row-container swiper-container-big-container swiper-container-two-row-container container">
           <div class="rehab-swiper__swiper-container swiper-container" id="rehab-swiper-two-rows">
@@ -375,7 +429,7 @@
                   </a>
 
                   <button class="rehab-swiper__btn-compare btn-compare" type="button">
-                    <svg class="btn-compare__icon icon-compare" width="15" height="15"role="img">
+                    <svg class="btn-compare__icon icon-compare" width="15" height="15" role="img">
                       <use xlink:href="img/sprite.svg#icon-compare"></use>
                     </svg>
                     <span class="btn-compare__desc btn-compare__not-selected">Сравнить центр</span>
@@ -403,7 +457,7 @@
                   </a>
 
                   <button class="rehab-swiper__btn-compare btn-compare" type="button">
-                    <svg class="btn-compare__icon icon-compare" width="15" height="15"role="img">
+                    <svg class="btn-compare__icon icon-compare" width="15" height="15" role="img">
                       <use xlink:href="img/sprite.svg#icon-compare"></use>
                     </svg>
                     <span class="btn-compare__desc btn-compare__not-selected">Сравнить центр</span>
@@ -431,7 +485,7 @@
                   </a>
 
                   <button class="rehab-swiper__btn-compare btn-compare" type="button">
-                    <svg class="btn-compare__icon icon-compare" width="15" height="15"role="img">
+                    <svg class="btn-compare__icon icon-compare" width="15" height="15" role="img">
                       <use xlink:href="img/sprite.svg#icon-compare"></use>
                     </svg>
                     <span class="btn-compare__desc btn-compare__not-selected">Сравнить центр</span>
@@ -459,7 +513,7 @@
                   </a>
 
                   <button class="rehab-swiper__btn-compare btn-compare" type="button">
-                    <svg class="btn-compare__icon icon-compare" width="15" height="15"role="img">
+                    <svg class="btn-compare__icon icon-compare" width="15" height="15" role="img">
                       <use xlink:href="img/sprite.svg#icon-compare"></use>
                     </svg>
                     <span class="btn-compare__desc btn-compare__not-selected">Сравнить центр</span>
@@ -487,7 +541,7 @@
                   </a>
 
                   <button class="rehab-swiper__btn-compare btn-compare" type="button">
-                    <svg class="btn-compare__icon icon-compare" width="15" height="15"role="img">
+                    <svg class="btn-compare__icon icon-compare" width="15" height="15" role="img">
                       <use xlink:href="img/sprite.svg#icon-compare"></use>
                     </svg>
                     <span class="btn-compare__desc btn-compare__not-selected">Сравнить центр</span>
@@ -515,7 +569,7 @@
                   </a>
 
                   <button class="rehab-swiper__btn-compare btn-compare" type="button">
-                    <svg class="btn-compare__icon icon-compare" width="15" height="15"role="img">
+                    <svg class="btn-compare__icon icon-compare" width="15" height="15" role="img">
                       <use xlink:href="img/sprite.svg#icon-compare"></use>
                     </svg>
                     <span class="btn-compare__desc btn-compare__not-selected">Сравнить центр</span>
@@ -543,7 +597,7 @@
                   </a>
 
                   <button class="rehab-swiper__btn-compare btn-compare" type="button">
-                    <svg class="btn-compare__icon icon-compare" width="15" height="15"role="img">
+                    <svg class="btn-compare__icon icon-compare" width="15" height="15" role="img">
                       <use xlink:href="img/sprite.svg#icon-compare"></use>
                     </svg>
                     <span class="btn-compare__desc btn-compare__not-selected">Сравнить центр</span>
@@ -571,7 +625,7 @@
                   </a>
 
                   <button class="rehab-swiper__btn-compare btn-compare" type="button">
-                    <svg class="btn-compare__icon icon-compare" width="15" height="15"role="img">
+                    <svg class="btn-compare__icon icon-compare" width="15" height="15" role="img">
                       <use xlink:href="img/sprite.svg#icon-compare"></use>
                     </svg>
                     <span class="btn-compare__desc btn-compare__not-selected">Сравнить центр</span>
@@ -599,7 +653,7 @@
                   </a>
 
                   <button class="rehab-swiper__btn-compare btn-compare" type="button">
-                    <svg class="btn-compare__icon icon-compare" width="15" height="15"role="img">
+                    <svg class="btn-compare__icon icon-compare" width="15" height="15" role="img">
                       <use xlink:href="img/sprite.svg#icon-compare"></use>
                     </svg>
                     <span class="btn-compare__desc btn-compare__not-selected">Сравнить центр</span>
@@ -627,7 +681,7 @@
                   </a>
 
                   <button class="rehab-swiper__btn-compare btn-compare" type="button">
-                    <svg class="btn-compare__icon icon-compare" width="15" height="15"role="img">
+                    <svg class="btn-compare__icon icon-compare" width="15" height="15" role="img">
                       <use xlink:href="img/sprite.svg#icon-compare"></use>
                     </svg>
                     <span class="btn-compare__desc btn-compare__not-selected">Сравнить центр</span>
@@ -655,7 +709,7 @@
                   </a>
 
                   <button class="rehab-swiper__btn-compare btn-compare" type="button">
-                    <svg class="btn-compare__icon icon-compare" width="15" height="15"role="img">
+                    <svg class="btn-compare__icon icon-compare" width="15" height="15" role="img">
                       <use xlink:href="img/sprite.svg#icon-compare"></use>
                     </svg>
                     <span class="btn-compare__desc btn-compare__not-selected">Сравнить центр</span>
@@ -683,7 +737,7 @@
                   </a>
 
                   <button class="rehab-swiper__btn-compare btn-compare" type="button">
-                    <svg class="btn-compare__icon icon-compare" width="15" height="15"role="img">
+                    <svg class="btn-compare__icon icon-compare" width="15" height="15" role="img">
                       <use xlink:href="img/sprite.svg#icon-compare"></use>
                     </svg>
                     <span class="btn-compare__desc btn-compare__not-selected">Сравнить центр</span>
@@ -972,5 +1026,8 @@
 
     <script src="js/main.js"></script>
     <script src="js/slider.js"></script>
+
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+    <script src="js/map.js"></script>
   </body>
 </html>
