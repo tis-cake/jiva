@@ -464,6 +464,25 @@
   height: 2.8rem;
 }
 
+.icon-triangle-bottom {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+
+  width: 1.6rem;
+  height: 1.6rem;
+  fill: @light-gray;
+
+  transition: @s;
+}
+
+.active .icon-triangle-bottom,
+.active.icon-triangle-bottom {
+  transform: translateY(-50%) rotate(180deg);
+}
+
 @media (max-width: @tablet-width) {
   .DaVinci {
     font-size: 3rem;
@@ -546,6 +565,11 @@
   .icon-compare {
     width: 1rem;
     height: 1rem;
+  }
+
+  .icon-triangle-bottom {
+    // width: 1.6rem;
+    // height: 1.6rem;
   }
 }
 

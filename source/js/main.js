@@ -80,24 +80,24 @@ $('.btn-compare').on('click', function() {
 
 // фильтр центров над картой
 $(document).ready(function () {
-  $('.contacts-map__filter-handler').on('click', function(){
+  $('.filter__handler').on('click', function(){
 
     $(this).toggleClass('active');
+    $(this).closest('.filter__options').toggleClass('active');
     $data = $(this).data('id');
-    $(this).find($('.contacts-map__filter-list[data-id='+$data+']').slideToggle());
-    // $('.contacts-map__filter-options').toggleClass('active');
+    $(this).find($('.filter__list[data-id='+$data+']').slideToggle());
 
-    $('.contacts-map__filter-item').click(function () {
+    $('.filter__item').click(function () {
       $value = $(this).text();
       $(this).addClass('active');
 
-      $(this).closest('.contacts-map__filter-options').find('.contacts-map__filter-handler').text($value); // находим ближайшее поле ввода (ссылку)
-                                                                                          //  и подставляем выбранное значение из списка
+      $(this).closest('.filter__options').find('.filter__handler').text($value);
 
-      $(this).closest('.contacts-map__filter-options').find('input').val($value);        // находим поле ввода и вставляем туда же текст
-      if ($(this).closest('.contacts-map__filter-options').find('input').change()) {    // если поле было изменено - скрыть
-        $(this).closest('.contacts-map__filter-options').find('.contacts-map__filter-handler').removeClass('active');
-        $(this).closest('.contacts-map__filter-options').find('.contacts-map__filter-list').slideUp();
+      $(this).closest('.filter__options').find('input').val($value);
+      if ($(this).closest('.filter__options').find('input').change()) {
+        $(this).closest('.filter__options').removeClass('active');
+        $(this).closest('.filter__options').find('.filter__handler').removeClass('active');
+        $(this).closest('.filter__options').find('.filter__list').slideUp();
       }
     });
   });

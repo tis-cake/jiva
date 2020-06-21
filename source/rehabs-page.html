@@ -320,53 +320,68 @@
 
       <section class="rehab-swiper rehab-swiper-filter">
 
-        <div class="rehab-swiper__filter filter contacts-map__container container">
-          <form class="contacts-map__filter-container" action="#" method="post">
-            <div class="contacts-map__filter-options">
-              <input class="contacts-map__input visually-hidden" type="text" name="COUNTRY" value="0" data-id="" id="filter-country">
-              <span class="contacts-map__filter-handler-desc">Страна</span>
-              <a class="contacts-map__filter-handler" href="javascript:void(0);" data-id="50">Все</a>
-              <ul class="contacts-map__filter-list" data-id="50">
-                <li class="contacts-map__filter-list-item">
-                  <a class="contacts-map__filter-item" href="javascript:void(0);" data-id="0">Россия</a>
+        <div class="rehab-swiper__filter filter container">
+          <form class="filter__form" action="#" method="post">
+            <div class="filter__options">
+              <input class="filter__input visually-hidden" type="text" name="COUNTRY" value="" data-id="" id="filter-country">
+              <label class="filter__handler-desc" for="filter-country">Страна</label>
+              <svg class="filter__handler-icon icon-triangle-bottom" width="16" height="16" role="img">
+                <use xlink:href="img/sprite.svg#icon-triangle-bottom"></use>
+              </svg>
+              <a class="filter__handler" href="javascript:void(0);" data-id="50">Все</a>
+              <ul class="filter__list" data-id="50">
+                <li class="filter__list-item">
+                  <a class="filter__item" href="javascript:void(0);" data-id="0">Россия</a>
                 </li>
-                <li class="contacts-map__filter-list-item">
-                  <a class="contacts-map__filter-item" href="javascript:void(0);" data-id="0">Израиль</a>
+                <li class="filter__list-item">
+                  <a class="filter__item" href="javascript:void(0);" data-id="0">Израиль</a>
                 </li>
-                <li class="contacts-map__filter-list-item">
-                  <a class="contacts-map__filter-item" href="javascript:void(0);" data-id="0">КНДР</a>
-                </li>
-              </ul>
-            </div>
-            <!-- <div class="contacts-map__filter-range">
-              <p class="contacts-map__toggle-wrapper">
-                <input class="contacts-map__toggle" type="text" id="range-toggle-min" readonly value="">
-                <input class="contacts-map__toggle contacts-map__toggle--max" type="text" id="range-toggle-max" readonly value="">
-              </p>
-              <div class="contacts-map__scale" id="filter-range"></div>
-            </div> -->
-            <div class="contacts-map__filter-options">
-              <input class="contacts-map__input visually-hidden" type="text" name="REGION" value="0" data-id="" id="filter-region">
-              <span class="contacts-map__filter-handler-desc">Регион</span>
-              <a class="contacts-map__filter-handler" href="javascript:void(0);" data-id="51">Любой</a>
-              <ul class="contacts-map__filter-list" data-id="51">
-                <li class="contacts-map__filter-list-item">
-                  <a class="contacts-map__filter-item" href="javascript:void(0);" data-id="0">Москва и область</a>
-                </li>
-                <li class="contacts-map__filter-list-item">
-                  <a class="contacts-map__filter-item" href="javascript:void(0);" data-id="0">Калужская область</a>
-                </li>
-                <li class="contacts-map__filter-list-item">
-                  <a class="contacts-map__filter-item" href="javascript:void(0);" data-id="0">Курская область</a>
+                <li class="filter__list-item">
+                  <a class="filter__item" href="javascript:void(0);" data-id="0">КНДР</a>
                 </li>
               </ul>
             </div>
-            <!-- <div class="contacts-map__filter-btn"> -->
-              <button class="contacts-map__btn btn">
-                Показать:
-                <span class="contacts-map__btn-count">237</span>
-              </button>
-            <!-- </div> -->
+
+            <div class="filter__options">
+              <input class="filter__input visually-hidden" type="text" name="REGION" value="" data-id="" id="filter-region">
+              <label class="filter__handler-desc" for="filter-region">Регион</label>
+              <svg class="filter__handler-icon icon-triangle-bottom" width="16" height="16" role="img">
+                <use xlink:href="img/sprite.svg#icon-triangle-bottom"></use>
+              </svg>
+              <a class="filter__handler" href="javascript:void(0);" data-id="51">Любой</a>
+              <ul class="filter__list" data-id="51">
+                <li class="filter__list-item">
+                  <a class="filter__item" href="javascript:void(0);" data-id="0">Москва и область</a>
+                </li>
+                <li class="filter__list-item">
+                  <a class="filter__item" href="javascript:void(0);" data-id="0">Калужская область</a>
+                </li>
+                <li class="filter__list-item">
+                  <a class="filter__item" href="javascript:void(0);" data-id="0">Курская область</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="filter__options filter__options-range">
+              <div class="filter__range-wrap">
+                <label class="filter__handler-desc" for="filter-range-min">
+                  Цена за месяц от
+                </label>
+                <input class="filter__input-range" id="filter-range-min" type="number" name="RANGE-MIN" min="30000" max="90000" step="5000" placeholder="50 000 Р">
+              </div>
+
+              <div class="filter__range-wrap">
+                <label class="filter__handler-desc" for="filter-range-max">
+                  Цена за месяц до
+                </label>
+                <input class="filter__input-range" id="filter-range-max" type="number" name="RANGE-MAX" min="30000" max="90000" step="5000" placeholder="90 000 Р">
+              </div>
+            </div>
+
+            <button class="filter__btn">
+              Показать:
+              <span class="filter__btn-count">237</span>
+            </button>
           </form>
         </div>
 

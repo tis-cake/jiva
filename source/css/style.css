@@ -830,6 +830,21 @@ html .desktop-block {
   width: 2.8rem;
   height: 2.8rem;
 }
+.icon-triangle-bottom {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  width: 1.6rem;
+  height: 1.6rem;
+  fill: #A6B2C6;
+  transition: 0.5s;
+}
+.active .icon-triangle-bottom,
+.active.icon-triangle-bottom {
+  transform: translateY(-50%) rotate(180deg);
+}
 @media (max-width: 48em) {
   .DaVinci {
     font-size: 3rem;
@@ -2547,43 +2562,71 @@ html .desktop-block {
   text-decoration: underline;
   color: #20b659;
 }
-.contacts-map__filter-container {
+.filter__form {
   box-sizing: border-box;
   display: flex;
   align-items: center;
-  padding: 5px;
-  padding-left: 0;
   padding-right: 13px;
   background-color: #FFF;
   border-radius: 15px;
 }
-.contacts-map__filter-options {
+.filter__options {
+  box-sizing: border-box;
   position: relative;
-  width: 305px;
+  height: 70px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 13px;
+  padding-right: 13px;
+  font-size: 20px;
   border-right: 1px solid #CBD7EF;
 }
-.contacts-map__filter-options:first-of-type {
-  padding-left: 32px;
+.filter__options:first-of-type {
+  width: 306px;
+  padding-left: 33px;
 }
-.contacts-map__filter-handler {
+.filter__options:nth-of-type(2) {
+  width: 352px;
+}
+.filter__options::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+}
+.filter__options:hover {
+  color: #000;
+}
+.filter__options:hover .filter__handler-desc {
+  color: #687c9e;
+}
+.filter__options:hover .filter__handler-icon {
+  fill: #687c9e;
+}
+.filter__handler {
   position: relative;
   box-sizing: border-box;
   display: flex;
-  align-items: center;
-  font-size: 20px;
-  background-color: #ffffff;
+  align-items: flex-end;
+  height: 100%;
 }
-.contacts-map__filter-handler-desc {
-  display: inline-block;
-  margin-bottom: 6px;
+.filter__handler-desc {
+  position: absolute;
+  z-index: 0;
+  top: 8px;
   color: #A6B2C6;
   font-size: 18px;
+  transition: 0.5s;
 }
-.contacts-map__input {
+.filter__handler-icon {
+  z-index: 0;
+  right: 18px;
+}
+.filter__input {
   position: absolute;
   z-index: 20;
 }
-.contacts-map__input:focus {
+.filter__input:focus {
   color: transparent;
   background-color: transparent;
   border: none;
@@ -2592,7 +2635,7 @@ html .desktop-block {
   -webkit-appearance: none;
   appearance: none;
 }
-.contacts-map__filter-list {
+.filter__list {
   box-sizing: border-box;
   display: none;
   position: absolute;
@@ -2609,14 +2652,48 @@ html .desktop-block {
   border-radius: 15px;
   background-color: #ffffff;
 }
-.contacts-map__filter-list-item:not(:last-child) {
+.filter__list-item:not(:last-child) {
   margin-bottom: 8px;
 }
-.contacts-map__filter-item {
+.filter__item {
   display: block;
   color: inherit;
 }
-.contacts-map__btn {
+.filter__options-range {
+  display: flex;
+  justify-content: space-between;
+  width: 380px;
+  border: none;
+}
+.filter__range-wrap {
+  display: flex;
+  align-items: flex-end;
+  width: 48%;
+}
+.filter__input-range {
+  box-sizing: border-box;
+  width: 80%;
+  height: 26px;
+  color: inherit;
+  opacity: 1;
+  border-bottom: 1px solid #A6B2C6;
+}
+.filter__input-range::-moz-placeholder {
+  opacity: 1;
+}
+.filter__input-range:-ms-input-placeholder {
+  opacity: 1;
+}
+.filter__input-range::-ms-input-placeholder {
+  opacity: 1;
+}
+.filter__input-range::placeholder {
+  opacity: 1;
+}
+.filter__input-range:focus {
+  outline: none;
+}
+.filter__btn {
   width: 260px;
   height: 59px;
   margin-left: auto;
@@ -2626,6 +2703,11 @@ html .desktop-block {
   background-color: #6ED1BB;
   border-radius: 15px;
   box-shadow: 5px 4px 15px rgba(65, 196, 165, 0.43);
+  transition: 0.5s;
+}
+.filter__btn:hover,
+.filter__btn:focus {
+  box-shadow: none;
 }
 .rehab-swiper {
   padding-top: 12.5rem;
