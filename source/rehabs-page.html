@@ -324,7 +324,9 @@
           <form class="filter__form" action="#" method="post">
             <div class="filter__options">
               <input class="filter__input visually-hidden" type="text" name="COUNTRY" value="" data-id="" id="filter-country">
-              <label class="filter__handler-desc" for="filter-country">Страна</label>
+              <label class="filter__handler-desc" for="filter-country">
+                Страна<span class="filter__handler-desc-mobile">:</span>
+              </label>
               <svg class="filter__handler-icon icon-triangle-bottom" width="16" height="16" role="img">
                 <use xlink:href="img/sprite.svg#icon-triangle-bottom"></use>
               </svg>
@@ -344,7 +346,9 @@
 
             <div class="filter__options">
               <input class="filter__input visually-hidden" type="text" name="REGION" value="" data-id="" id="filter-region">
-              <label class="filter__handler-desc" for="filter-region">Регион</label>
+              <label class="filter__handler-desc" for="filter-region">
+                Регион<span class="filter__handler-desc-mobile">:</span>
+              </label>
               <svg class="filter__handler-icon icon-triangle-bottom" width="16" height="16" role="img">
                 <use xlink:href="img/sprite.svg#icon-triangle-bottom"></use>
               </svg>
@@ -365,16 +369,24 @@
             <div class="filter__options filter__options-range">
               <div class="filter__range-wrap">
                 <label class="filter__handler-desc" for="filter-range-min">
-                  Цена за месяц от
+                  Цена за месяц от<span class="filter__handler-desc-mobile">:</span>
                 </label>
                 <input class="filter__input-range" id="filter-range-min" type="number" name="RANGE-MIN" min="30000" max="90000" step="5000" placeholder="50 000 Р">
+
+                <svg class="filter__handler-icon icon-triangle-bottom" width="16" height="16" role="img">
+                  <use xlink:href="img/sprite.svg#icon-triangle-bottom"></use>
+                </svg>
               </div>
 
               <div class="filter__range-wrap">
                 <label class="filter__handler-desc" for="filter-range-max">
-                  Цена за месяц до
+                  Цена за месяц до<span class="filter__handler-desc-mobile">:</span>
                 </label>
                 <input class="filter__input-range" id="filter-range-max" type="number" name="RANGE-MAX" min="30000" max="90000" step="5000" placeholder="90 000 Р">
+
+                <svg class="filter__handler-icon icon-triangle-bottom" width="16" height="16" role="img">
+                  <use xlink:href="img/sprite.svg#icon-triangle-bottom"></use>
+                </svg>
               </div>
             </div>
 

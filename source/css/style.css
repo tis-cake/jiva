@@ -913,6 +913,10 @@ html .desktop-block {
     width: 1rem;
     height: 1rem;
   }
+  .icon-triangle-bottom {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
 }
 /*header*/
 .header {
@@ -1814,11 +1818,40 @@ html .desktop-block {
     top: 47.3rem;
     background-image: url('../img/main-info/1-2-m.svg');
   }
+  .main-info__text-wrap {
+    padding-top: 4.5rem;
+  }
+  .main-info__subtitle {
+    margin-bottom: 2.7rem;
+    font-size: 1.8rem;
+  }
+  .main-info__title {
+    margin-bottom: 1.4rem;
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+  .main-info__desc {
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+  }
+  .main-info__btn-modal {
+    margin-top: 2.8rem;
+  }
   .main-info-one::after {
     top: 52.9rem;
     transform: translateX(-21rem);
     width: 36.8rem;
     height: 36.8rem;
+  }
+  .main-info-two .main-info__bg {
+    top: -18.2rem;
+    width: 62.8rem;
+    height: 62.8rem;
+  }
+  .main-info-two::after {
+    top: 39.5rem;
+    width: 35.3rem;
+    height: 22.2rem;
   }
 }
 .services {
@@ -2557,36 +2590,37 @@ html .desktop-block {
     font-size: 2.6rem;
   }
 }
-/* в баллуне */
+/* баллун */
 .address-card-btn {
   text-decoration: underline;
   color: #20b659;
 }
 .filter__form {
   box-sizing: border-box;
+  position: relative;
   display: flex;
   align-items: center;
-  padding-right: 13px;
+  padding-right: 1.3rem;
   background-color: #FFF;
-  border-radius: 15px;
+  border-radius: 1.5rem;
 }
 .filter__options {
   box-sizing: border-box;
   position: relative;
-  height: 70px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 13px;
-  padding-right: 13px;
-  font-size: 20px;
-  border-right: 1px solid #CBD7EF;
+  height: 7rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1.3rem;
+  padding-right: 1.3rem;
+  font-size: 2rem;
+  border-right: 0.1rem solid #CBD7EF;
 }
 .filter__options:first-of-type {
-  width: 306px;
-  padding-left: 33px;
+  width: 30.6rem;
+  padding-left: 3.3rem;
 }
 .filter__options:nth-of-type(2) {
-  width: 352px;
+  width: 35.2rem;
 }
 .filter__options::after {
   position: absolute;
@@ -2613,14 +2647,17 @@ html .desktop-block {
 .filter__handler-desc {
   position: absolute;
   z-index: 0;
-  top: 8px;
+  top: 0.8rem;
   color: #A6B2C6;
-  font-size: 18px;
+  font-size: 1.8rem;
   transition: 0.5s;
+}
+.filter__handler-desc-mobile {
+  display: none;
 }
 .filter__handler-icon {
   z-index: 0;
-  right: 18px;
+  right: 1.8rem;
 }
 .filter__input {
   position: absolute;
@@ -2642,18 +2679,18 @@ html .desktop-block {
   z-index: 20;
   left: 0;
   width: 100%;
-  max-height: 224px;
+  max-height: 22.4rem;
   overflow-y: scroll;
-  margin-top: 20px;
-  padding-top: 12px;
-  padding-left: 35px;
-  padding-right: 35px;
-  padding-bottom: 12px;
-  border-radius: 15px;
+  margin-top: 2rem;
+  padding-top: 1.2rem;
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+  padding-bottom: 1.2rem;
+  border-radius: 1.5rem;
   background-color: #ffffff;
 }
 .filter__list-item:not(:last-child) {
-  margin-bottom: 8px;
+  margin-bottom: 0.8rem;
 }
 .filter__item {
   display: block;
@@ -2662,7 +2699,7 @@ html .desktop-block {
 .filter__options-range {
   display: flex;
   justify-content: space-between;
-  width: 380px;
+  width: 38rem;
   border: none;
 }
 .filter__range-wrap {
@@ -2670,13 +2707,16 @@ html .desktop-block {
   align-items: flex-end;
   width: 48%;
 }
+.filter__range-wrap .filter__handler-icon {
+  display: none;
+}
 .filter__input-range {
   box-sizing: border-box;
   width: 80%;
-  height: 26px;
+  height: 2.6rem;
   color: inherit;
   opacity: 1;
-  border-bottom: 1px solid #A6B2C6;
+  border-bottom: 0.1rem solid #A6B2C6;
 }
 .filter__input-range::-moz-placeholder {
   opacity: 1;
@@ -2694,20 +2734,110 @@ html .desktop-block {
   outline: none;
 }
 .filter__btn {
-  width: 260px;
-  height: 59px;
+  width: 26rem;
+  height: 5.9rem;
   margin-left: auto;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 2rem;
   color: #fff;
   background-color: #6ED1BB;
-  border-radius: 15px;
+  border-radius: 1.5rem;
   box-shadow: 5px 4px 15px rgba(65, 196, 165, 0.43);
   transition: 0.5s;
 }
 .filter__btn:hover,
 .filter__btn:focus {
   box-shadow: none;
+}
+@media (max-width: 48em) {
+  /* баллун */
+  .filter {
+    margin-bottom: 80px;
+  }
+  .filter__form {
+    align-items: initial;
+    flex-direction: column;
+    padding-right: 0;
+  }
+  .filter__options {
+    height: 47px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 16px;
+    border-right: none;
+  }
+  .filter__options:first-of-type,
+  .filter__options:nth-of-type(2) {
+    width: 100%;
+    padding-left: 0;
+  }
+  .filter__options::before {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+  }
+  .filter__handler {
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding-left: 68px;
+    padding-right: 24px;
+  }
+  .filter__handler-desc {
+    top: 50%;
+    left: 11px;
+    transform: translateY(-50%);
+    font-size: 16px;
+  }
+  .filter__handler-desc-mobile {
+    display: inline;
+  }
+  .filter__handler-icon {
+    right: 9px;
+  }
+  .filter__list {
+    margin-top: 0;
+    padding-left: 11px;
+    padding-right: 11px;
+    border-radius: 0 0 1.5rem 1.5rem;
+  }
+  .filter__options-range {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    border: none;
+  }
+  .filter__range-wrap {
+    position: relative;
+    width: 100%;
+    height: 47px;
+  }
+  .filter__range-wrap .filter__handler-icon {
+    display: block;
+  }
+  .filter__input-range {
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    width: 100%;
+    height: 100%;
+    padding-left: 140px;
+    padding-right: 24px;
+    border-bottom: none;
+  }
+  .filter__input-range:focus + .filter__handler-icon {
+    transform: translateY(-50%) rotate(180deg);
+  }
+  .filter__btn {
+    position: absolute;
+    bottom: -62px;
+    width: 100%;
+    height: 50px;
+    margin-left: 0;
+    font-size: 16px;
+  }
 }
 .rehab-compare-link {
   box-sizing: border-box;
@@ -2961,6 +3091,9 @@ html .desktop-block {
   }
   .rehab-swiper__btn-modal {
     margin-bottom: 4rem;
+  }
+  .rehab-swiper__map-wrap {
+    height: 338px;
   }
 }
 .reviews-swiper {
