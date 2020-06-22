@@ -10,7 +10,7 @@ function init() {
 
   var iconParam = {
     iconLayout: 'default#image',
-    iconImageHref: '/img/marker-maps.png',
+    iconImageHref: 'img/marker-maps.png',
     iconImageSize: [40, 45]
   }
 

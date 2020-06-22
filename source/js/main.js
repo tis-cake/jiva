@@ -76,6 +76,12 @@ $('.btn-compare').on('click', function() {
   $(this).toggleClass('selected');
   $(this).prev().toggleClass('selected');
   $(this).blur();
+
+  if ($('.rehab-swiper__link').hasClass('selected')) {
+    $('.rehab-compare-link').addClass('active');
+  } else {
+    $('.rehab-compare-link').removeClass('active');
+  }
 })
 
 // фильтр центров над картой
