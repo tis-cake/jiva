@@ -90,11 +90,11 @@ $(document).ready(function () {
   });
 });
 
-// свайпер рехабов
+// свайпер рехабов в 2 строки
 $(document).ready(function () {
 
   let rehabSwiper = new Swiper('#rehab-swiper-two-rows', {
-    slidesPerView: '4',
+    slidesPerView: '2',
     slidesPerColumn: '2',
     slidesPerColumnFill: 'row',
 
@@ -113,15 +113,16 @@ $(document).ready(function () {
       }
     },
 
-    // breakpoints: {
-    //   756: {
-    //     slidesPerView: '4',
-    //     spaceBetween: 30,
-    //   },
-    //   550: {
-    //     slidesPerView: '3',
-    //     spaceBetween: 30,
-    //   }
-    // }
+    breakpoints: {
+      756: {
+        slidesPerView: '4',
+        spaceBetween: 30,
+      },
+      550: {
+        slidesPerView: '3',
+        slidesPerColumn: '2',
+        spaceBetween: 30,
+      }
+    }
   });
 });

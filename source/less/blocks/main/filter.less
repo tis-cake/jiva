@@ -207,7 +207,7 @@
   .address-card-btn {}
 
   .filter {
-    margin-bottom: 80px;
+    margin-bottom: 8rem;
   }
 
   .filter__form {
@@ -217,12 +217,12 @@
   }
 
   .filter__options {
-    height: 47px;
-    .padding-block(0px);
+    height: 4.7rem;
+    .padding-block(0);
     padding-left: 0;
     padding-right: 0;
 
-    font-size: 16px;
+    font-size: 1.6rem;
 
     border-right: none;
 
@@ -231,12 +231,20 @@
       width: 100%;
       padding-left: 0;
     }
+  }
 
+  .filter__options,
+  .filter__range-wrap {
     &::before {
       position: absolute;
       content: '';
       bottom: 0;
-      left: 0;
+      left: 50%;
+      transform: translateX(-50%);
+
+      background-color: @bg;
+      height: 0.1rem;
+      width: 93%;
     }
   }
 
@@ -247,16 +255,16 @@
     width: 100%;
     height: 100%;
 
-    padding-left: 68px;
-    padding-right: 24px;
+    padding-left: 6.8rem;
+    padding-right: 2.4rem;
 
     &.active {}
     &-desc {
       top: 50%;
-      left: 11px;
+      left: 1.1rem;
       transform: translateY(-50%);
 
-      font-size: 16px;
+      font-size: 1.6rem;
 
       &-mobile {
         display: inline;
@@ -264,7 +272,7 @@
     }
 
     &-icon {
-      right: 9px;
+      right: 0.9rem;
     }
   }
 
@@ -276,7 +284,7 @@
 
     margin-top: 0;
     // padding-top: 12px;
-    .padding-inline (11px);
+    .padding-inline (1.1rem);
     // padding-bottom: 12px;
 
     border-radius: 0 0 1.5rem 1.5rem;
@@ -299,7 +307,11 @@
   .filter__range-wrap {
     position: relative;
     width: 100%;
-    height: 47px;
+    height: 4.7rem;
+
+    &:last-child::before {
+      content: none;
+    }
 
     .filter__handler-icon {
       display: block;
@@ -312,8 +324,8 @@
 
     width: 100%;
     height: 100%;
-    padding-left: 140px;
-    padding-right: 24px;
+    padding-left: 14rem;
+    padding-right: 2rem;
 
     border-bottom: none;
 
@@ -326,14 +338,14 @@
     position: absolute;
     // left: 50%;
     // transform: translateX(-50%);
-    bottom: -62px;
+    bottom: -6.2rem;
 
     // width: 96%;
     width: 100%;
-    height: 50px;
+    height: 5rem;
     margin-left: 0;
 
-    font-size: 16px;
+    font-size: 1.6rem;
 
     &-count {}
   }

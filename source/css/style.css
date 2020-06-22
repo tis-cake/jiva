@@ -507,6 +507,9 @@ html .desktop-block {
   .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next::after {
     top: 0.2rem;
   }
+  .swiper-container-horizontal > .swiper-pagination-numeric {
+    bottom: 0.8rem;
+  }
 }
 /* fonts */
 .DaVinci {
@@ -2411,7 +2414,7 @@ html .desktop-block {
   .article-part__content h3 {
     margin-bottom: 2.7rem;
     font-size: 2.5rem;
-    line-height: 3.7rem;
+    line-height: 3rem;
   }
   .article-part__aside {
     position: relative;
@@ -2752,7 +2755,7 @@ html .desktop-block {
 @media (max-width: 48em) {
   /* баллун */
   .filter {
-    margin-bottom: 80px;
+    margin-bottom: 8rem;
   }
   .filter__form {
     align-items: initial;
@@ -2760,12 +2763,12 @@ html .desktop-block {
     padding-right: 0;
   }
   .filter__options {
-    height: 47px;
-    padding-top: 0px;
-    padding-bottom: 0px;
+    height: 4.7rem;
+    padding-top: 0;
+    padding-bottom: 0;
     padding-left: 0;
     padding-right: 0;
-    font-size: 16px;
+    font-size: 1.6rem;
     border-right: none;
   }
   .filter__options:first-of-type,
@@ -2773,35 +2776,40 @@ html .desktop-block {
     width: 100%;
     padding-left: 0;
   }
-  .filter__options::before {
+  .filter__options::before,
+  .filter__range-wrap::before {
     position: absolute;
     content: '';
     bottom: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #EAF1F9;
+    height: 0.1rem;
+    width: 93%;
   }
   .filter__handler {
     align-items: center;
     width: 100%;
     height: 100%;
-    padding-left: 68px;
-    padding-right: 24px;
+    padding-left: 6.8rem;
+    padding-right: 2.4rem;
   }
   .filter__handler-desc {
     top: 50%;
-    left: 11px;
+    left: 1.1rem;
     transform: translateY(-50%);
-    font-size: 16px;
+    font-size: 1.6rem;
   }
   .filter__handler-desc-mobile {
     display: inline;
   }
   .filter__handler-icon {
-    right: 9px;
+    right: 0.9rem;
   }
   .filter__list {
     margin-top: 0;
-    padding-left: 11px;
-    padding-right: 11px;
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
     border-radius: 0 0 1.5rem 1.5rem;
   }
   .filter__options-range {
@@ -2813,7 +2821,10 @@ html .desktop-block {
   .filter__range-wrap {
     position: relative;
     width: 100%;
-    height: 47px;
+    height: 4.7rem;
+  }
+  .filter__range-wrap:last-child::before {
+    content: none;
   }
   .filter__range-wrap .filter__handler-icon {
     display: block;
@@ -2823,8 +2834,8 @@ html .desktop-block {
     -moz-appearance: textfield;
     width: 100%;
     height: 100%;
-    padding-left: 140px;
-    padding-right: 24px;
+    padding-left: 14rem;
+    padding-right: 2rem;
     border-bottom: none;
   }
   .filter__input-range:focus + .filter__handler-icon {
@@ -2832,11 +2843,11 @@ html .desktop-block {
   }
   .filter__btn {
     position: absolute;
-    bottom: -62px;
+    bottom: -6.2rem;
     width: 100%;
-    height: 50px;
+    height: 5rem;
     margin-left: 0;
-    font-size: 16px;
+    font-size: 1.6rem;
   }
 }
 .rehab-compare-link {
@@ -2875,6 +2886,10 @@ html .desktop-block {
   margin-bottom: 0.7rem;
   fill: #fff;
 }
+.rehab-compare-link__icon-mobile {
+  display: none;
+  fill: #fff;
+}
 .rehab-compare-link__title {
   font-weight: 800;
   font-size: 2rem;
@@ -2882,6 +2897,53 @@ html .desktop-block {
 .rehab-compare-link__desc {
   font-weight: 300;
   font-size: 1.6rem;
+}
+@media (max-width: 48em) {
+  .rehab-compare-link {
+    top: auto;
+    right: auto;
+    left: 0;
+    bottom: 7rem;
+    transform: none;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 2.7rem;
+    padding: 0;
+    padding-left: 1.8rem;
+    padding-right: 1.8rem;
+    text-align: left;
+    background-image: linear-gradient(90deg, #92A9CA 2.13%, #AEBAD9 50%);
+    box-shadow: 0px 15px 30px rgba(64, 77, 98, 0.73);
+    border-radius: 0;
+  }
+  .rehab-compare-link__icon {
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-right: 0.9rem;
+    margin-bottom: 0;
+  }
+  .rehab-compare-link__icon-mobile {
+    display: inline;
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-left: auto;
+  }
+  .rehab-compare-link__title,
+  .rehab-compare-link__desc {
+    font-size: 1.4rem;
+  }
+  .rehab-compare-link__title {
+    margin-right: 0.6rem;
+  }
+  .rehab-compare-link__desc {
+    text-transform: lowercase;
+  }
+}
+@media (max-width: 23em) {
+  .rehab-compare-link {
+    bottom: 6rem;
+  }
 }
 .rehab-swiper {
   padding-top: 12.5rem;
@@ -3093,7 +3155,7 @@ html .desktop-block {
     margin-bottom: 4rem;
   }
   .rehab-swiper__map-wrap {
-    height: 338px;
+    height: 33.8rem;
   }
 }
 .reviews-swiper {
