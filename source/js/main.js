@@ -71,18 +71,68 @@ $(document).ready(function () {
   });
 });
 
-// сравнить центр
-$('.btn-compare').on('click', function() {
-  $(this).toggleClass('selected');
-  $(this).prev().toggleClass('selected');
-  $(this).blur();
 
-  if ($('.rehab-swiper__link').hasClass('selected')) {
-    $('.rehab-compare-link').addClass('active');
+// сравнить центр (включая localStorage)
+$(document).ready(function () {
+
+  let itemsArray;
+
+  // если в хранилище есть ключ items - конвертируем содержимое хранилища
+  //   в массив itemsArray, иначе - оставляем массив пустым
+  if (localStorage.getItem('items')) {
+    itemsArray = JSON.parse(localStorage.getItem('items'))
   } else {
-    $('.rehab-compare-link').removeClass('active');
+    itemsArray = []
   }
-})
+
+  // записываем в хранилище массив itemsArray в виде строки
+  localStorage.setItem('items', JSON.stringify(itemsArray));
+
+  // // конвертируем содержимое хранилища в новый массив для перебора
+  // const data = JSON.parse(localStorage.getItem('items'));
+  for (let itemsEl of itemsArray) {
+    let currentSlide = $('.rehab-swiper__link[data-rehab-id="'+itemsEl+'"]');
+    currentSlide.addClass('selected');
+    currentSlide.closest('.rehab-swiper__item').find('.rehab-swiper__btn-compare').addClass('selected');
+  }
+
+  showComparePageLink();
+
+  // сравнить центр
+  $('.btn-compare').on('click', function() {
+
+    let currentSlide = $(this).closest('.rehab-swiper__item').find('.rehab-swiper__link');
+    let currentDataID = currentSlide.data('rehab-id');
+
+    $(this).toggleClass('selected');
+    currentSlide.toggleClass('selected');
+    $(this).blur();
+
+    // добавляем/удаляем текущий элемент в массив,
+    //   перезаписываем хранилище обновленным массивом
+    if (currentSlide.hasClass('selected')) {
+      itemsArray.push(currentDataID);
+      localStorage.setItem('items', JSON.stringify(itemsArray));
+    } else {
+      let indexEl = itemsArray.indexOf(currentDataID);
+      itemsArray.splice(indexEl, 1);
+      localStorage.setItem('items', JSON.stringify(itemsArray));
+    }
+
+    showComparePageLink();
+  })
+
+  // показываем ссылку на страницу стравнения
+  function showComparePageLink() {
+    if ($('.rehab-swiper__link').hasClass('selected')) {
+      $('.rehab-compare-link').addClass('active');
+    } else {
+      $('.rehab-compare-link').removeClass('active');
+    }
+  }
+
+});
+
 
 // фильтр центров над картой
 $(document).ready(function () {
@@ -126,4 +176,3 @@ $(document).ready(function () {
     });
   });
 });
-
