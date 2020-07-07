@@ -63,10 +63,10 @@ $(document).ready(function () {
   // для рехабов
   $('.rehab-swiper__link').on({
     focus: function() {
-      $(this).closest('.rehab-swiper__item').addClass('tab-focus');
+      $(this).closest('.rehab-swiper__item').parent().addClass('tab-focus');
     },
     blur: function() {
-      $(this).closest('.rehab-swiper__item').removeClass('tab-focus');
+      $(this).closest('.rehab-swiper__item').parent().removeClass('tab-focus');
     }
   });
 });
@@ -99,7 +99,7 @@ $(document).ready(function () {
   showComparePageLink();
 
   // сравнить центр
-  $('.btn-compare').on('click', function() {
+  $('.btn-compare-toggle-js').on('click', function() {
 
     let currentSlide = $(this).closest('.rehab-swiper__item').find('.rehab-swiper__link');
     let currentDataID = currentSlide.data('rehab-id');
@@ -121,6 +121,23 @@ $(document).ready(function () {
 
     showComparePageLink();
   })
+
+  // удаляем центр (на странице сравнения)
+  $('.btn-compare-remove-js').on('click', function() {
+    let currentSlide = $(this).closest('.rehab-swiper__item').find('.rehab-swiper__link');
+    let currentDataID = currentSlide.data('rehab-id');
+
+    $(this).removeClass('selected');
+    currentSlide.removeClass('selected');
+    $(this).blur();
+
+    // удаляем из хранилища
+    let indexEl = itemsArray.indexOf(currentDataID);
+    itemsArray.splice(indexEl, 1);
+    localStorage.setItem('items', JSON.stringify(itemsArray));
+
+    console.log('Центр удалён');
+  });
 
   // показываем ссылку на страницу стравнения
   function showComparePageLink() {
