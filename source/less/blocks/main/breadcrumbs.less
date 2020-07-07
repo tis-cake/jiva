@@ -1,6 +1,9 @@
 .breadcrumbs {
-  margin-top: 5.7rem;
-  margin-bottom: 5.7rem;
+  padding-top: 6.8rem;
+  padding-bottom: 6.8rem;
+
+  font-size: 1.6rem;
+  font-weight: 700;
 }
 
 .breadcrumbs__list {
@@ -9,20 +12,18 @@
 
 .breadcrumbs__item {
   position: relative;
-  margin-right: 7.7rem;
+  margin-right: 3.4rem;
 
   &:last-child {
-    color: #777;
-    span {
-      color: #777;
-    }
+    margin-right: 0;
+    color: @light-gray;
   }
 
   &::after {
     content: '>';
     position: absolute;
     top: 0;
-    right: -5rem;
+    right: -2.3rem;
   }
 
   &:last-child::after {
@@ -32,6 +33,14 @@
   &:nth-last-child(2)::after {
     color: #777;
   }
+}
+
+.breadcrumbs__link {
+  text-decoration-line: underline;
+}
+
+.breadcrumbs-current {
+  cursor: initial;
 }
 
 @media (max-width: @tablet-width) {
