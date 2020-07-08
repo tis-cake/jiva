@@ -407,4 +407,36 @@
   .rehab-swiper__map {}
 
   .rehab-swiper__rehab-compare-link {}
+
+  .rehab-swiper-list {
+    padding-top: 0;
+    padding-bottom: 0;
+    .rehab-swiper__text-wrap {
+      &::before {
+        // bottom: -11rem;
+        bottom: -8.6rem;
+
+        // background-image: url('../img/figure/clip-small-top.png');
+        // bottom: -6.6rem;
+      }
+    }
+    .rehab-swiper__item {
+      width: auto;
+      height: 29rem;
+      // height: 46rem;
+      border-radius: 2rem 2rem 0 0;
+    }
+    .rehab-swiper__img-wrap::before,
+    .rehab-swiper__img {
+      border-radius: 2rem 0 0rem 0rem;
+    }
+    .rehab-swiper__aside-item {
+      bottom: 11rem;
+    }
+    .rehab-swiper__btn-compare {
+      left: 1.2rem;
+      bottom: 5.8rem;
+      width: 7.8rem;
+    }
+  }
 }

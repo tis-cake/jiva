@@ -189,6 +189,7 @@ html .desktop-block {
 @media (max-width: 48em) {
   .main {
     overflow: hidden;
+    margin-top: 11rem;
   }
   .container,
   .container-outside,
@@ -762,6 +763,8 @@ html .desktop-block {
 }
 @media (max-width: 48em) {
   .header {
+    position: fixed;
+    top: 0;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     font-size: 1.5rem;
@@ -2243,6 +2246,10 @@ html .desktop-block {
   .article-part__aside-btn-modal .btn-modal__decor-line {
     width: 10.2rem;
   }
+  .article-part-two .article-part__aside-img {
+    -o-object-position: 0 -3rem;
+       object-position: 0 -3rem;
+  }
 }
 .database-sections {
   padding-top: 12rem;
@@ -2673,28 +2680,30 @@ html .desktop-block {
   cursor: initial;
 }
 @media (max-width: 48em) {
+  .breadcrumbs {
+    padding-bottom: 2.5rem;
+    font-size: 1.5rem;
+  }
   .breadcrumbs__list {
     flex-wrap: wrap;
   }
   .breadcrumbs__item {
-    margin-right: 3.5rem;
+    margin-right: 2.8rem;
     margin-bottom: 1rem;
   }
   .breadcrumbs__item::after {
-    right: -2.2rem;
+    right: -1.9rem;
   }
   .breadcrumbs__item:last-child {
     margin-bottom: 0;
   }
 }
 .compare {
-  margin-top: 1.2rem;
+  margin-top: 1.7rem;
   margin-bottom: 6rem;
 }
 .compare__title {
-  margin-bottom: 2.4rem;
-  font-size: 4rem;
-  line-height: 5rem;
+  margin-bottom: 3.9rem;
 }
 .compare__title-item {
   display: block;
@@ -2790,6 +2799,64 @@ html .desktop-block {
   width: 1.7rem;
   height: 1.7rem;
   background-image: url('../img/svg/close.svg');
+}
+@media (max-width: 48em) {
+  .compare {
+    margin-top: 1.2rem;
+  }
+  .compare__title {
+    margin-bottom: 0.3rem;
+  }
+  .compare__subtitle {
+    margin-bottom: 2.7rem;
+    font-weight: 400;
+    font-size: 1.8rem;
+  }
+  .compare__d-list {
+    width: auto;
+    margin-bottom: 4.3rem;
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+  }
+  .compare__d-term::before {
+    padding-right: 0.2rem;
+  }
+  .compare__d-desc {
+    margin-bottom: 2.2rem;
+  }
+  .compare__list {
+    justify-content: space-between;
+  }
+  .compare__item {
+    width: 16rem;
+    margin-right: 0;
+    border-radius: 2rem;
+  }
+  .compare__benefit-block {
+    margin-top: -5.4rem;
+    padding-top: 2.4rem;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    padding-bottom: 1.1rem;
+  }
+  .compare__benefit-title {
+    display: none;
+  }
+  .compare__benefit-list {
+    font-size: 1.3rem;
+  }
+  .compare__benefit-item {
+    margin-bottom: 1.51rem;
+    padding-left: 2.1rem;
+  }
+  .compare__benefit-item::before {
+    width: 1.5rem;
+    height: 1.1rem;
+  }
+  .compare__benefit-item--less::before {
+    width: 1.1rem;
+    height: 1.1rem;
+  }
 }
 .swiper-container-big-container {
   box-sizing: border-box;
@@ -3271,6 +3338,30 @@ html .desktop-block {
   .rehab-swiper__map-wrap {
     height: 33.8rem;
   }
+  .rehab-swiper-list {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .rehab-swiper-list .rehab-swiper__text-wrap::before {
+    bottom: -8.6rem;
+  }
+  .rehab-swiper-list .rehab-swiper__item {
+    width: auto;
+    height: 29rem;
+    border-radius: 2rem 2rem 0 0;
+  }
+  .rehab-swiper-list .rehab-swiper__img-wrap::before,
+  .rehab-swiper-list .rehab-swiper__img {
+    border-radius: 2rem 0 0rem 0rem;
+  }
+  .rehab-swiper-list .rehab-swiper__aside-item {
+    bottom: 11rem;
+  }
+  .rehab-swiper-list .rehab-swiper__btn-compare {
+    left: 1.2rem;
+    bottom: 5.8rem;
+    width: 7.8rem;
+  }
 }
 .reviews-swiper {
   padding-top: 8.3rem;
@@ -3655,10 +3746,9 @@ html .desktop-block {
 }
 @media (max-width: 48em) {
   .rehab-compare-link {
-    top: auto;
+    top: 11rem;
     right: auto;
     left: 0;
-    bottom: 7rem;
     transform: none;
     display: flex;
     align-items: center;

@@ -1,12 +1,14 @@
 .compare {
-  margin-top: 1.2rem;
+  // margin-top: 1.2rem;
+  margin-top: 1.7rem;
   margin-bottom: 6rem;
 }
 
 .compare__title {
-  margin-bottom: 2.4rem;
-  font-size: 4rem;
-  line-height: 5rem;
+  // margin-bottom: 2.4rem;
+  margin-bottom: 3.9rem;
+  // font-size: 4rem;
+  // line-height: 5rem;
   &-item {
     display: block;
   }
@@ -53,7 +55,6 @@
 
 .compare__item {
   width: 30.5rem;
-  // margin-right: 47px;
   margin-right: 4rem;
   margin-bottom: 4rem;
 
@@ -63,7 +64,6 @@
   overflow: hidden;
   transition: @s;
 
-  // &:nth-child(3n),
   &:nth-child(4n) {
     margin-right: 0;
   }
@@ -133,4 +133,80 @@
 }
 
 @media (max-width: @tablet-width) {
+  .compare {
+    margin-top: 1.2rem;
+    // margin-bottom: 6rem;
+  }
+
+  .compare__title {
+    margin-bottom: 0.3rem;
+  }
+
+  .compare__subtitle {
+    margin-bottom: 2.7rem;
+    font-weight: 400;
+    font-size: 1.8rem;
+  }
+
+  .compare__d-list {
+    width: auto;
+    margin-bottom: 4.3rem;
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+  }
+
+  .compare__d-term {
+    &::before {
+      padding-right: 0.2rem;
+    }
+  }
+
+  .compare__d-desc {
+    margin-bottom: 2.2rem;
+  }
+
+  .compare__list {
+    justify-content: space-between;
+  }
+
+  .compare__item {
+    width: 16rem;
+    margin-right: 0;
+    // margin-bottom: 4rem;
+
+    border-radius: 2rem;
+  }
+
+  .compare__benefit-block {
+
+    margin-top: -5.4rem;
+    padding-top: 2.4rem;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    padding-bottom: 1.1rem;
+  }
+
+  .compare__benefit-title {
+    display: none;
+  }
+
+  .compare__benefit-list {
+    font-size: 1.3rem;
+  }
+
+  .compare__benefit-item {
+    margin-bottom: 1.51rem;
+    padding-left: 2.1rem;
+    &::before {
+      width: 1.5rem;
+      height: 1.1rem;
+    }
+
+    &--less {
+      &::before {
+        width: 1.1rem;
+        height: 1.1rem;
+      }
+    }
+  }
 }
