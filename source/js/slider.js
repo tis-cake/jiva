@@ -26,7 +26,7 @@ function renderPagination(swiper_class, limitForOverflow) {
   return paginationParam;
 }
 
-// свайпер рехабов
+// слайдер рехабов
 $(document).ready(function () {
 
   // limitForOverflow = 16;
@@ -62,7 +62,7 @@ $(document).ready(function () {
   });
 });
 
-// свайпер отзывов
+// слайдер отзывов
 $(document).ready(function () {
 
   // limitForOverflow = 10;
@@ -90,12 +90,12 @@ $(document).ready(function () {
   });
 });
 
-// свайпер рехабов в 2 строки
+// слайдер рехабов в 2 строки
 $(document).ready(function () {
 
   let rehabSwiper = new Swiper('#rehab-swiper-two-rows', {
     slidesPerView: '2',
-    slidesPerColumn: '2',
+    slidesPerColumn: '4',
     slidesPerColumnFill: 'row',
 
     spaceBetween: 25,
@@ -116,6 +116,7 @@ $(document).ready(function () {
     breakpoints: {
       756: {
         slidesPerView: '4',
+        slidesPerColumn: '2',
         spaceBetween: 30,
       },
       550: {
