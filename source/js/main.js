@@ -49,29 +49,6 @@ $('.search__input').on('keyup', function (evt) {
   });
 });
 
-// стилевое затемнение, если в фокусе с tab
-$(document).ready(function () {
-  // для телефона в шапке
-  $('.aside-link__link').on({
-    focus: () => {
-      $('.aside-link').addClass('tab-focus');
-    },
-    blur: () => {
-      $('.aside-link').removeClass('tab-focus');
-    }
-  });
-  // для рехабов
-  $('.rehab-swiper__link').on({
-    focus: function() {
-      $(this).closest('.rehab-swiper__item').parent().addClass('tab-focus');
-    },
-    blur: function() {
-      $(this).closest('.rehab-swiper__item').parent().removeClass('tab-focus');
-    }
-  });
-});
-
-
 // сравнить центр (включая localStorage)
 $(document).ready(function () {
 
