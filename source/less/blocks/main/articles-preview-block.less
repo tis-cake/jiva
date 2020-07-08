@@ -1,0 +1,125 @@
+.articles-preview-block {
+  display: flex;
+}
+.articles-preview-block-three-column {
+  justify-content: space-between;
+}
+
+.articles-preview-block__column {
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-between;
+
+  .articles-preview-block__item {
+    margin-bottom: 3.5rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.articles-preview-block__column,
+.articles-preview-block__item {
+  width: 30.6rem;
+  border-radius: 4rem;
+}
+
+.articles-preview-block__column-big {
+  .r;
+  width: 655px;
+  border-radius: 50px;
+}
+
+.articles-preview-block__articles-preview {
+  align-self: flex-start;
+}
+
+.articles-preview-block__item {
+  // height: 475px;
+  min-height: 482px;
+  overflow: hidden;
+
+  transition: @s;
+
+  &:hover,
+  &:focus {
+    box-shadow: 30px 30px 55px #BFC5D8;
+  }
+}
+
+.articles-preview-block__img-wrap {
+  position: relative;
+  // z-index: 0;
+  width: 100%;
+  height: 234px;
+  // height: 240px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    // z-index: 0;
+    // top: -68px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 72px;
+
+    background-image: url('../img/figure/clip-small-bottom.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
+
+.articles-preview-block__img {
+  .img-cover;
+}
+
+.articles-preview-block__text-wrap {
+  box-sizing: border-box;
+
+  position: relative;
+  z-index: 0;
+
+  margin-top: -6px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 18px;
+
+  font-size: 16px;
+  line-height: 24px;
+
+  background-image: linear-gradient(-20deg, #FFF 0%, #E6F1FD 100%);
+
+  // &::before {
+  //   content: '';
+  //   position: absolute;
+  //   z-index: -1;
+  //   top: -68px;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 72px;
+
+  //   background-image: url('../img/figure/clip-small-bottom.png');
+  //   background-repeat: no-repeat;
+  //   background-position: center;
+  //   background-size: contain;
+  // }
+}
+
+.articles-preview-block__title {
+  margin-bottom: 10px;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.articles-preview-block__desc {
+  margin-bottom: 7px;
+}
+
+.articles-preview-block__tag {
+  font-weight: 700;
+  text-decoration-line: underline;
+  color: #2C2C2C;
+}
