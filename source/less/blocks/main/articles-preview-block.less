@@ -1,8 +1,12 @@
 .articles-preview-block {
-  display: flex;
+  // display: flex;
+  --margin-bottom: 42px;
 }
-.articles-preview-block-three-column {
+
+.articles-preview__columns {
+  display: flex;
   justify-content: space-between;
+  margin-bottom: var(--margin-bottom);
 }
 
 .articles-preview-block__column {
@@ -111,29 +115,10 @@
   color: #2C2C2C;
 }
 
-.articles-preview-block__item-big {
-  width: 100%;
-  margin-bottom: 3.5rem;
-  border-radius: 5rem;
-  .articles-preview-block__img-wrap {
-    height: 44.6rem;
-    &::before {
-      height: 10rem;
-      background-image: url('../img/figure/clip-big-bottom.png');
-    }
-  }
-  .articles-preview-block__text-wrap {
-    padding-top: 0.6rem;
-    background-image: linear-gradient(20deg, #FFFFFF 0%, #E6F1FD 100%);
-  }
-  .articles-preview-block__aside-item {
-    top: 14.8rem;
-    bottom: auto;
-  }
-}
-
 .articles-preview-block__item-big,
 .articles-preview-block__item-small {
+  width: 100%;
+  border-radius: 5rem;
   .articles-preview-block__text-wrap {
     padding-left: 3.3rem;
     padding-right: 3.3rem;
@@ -153,11 +138,28 @@
   }
 }
 
+.articles-preview-block__item-big {
+  margin-bottom: var(--margin-bottom);
+  .articles-preview-block__img-wrap {
+    height: 44.6rem;
+    &::before {
+      height: 10rem;
+      background-image: url('../img/figure/clip-big-bottom.png');
+    }
+  }
+  .articles-preview-block__text-wrap {
+    padding-top: 0.6rem;
+    background-image: linear-gradient(20deg, #FFFFFF 0%, #E6F1FD 100%);
+  }
+  .articles-preview-block__aside-item {
+    top: 14.8rem;
+    bottom: auto;
+  }
+}
+
 .articles-preview-block__item-small {
-  width: 100%;
   min-height: 0;
 
-  border-radius: 5rem;
   background: linear-gradient(180deg, #FFFFFF 0%, #F1F8FE 100%);
   .articles-preview-block__text-wrap {
     margin-top: 0;
@@ -170,4 +172,20 @@
     bottom: auto;
     transform: rotate(0);
   }
+}
+
+.articles-preview-block__list {
+  display: flex;
+  flex-wrap: wrap;
+  .articles-preview-block__item {
+    margin-right: 42px;
+    margin-bottom: var(--margin-bottom);
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
+}
+
+.articles-preview-block__b {
+  padding-top: calc(var(--padding-block) - var(--margin-bottom));
 }

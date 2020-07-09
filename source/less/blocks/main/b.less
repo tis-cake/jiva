@@ -1,9 +1,11 @@
 .b {
+  --padding-block: 7.5rem;
+
   position: relative;
   display: flex;
 
-  padding-top: 7.5rem;
-  padding-bottom: 7.5rem;
+  padding-top: var(--padding-block);
+  padding-bottom: var(--padding-block);
 }
 
 .b__content-wrap {
@@ -109,8 +111,9 @@
     // padding-bottom: 2.1rem;
 
     height: 65.9rem;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    --padding-block: 5rem;
+    // padding-top: 5rem;
+    // padding-bottom: 5rem;
   }
 
   .b__content-wrap {
