@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="«Ji+Va»">
+    <title>Ji+Va</title>
+
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="./fav.ico"> -->
+
+    <link rel="preload" href="fonts/Circe/regular/Circe-Regular.woff2" as="font" type="font/woff2" crossorigin="">
+
+    <link rel="stylesheet" href="css/normalise.css">
+    <link rel="stylesheet" href="css/libs/swiper.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container container">
+        <div class="header__wrap">
+          <button class="header__menu-toggle menu-toggle">
+            <span>Открыть меню</span>
+          </button>
+
+          <a class="header__logo logo" href="index.html">
+            <div class="logo__img-wrap">
+              <img class="logo__img" src="img/logo/logo.png" width="92" height="92" alt="Логотип портала «Ji+Va»">
+            </div>
+            <p class="logo__title logo__title--absolute">
+              <span class="logo__title--red">J</span>i <span class="logo__title-decor" aria-hidden="true">
+              <svg class="logo__icon icon-logo-star" width="14" height="14" role="img">
+                <use xlink:href="img/sprite.svg#icon-logo-star"></use>
+              </svg>
+              </span> Va
+            </p>
+          </a>
+
+          <div class="header__rows-wrap">
+            <div class="header__row-top">
+              <form class="header__form-lang select-lang" action=".php" method="post">
+                <select class="select-lang__select custom-select-js" name="SELECT-LANG">
+                  <option value="LANG-RUSSIAN" selected>RU</option>
+                  <option value="LANG-ENGLISH">EN</option>
+                  <option value="LANG-FRENCH">FR</option>
+                </select>
+              </form>
+              <button class="header__link-modal-region btn-region-1 modal-region" type="button" title="Выбрать регион">
+                Россия
+                <span class="visually-hidden">Выбрать регион</span>
+              </button>
+              <div class="header__text-wrap">
+                <p class="header__text-item">
+                  Помощь 24/7 в России
+                </p>
+                <p class="header__text-item header__text-item--gray">
+                  Все звонки бесплатные и конфиденциальные.
+                </p>
+              </div>
+              <button class="header__link-call-back btn-tel modal-callback">
+                <svg class="btn-tel__icon icon-tel" width="28" height="28">
+                  <use xlink:href="img/sprite.svg#icon-tel"></use>
+                </svg>
+              </button>
+            </div>
+
+            <div class="header__row-bottom">
+              <nav class="header__main-nav main-nav">
+                <ul class="main-nav__list">
+                  <li class="main-nav__item">
+                    <a class="main-nav__link" href="rehabs.html">Реабилитационные центры</a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a class="main-nav__link" href="clinics.html">Клиники</a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a href="#" class="main-nav__link main-nav-sub">Наркомания</a>
+                    <ul class="main-nav__sublist">
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="service-detail.html">Детоксикация в клинике</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="service-detail.html">Лечение подростков</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="#">Лечение солевой наркомании</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="#">Героиновая наркомания</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="#">ВИП лечение</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="#">Снятие ломки</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="#">Лечение спайсовой наркомании</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="#">Программы лечения</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="#">УБОД</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="#">Амбулаторное лечение</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="#">Работа с психологом</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="main-nav__item">
+                    <a href="#" class="main-nav__link main-nav-sub">Алкоголизм</a>
+                    <ul class="main-nav__sublist">
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="service-detail.html">Детоксикация в клинике</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="#">Лечение подростков</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="#">ВИП лечение</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="#">Вызов нарколога</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="#">Женский алкоголизм</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="service-detail.html">Пивной алкоголизм</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="#">Программы лечения</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="#">Вывод из запоя</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="#">Амбулаторное лечение</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="#">Работа с психологом</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="#">Кодирование</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="main-nav__item">
+                    <a href="#" class="main-nav__link main-nav-sub">Игромания</a>
+                    <ul class="main-nav__sublist">
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="service-detail.html">Лечение подростков</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="#">ВИП лечение</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="#">Программы лечения</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="#">Амбулаторное лечения</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="#">Работа с психологом</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="#">Онлайн игры</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="#">Казино</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="#">Лечение игровой наркомании</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="#">Ставки на спорт</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="main-nav__item">
+                    <a class="main-nav__link" href="#">Родственникам</a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a class="main-nav__link" href="database.html">База знаний</a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a class="main-nav__link main-nav-sub" href="about.html">О портале</a>
+                    <ul class="main-nav__sublist">
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="reviews.html">Отзывы</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="masters.html">Специалисты</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="main-nav__item">
+                    <a class="main-nav__link" href="contacts.html">Контакты</a>
+                  </li>
+                </ul>
+
+                <div class="main-nav__search search">
+                  <form class="search__form" action=".php" method="post">
+                    <label class="search__label-icon" for="search-field" aria-hidden="true">
+                      <svg class="search__icon search__icon--label-search icon-search" width="23" height="23" role="img">
+                        <use xlink:href="img/sprite.svg#icon-search"></use>
+                      </svg>
+                    </label>
+                    <input class="search__input" id="search-field" type="search" name="SEARCH" placeholder="Поиск" required>
+                    <button class="search__btn-submit btn-submit" title="Отправить запрос">
+                      <span class="visually-hidden">
+                        Отправить запрос
+                      </span>
+                      <svg class="btn-submit__icon icon-arrow icon-arrow--right" width="13" height="11" role="img">
+                        <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+                      </svg>
+                    </button>
+                  </form>
+
+                  <div class="search__datalist-wrap">
+                    <ul class="search__datalist">
+                      <li class="search__datalist-item">
+                        <a href="#" class="search__datalist-link">
+                          Наркомания
+                        </a>
+                      </li>
+                      <li class="search__datalist-item">
+                        <a href="#" class="search__datalist-link">
+                          Наркотическая зависимость
+                        </a>
+                      </li>
+                      <li class="search__datalist-item">
+                        <a href="#" class="search__datalist-link">
+                          Наркомания
+                        </a>
+                      </li>
+                      <li class="search__datalist-item">
+                        <a href="#" class="search__datalist-link">
+                          Наркотическая зависимость
+                        </a>
+                      </li>
+                      <li class="search__datalist-item">
+                        <a href="#" class="search__datalist-link">
+                          Наркомания
+                        </a>
+                      </li>
+                      <li class="search__datalist-item">
+                        <a href="#" class="search__datalist-link">
+                          Наркотическая зависимость
+                        </a>
+                      </li>
+                      <li class="search__datalist-item">
+                        <a href="#" class="search__datalist-link">
+                          Наркомания
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <button class="main-nav__search-toggle search-toggle" title="Поиск по сайту">
+                  <span class="visually-hidden">Поиск по сайту</span>
+                  <svg class="search__icon search__icon--search icon-search" width="23" height="23" role="img">
+                    <use xlink:href="img/sprite.svg#icon-search"></use>
+                  </svg>
+                  <svg class="search__icon search__icon--close icon-close" width="23" height="23" role="img">
+                    <use xlink:href="img/sprite.svg#icon-plus"></use>
+                  </svg>
+                </button>
+
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <aside class="aside-link">
+      <div class="aside-link__bg-wrap">
+        <svg class="aside-link__bg-img" width="447" height="45">
+          <use xlink:href="img/sprite.svg#figure-aside-d"></use>
+        </svg>
+      </div>
+      <div class="aside-link__wrap">
+        <a class="aside-link__link blaster" href="tel:+78006003960">
+          8 800 600-39-60
+        </a>
+        <p class="aside-link__desc">
+          Анонимно. Бесплатно. <span class="aside-item__desc--dark">Помощь по всему миру 24/7</span>
+        </p>
+      </div>
+    </aside>
+
+    <main class="main">
+      <section class="main-info main-info-three">
+        <div class="main-info__bg"></div>
+
+        <div class="main-info__text-wrap">
+          <p class="main-info__title">
+            The largest knowledge base for addicted and co-dependent
+          </p>
+
+          <p class="main-info__desc">
+            Our experts will help persuade a dependent on treatment and will select a rehabilitation center for you for free!
+          </p>
+        </div>
+
+        <button class="main-info__btn-modal btn-modal btn-modal--dark modal-callback" type="button">
+          Заявка на консультацию
+          <span class="btn-modal__decor-line" aria-hidden="true"></span>
+        </button>
+      </section>
+
+      <section class="topics-switch topics-switch-database container">
+        <div class="topics-switch__title-wrap">
+          <p class="topics-switch__title section-title">Разделы базы знаний</p>
+          <p class="topics-switch__desc">Over 1000 articles</p>
+        </div>
+
+        <ul class="topics-switch__list">
+          <li class="topics-switch__item">
+            <a class="topics-switch__link active" href="#">
+              All
+            </a>
+          </li>
+          <li class="topics-switch__item">
+            <a class="topics-switch__link active" href="#">
+              Drugs
+            </a>
+          </li>
+          <li class="topics-switch__item">
+            <a class="topics-switch__link active" href="#">
+              Alcoholism
+            </a>
+          </li>
+          <li class="topics-switch__item">
+            <a class="topics-switch__link active" href="#">
+              Gambling
+            </a>
+          </li>
+          <li class="topics-switch__item">
+            <a class="topics-switch__link active" href="#">
+              Relatives
+            </a>
+          </li>
+          <li class="topics-switch__item">
+            <a class="topics-switch__link active" href="#">
+              Relatives
+            </a>
+          </li>
+          <li class="topics-switch__item">
+            <a class="topics-switch__link active" href="#">
+              International Rehabilitation
+            </a>
+          </li>
+          <li class="topics-switch__item">
+            <a class="topics-switch__link active" href="#">
+              Question and Answer
+            </a>
+          </li>
+          <li class="topics-switch__item">
+            <a class="topics-switch__link modal-sections" href="#">
+              + 10 topics
+            </a>
+          </li>
+
+        <ul class="topics-switch__sublist">
+          <li class="topics-switch__subitem">
+            <a class="topics-switch__sublink active" href="#">
+              All
+            </a>
+          </li>
+          <li class="topics-switch__subitem">
+            <a class="topics-switch__sublink" href="#">
+              Drugs
+            </a>
+          </li>
+          <li class="topics-switch__subitem">
+            <a class="topics-switch__sublink" href="#">
+              Alcoholism
+            </a>
+          </li>
+          <li class="topics-switch__subitem">
+            <a class="topics-switch__sublink" href="#">
+              Gambling
+            </a>
+          </li>
+          <li class="topics-switch__subitem">
+            <a class="topics-switch__sublink" href="#">
+              Relatives
+            </a>
+          </li>
+          <li class="topics-switch__subitem">
+            <a class="topics-switch__sublink" href="#">
+              International Rehabilitation
+            </a>
+          </li>
+          <li class="topics-switch__subitem">
+            <a class="topics-switch__sublink" href="#">
+              Question and Answer
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="articles-preview-block articles-preview-block-three-column container">
+        <div class="articles-preview-block__column">
+          <div class="articles-preview-block__item">
+            <a class="articles-preview-block__link" href="article-detail.html">
+              <div class="articles-preview-block__img-wrap">
+                <img class="articles-preview-block__img" src="img/article/articles-preview-block/1.png" alt="">
+                <div class="articles-preview-block__aside-item aside-item aside-item--small">
+                  <time class="aside-item__desc" datetime="ГГ-ММ-ДД">3 days ago</time>
+                </div>
+              </div>
+              <div class="articles-preview-block__text-wrap">
+                <p class="articles-preview-block__title">
+                  The Dying California Desert Town Where Cannabis Is the Only Remaining Hope
+                </p>
+                <p class="articles-preview-block__desc">
+                  From cul-de-sac-fever-dream gone bust to vertically integrated weed opportunity zone, the high desert town of California City is hoping the winds of fate will finally blow its way.
+                </p>
+                <p class="articles-preview-block__tag">
+                  Alcoholism
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <div class="articles-preview-block__item">
+            <a class="articles-preview-block__link" href="article-detail.html">
+              <div class="articles-preview-block__img-wrap">
+                <img class="articles-preview-block__img" src="img/article/articles-preview-block/1.png" alt="">
+
+                <div class="articles-preview-block__aside-item aside-item aside-item--small">
+                  <time class="aside-item__desc" datetime="ГГ-ММ-ДД">03.02.2020</time>
+                </div>
+              </div>
+              <div class="articles-preview-block__text-wrap">
+                <p class="articles-preview-block__title">
+                  The Dying California Desert Town Where Cannabis Is the Only Remaining Hope
+                </p>
+                <p class="articles-preview-block__desc">
+                  From cul-de-sac-fever-dream gone bust to vertically integrated weed opportunity zone, the high desert town of California City is hoping the winds of fate will finally blow its way.
+                </p>
+                <p class="articles-preview-block__tag">
+                  Alcoholism
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="articles-preview-block__column-big">
+          <div class="articles-preview-block__item articles-preview-block__item-big">
+            <a class="articles-preview-block__link" href="article-detail.html">
+              <div class="articles-preview-block__img-wrap">
+                <img class="articles-preview-block__img" src="img/article/articles-preview-block/2.png" alt="">
+
+                <div class="articles-preview-block__aside-item aside-item aside-item--small">
+                  <time class="aside-item__desc" datetime="ГГ-ММ-ДД">Today</time>
+                </div>
+              </div>
+              <div class="articles-preview-block__text-wrap">
+                <p class="articles-preview-block__title">
+                  The Dying California Desert Town Where Cannabis Is the Only Remaining Hope
+                </p>
+                <p class="articles-preview-block__desc">
+                  From cul-de-sac-fever-dream gone bust to vertically integrated weed opportunity zone, the high desert town of California City is hoping the winds of fate will finally blow its way.
+                </p>
+                <p class="articles-preview-block__tag">
+                  Alcoholism
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <div class="articles-preview-block__item articles-preview-block__item-small">
+            <a class="articles-preview-block__link" href="article-detail.html">
+              <div class="articles-preview-block__aside-item aside-item aside-item--small">
+                <time class="aside-item__desc" datetime="ГГ-ММ-ДД">Today</time>
+              </div>
+              <div class="articles-preview-block__text-wrap">
+                <p class="articles-preview-block__title">
+                  The Dying California Desert Town Where Cannabis Is the Only Remaining Hope
+                </p>
+                <p class="articles-preview-block__desc">
+                  From cul-de-sac-fever-dream gone bust to vertically integrated weed opportunity zone, the high desert town of California City is hoping the winds of fate will finally blow its way.
+                </p>
+                <p class="articles-preview-block__tag">
+                  Alcoholism
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="articles-preview-block__column articles-preview-block__articles-preview articles-preview">
+          <div class="articles-preview__img-wrap">
+            <img class="articles-preview__img" src="img/article/articles-preview/1.png" alt="">
+          </div>
+          <p class="articles-preview__main-title">
+            Drugs
+          </p>
+          <ul class="articles-preview__list">
+            <li class="articles-preview__item">
+              <a class="articles-preview__link" href="#">
+                <p class="articles-preview__title">
+                  The Dying California Desert Town Where Cannabis Is the Only Remaining Hope
+                </p>
+                <p class="articles-preview__desc">
+                  From cul-de-sac-fever-dream gone bust to vertically integrated weed opportunity zone, the high desert town of California City is hoping the winds of fate will finally blow its way.
+                </p>
+                <p class="articles-preview__tag">
+                  Psychedelics
+                </p>
+              </a>
+            </li>
+            <li class="articles-preview__item">
+              <a class="articles-preview__link" href="#">
+                <p class="articles-preview__title">
+                  The Truth About Ecstasy: High Society
+                </p>
+                <p class="articles-preview__desc">
+                  British people statistically take more MDMA in one session than any other country on the planet. And not just a little bit more: on average, Brits take 420 milligrams per session in your mind.
+                </p>
+                <p class="articles-preview__tag">
+                  Psychedelics
+                </p>
+              </a>
+            </li>
+            <li class="articles-preview__item">
+              <a class="articles-preview__link" href="#">
+                <p class="articles-preview__title">
+                  The Dying California Desert Town Where Cannabis Is the Only Remaining Hope
+                </p>
+                <p class="articles-preview__desc">
+                  From cul-de-sac-fever-dream gone bust to vertically integrated weed opportunity zone, the high desert town of California City is hoping the winds of fate will finally blow its way.
+                </p>
+                <p class="articles-preview__tag">
+                  Psychedelics
+                </p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__wrapper container">
+        <ul class="footer__list footer__list--left">
+          <li class="footer__item footer__item--light">Портал
+          </li>
+          <li class="footer__item">
+            <a class="footer__item-link" href="rehabs.html">Главная</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__item-link" href="rehabs.html">Реабилитационные центры</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__item-link" href="clinics.html">Клиники</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__item-link" href="service-detail.html">Наркомания</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__item-link" href="service-detail.html">Алкоголизм</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__item-link" href="service-detail.html">Игромания</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__item-link" href="#">Родственникам</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__item-link" href="about.html">О портале</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__item-link" href="contacts.html">Контакты</a>
+          </li>
+        </ul>
+        <div class="footer__center-column">
+          <a class="footer__logo logo logo-middle" href="index.html">
+            <div class="logo__img-wrap">
+              <img class="logo__img" src="img/logo/middle-logo.svg" width="216" height="216" alt="Логотип портала «Ji+Va»">
+            </div>
+            <p class="logo__title logo__title--absolute">
+              <span class="logo__title--red">J</span>i <span class="logo__title-decor" aria-hidden="true">
+                <svg class="logo__icon icon-logo-star" width="21" height="20" role="img">
+                  <use xlink:href="img/sprite.svg#icon-logo-star"></use>
+                </svg>
+              </span> Va
+            </p>
+          </a>
+
+          <div class="footer__text-wrap">
+            <p class="footer__text-item">
+              Помощь 24/7 в России
+            </p>
+            <p class="footer__text-item footer__text-item--gray">
+              Все звонки бесплатные и конфиденциальные.
+            </p>
+          </div>
+
+          <a class="footer__tel-link blaster" href="tel:+78006003960">
+            8 800 600-39-60
+          </a>
+
+          <button class="footer__link-modal-region btn-region-1 modal-region" type="button" title="Выбрать регион">
+            Россия
+            <span class="visually-hidden">Выбрать регион</span>
+          </button>
+
+        </div>
+        <ul class="footer__list footer__list--right">
+          <li class="footer__item footer__item--light">База знаний
+          </li>
+          <li class="footer__item">
+            <a class="footer__item-link" href="database.html">Все публикации</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__item-link" href="service-detail.html">Игромания</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__item-link" href="service-detail.html">Алкоголизм</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__item-link" href="service-detail.html">Наркомания</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__item-link" href="service-detail.html">Созависимость</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__item-link" href="service-detail.html">Международная практика</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__item-link" href="service-detail.html">Героин</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__item-link" href="service-detail.html">Мефедрон</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__item-link" href="service-detail.html">Подростковая зависимость</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <div class="overlay"></div>
+
+    <script src="js/libs/jquery-3.4.1.min.js"></script>
+    <script src="js/libs/jquery.custom-select.min.js"></script>
+    <script src="js/libs/jquery.maskedinput.min.js"></script>
+    <script src="js/libs/jquery.fancybox.min.js"></script>
+
+    <script src="js/libs/swiper.min.js"></script>
+
+    <script src="js/main.js"></script>
+    <script src="js/slider.js"></script>
+
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+    <script src="js/map.js"></script>
+  </body>
+</html>
