@@ -26,7 +26,7 @@
 }
 
 .topics-switch__title {
-  font-size: 3.5rem;
+  // font-size: 3.5rem;
 }
 
 .topics-switch__desc {
@@ -55,6 +55,13 @@
   margin-bottom: 1.8rem;
   transition: @s;
 
+  &.active {
+    color: @light-gray;
+    &:hover {
+      opacity: 1;
+    }
+  }
+
   &:hover,
   &:focus {
     opacity: @opacity-hover;
@@ -77,21 +84,13 @@
   border-bottom: 0.1rem solid #D2DCE7;
 }
 
-.topics-switch__subitem {
-  // &:last-child {
-  //   .topics-switch__link {
-  //     text-decoration-line: underline;
-  //   }
-  // }
-}
-
 .topics-switch__sublink {
   margin-bottom: 1.5rem;
   padding-left: 1.7rem;
   padding-right: 1.7rem;
 
   &.active {
-    color: @red;
+    // color: @red;
   }
 }
 
@@ -101,20 +100,59 @@
 
 @media (max-width: @tablet-width) {
   .topics-switch {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
     // padding-top: 2.9rem;
     // padding-bottom: 2.9rem;
 
-    &-article {
-      padding-top: 0;
-      padding-bottom: 0;
+    font-size: 1.5rem;
+
+    &-database {
+      margin-top: 8.7rem;
+      margin-bottom: 3.3rem;
     }
-    // &-article-detail {
-    //   padding-top: 0.3rem;
-    //   padding-bottom: 0;
-    // }
+  }
+
+  .topics-switch__title-wrap {
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+
+  .topics-switch__title {
+    margin-bottom: 1.3rem;
+    // font-size: 2.5rem;
+  }
+
+  .topics-switch__desc {
+    font-size: 1.5rem;
+  }
+
+  .topics-switch-database {
+    .topics-switch__list {
+      flex-direction: column;
+      border-radius: 2rem;
+    }
   }
 
   .topics-switch__list {
+    padding-top: 2.2rem;
+    padding-left: 1.8rem;
+    padding-right: 1.8rem;
+    padding-bottom: 2.2rem;
+  }
+
+  .topics-switch__item {
+    margin-bottom: 1.8rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .topics-switch__link {
+    margin-bottom: 0;
+  }
+
+  .topics-switch__sublist {
     justify-content: space-around;
     padding: 0;
 
@@ -122,7 +160,7 @@
     border: none;
   }
 
-  .topics-switch__link {
+  .topics-switch__sublink {
     margin-bottom: 0.7rem;
 
     padding-top: 1.2rem;
@@ -132,7 +170,7 @@
     border: 0.1rem solid #D2DCE7;
 
     &.active {
-      color: rgba(196, 196, 196, 0.8);
+      // color: rgba(196, 196, 196, 0.8);
     }
   }
 }
