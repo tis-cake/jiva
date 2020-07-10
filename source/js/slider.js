@@ -10,6 +10,8 @@ if (width <= 750) {
 // объект с данными для пагинации слайдера
 let paginationParam =  {};
 
+// рендерим пагинацию для слайдера, учитывая переполнение и НЕ учитывая
+//  тип числовой пагинации (которая через renderBullet)
 function renderPagination(swiper_class, limitForOverflow) {
 
   let currentPagination = $(swiper_class+' .swiper-pagination');
@@ -17,6 +19,8 @@ function renderPagination(swiper_class, limitForOverflow) {
 
   paginationParam.el = currentPagination;
   paginationParam.clickable = true;
+
+  // проверка на переполнение
   if (currentSlidesLength > limitForOverflow) {
     paginationParam.dynamicBullets = true;
   } else {
@@ -90,10 +94,10 @@ $(document).ready(function () {
   });
 });
 
-// слайдер рехабов в 2 строки
+// слайдер рехабов в 2 строки (с числовой пагинацией, НЕ учитывая переполнение)
 $(document).ready(function () {
 
-  let rehabSwiper = new Swiper('#rehab-swiper-two-rows', {
+  let rehabSwiperTwo = new Swiper('#rehab-swiper-two-rows', {
     slidesPerView: '2',
     slidesPerColumn: '4',
     slidesPerColumnFill: 'row',
@@ -126,4 +130,38 @@ $(document).ready(function () {
       }
     }
   });
+});
+
+// слайдеры авторов/редаторов/экспертов (с числовой пагинацией, НЕ учитывая переполнение)
+$(document).ready(function () {
+
+  let teamSwiperParam = {
+    slidesPerView: '1',
+    spaceBetween: 25,
+    touchRatio: 1,
+
+    navigation: {
+      nextEl: ' .swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + (index + 1) + '</span>';
+      }
+    },
+
+    breakpoints: {
+      756: {
+        slidesPerView: '4',
+        spaceBetween: 30,
+      }
+    }
+  }
+
+  // слайдер экспертов
+  let teamSwiperExperts = new Swiper('#team-swiper-experts', teamSwiperParam);
+
 });

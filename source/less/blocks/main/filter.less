@@ -44,16 +44,19 @@
     right: 0;
   }
 
-  &:hover {
+  &:not(.filter__options-range):hover,
+  &:not(.filter__options-range):focus-within {
     color: #000;
-    .filter__handler-desc {
+    .filter__handler-desc,
+    .filter__handler-icon {
       color: darken(@c-light-gray, 20%);
+      fill: currentColor;
       // color: #687c9e;
     }
-    .filter__handler-icon {
-      fill: darken(@c-light-gray, 20%);
+    // .filter__handler-icon {
+      // fill: darken(@c-light-gray, 20%);
       // fill: #687c9e;
-    }
+    // }
   }
 }
 
@@ -148,6 +151,16 @@
 
   .filter__handler-icon {
     display: none;
+  }
+
+  &:hover,
+  &:focus-within {
+    color: #000;
+    .filter__handler-desc,
+    .filter__handler-icon {
+      color: darken(@c-light-gray, 20%);
+      fill: currentColor;
+    }
   }
 }
 
@@ -316,7 +329,7 @@
     }
 
     .filter__handler-icon {
-      display: block;
+      // display: block;
     }
   }
 
