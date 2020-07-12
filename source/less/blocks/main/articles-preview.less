@@ -9,6 +9,7 @@
   padding-bottom: 3rem;
 
   background-color: #fff;
+  border-radius: 4rem;
 
   transition: @s;
   &:hover,
@@ -107,4 +108,54 @@
 
     transition: @s;
   }
+}
+
+@media (max-width: @tablet-width) {
+  .articles-preview {
+    // padding-top: 14.4rem;
+    // padding-left: 2rem;
+    // padding-right: 3rem;
+    padding-bottom: 1.8rem;
+  }
+
+  .articles-preview__img-wrap {
+    // top: 5rem;
+    // right: 0;
+    // width: 100%;
+  }
+
+  .articles-preview__img {
+    // position: absolute;
+    // right: 0;
+  }
+
+  .articles-preview__main-title {
+    // margin-bottom: 1.5rem;
+  }
+
+  .articles-preview__list {}
+
+  // .articles-preview__item {
+  //   margin-bottom: 1.8rem;
+  //   padding-bottom: 1.7rem;
+  //   border-bottom: 0.1rem solid #E6F1FD;
+  // }
+
+  // .articles-preview__link {
+  //   font-size: 1.6rem;
+  //   line-height: 2.4rem;
+  // }
+
+  .articles-preview__title {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .articles-preview__desc {
+    display: none;
+  }
+
+  .articles-preview__tag {}
+
 }
