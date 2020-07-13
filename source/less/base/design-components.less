@@ -377,11 +377,43 @@
   }
 }
 
+.link-decoration-bottom {
+  position: relative;
+  display: inline-block;
+
+  font-weight: 700;
+  font-size: 2.2rem;
+  // text-decoration: underline;
+
+  &::before {
+    position: absolute;
+    content: '';
+    // bottom: 1px;
+    // left: 0;
+    bottom: 0;
+    left:50%;
+    transform:translateX(-50%);
+
+    width: 100%;
+    height: 0.1rem;
+    background-color: currentColor;
+    transition: @s;
+  }
+
+  &:hover,
+  &:focus {
+    // opacity: @opacity-hover;
+    &::before {
+      width: 0;
+    }
+  }
+}
+
 /* shapes */
 
-.aside-item {
-  position: absolute;
-}
+// .aside-item {
+//   position: absolute;
+// }
 
 /* text */
 
@@ -389,6 +421,9 @@
   font-weight: 700;
   font-size: 3.8rem;
   line-height: 4rem;
+  &--small {
+    font-size: 3.5rem;
+  }
 }
 
 .section-desc {
@@ -442,8 +477,8 @@
 
 .icon-logo-star {}
 
-/* меняем цвет через color, так как внутри currentColor */
-#icon-region-1 {
+// меняем цвет через color, так как внутри currentColor
+// #icon-region-1 {
   // transition: @s;
   // path {
     // fill: red;
@@ -451,16 +486,16 @@
   // circle {
     // stroke: red;
   // }
-}
+// }
 
-/* меняем цвет через color, так как внутри currentColor */
-#icon-region-2 {
+// меняем цвет через color, так как внутри currentColor
+// #icon-region-2 {
   // transition: @s;
   // fill: red;
   // path {
     // stroke: red;
   // }
-}
+// }
 
 .icon-tel {
   color: currentColor;
@@ -548,9 +583,16 @@
     }
   }
 
+  .link-decoration-bottom {
+    font-size: 1.5rem;
+  }
+
   .section-title {
     font-size: 2.5rem;
     line-height: 3rem;
+    &--small {
+      // font-size: 3.5rem;
+    }
   }
 
   .section-desc {
