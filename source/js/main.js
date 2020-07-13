@@ -170,3 +170,25 @@ $(document).ready(function () {
     });
   });
 });
+
+
+// табы с разделами базы знаний
+$('.topics-switch__link').on('click', function(evt) {
+
+  let tabID = $(this).data('topic');
+  if (tabID) {
+    evt.preventDefault();
+  }
+
+  let tab = $('.topics-switch__sublist[data-topic='+tabID+']');
+
+  $('.topics-switch__link').removeClass('active');
+  $(this).addClass('active');
+
+  $('.topics-switch__sublist').not(tab).removeClass('active');
+  $(tab).addClass('active');
+
+  // let tab = $(this).attr('href');
+  // $('.topics-switch__sublist').not(tab).removeClass('active');
+  // $(tab).addClass('active');
+})
