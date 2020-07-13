@@ -2822,18 +2822,18 @@ html .desktop-block {
 }
 @media (max-width: 48em) {
   .breadcrumbs {
-    padding-bottom: 2.5rem;
-    font-size: 1.5rem;
+    margin-top: 5.6rem;
+    margin-bottom: 2.5rem;
   }
   .breadcrumbs__list {
     flex-wrap: wrap;
   }
   .breadcrumbs__item {
-    margin-right: 2.8rem;
+    margin-right: 3.2rem;
     margin-bottom: 1rem;
   }
   .breadcrumbs__item::after {
-    right: -1.9rem;
+    right: -2.1rem;
   }
   .breadcrumbs__item:last-child {
     margin-bottom: 0;
@@ -3050,7 +3050,7 @@ html .desktop-block {
   opacity: 0.7;
 }
 .topics-switch__sublist {
-  display: flex;
+  display: none;
   justify-content: space-evenly;
   margin-top: 4rem;
   padding-top: 2.2rem;
@@ -3060,10 +3060,16 @@ html .desktop-block {
   border-top: 0.1rem solid #D2DCE7;
   border-bottom: 0.1rem solid #D2DCE7;
 }
+.topics-switch__sublist.active {
+  display: flex;
+}
 .topics-switch__sublink {
   margin-bottom: 1.5rem;
   padding-left: 1.7rem;
   padding-right: 1.7rem;
+}
+.topics-switch__modal-toggle {
+  display: none;
 }
 .modal-sections {
   -webkit-text-decoration-line: underline;
@@ -3071,7 +3077,7 @@ html .desktop-block {
 }
 @media (max-width: 48em) {
   .topics-switch {
-    margin-top: 6rem;
+    margin-top: 2rem;
     margin-bottom: 6rem;
     font-size: 1.5rem;
   }
@@ -3079,25 +3085,47 @@ html .desktop-block {
     margin-top: 8.7rem;
     margin-bottom: 3.3rem;
   }
-  .topics-switch__title-wrap {
+  .topics-switch-database .topics-switch__title-wrap,
+  .topics-switch-database .topics-switch__list {
+    display: flex;
+  }
+  .topics-switch-database .topics-switch__title-wrap {
     flex-direction: column;
+    margin-bottom: 2rem;
+  }
+  .topics-switch-database .topics-switch__desc {
+    display: inline-block;
+  }
+  .topics-switch-database .topics-switch__modal-toggle {
+    display: none;
+  }
+  .topics-switch__title-wrap {
     margin-bottom: 2rem;
   }
   .topics-switch__title {
     margin-bottom: 1.3rem;
   }
   .topics-switch__desc {
+    display: none;
     font-size: 1.5rem;
   }
-  .topics-switch-database .topics-switch__list {
-    flex-direction: column;
+  .topics-switch__modal-toggle {
+    display: inline-block;
+    width: 13.3rem;
+    height: 4.9rem;
+    font-weight: 700;
+    text-align: center;
+    background-color: #FFF;
     border-radius: 2rem;
   }
   .topics-switch__list {
+    display: none;
+    flex-direction: column;
     padding-top: 2.2rem;
     padding-left: 1.8rem;
     padding-right: 1.8rem;
     padding-bottom: 2.2rem;
+    border-radius: 2rem;
   }
   .topics-switch__item {
     margin-bottom: 1.8rem;
@@ -3108,23 +3136,37 @@ html .desktop-block {
   .topics-switch__link {
     margin-bottom: 0;
   }
+  .topics-switch__sublist-wrap.container {
+    padding-left: 0;
+    padding-right: 0;
+  }
   .topics-switch__sublist {
-    justify-content: space-around;
-    padding: 0;
-    font-size: 2rem;
-    border: none;
+    justify-content: initial;
+    align-items: initial;
+    flex-wrap: nowrap;
+    margin-top: 2.2rem;
+    padding: 0 2.4rem;
+    font-size: 1.4rem;
+    overflow: scroll hidden;
+  }
+  .topics-switch__subitem {
+    flex-shrink: 0;
   }
   .topics-switch__sublink {
-    margin-bottom: 0.7rem;
-    padding-top: 1.2rem;
-    padding-left: 1.3rem;
-    padding-right: 1.3rem;
-    padding-bottom: 0.5rem;
-    border: 0.1rem solid #D2DCE7;
+    margin-bottom: 0;
+    padding: 2.5rem 1.3rem;
+  }
+}
+@media (max-width: 48em) and (max-width: 24.4em) {
+  .topics-switch__sublist {
+    padding: 0 0.7rem;
   }
 }
 .articles-preview-block {
   --margin-bottom: 4.2rem;
+}
+.articles-preview-block--mb {
+  margin-bottom: 10rem;
 }
 .articles-preview-block__columns {
   display: flex;
@@ -3427,6 +3469,9 @@ html .desktop-block {
     padding-top: 3.9rem;
     padding-left: 3.1rem;
     padding-right: 1rem;
+  }
+  .articles-preview-block__list-title-wrap {
+    margin-top: 6.2rem;
   }
   .articles-preview-block__list .articles-preview-block__item {
     margin-right: 0;

@@ -6,7 +6,7 @@
     <meta name="description" content="«Ji+Va»">
     <title>Ji+Va</title>
 
-    <!-- <link rel="shortcut icon" type="image/x-icon" href="./fav.ico"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="./fav.ico">
 
     <link rel="preload" href="fonts/Circe/regular/Circe-Regular.woff2" as="font" type="font/woff2" crossorigin="">
 
@@ -323,30 +323,34 @@
         </ul>
       </div>
 
-      <section class="topics-switch container">
-        <div class="topics-switch__title-wrap">
-          <p class="topics-switch__title section-title">Разделы базы знаний</p>
+      <section class="topics-switch">
+        <div class="topics-switch__title-wrap container">
+          <p class="topics-switch__title section-title">Drugs</p>
           <p class="topics-switch__desc">Over 1000 articles</p>
+
+          <button class="topics-switch__modal-toggle modal-sections">
+            + 10 topics
+          </button>
         </div>
 
-        <ul class="topics-switch__list">
+        <ul class="topics-switch__list container">
           <li class="topics-switch__item">
             <a class="topics-switch__link" href="database.html">
               All
             </a>
           </li>
           <li class="topics-switch__item">
-            <a class="topics-switch__link active" href="theme.html">
+            <a class="topics-switch__link active" href="#" data-topic="1">
               Drugs
             </a>
           </li>
           <li class="topics-switch__item">
-            <a class="topics-switch__link" href="theme.html">
+            <a class="topics-switch__link" href="#" data-topic="2">
               Alcoholism
             </a>
           </li>
           <li class="topics-switch__item">
-            <a class="topics-switch__link" href="theme.html">
+            <a class="topics-switch__link" href="#" data-topic="3">
               Gambling
             </a>
           </li>
@@ -377,46 +381,100 @@
           </li>
         </ul>
 
-        <ul class="topics-switch__sublist">
-          <li class="topics-switch__subitem">
-            <a class="topics-switch__sublink active" href="#">
-              All
-            </a>
-          </li>
-          <li class="topics-switch__subitem">
-            <a class="topics-switch__sublink" href="#">
-              Drugs
-            </a>
-          </li>
-          <li class="topics-switch__subitem">
-            <a class="topics-switch__sublink" href="#">
-              Alcoholism
-            </a>
-          </li>
-          <li class="topics-switch__subitem">
-            <a class="topics-switch__sublink" href="#">
-              Gambling
-            </a>
-          </li>
-          <li class="topics-switch__subitem">
-            <a class="topics-switch__sublink" href="#">
-              Relatives
-            </a>
-          </li>
-          <li class="topics-switch__subitem">
-            <a class="topics-switch__sublink" href="#">
-              International Rehabilitation
-            </a>
-          </li>
-          <li class="topics-switch__subitem">
-            <a class="topics-switch__sublink" href="#">
-              Question and Answer
-            </a>
-          </li>
-        </ul>
+        <div class="topics-switch__sublist-wrap container">
+          <ul data-topic="1" class="topics-switch__sublist active">
+            <li class="topics-switch__subitem">
+              <a class="topics-switch__sublink active" href="#">
+                All
+              </a>
+            </li>
+            <li class="topics-switch__subitem">
+              <a class="topics-switch__sublink" href="#">
+                Реабилитация зависимых
+              </a>
+            </li>
+            <li class="topics-switch__subitem">
+              <a class="topics-switch__sublink" href="#">
+                Детоксикация
+              </a>
+            </li>
+            <li class="topics-switch__subitem">
+              <a class="topics-switch__sublink" href="#">
+                Игровая
+              </a>
+            </li>
+            <li class="topics-switch__subitem">
+              <a class="topics-switch__sublink" href="#">
+                Межличностная
+              </a>
+            </li>
+            <li class="topics-switch__subitem">
+              <a class="topics-switch__sublink" href="#">
+                Геополитическая
+              </a>
+            </li>
+            <li class="topics-switch__subitem">
+              <a class="topics-switch__sublink" href="#">
+                Question and Answer
+              </a>
+            </li>
+          </ul>
+
+          <ul data-topic="2" class="topics-switch__sublist">
+            <li class="topics-switch__subitem">
+              <a class="topics-switch__sublink active" href="#">
+                Все
+              </a>
+            </li>
+            <li class="topics-switch__subitem">
+              <a class="topics-switch__sublink" href="#">
+                Пивной алкоголизм
+              </a>
+            </li>
+            <li class="topics-switch__subitem">
+              <a class="topics-switch__sublink" href="#">
+                Женский алкоголизм
+              </a>
+            </li>
+            <li class="topics-switch__subitem">
+              <a class="topics-switch__sublink" href="#">
+                Детский алкоголизм
+              </a>
+            </li>
+            <li class="topics-switch__subitem">
+              <a class="topics-switch__sublink" href="#">
+                Младенческий алкоголизм
+              </a>
+            </li>
+          </ul>
+
+          <ul data-topic="3" class="topics-switch__sublist">
+            <li class="topics-switch__subitem">
+              <a class="topics-switch__sublink active" href="#">
+                Все
+              </a>
+            </li>
+            <li class="topics-switch__subitem">
+              <a class="topics-switch__sublink" href="#">
+                Большой куш
+              </a>
+            </li>
+            <li class="topics-switch__subitem">
+              <a class="topics-switch__sublink" href="#">
+                Азино 3 топора
+              </a>
+            </li>
+            </li>
+            <li class="topics-switch__subitem">
+              <a class="topics-switch__sublink" href="#">
+                Вопросы и ответы
+              </a>
+            </li>
+          </ul>
+        </div>
       </section>
 
-      <section class="articles-preview-block container">
+      <section class="articles-preview-block articles-preview-block--mb container">
         <div class="articles-preview-block__columns">
           <a class="articles-preview-block__item articles-preview-block__item-big" href="article-detail.html">
             <div class="articles-preview-block__aside-item aside-item aside-item--small">
