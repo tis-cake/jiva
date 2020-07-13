@@ -136,7 +136,7 @@ $(document).ready(function () {
 $(document).ready(function () {
 
   let teamSwiperParam = {
-    slidesPerView: '1',
+    slidesPerView: '2',
     spaceBetween: 25,
     touchRatio: 1,
 

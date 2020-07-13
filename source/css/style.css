@@ -708,6 +708,14 @@ html .desktop-block {
     height: 1.4rem;
   }
 }
+@media (max-width: 23em) {
+  .btn-modal__decor-line::before {
+    left: -0.2rem;
+  }
+  .btn-modal__decor-line::after {
+    right: -0.2rem;
+  }
+}
 /*header*/
 .header {
   position: relative;
@@ -4169,55 +4177,46 @@ html .desktop-block {
 }
 @media (max-width: 48em) {
   .team-swiper {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-top: 9.4rem;
+    padding-bottom: 9.4rem;
   }
   .team-swiper__main-text-wrap {
-    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
   }
-  .team-swiper__count-reviews {
-    display: none;
+  .team-swiper__main-title {
+    margin-bottom: 1.6rem;
+  }
+  .team-swiper__link-page {
+    font-size: 1.5rem;
   }
   .team-swiper__swiper-container {
-    padding-top: 8.2rem;
+    padding-top: 7.3rem;
   }
-  .team-swiper__blockquote {
+  .team-swiper__item {
     width: auto;
-    padding-top: 8rem;
-    padding-left: 1.8rem;
+    padding-top: 4.7rem;
+    padding-left: 2.3rem;
     padding-right: 1.8rem;
-    padding-bottom: 3rem;
-    border-radius: 4rem;
-  }
-  .team-swiper__author-block {
-    margin-bottom: 1.4rem;
-    padding-left: 0;
-    text-align: center;
+    padding-bottom: 2.5rem;
+    background-image: linear-gradient(216.95deg, #FFFFFF 22.57%, #E6F1FD 184.71%);
+    box-shadow: 5px 25px 35px #E4E9EF;
+    border-radius: 5rem;
   }
   .team-swiper__author-photo-wrap {
-    top: -6.2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 12.4rem;
-    height: 12.4rem;
-  }
-  .team-swiper__author-name {
-    margin-bottom: 0;
-    font-size: 1.8rem;
-    line-height: 2.7rem;
+    top: -3.1rem;
+    left: 2.2rem;
+    width: 6.6rem;
+    height: 6.6rem;
   }
   .team-swiper__author-theme {
-    font-size: 1.5rem;
+    margin-bottom: 0.7rem;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
   }
-  .team-swiper__btn-link {
-    box-shadow: none;
-    position: absolute;
-    top: 3.4rem;
-    right: 1.8rem;
-  }
-  .team-swiper__author-text {
-    font-size: 1.5rem;
-    line-height: 2.2rem;
+  .team-swiper__author-name {
+    font-size: 1.7rem;
+    line-height: 1.1;
   }
 }
 .footer {
