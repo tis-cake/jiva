@@ -1,0 +1,115 @@
+.social-panel {
+  // margin-bottom: 5rem;
+}
+
+.social-panel__wrap {
+  display: flex;
+  align-items: center;
+  color: #393544;
+}
+
+.social-panel__desc {
+  font-size: 1.6rem;
+}
+
+.social-panel__views {
+  margin-right: 4rem;
+
+  &-count {
+    position: relative;
+    padding-left: 4.6rem;
+    font-weight: 700;
+    transition: @s;
+    &::before {
+      content: '';
+      position: absolute;
+      top: -1rem;
+      left: -0.2rem;
+
+      width: 4rem;
+      height: 4rem;
+
+      background-image: url('../img/social-panel/views-count.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      transition: inherit;
+    }
+    &:hover::before {
+      opacity: @opacity-hover;
+    }
+  }
+}
+
+.social-panel__share {
+  display: flex;
+  align-items: center;
+}
+
+.social-panel__btn-list {
+  display: flex;
+  margin-left: 0.5rem;
+}
+
+.social-panel__btn-item {
+  margin-right: 1rem;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.ya-share2__item {
+  transition: @s;
+}
+
+.ya-share2__icon {
+  height: 3.5rem!important;
+  width: 3.5rem!important;
+  background-repeat: no-repeat;
+  background-size: inherit!important;
+}
+
+.ya-share2__item_service_facebook .ya-share2__badge,
+.ya-share2__item_service_vkontakte .ya-share2__badge {
+  border-radius: 50%;
+  background-color: #2C2C2C!important;
+  border: 0.2rem solid #2C2C2C;
+}
+
+.ya-share2__item_service_facebook .ya-share2__icon {
+  background-position: 0.2rem -0.2rem;
+  background-size: 4.4rem!important;
+}
+
+
+// @media (max-width: @mobile-width) {
+//   .social-panel {
+//     margin-bottom: @m64px;
+//   }
+
+//   .social-panel__wrap {
+//     flex-wrap: wrap;
+//     width: @a;
+//   }
+
+//   .social-panel__desc {
+//     font-size: @m25px;
+//   }
+
+//   .social-panel__views {
+//     order: 1;
+//   }
+
+//   .social-panel__btn-list {
+//     margin-left: @m20px;
+//   }
+
+//   .social-panel__btn-item {
+//     margin-right: @m10px;
+//   }
+
+//   .ya-share2__icon {
+//     height: @m53px!important;
+//     width: @m53px!important;
+//   }
+// }
