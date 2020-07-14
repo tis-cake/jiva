@@ -195,30 +195,41 @@
     flex-wrap: nowrap;
 
     margin-top: 2.2rem;
-    padding: 0 2.4rem;
+    // padding: 0 2.4rem;
+    padding: 0;
 
     font-size: 1.4rem;
 
-    overflow: scroll hidden;
+    overflow: hidden;
+    overflow-x: scroll;
 
-    @media (max-width: 24.4em) {
-      padding: 0 0.7rem;
-    }
+    // @media (max-width: 24.4em) {
+      // padding: 0 0.7rem;
+    // }
   }
 
   .topics-switch__subitem {
     flex-shrink: 0;
+
+    &:first-child .topics-switch__sublink {
+      padding-left: 3.5rem;
+    }
+    &:last-child .topics-switch__sublink {
+      padding-right: 3.5rem;
+    }
+
+    @media (max-width: 24.4em) {
+      &:first-child .topics-switch__sublink {
+        padding-left: 2.4rem;
+      }
+      &:last-child .topics-switch__sublink {
+        padding-right: 2.4rem;
+      }
+    }
   }
 
   .topics-switch__sublink {
     margin-bottom: 0;
-    // margin-bottom: 0.7rem;
-
     padding: 2.5rem 1.3rem;
-
-    // padding-top: 1.2rem;
-    // padding-left: 1.3rem;
-    // padding-right: 1.3rem;
-    // padding-bottom: 0.5rem;
   }
 }

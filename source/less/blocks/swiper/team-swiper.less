@@ -90,6 +90,17 @@
 
 .team-swiper__swiper-pagination {}
 
+.team-swiper__list {
+  display: flex;
+  flex-wrap: nowrap;
+  .team-swiper__item {
+    margin-right: 3.8rem;
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
+}
+
 @media (max-width: @tablet-width) {
   .team-swiper {
     padding-top: 9.4rem;
