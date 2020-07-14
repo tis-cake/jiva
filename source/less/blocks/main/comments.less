@@ -81,36 +81,6 @@
   border-right: 0.1rem solid #D0D0D0;
 }
 
-// .comments__btn {
-//   position: relative;
-//   width: 7.3rem;
-//   margin-left: @a;
-
-//   cursor: pointer;
-//   text-align: left;
-//   background-color: @red;
-
-//   &::before {
-//     position: absolute;
-//     content: '';
-//     top: 50%;
-//     left: 50%;
-//     transform: translate(-50%, -50%);
-
-//     width: 2rem;
-//     height: 2rem;
-
-//     background-image: url('../img/svg/arrow-w.svg');
-//     background-repeat: no-repeat;
-//     background-position: center;
-//     background-size: contain;
-//   }
-
-//   &:focus {
-//     background-color: #f22248;
-//   }
-// }
-
 .comments__btn-submit {
   align-self: center;
   margin-left: auto;
@@ -183,145 +153,102 @@
 @media (max-width: @tablet-width) {
   .comments {
     margin-bottom: 4.8rem;
-    // font-size: 1.6rem;
+    font-size: 1.6rem;
   }
 
   .comments__count {
-    // margin-bottom: 1.4rem;
+    margin-bottom: 1.9rem;
+    font-size: inherit;
   }
 
   .comments__title {
-    // margin-bottom: 2.6rem;
-    // font-size: 3rem;
+    margin-bottom: 2.3rem;
+    font-size: 2.5rem;
+    line-height: 3rem;
   }
 
   .comments__form {
     flex-direction: column;
-    // height: 7.3rem;
     height: auto;
+    margin-bottom: 0;
     padding-left: 0;
+    padding-right: 0;
 
     background-color: transparent;
   }
 
   .comments__form-text,
-  .comments__form-name,
-  .comments__btn {
+  .comments__form-name {
     width: 100%;
   }
 
   .comments__form-text,
   .comments__form-name {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     padding-left: 2rem;
     padding-right: 2rem;
 
-    background-color: @gray;
+    font-size: 1.6rem;
+
+    background: #FFF;
+    border-radius: 9rem;
   }
 
   .comments__form-text {
     // width: 70%;
-    height: 12rem;
-    padding-top: 1.5rem;
+    height: 18rem;
+    padding-top: 2rem;
     padding-bottom: 1.5rem;
+    border-radius: 4rem;
     &::placeholder {
       line-height: initial;
     }
   }
 
   .comments__form-name {
-    // width: 20%;
     height: 5rem;
     margin-top: 0;
     margin-right: 0;
     border: none;
   }
 
-  .comments__btn {
-    // position: relative;
-    // width: 100%;
-    height: 5rem;
-    margin-left: 0;
-
-    background-color: @red;
-
-    // &::before {
-    //   position: absolute;
-    //   content: '';
-    //   top: 50%;
-    //   left: 50%;
-    //   transform: translate(-50%, -50%);
-
-    //   width: 2rem;
-    //   height: 2rem;
-
-    //   background-image: url('../img/svg/arrow-w.svg');
-    //   background-repeat: no-repeat;
-    //   background-position: center;
-    //   background-size: contain;
-    // }
+  .comments__btn-submit {
+    margin-top: 0.8rem;
+    margin-right: auto;
   }
 
   .comments__block {
-    // margin-top: 6.2rem;
-    // &:last-child {
-    //   margin-bottom: 0;
-    // }
+    margin-top: 4.5rem;
+  }
+
+  .comments__author-name,
+  .comments__time {
+    font-size: 2rem;
   }
 
   .comments__author-name {
-    // position: relative;
-    // display: inline-block;
-    // margin-right: 2.5rem;
-    // margin-bottom: 1.6rem;
-
-    // font-weight: 700;
-    // font-size: 2.2rem;
-
-    // &::after {
-    //   position: absolute;
-    //   content: '';
-    //   top: 0.4rem;
-    //   right: -1.4rem;
-
-    //   width: 0.1rem;
-    //   height: 1.6rem;
-    //   background-color: #393544;
-    // }
-  }
-
-  .comments__time {
-    // font-weight: 300;
-    // font-size: 2.2rem;
-    // color: #393544;
+    margin-right: 2.1rem;
+    margin-bottom: 1.3rem;
+    font-size: 2rem;
+    &::after {
+      right: -1.2rem;
+    }
   }
 
   .comments__author-text {
-    // margin-bottom: 1.9rem;
+    margin-bottom: 1.4rem;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
   }
 
   .comments__reply-btn {
-    // color: #777;
-    // font-family: inherit;
-
-    // &.hidden {
-    //   display: none;
-    // }
+    font-size: 1.5rem;
   }
 
   .comments__reply-form {
-    // display: none;
-    // &.active {
-    //   display: flex;
-    // }
   }
 
   .comments__answer-block {
-    // display: none;
-    // margin-top: 3rem;
     margin-left: 2.5rem;
-    // &.active {
-    //   display: block;
-    // }
   }
 }

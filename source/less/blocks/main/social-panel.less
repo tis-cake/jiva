@@ -82,34 +82,18 @@
 }
 
 
-// @media (max-width: @mobile-width) {
-//   .social-panel {
-//     margin-bottom: @m64px;
-//   }
+@media (max-width: @tablet-width) {
+  .social-panel__views {
+    margin-right: auto;
 
-//   .social-panel__wrap {
-//     flex-wrap: wrap;
-//     width: @a;
-//   }
-
-//   .social-panel__desc {
-//     font-size: @m25px;
-//   }
-
-//   .social-panel__views {
-//     order: 1;
-//   }
-
-//   .social-panel__btn-list {
-//     margin-left: @m20px;
-//   }
-
-//   .social-panel__btn-item {
-//     margin-right: @m10px;
-//   }
-
-//   .ya-share2__icon {
-//     height: @m53px!important;
-//     width: @m53px!important;
-//   }
-// }
+    &-count {
+      padding-left: 3.2rem;
+      &::before {
+        top: -0.6rem;
+        // left: -0.2rem;
+        width: 3rem;
+        height: 3rem;
+      }
+    }
+  }
+}
