@@ -127,7 +127,6 @@ $(document).ready(function () {
 
 });
 
-
 // фильтр центров над картой
 $(document).ready(function () {
   $('.filter__handler').on('click', function() {
@@ -173,22 +172,34 @@ $(document).ready(function () {
 
 
 // табы с разделами базы знаний
-$('.topics-switch__link').on('click', function(evt) {
+$(document).ready(function () {
+  $('.topics-switch__link').on('click', function(evt) {
 
-  let tabID = $(this).data('topic');
-  if (tabID) {
-    evt.preventDefault();
-  }
+    let tabID = $(this).data('topic');
+    if (tabID) {
+      evt.preventDefault();
+    }
 
-  let tab = $('.topics-switch__sublist[data-topic='+tabID+']');
+    let tab = $('.topics-switch__sublist[data-topic='+tabID+']');
 
-  $('.topics-switch__link').removeClass('active');
-  $(this).addClass('active');
+    $('.topics-switch__link').removeClass('active');
+    $(this).addClass('active');
 
-  $('.topics-switch__sublist').not(tab).removeClass('active');
-  $(tab).addClass('active');
+    $('.topics-switch__sublist').not(tab).removeClass('active');
+    $(tab).addClass('active');
 
-  // let tab = $(this).attr('href');
-  // $('.topics-switch__sublist').not(tab).removeClass('active');
-  // $(tab).addClass('active');
-})
+    // let tab = $(this).attr('href');
+    // $('.topics-switch__sublist').not(tab).removeClass('active');
+    // $(tab).addClass('active');
+  })
+});
+
+// комментарии под статьёй
+$(document).ready(function () {
+  $('.comments__reply-btn').on('click', function() {
+    $(this).addClass('hidden');
+    let currentBlock = $(this).closest('.comments__block');
+
+    currentBlock.find('.comments__reply-form').addClass('active');
+  })
+});
