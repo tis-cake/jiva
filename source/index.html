@@ -37,13 +37,29 @@
 
           <div class="header__rows-wrap">
             <div class="header__row-top">
-              <form class="header__form-lang select-lang" action=".php" method="post">
+
+              <!-- <form class="header__form-lang select-lang" action=".php" method="post">
+                <input class="select-lang__input visually-hidden" type="text" name="LANG" value="RU">
+
                 <select class="select-lang__select custom-select-js" name="SELECT-LANG">
-                  <option value="LANG-RUSSIAN" selected>RU</option>
-                  <option value="LANG-ENGLISH">EN</option>
-                  <option value="LANG-FRENCH">FR</option>
+                  <option value="RU" selected>RU</option>
+                  <option value="EN">EN</option>
                 </select>
+              </form> -->
+
+              <form class="header__form-lang select-lang" action=".php" method="post">
+                <input class="select-lang__input visually-hidden" type="text" name="LANG" value="RU">
+                <button class="select-lang__select" data-id="">RU</button>
+                <ul class="select-lang__list">
+                  <li class="select-lang__item">
+                    <button class="select-lang__option" data-lang="EN">EN</button>
+                  </li>
+                  <li class="select-lang__item">
+                    <button class="select-lang__option" data-lang="RU">RU</button>
+                  </li>
+                </ul>
               </form>
+
               <button class="header__link-modal-region btn-region-1 modal-region" type="button" title="Выбрать регион">
                 Россия
                 <span class="visually-hidden">Выбрать регион</span>

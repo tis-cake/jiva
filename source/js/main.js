@@ -1,6 +1,68 @@
+$('.select-lang input[name=LANG]').change(function () {
+  console.log('Язык изменён');
+  // location.reload();
+});
+
+// выбор языка
+$(document).ready(function () {
+
+  let selectLang = $('.select-lang__select'),
+      optionLang = $('.select-lang__option'),
+      inputLang = $('.select-lang__input'),
+      listLang = $('.select-lang__list');
+
+  // выпадающее меню
+  selectLang.on('click', function (evt) {
+    evt.preventDefault();
+
+    if (selectLang.hasClass('active')) {
+      selectLang.removeClass('active');
+      listLang.slideUp();
+    } else {
+      listLang.slideDown();
+      $(this).toggleClass('active');
+    }
+
+    // клик вне элемента
+    $(document).on('mouseup touchstart', function (evt) {
+      let currentEl = $(".select-lang__select.active");
+      if (!currentEl.is(evt.target) && currentEl.has(evt.target).length === 0) {
+        selectLang.removeClass('active');
+        listLang.slideUp();
+      }
+    });
+  });
+
+  // выбор языка
+  optionLang.on('click', function (evt) {
+    evt.preventDefault();
+
+    let val = $(this).text();
+    selectLang.text(val);
+
+    val = $(this).data('lang');
+    inputLang.val(val);
+    inputLang.change();
+
+    selectLang.removeClass('active');
+    listLang.slideUp();
+
+    console.log(inputLang.val());
+  });
+
+});
+
+// $('body').on('click', '.select-lang option', function (e) {
+//   let val = $(this).val()
+//   let input = $(this).closest('.select-lang').find('input');
+//   input.val(val);
+//   input.change();
+//   console.log(input.val());
+// });
+
 // кастомный language-select
-$('.custom-select-js').customSelect();
-$('.custom-select').length != 0 ? $('.select-lang').addClass('custom') : $('.select-lang').removeClass('custom');
+// $('.custom-select-js').customSelect();
+// $('.custom-select').length != 0 ? $('.select-lang').addClass('custom') : $('.select-lang').removeClass('custom');
 
 $('.search-toggle').click(function() {
   $(this).toggleClass('active');
@@ -124,7 +186,6 @@ $(document).ready(function () {
       $('.rehab-compare-link').removeClass('active');
     }
   }
-
 });
 
 // фильтр центров над картой

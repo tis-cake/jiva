@@ -1189,8 +1189,8 @@ html .desktop-block {
 .select-lang.custom::after {
   content: none;
 }
-.custom-select__option--value::after,
-.select-lang::after {
+.select-lang__select::after,
+.custom-select__option--value::after {
   content: '';
   position: absolute;
   z-index: 0;
@@ -1205,6 +1205,7 @@ html .desktop-block {
   cursor: pointer;
   transition: var(--transition-main);
 }
+.select-lang__select.active::after,
 .custom-select--active .custom-select__option--value::after {
   transform: translateY(-50%) rotate(-180deg);
 }
@@ -1216,7 +1217,7 @@ html .desktop-block {
   padding-right: 1rem;
 }
 .select-lang__select option {
-  color: #000;
+  background-color: var(--color-brown);
 }
 .select-lang__select,
 .custom-select__option,
@@ -1264,6 +1265,33 @@ html .desktop-block {
   .select-lang::after {
     right: 6px;
   }
+}
+.select-lang__select,
+.select-lang__option {
+  transition: var(--transition-main);
+}
+.select-lang__select:hover,
+.select-lang__option:hover,
+.select-lang__select:focus,
+.select-lang__option:focus {
+  opacity: 0.7;
+}
+.select-lang__input {
+  visibility: hidden;
+}
+.select-lang__list {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  color: #fff;
+  background-color: var(--color-brown);
+}
+.select-lang__item {
+  margin-top: 0.8rem;
+  padding-right: 1rem;
+}
+.select-lang__option {
+  color: inherit;
 }
 .search {
   position: absolute;
