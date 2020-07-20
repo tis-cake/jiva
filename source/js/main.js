@@ -234,7 +234,7 @@ $(document).ready(function () {
 
 // табы с разделами базы знаний
 $(document).ready(function () {
-  $('.topics-switch__link').on('click', function(evt) {
+  $('.topics-switch__link:not(.modal-sections)').on('click', function(evt) {
 
     let tabID = $(this).data('topic');
     if (tabID) {
@@ -263,4 +263,52 @@ $(document).ready(function () {
 
     currentBlock.find('.comments__reply-form').addClass('active');
   })
+});
+
+// табы
+$(document).ready(function() {
+
+  // показываем модалку с табами
+  $(".modal-sections").click(function(evt) {
+    evt.preventDefault();
+    $(".modal-sections-tab").addClass('active');
+    $("body").addClass('noscroll');
+  });
+
+  // закрываем
+  $(".modal-sections-tab__close").click(function() {
+    $(".modal-sections-tab").removeClass('active');
+    $("body").removeClass('noscroll');
+  });
+
+  let currentHeight;
+  let heightOverflow = 600;
+
+  // клик по табам, но не по кнопке "all"
+  $(".modal-sections-tab__toggle-btn").click(function() {
+    let selectedTab = $(this).closest('.modal-sections-tab__item').find('.modal-sections-tab__sub-list');
+
+    $(".modal-sections-tab__toggle-btn").not(this).removeClass('active');
+    $(".modal-sections-tab__sub-list").not(selectedTab).removeClass('active');
+
+    $(this).toggleClass("active");
+    $(selectedTab).toggleClass("active");
+
+    // при переполнении в правом блоке добавляем скролл
+    // currentHeight = $('.modal-sections-tab__right').height();
+
+    if (width > 756) {
+      currentHeight = $(selectedTab).height();
+      resizeRightColumn(currentHeight);
+    }
+  });
+
+  function resizeRightColumn(height) {
+    if (height > heightOverflow) {
+      $('.modal-sections-tab__sub-list').addClass('overflow');
+    } else {
+      $('.modal-sections-tab__sub-list').removeClass('overflow');
+
+    }
+  }
 });
