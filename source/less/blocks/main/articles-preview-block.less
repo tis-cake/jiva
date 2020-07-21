@@ -1,6 +1,11 @@
+/* вынес в корень, так как баннер изолирован от блока со статьями */
+html {
+  --article-margin-bottom: 4.2rem;
+}
+
 .articles-preview-block {
   // display: flex;
-  --margin-bottom: 4.2rem;
+  // --margin-bottom: 4.2rem;
 
   &--mb {
     margin-bottom: 10rem;
@@ -10,7 +15,7 @@
 .articles-preview-block__columns {
   display: flex;
   justify-content: space-between;
-  margin-bottom: var(--margin-bottom);
+  margin-bottom: var(--article-margin-bottom);
 }
 
 .articles-preview-block__column {
@@ -43,7 +48,7 @@
 
 .articles-preview-block__item {
   position: relative;
-  min-height: 48.2rem;
+  // min-height: 48.2rem;
   overflow: hidden;
 
   transition: @s;
@@ -90,7 +95,8 @@
 
   display: flex;
   flex-direction: column;
-
+  // min-height: 10.8rem;
+  min-height: 100%;
   margin-top: -0.6rem;
   padding-left: 2.5rem;
   padding-right: 2.5rem;
@@ -149,7 +155,7 @@
 }
 
 .articles-preview-block__item-big {
-  margin-bottom: var(--margin-bottom);
+  margin-bottom: var(--article-margin-bottom);
   .articles-preview-block__img-wrap {
     height: 44.6rem;
     &::before {
@@ -183,7 +189,7 @@
 }
 
 .articles-preview-block__b {
-  padding-top: calc(var(--padding-block) - var(--margin-bottom));
+  padding-top: calc(var(--padding-block) - var(--article-margin-bottom));
 }
 
 .articles-preview-block__list-wrap {}
@@ -205,7 +211,7 @@
   flex-wrap: wrap;
   .articles-preview-block__item {
     margin-right: 4.2rem;
-    margin-bottom: var(--margin-bottom);
+    margin-bottom: var(--article-margin-bottom);
     &:nth-child(4n) {
       margin-right: 0;
     }
@@ -213,8 +219,13 @@
 }
 
 @media (max-width: @tablet-width) {
+  /* вынес в корень, так как баннер изолирован от блока со статьями */
+  html {
+    --article-margin-bottom: 1.6rem;
+  }
+
   .articles-preview-block {
-    --margin-bottom: 1.6rem;
+    // --article-margin-bottom: 1.6rem;
 
     &--mb {
       // margin-bottom: 10rem;
@@ -228,7 +239,7 @@
   .articles-preview-block__item,
   .articles-preview-block__column .articles-preview-block__item,
   .articles-preview-block__column .articles-preview-block__item:last-child {
-    margin-bottom: var(--margin-bottom);
+    margin-bottom: var(--article-margin-bottom);
   }
 
   .articles-preview-block__column,
@@ -285,6 +296,7 @@
   }
 
   .articles-preview-block__text-wrap {
+    min-height: 0;
     margin-top: 0;
     padding: 0;
     padding-top: 1rem;
@@ -310,7 +322,7 @@
   .articles-preview-block__item-big,
   .articles-preview-block__item-small {
     border-radius: 3rem;
-    margin-bottom: var(--margin-bottom);
+    margin-bottom: var(--article-margin-bottom);
     padding: 0;
     .articles-preview-block__text-wrap {
       padding-bottom: 1.8rem;

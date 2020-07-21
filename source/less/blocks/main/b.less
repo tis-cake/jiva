@@ -6,6 +6,10 @@
 
   padding-top: var(--padding-block);
   padding-bottom: var(--padding-block);
+
+  &.padding-var {
+    padding-top: calc(var(--padding-block) - var(--article-margin-bottom));
+  }
 }
 
 .b__content-wrap {
