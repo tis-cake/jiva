@@ -39,7 +39,7 @@ gulp.task('js', function () {
 });
 
 gulp.task("img", function () {
-  return gulp.src("source/img/z/*.{png,jpg,svg}")
+  return gulp.src("source/img/z/**/*.{png,jpg,svg}")
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.jpegtran({progressive: true}),
