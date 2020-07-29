@@ -2,7 +2,7 @@ let width = $(window).width();
 
 // максимальное число для слайдов в контейнере,
 //  выше которого меняется тип пагинации слайдера
-var limitForOverflow = 16;
+let limitForOverflow = 16;
 if (width <= 750) {
   limitForOverflow = 7;
 }
@@ -163,5 +163,11 @@ $(document).ready(function () {
 
   // слайдер экспертов
   let teamSwiperExperts = new Swiper('#team-swiper-experts', teamSwiperParam);
+
+  // слайдер редакторов
+  let teamSwiperEditors = new Swiper('#team-swiper-editors', teamSwiperParam);
+
+  // слайдер авторов
+  let teamSwiperAuthors = new Swiper('#team-swiper-authors', teamSwiperParam);
 
 });

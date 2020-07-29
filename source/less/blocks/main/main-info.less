@@ -102,15 +102,36 @@
   background-repeat: no-repeat;
   background-position: center;
 
-  top: 31.3rem;
+  // top: 31.3rem;
+  top: var(--top);
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  height: 112.7rem;
+  // height: 112.7rem;
+  height: var(--height);
   background-image: url('../img/main-info/1-2-d.svg');
   background-size: cover;
+
+  --top: 31.3rem;
+  --height: 112.7rem;
+  --dynamic-height: 58.697vw;
+
   @media (min-width: @max-desktop-width) {
-    height: 58.697vw;
+    /*
+      Декоративный элемент должен увеличивать height через vw
+      и понижать top на треть от этой высоты
+
+      1) --dynamic-height - это та же высота, выраженная в vw (1127px/112.7rem = 58.697vw)
+      2) --difference-height - это разница между динамической и статичной высотой
+      3) --dynamic-top - динамическая величина top, зависимая от высоты декоративного элемента
+         (чем больше элемент - тем на треть меньше top)
+    */
+
+    --difference-height: calc(var(--dynamic-height) - var(--height));
+    --dynamic-top: calc(var(--top) - var(--difference-height) / 3);
+
+    top: var(--dynamic-top);
+    height: var(--dynamic-height);
   }
 }
 
@@ -145,6 +166,7 @@
 }
 
 .main-info__btn-modal {
+  z-index: 1;
   margin-top: 2.8rem;
 }
 
@@ -214,6 +236,44 @@
     width: 44.4rem;
     height: 57.4rem;
     background-image: url('../img/main-info/3-2.svg');
+  }
+}
+
+.main-info-four {
+  padding-bottom: 37.2rem;
+  .main-info__bg {
+    top: -56.5rem;
+    width: 115.9rem;
+    height: 115.9rem;
+    background-image: radial-gradient(74.44% 77.83% at 100.48% 83.04%, #605D72 0%, #2F1F27 100%);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+  }
+  .main-info__text-wrap {
+    padding-top: 1rem;
+    width: 80rem;
+  }
+  .main-info__title {
+    font-size: 4.5rem;
+    line-height: 4.5rem;
+  }
+  .main-info__subtitle {
+    font-size: 1.6rem;
+  }
+  .main-info__desc {
+    font-size: 2rem;
+    line-height: 2.9rem;
+  }
+  .main-info__decor {
+    /* это переменная, см. комментарий к .main-info__decor */
+    --top: 37.3rem;
+  }
+  &::after {
+    top: 39.8rem;
+    transform: translateX(-43.2rem) ;
+    width: 39.3rem;
+    height: 36.8rem;
+
+    background-image: url('../img/main-info/4-1.svg');
   }
 }
 
@@ -364,6 +424,43 @@
       height: 36.3rem;
     }
   }
+
+  // .main-info-four {
+  //   padding-bottom: 37.2rem;
+  //   .main-info__bg {
+  //     top: -56.5rem;
+  //     width: 115.9rem;
+  //     height: 115.9rem;
+  //     background-image: radial-gradient(74.44% 77.83% at 100.48% 83.04%, #605D72 0%, #2F1F27 100%);
+  //     transform: matrix(-1, 0, 0, 1, 0, 0);
+  //   }
+  //   .main-info__text-wrap {
+  //     padding-top: 1rem;
+  //     width: 80rem;
+  //   }
+  //   .main-info__title {
+  //     font-size: 4.5rem;
+  //     line-height: 4.5rem;
+  //   }
+  //   .main-info__subtitle {
+  //     font-size: 1.6rem;
+  //   }
+  //   .main-info__desc {
+  //     font-size: 2rem;
+  //     line-height: 2.9rem;
+  //   }
+  //   .main-info__decor {
+  //     top: 37.3rem;
+  //   }
+  //   &::after {
+  //     top: 39.8rem;
+  //     transform: translateX(-43.2rem) ;
+  //     width: 39.3rem;
+  //     height: 36.8rem;
+
+  //     background-image: url('../img/main-info/4-1.svg');
+  //   }
+  // }
 }
 
 @media(max-width: 420px) {

@@ -1593,17 +1593,32 @@ html .desktop-block {
   z-index: 0;
   background-repeat: no-repeat;
   background-position: center;
-  top: 31.3rem;
+  top: var(--top);
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  height: 112.7rem;
+  height: var(--height);
   background-image: url('../img/main-info/1-2-d.svg');
   background-size: cover;
+  --top: 31.3rem;
+  --height: 112.7rem;
+  --dynamic-height: 58.697vw;
 }
 @media (min-width: 1921px) {
   .main-info__decor {
-    height: 58.697vw;
+    /*
+      Декоративный элемент должен увеличивать height через vw
+      и понижать top на треть от этой высоты
+
+      1) --dynamic-height - это та же высота, выраженная в vw (1127px/112.7rem = 58.697vw)
+      2) --difference-height - это разница между динамической и статичной высотой
+      3) --dynamic-top - динамическая величина top, зависимая от высоты декоративного элемента
+         (чем больше элемент - тем на треть меньше top)
+    */
+    --difference-height: calc(var(--dynamic-height) - var(--height));
+    --dynamic-top: calc(var(--top) - var(--difference-height) / 3);
+    top: var(--dynamic-top);
+    height: var(--dynamic-height);
   }
 }
 .main-info__text-wrap {
@@ -1627,6 +1642,7 @@ html .desktop-block {
   line-height: 2.8rem;
 }
 .main-info__btn-modal {
+  z-index: 1;
   margin-top: 2.8rem;
 }
 .main-info-one::after {
@@ -1688,6 +1704,42 @@ html .desktop-block {
   width: 44.4rem;
   height: 57.4rem;
   background-image: url('../img/main-info/3-2.svg');
+}
+.main-info-four {
+  padding-bottom: 37.2rem;
+}
+.main-info-four .main-info__bg {
+  top: -56.5rem;
+  width: 115.9rem;
+  height: 115.9rem;
+  background-image: radial-gradient(74.44% 77.83% at 100.48% 83.04%, #605D72 0%, #2F1F27 100%);
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+.main-info-four .main-info__text-wrap {
+  padding-top: 1rem;
+  width: 80rem;
+}
+.main-info-four .main-info__title {
+  font-size: 4.5rem;
+  line-height: 4.5rem;
+}
+.main-info-four .main-info__subtitle {
+  font-size: 1.6rem;
+}
+.main-info-four .main-info__desc {
+  font-size: 2rem;
+  line-height: 2.9rem;
+}
+.main-info-four .main-info__decor {
+  /* это переменная, см. комментарий к .main-info__decor */
+  --top: 37.3rem;
+}
+.main-info-four::after {
+  top: 39.8rem;
+  transform: translateX(-43.2rem);
+  width: 39.3rem;
+  height: 36.8rem;
+  background-image: url('../img/main-info/4-1.svg');
 }
 @media (max-width: 48em) {
   .main-info {
@@ -2857,6 +2909,9 @@ html .desktop-block {
   font-size: 1.6rem;
   font-weight: 700;
 }
+.breadcrumbs--black {
+  color: var(--color-main);
+}
 .breadcrumbs__list {
   display: flex;
 }
@@ -3958,11 +4013,13 @@ html {
 .article-rating__title {
   margin-right: 1rem;
 }
+.rating_count {
+  width: auto !important;
+}
 .article-rating__area {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
-  width: 17.2rem;
 }
 .article-rating__area:not(:checked) > input {
   display: none;
@@ -5195,6 +5252,36 @@ html {
     font-size: 1.5rem;
     line-height: 2.2rem;
   }
+}
+.team-swiper-list {
+  --padding-block: 4.16rem;
+}
+.team-swiper-list .team-swiper:first-child {
+  padding-top: 8.3rem;
+  padding-bottom: var(--padding-block);
+}
+.team-swiper-list .team-swiper {
+  padding-top: var(--padding-block);
+  padding-bottom: var(--padding-block);
+}
+.team-swiper-list .team-swiper::before {
+  position: absolute;
+  content: '';
+  bottom: 2rem;
+  left: 0;
+  width: 100%;
+  height: 0.1rem;
+  background-color: #fff;
+}
+.team-swiper-list .team-swiper:last-child {
+  padding-top: var(--padding-block);
+  padding-bottom: 8.3rem;
+}
+.team-swiper-list .team-swiper:last-child::before {
+  content: none;
+}
+.team-swiper-list .team-swiper__arrows-wrap {
+  margin-top: 4.2rem;
 }
 .team-swiper {
   padding-top: 8.3rem;
