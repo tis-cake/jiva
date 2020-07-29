@@ -257,6 +257,7 @@
     line-height: 4.5rem;
   }
   .main-info__subtitle {
+    font-weight: 400;
     font-size: 1.6rem;
   }
   .main-info__desc {
@@ -425,42 +426,56 @@
     }
   }
 
-  // .main-info-four {
-  //   padding-bottom: 37.2rem;
-  //   .main-info__bg {
-  //     top: -56.5rem;
-  //     width: 115.9rem;
-  //     height: 115.9rem;
-  //     background-image: radial-gradient(74.44% 77.83% at 100.48% 83.04%, #605D72 0%, #2F1F27 100%);
-  //     transform: matrix(-1, 0, 0, 1, 0, 0);
-  //   }
-  //   .main-info__text-wrap {
-  //     padding-top: 1rem;
-  //     width: 80rem;
-  //   }
-  //   .main-info__title {
-  //     font-size: 4.5rem;
-  //     line-height: 4.5rem;
-  //   }
-  //   .main-info__subtitle {
-  //     font-size: 1.6rem;
-  //   }
-  //   .main-info__desc {
-  //     font-size: 2rem;
-  //     line-height: 2.9rem;
-  //   }
-  //   .main-info__decor {
-  //     top: 37.3rem;
-  //   }
-  //   &::after {
-  //     top: 39.8rem;
-  //     transform: translateX(-43.2rem) ;
-  //     width: 39.3rem;
-  //     height: 36.8rem;
+  .main-info-four {
+    padding-bottom: 36.6rem;
+    .main-info__bg {
+      // top: -18.2rem;
+      top: -27rem;
+      width: 80.8rem;
+      height: 84.7rem;
+      // background-image: radial-gradient(74.44% 77.83% at 100.48% 83.04%, #605D72 0%, #2F1F27 100%);
+      // transform: matrix(-1, 0, 0, 1, 0, 0);
+      background-image: radial-gradient(43.24% 44.87% at 2.24% 86.64%, #504D60 0%, #2F1F27 100%);
+      transform: rotate(-1.37deg);
+    }
+    .main-info__text-wrap {
+      width: auto;
+      padding-top: 0.5rem;
+    }
+    .main-info__title {
+      margin-bottom: 3rem;
+      font-size: 2.5rem;
+      line-height: 3rem;
+    }
+    .main-info__subtitle {
+      font-size: 1.3rem;
+    }
+    .main-info__desc {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+    .main-info__decor {
+      // top: 47.3rem;
+      top: 38rem;
+    }
+    &::after {
+      // top: 52.9rem;
+      top: 44.3rem;
+      // transform: translateX(-21rem);
+      transform: translateX(-19.5rem);
+      width: 36.8rem;
+      height: 36.8rem;
+      background-image: url('../img/main-info/1-1.svg');
+    }
+  }
 
-  //     background-image: url('../img/main-info/4-1.svg');
-  //   }
-  // }
+  .main-info__breadcrumbs {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    align-self: flex-start;
+  }
 }
 
 @media(max-width: 420px) {
