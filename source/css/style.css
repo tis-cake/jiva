@@ -3013,6 +3013,9 @@ html .desktop-block {
   .breadcrumbs__item:last-child {
     margin-bottom: 0;
   }
+  .breadcrumbs__link-page {
+    display: none;
+  }
 }
 .compare {
   margin-top: 1.7rem;
@@ -3670,10 +3673,17 @@ html {
     padding-right: 1rem;
   }
   .articles-preview-block__list-title-wrap {
+    flex-wrap: wrap;
     margin-top: 6.2rem;
   }
   .articles-preview-block__list .articles-preview-block__item {
     margin-right: 0;
+  }
+  .articles-preview-block-expert .articles-preview-block__list-title-wrap {
+    justify-content: center;
+  }
+  .articles-preview-block__btn-modal {
+    margin-top: 2rem;
   }
 }
 .articles-preview {
@@ -4693,6 +4703,7 @@ html {
   box-sizing: border-box;
   position: relative;
   width: 61.4rem;
+  min-height: 25.5rem;
   margin-bottom: 6.5rem;
   padding-top: 9.3rem;
   padding-left: 3rem;
@@ -4763,6 +4774,8 @@ html {
 }
 .about-person__document-list {
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   margin-top: 3.8rem;
 }
 .about-person__document-item {
@@ -4809,6 +4822,68 @@ html {
 }
 .about-person__rating-item.check {
   background-image: url('../img/svg/star-gray-fill.svg');
+}
+@media (max-width: 48em) {
+  .about-person {
+    padding-top: 9.2rem;
+    padding-bottom: 1rem;
+  }
+  .about-person__detail-wrap {
+    width: 100%;
+    min-height: 21.8rem;
+    margin-bottom: 7.6rem;
+    padding-top: 8rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2.9rem;
+  }
+  .about-person__subject-desc {
+    font-size: 1.5rem;
+  }
+  .about-person__name,
+  .about-person__desc-title {
+    font-size: 2.5rem;
+    line-height: 3.7rem;
+  }
+  .about-person__social-list {
+    margin-top: 1.2rem;
+  }
+  .about-person__desc-title {
+    margin-bottom: 1.6rem;
+  }
+  .about-person__experience {
+    font-size: 1.3rem;
+  }
+  .about-person__desc {
+    width: auto;
+    margin-top: 2.5rem;
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+  }
+  .about-person__document-list {
+    margin-top: 3.2rem;
+  }
+  .about-person__document-item {
+    margin-bottom: 1.2rem;
+  }
+  .about-person__document-wrap {
+    width: 11.7rem;
+    height: 15.7rem;
+    padding-top: 0;
+  }
+  .about-person__document {
+    width: 7.5rem;
+    height: 10.5rem;
+  }
+  .about-person__rating-list {
+    margin-top: 1rem;
+  }
+  .about-person__rating-item {
+    width: 2.2rem;
+    height: 2.2rem;
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+  }
 }
 /*swiper*/
 .swiper-container-big-container {
