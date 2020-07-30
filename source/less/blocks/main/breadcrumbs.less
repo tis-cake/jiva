@@ -20,6 +20,7 @@
 .breadcrumbs__item {
   position: relative;
   margin-right: 3.4rem;
+  transition: @s;
 
   &:last-child {
     margin-right: 0;
@@ -40,10 +41,35 @@
   &:nth-last-child(2)::after {
     color: #777;
   }
+
+  &:not(:last-child):hover,
+  &:not(:last-child):focus-within {
+    opacity: @opacity-hover;
+  }
 }
 
 .breadcrumbs__link {
   text-decoration-line: underline;
+
+  // position: relative;
+  // transition: @s;
+  // &::before {
+  //   position: absolute;
+  //   content: '';
+  //   left: 0;
+  //   bottom: 0;
+  //   width: 100%;
+  //   height: 0.1rem;
+  //   background-color: currentColor;
+  //   transition: inherit;
+  // }
+
+  // &:hover {
+    // opacity: @opacity-hover;
+    // &::before {
+    //   opacity: 0;
+    // }
+  // }
 }
 
 .breadcrumbs__link-page {

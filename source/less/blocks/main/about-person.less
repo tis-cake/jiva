@@ -6,6 +6,10 @@
 
   padding-top: 5.7rem;
   padding-bottom: 11.6rem;
+
+  &--pb {
+    padding-bottom: 6rem;
+  }
 }
 
 .about-person__detail-wrap {
@@ -129,7 +133,28 @@
   width: 8.7rem;
   height: 12.2rem;
   object-fit: contain;
-  // .img-cover;
+}
+
+.about-person__rating-list {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.6rem;
+}
+
+.about-person__rating-item {
+  width: 3rem;
+  height: 3rem;
+  margin-left: 0.4rem;
+  margin-right: 0.4rem;
+
+  background-image: url('../img/svg/star-gray.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  &.check {
+    background-image: url('../img/svg/star-gray-fill.svg');
+  }
 }
 
 @media (max-width: @tablet-width) {

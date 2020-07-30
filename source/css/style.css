@@ -2963,6 +2963,7 @@ html .desktop-block {
 .breadcrumbs__item {
   position: relative;
   margin-right: 3.4rem;
+  transition: var(--transition-main);
 }
 .breadcrumbs__item:last-child {
   margin-right: 0;
@@ -2979,6 +2980,10 @@ html .desktop-block {
 }
 .breadcrumbs__item:nth-last-child(2)::after {
   color: #777;
+}
+.breadcrumbs__item:not(:last-child):hover,
+.breadcrumbs__item:not(:last-child):focus-within {
+  opacity: 0.7;
 }
 .breadcrumbs__link {
   -webkit-text-decoration-line: underline;
@@ -4681,6 +4686,9 @@ html {
   padding-top: 5.7rem;
   padding-bottom: 11.6rem;
 }
+.about-person--pb {
+  padding-bottom: 6rem;
+}
 .about-person__detail-wrap {
   box-sizing: border-box;
   position: relative;
@@ -4783,6 +4791,24 @@ html {
   height: 12.2rem;
   -o-object-fit: contain;
      object-fit: contain;
+}
+.about-person__rating-list {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.6rem;
+}
+.about-person__rating-item {
+  width: 3rem;
+  height: 3rem;
+  margin-left: 0.4rem;
+  margin-right: 0.4rem;
+  background-image: url('../img/svg/star-gray.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.about-person__rating-item.check {
+  background-image: url('../img/svg/star-gray-fill.svg');
 }
 /*swiper*/
 .swiper-container-big-container {
