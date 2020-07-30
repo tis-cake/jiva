@@ -265,7 +265,7 @@ $(document).ready(function () {
   })
 });
 
-// табы
+// модальное окно с разделами базы знаний
 $(document).ready(function() {
 
   // показываем модалку с табами
@@ -312,3 +312,7 @@ $(document).ready(function() {
     }
   }
 });
+
+// $().fancybox({
+//   selector : '.about-person__document-wrap',
+// });
