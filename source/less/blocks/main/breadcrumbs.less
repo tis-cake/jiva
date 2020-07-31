@@ -1,5 +1,7 @@
 .breadcrumbs {
   display: flex;
+  position: relative;
+  z-index: 1;
 
   margin-top: 6.8rem;
   // margin-bottom: 6.8rem;
@@ -10,6 +12,10 @@
 
   &--black {
     color: @dark;
+  }
+
+  &--width-half {
+    width: 63rem;
   }
 }
 
@@ -85,6 +91,9 @@
     margin-top: 5.6rem;
     margin-bottom: 2.5rem;
     // font-size: 1.5rem;
+    &--width-half {
+      width: auto;
+    }
   }
 
   .breadcrumbs__list {
