@@ -1,0 +1,66 @@
+.section-title {
+  font-weight: 700;
+  font-size: 3.8rem;
+  line-height: 4rem;
+  &--small {
+    font-size: 3.5rem;
+  }
+  &--big {
+    font-size: 4rem;
+  }
+}
+
+.section-desc {
+  color: @light-gray;
+  line-height: 2.7rem;
+}
+
+.DaVinci {
+  position: relative;
+
+  display: inline-block;
+  margin-left: 1rem;
+  margin-right: 1rem;
+
+  font-family: @font-decor-s;
+  font-size: 4.4rem;
+  // line-height: 77px;
+  letter-spacing: -0.02em;
+  text-transform: initial;
+  color: @gold;
+
+  transform: rotate(-5.91deg);
+}
+
+.blaster {
+  display: inline-block;
+  font-family: @font-decor-f;
+  font-style: italic;
+  font-weight: 400;
+  &--green {
+    color: @emerald;
+  }
+}
+
+@media (max-width: @tablet-width) {
+
+  .section-title {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    &--small {
+      // font-size: 3.5rem;
+    }
+    &--big {
+      // font-size: 4rem;
+    }
+  }
+
+  .section-desc {
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+  }
+
+  .DaVinci {
+    font-size: 3rem;
+  }
+}
