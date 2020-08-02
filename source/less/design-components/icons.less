@@ -70,20 +70,29 @@
   height: 2.8rem;
 }
 
-.icon-shild {
+.icon-shield {
   width: 5.5rem;
   height: 6.2rem;
 }
 
-#icon-shild {
+// Фон иконки-щита: при hover меняются координаты translate в css-переменной,
+// (хотя сам элемент в shadow-root).
+// Для хрома нужно инлайново в спрайт, однако связка use + var + transition в нём
+// не поддерживается (на июль 2020), только use + var. Инлайново в html работает.
+#icon-shield-bg {
   transition: @s;
-  .icon-shild-bg {
-    transition: inherit;
-  }
+  transform: var(--icon-shield-translate);
+}
+
+// html {
+//   --icon-shield-translate: translate(0);
+// }
+
+.aside-check {
   &:hover {
-    .icon-shild-bg {
-      transform: translate(-0.5rem, -0.5rem);
-    }
+    --icon-shield-translate: translate(-0.5rem, -0.5rem);
+    // chrome (без transition)
+    // --icon-shield-translate: translate(-5%, -5%);
   }
 }
 
@@ -127,7 +136,7 @@
     height: 1rem;
   }
 
-  .icon-shild {
+  .icon-shield {
     // width: 5.5rem;
     // height: 6.2rem;
   }

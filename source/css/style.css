@@ -387,18 +387,16 @@ html .desktop-block {
   width: 2.8rem;
   height: 2.8rem;
 }
-.icon-shild {
+.icon-shield {
   width: 5.5rem;
   height: 6.2rem;
 }
-#icon-shild {
+#icon-shield-bg {
   transition: var(--transition-main);
+  transform: var(--icon-shield-translate);
 }
-#icon-shild .icon-shild-bg {
-  transition: inherit;
-}
-#icon-shild:hover .icon-shild-bg {
-  transform: translate(-0.5rem, -0.5rem);
+.aside-check:hover {
+  --icon-shield-translate: translate(-0.5rem, -0.5rem);
 }
 .icon-download {
   width: 1.8rem;
