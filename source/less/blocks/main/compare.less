@@ -204,7 +204,6 @@
   }
 
   .compare__benefit-block {
-
     // margin-top: -5.4rem;
     margin-top: -3.4rem;
     padding-top: 2.4rem;
@@ -237,26 +236,33 @@
     }
   }
 
-  // .compare__column-wrap {
-  //   display: flex;
-  //   justify-content: space-between;
-  // }
+  .compare__column-wrap {
+    flex-direction: column;
+  }
 
-  // .compare__column {
-  //   width: 62.1rem;
-  //   .compare__d-list {
-  //     width: inherit;
-  //   }
-  //   .compare__benefit-list {
-  //     column-count: 2;
-  //     font-size: 1.7rem;
-  //   }
-  //   .compare__benefit-item {
-  //     margin-bottom: 2.1rem;
-  //   }
-  // }
-
-  // .compare__column-left {}
-
-  // .compare__column-right {}
+  .compare__column {
+    width: auto;
+    .compare__benefit-list {
+      column-count: initial;
+      margin-bottom: 2.9rem;
+      font-size: 1.5rem;
+    }
+    .compare__benefit-item {
+      margin-bottom: 1.3rem;
+      padding-left: 3.5rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &::before {
+        width: 1.8rem;
+        height: 1.4rem;
+      }
+      &--less {
+        &::before {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+      }
+    }
+  }
 }

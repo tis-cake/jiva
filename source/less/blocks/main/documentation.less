@@ -34,7 +34,7 @@
 .documentation__sutitle {
   margin-bottom: 1.8rem;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 2rem;
   color: @light-gray;
 }
 
@@ -51,10 +51,17 @@
       color: @light-gray;
     }
   }
+
+  tr:last-child {
+    td {
+      padding-bottom: 0;
+    }
+  }
 }
 
 .documentation__btn-download-wrap {
   margin-top: 2rem;
+  margin-top: 3.4rem;
 }
 
 .documentation__btn-download {
@@ -62,4 +69,57 @@
 }
 
 @media (max-width: @tablet-width) {
+  .documentation {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    // padding-bottom: 10.1rem;
+  }
+
+  .documentation__column-wrap {
+    flex-wrap: wrap;
+  }
+
+  .documentation__column-left {
+    width: 100%;
+    margin-bottom: 2.2rem;
+  }
+
+  .documentation__map-wrap {
+    height: 29.5rem;
+  }
+
+  .documentation__column-right {
+    width: 100%;
+  }
+
+  .documentation__aside-check {
+    margin-bottom: 2rem;
+  }
+
+  .documentation__sutitle {
+    margin-bottom: 1.2rem;
+    font-size: 1.3rem;
+  }
+
+  .documentation__title {
+    margin-bottom: 2.4rem;
+  }
+
+  .documentation__table {
+    font-size: 1.5rem;
+    td {
+      padding-bottom: 1.6rem;
+      &:first-child {
+        width: 19%;
+      }
+    }
+  }
+
+  .documentation__btn-download-wrap {
+    margin-top: 2.1rem;
+  }
+
+  .documentation__btn-download {
+    // margin-right: 3.4rem;
+  }
 }
