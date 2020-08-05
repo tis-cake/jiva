@@ -1149,6 +1149,27 @@ html .desktop-block {
     top: 45%;
   }
   /* main-info, о портале */
+  .logo-more-middle {
+    font-size: 6.8rem;
+  }
+  .logo-more-middle .logo__img-wrap {
+    width: 26.2rem;
+    height: 26.2rem;
+  }
+  .logo-more-middle .logo__title {
+    margin-top: -3rem;
+  }
+  .logo-more-middle .logo__icon {
+    top: 45%;
+  }
+  .logo-more-middle .logo__desc {
+    width: auto;
+    font-size: 1.3rem;
+    line-height: 3.2rem;
+  }
+  .logo-more-middle .DaVinci {
+    font-size: 3.8rem;
+  }
 }
 .main-nav {
   display: flex;
@@ -2008,10 +2029,14 @@ html .desktop-block {
     background-image: url('../img/main-info/1-1.svg');
   }
   /* о портале */
+  .main-info-five {
+    padding-bottom: 4.6rem;
+  }
   .main-info-five .main-info__bg {
-    top: -18.2rem;
-    width: 62.8rem;
-    height: 62.8rem;
+    top: -35.5rem;
+  }
+  .main-info-five .main-info__logo {
+    margin-top: 7rem;
   }
 }
 @media (max-width: 420px) {
@@ -2664,8 +2689,13 @@ html .desktop-block {
   .article-part__aside-btn-modal .btn-modal__decor-line {
     width: 10.2rem;
   }
+  .article-part__content .article-part__caption-title {
+    margin-bottom: 1.6rem;
+  }
   .article-part__caption {
-    margin-bottom: 3.1rem;
+    margin-bottom: 3.2rem;
+    font-size: 1.6rem;
+    line-height: 1.8rem;
   }
   .article-part-two .article-part__aside-img {
     -o-object-position: 0 -3rem;
