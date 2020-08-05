@@ -22,7 +22,7 @@
 }
 
 .logo__title {
-    // .text-stroke(#fff, 0px);
+    // .text-stroke(#fff, 0);
   .text-stroke(@brown, 0.1rem);
 
   -webkit-text-stroke-color: #fff;
@@ -54,10 +54,10 @@
     //   position: absolute;
     //   // top: 50%;
     //   top: 43%;
-    //   left: -10px;
+    //   left: -1rem;
 
-    //   width: 14px;
-    //   height: 14px;
+    //   width: 1.4rem;
+    //   height: 1.4rem;
 
     //   background-image: url('../img/logo/icon-logo-star.svg');
     //   background-repeat: no-repeat;
@@ -85,8 +85,10 @@
   font-size: 1.6rem;
   text-transform: uppercase;
   letter-spacing: 0;
+  text-align: center;
 }
 
+/* main-info, главная */
 .logo-big {
   font-size: 9.2rem;
   .logo__img-wrap {
@@ -105,10 +107,10 @@
     // &-decor {
       // &::before {
         // top: 40%;
-        // left: -23px;
+        // left: -2.3rem;
 
-        // width: 28px;
-        // height: 28px;
+        // width: 2.8rem;
+        // height: 2.8rem;
       // }
     // }
   }
@@ -121,10 +123,11 @@
   .logo__desc {
     width: 45rem;
     margin-top: 0.8rem;
-    text-align: center;
+    // text-align: center;
   }
 }
 
+/* подвал */
 .logo-middle {
   font-size: 6.8rem;
 
@@ -133,7 +136,7 @@
     height: 21.6rem;
   }
   .logo__img {
-    // object-position: -13px -20px;
+    // object-position: -1.3rem -2rem;
     object-position: -0.5rem -1.9rem;
   }
   .logo__title {
@@ -146,7 +149,7 @@
       top: 7.8rem;
       bottom: auto;
       left: auto;
-      // right: 46px;
+      // right: 4.6rem;
       right: 5.2rem;
     }
 
@@ -163,6 +166,45 @@
     fill: @dark-gray;
     stroke-width: 0.05rem;
     stroke: #fff;
+  }
+}
+
+/* main-info, о портале */
+.logo-more-middle {
+  font-size: 6.5rem;
+  .logo__img-wrap {
+    width: 31.2rem;
+    height: 31.2rem;
+  }
+  .logo__img {
+    // object-position: -1.3rem -2rem;
+    object-position: -0.5rem -1.9rem;
+  }
+  .logo__title {
+    margin-top: -5rem;
+    margin-bottom: 1.1rem;
+
+    .text-stroke(#fff, 0.2rem);
+    -webkit-text-stroke-width: 0.2rem;
+    -webkit-text-stroke-color: @dark-gray;
+
+    &--red {
+      .text-stroke(#fff, 0.2rem);
+      -webkit-text-stroke-width: 0.2rem;
+    }
+  }
+  .logo__icon {
+    left: -1.4rem;
+    width: 1.8rem;
+    height: 1.8rem;
+    fill: @dark-gray;
+    stroke-width: 0.05rem;
+    stroke: #fff;
+  }
+  .logo__desc {
+    width: 42rem;
+    font-size: 1.4rem;
+    line-height: 3.3rem;
   }
 }
 
@@ -208,6 +250,7 @@
     font-size: 1.1rem;
   }
 
+  /* main-info, главная */
   .logo-big {
     font-size: 5.6rem;
     .logo__img-wrap {
@@ -237,6 +280,7 @@
     }
   }
 
+  /* подвал */
   .logo-middle {
     font-size: 6.8rem;
 
@@ -264,6 +308,44 @@
     }
     .logo__icon {
       top: 45%;
+    }
+  }
+
+  /* main-info, о портале */
+  .logo-more-middle {
+    // font-size: 6.5rem;
+    .logo__img-wrap {
+      // width: 31.2rem;
+      // height: 31.2rem;
+    }
+    .logo__img {
+      // object-position: -0.5rem -1.9rem;
+    }
+    .logo__title {
+      // margin-top: -5rem;
+      // margin-bottom: 1.1rem;
+
+      // .text-stroke(#fff, 0.2rem);
+      // -webkit-text-stroke-width: 0.2rem;
+      // -webkit-text-stroke-color: @dark-gray;
+
+      &--red {
+        // .text-stroke(#fff, 0.2rem);
+        // -webkit-text-stroke-width: 0.2rem;
+      }
+    }
+    .logo__icon {
+      // left: -1.4rem;
+      // width: 1.8rem;
+      // height: 1.8rem;
+      // fill: @dark-gray;
+      // stroke-width: 0.05rem;
+      // stroke: #fff;
+    }
+    .logo__desc {
+      // width: 42rem;
+      // font-size: 1.4rem;
+      // line-height: 3.3rem;
     }
   }
 }
