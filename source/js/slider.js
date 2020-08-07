@@ -1,3 +1,9 @@
+// Сейчас используются 3 типа пагинации у слайдеров:
+// 1) не числовая (...), динамическая
+// 2) не числовая (...), не динамическая (при большом количестве слайдов
+//    будет переполняться контейнер с пагинацией)
+// 3) числовая (1 2 3), не динамическая
+
 let width = $(window).width();
 
 // максимальное число для слайдов в контейнере,
@@ -33,6 +39,7 @@ function renderPagination(swiper_class, limitForOverflow) {
 // слайдер рехабов
 $(document).ready(function () {
 
+  // локальный лимит только для этого слайдера
   // limitForOverflow = 16;
 
   renderPagination('.rehab-swiper', limitForOverflow);
@@ -69,6 +76,7 @@ $(document).ready(function () {
 // слайдер отзывов
 $(document).ready(function () {
 
+  // локальный лимит только для этого слайдера
   // limitForOverflow = 10;
 
   renderPagination('.reviews-swiper', limitForOverflow);
@@ -141,7 +149,7 @@ $(document).ready(function () {
     touchRatio: 1,
 
     navigation: {
-      nextEl: ' .swiper-button-next',
+      nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
 
@@ -162,12 +170,20 @@ $(document).ready(function () {
   }
 
   // слайдер экспертов
-  let teamSwiperExperts = new Swiper('#team-swiper-experts', teamSwiperParam);
+  // let teamSwiperExperts = new Swiper('#team-swiper-experts', teamSwiperParam);
 
   // слайдер редакторов
-  let teamSwiperEditors = new Swiper('#team-swiper-editors', teamSwiperParam);
+  // let teamSwiperEditors = new Swiper('#team-swiper-editors', teamSwiperParam);
 
   // слайдер авторов
-  let teamSwiperAuthors = new Swiper('#team-swiper-authors', teamSwiperParam);
+  // let teamSwiperAuthors = new Swiper('#team-swiper-authors', teamSwiperParam);
 
+  // массив со всеми слайдерами экспертов/авторов, учитывая любое их количество на странице
+  let teamSwiperArr = $('.team-swiper__swiper-container');
+  for (let i = 0; i < teamSwiperArr.length; i++) {
+    let teamSwiperID = teamSwiperArr[i].id;
+    let teamSwiperCurrent = `#${teamSwiperID}`;
+
+    teamSwiper = new Swiper (teamSwiperCurrent, teamSwiperParam);
+  }
 });
