@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="«Ji+Va»">
+    <title>Ji+Va</title>
+
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="./fav.ico"> -->
+
+    <link rel="preload" href="fonts/Circe/regular/Circe-Regular.woff2" as="font" type="font/woff2" crossorigin="">
+
+    <link rel="stylesheet" href="css/normalise.css">
+    <link rel="stylesheet" href="css/libs/swiper.min.css">
+    <link rel="stylesheet" href="css/libs/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container container">
+        <div class="header__wrap">
+          <button class="header__menu-toggle menu-toggle">
+            <span>Открыть меню</span>
+          </button>
+
+          <a class="header__logo logo" href="index.html">
+            <div class="logo__img-wrap">
+              <img class="logo__img" src="img/logo/logo.png" width="92" height="92" alt="Логотип портала «Ji+Va»">
+            </div>
+            <p class="logo__title logo__title--absolute">
+              <span class="logo__title--red">J</span>i <span class="logo__title-decor" aria-hidden="true">
+              <svg class="logo__icon icon-logo-star" width="14" height="14" role="img">
+                <use xlink:href="img/sprite.svg#icon-logo-star"></use>
+              </svg>
+              </span> Va
+            </p>
+          </a>
+
+          <div class="header__rows-wrap">
+            <div class="header__row-top">
+
+              <!-- <form class="header__form-lang select-lang" action=".php" method="post">
+                <input class="select-lang__input visually-hidden" type="text" name="LANG" value="RU">
+
+                <select class="select-lang__select custom-select-js" name="SELECT-LANG">
+                  <option value="RU" selected>RU</option>
+                  <option value="EN">EN</option>
+                </select>
+              </form> -->
+
+              <form class="header__form-lang select-lang" action=".php" method="post">
+                <input class="select-lang__input visually-hidden" type="text" name="LANG" value="RU">
+                <button class="select-lang__select" data-id="">RU</button>
+                <ul class="select-lang__list">
+                  <li class="select-lang__item">
+                    <button class="select-lang__option" data-lang="EN">EN</button>
+                  </li>
+                  <li class="select-lang__item">
+                    <button class="select-lang__option" data-lang="RU">RU</button>
+                  </li>
+                </ul>
+              </form>
+
+              <button class="header__link-modal-region btn-region-1 modal-region" type="button" title="Выбрать регион">
+                Россия
+                <span class="visually-hidden">Выбрать регион</span>
+              </button>
+              <div class="header__text-wrap">
+                <p class="header__text-item">
+                  Помощь 24/7 в России
+                </p>
+                <p class="header__text-item header__text-item--gray">
+                  Все звонки бесплатные и конфиденциальные.
+                </p>
+              </div>
+              <button class="header__link-call-back btn-tel modal-callback">
+                <svg class="btn-tel__icon icon-tel" width="28" height="28">
+                  <use xlink:href="img/sprite.svg#icon-tel"></use>
+                </svg>
+              </button>
+            </div>
+
+            <div class="header__row-bottom">
+              <nav class="header__main-nav main-nav">
+                <ul class="main-nav__list">
+                  <li class="main-nav__item">
+                    <a class="main-nav__link" href="rehabs.html">Реабилитационные центры</a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a class="main-nav__link" href="clinics.html">Клиники</a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a href="#" class="main-nav__link main-nav-sub">Наркомания</a>
+                    <ul class="main-nav__sublist">
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="service-detail.html">Детоксикация в клинике</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="service-detail.html">Лечение подростков</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="#">Лечение солевой наркомании</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="#">Героиновая наркомания</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="#">ВИП лечение</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="#">Снятие ломки</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="#">Лечение спайсовой наркомании</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="#">Программы лечения</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="#">УБОД</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="#">Амбулаторное лечение</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="#">Работа с психологом</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="main-nav__item">
+                    <a href="#" class="main-nav__link main-nav-sub">Алкоголизм</a>
+                    <ul class="main-nav__sublist">
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="service-detail.html">Детоксикация в клинике</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="#">Лечение подростков</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="#">ВИП лечение</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="#">Вызов нарколога</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="#">Женский алкоголизм</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="service-detail.html">Пивной алкоголизм</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="#">Программы лечения</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="#">Вывод из запоя</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="#">Амбулаторное лечение</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="#">Работа с психологом</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="#">Кодирование</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="main-nav__item">
+                    <a href="#" class="main-nav__link main-nav-sub">Игромания</a>
+                    <ul class="main-nav__sublist">
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="service-detail.html">Лечение подростков</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="#">ВИП лечение</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="#">Программы лечения</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="#">Амбулаторное лечения</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="#">Работа с психологом</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="#">Онлайн игры</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="#">Казино</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="#">Лечение игровой наркомании</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="#">Ставки на спорт</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="main-nav__item">
+                    <a class="main-nav__link" href="#">Родственникам</a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a class="main-nav__link" href="database.html">База знаний</a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a class="main-nav__link main-nav-sub" href="about.html">О портале</a>
+                    <ul class="main-nav__sublist">
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="reviews.html">Отзывы</a>
+                      </li>
+                      <li class="main-nav__subitem">
+                        <a class="main-nav__sublink" href="masters.html">Специалисты</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="main-nav__item">
+                    <a class="main-nav__link" href="contacts.html">Контакты</a>
+                  </li>
+                </ul>
+
+                <div class="main-nav__search search">
+                  <form class="search__form" action=".php" method="post">
+                    <label class="search__label-icon" for="search-field" aria-hidden="true">
+                      <svg class="search__icon search__icon--label-search icon-search" width="23" height="23" role="img">
+                        <use xlink:href="img/sprite.svg#icon-search"></use>
+                      </svg>
+                    </label>
+                    <input class="search__input" id="search-field" type="search" name="SEARCH" placeholder="Поиск" required>
+                    <button class="search__btn-submit btn-submit" title="Отправить запрос">
+                      <span class="visually-hidden">
+                        Отправить запрос
+                      </span>
+                      <svg class="btn-submit__icon icon-arrow icon-arrow--right" width="13" height="11" role="img">
+                        <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+                      </svg>
+                    </button>
+                  </form>
+
+                  <div class="search__datalist-wrap">
+                    <ul class="search__datalist">
+                      <li class="search__datalist-item">
+                        <a href="#" class="search__datalist-link">
+                          Наркомания
+                        </a>
+                      </li>
+                      <li class="search__datalist-item">
+                        <a href="#" class="search__datalist-link">
+                          Наркотическая зависимость
+                        </a>
+                      </li>
+                      <li class="search__datalist-item">
+                        <a href="#" class="search__datalist-link">
+                          Наркомания
+                        </a>
+                      </li>
+                      <li class="search__datalist-item">
+                        <a href="#" class="search__datalist-link">
+                          Наркотическая зависимость
+                        </a>
+                      </li>
+                      <li class="search__datalist-item">
+                        <a href="#" class="search__datalist-link">
+                          Наркомания
+                        </a>
+                      </li>
+                      <li class="search__datalist-item">
+                        <a href="#" class="search__datalist-link">
+                          Наркотическая зависимость
+                        </a>
+                      </li>
+                      <li class="search__datalist-item">
+                        <a href="#" class="search__datalist-link">
+                          Наркомания
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <button class="main-nav__search-toggle search-toggle" title="Поиск по сайту">
+                  <span class="visually-hidden">Поиск по сайту</span>
+                  <svg class="search__icon search__icon--search icon-search" width="23" height="23" role="img">
+                    <use xlink:href="img/sprite.svg#icon-search"></use>
+                  </svg>
+                  <svg class="search__icon search__icon--close icon-close" width="23" height="23" role="img">
+                    <use xlink:href="img/sprite.svg#icon-plus"></use>
+                  </svg>
+                </button>
+
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <aside class="aside-link">
+      <div class="aside-link__bg-wrap">
+        <svg class="aside-link__bg-img" width="447" height="45">
+          <use xlink:href="img/sprite.svg#figure-aside-d"></use>
+        </svg>
+      </div>
+      <div class="aside-link__wrap">
+        <a class="aside-link__link blaster" href="tel:+78006003960">
+          8 800 600-39-60
+        </a>
+        <p class="aside-link__desc">
+          Анонимно. Бесплатно. <span class="aside-item__desc--dark">Помощь по всему миру 24/7</span>
+        </p>
+      </div>
+    </aside>
+
+    <main class="main">
+      <section class="about-service">
+        <div class="about-service__img-wrap">
+          <img class="about-service__img" src="img/about-service/4.png" alt="Услуга 1">
+        </div>
+        <p class="about-service__caption blaster blaster--green">
+          <!-- от <span class="about-service__caption-item blaster blaster--green">20 000</span> руб. -->
+          от 20 000 руб.
+        </p>
+        <p class="about-service__title section-title .section-title--big">
+          Лечение наркомании и алкоголизма
+        </p>
+        <p class="about-service__subtitle">
+          Лечение наркомании в проверенных треабилитационных центрах
+        </p>
+        <button class="about-service__btn-modal btn-modal btn-modal--white btn-modal--middle modal-callback">
+          Заявка на консультацию
+          <span class="btn-modal__decor-line"></span>
+        </button>
+      </section>
+      <section class="price container">
+        <p class="price__title section-title">Прайс лист</p>
+        <div class="price__column-wrap">
+          <div class="price__column-left">
+            <div class="price__block">
+              <p>Консультация по телефону</p>
+              <span>Бесплатно!</span>
+            </div>
+            <div class="price__block">
+              <p>Консультация для родственников</p>
+              <span>Бесплатно!</span>
+            </div>
+            <div class="price__block">
+              <p>Первичная консультация психиатра-нарколога, с годовым обслуживанием.</p>
+              <span>3 000</span>
+            </div>
+            <div class="price__block">
+              <p>Первичная консультация психиатра-нарколога, при госпитализации </p>
+              <span>Бесплатно!</span>
+            </div>
+            <div class="price__block">
+              <p>Мотивация психологом несогласных на лечение и медицинское сопровождение в клинику</p>
+              <span>от 10 000</span>
+            </div>
+            <div class="price__block">
+              <p>Доставка пациента в стационар в сопровождении врача (Москва, МО)</p>
+              <span>3 000</span>
+            </div>
+            <div class="price__block">
+              <p>Транспортировка больного в клинику (при госпитализации от 3-х суток</p>
+              <span>Бесплатно!</span>
+            </div>
+            <div class="price__block">
+              <p>Вывод из запоя на дому</p>
+              <span>5 000 по Москве</span>
+            </div>
+            <div class="price__block">
+              <p>Алко-стоп Стандарт</p>
+              <span>3 000/сутки</span>
+            </div>
+            <div class="price__block">
+              <p>Двойное очищение  (усиленная капельница)</p>
+              <span>6 000/сутки</span>
+            </div>
+            <div class="price__block">
+              <p>Усиленная терапия (при тяжелой степени отравления алкоголем)</p>
+              <span>8 000/сутки</span>
+            </div>
+            <div class="price__block">
+              <p>Вывод из запоя на дому</p>
+              <span>от 3 000</span>
+            </div>
+          </div>
+          <div class="price__column-right">
+            <div class="price__aside-modal-block aside-modal-block">
+              <p class="aside-modal-block__title">
+                Международная команда медицинских экспертов!
+              </p>
+              <p class="aside-modal-block__desc">
+                Наша команда сможет погрузиться в вашу проблему на глубоком уровне и поможет найти выход именно в вашей ситуации.
+              </p>
+              <button class="aside-modal-block__btn-modal btn-modal btn-modal--small btn-modal--white modal-callback" type="button">
+                Заявка на консультацию
+                <span class="btn-modal__decor-line" aria-hidden="true"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="rehab-swiper rehab-swiper-pb-small">
+        <div class="rehab-swiper__main-text-wrap container">
+          <p class="rehab-swiper__main-title section-title">
+            Лучшие реабилитационные центры мира
+          </p>
+          <button class="rehab-swiper__btn-region btn-region-2 modal-region" type="button">
+            <svg class="btn-region-2__icon icon-region-2" width="26" height="34" role="img">
+              <use xlink:href="img/sprite.svg#icon-region-2"></use>
+            </svg>
+            Выбрать регион
+          </button>
+        </div>
+
+        <div class="rehab-swiper__big-container swiper-container-big-container container">
+          <div class="rehab-swiper__swiper-container swiper-container" id="rehab-swiper">
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide rehab-swiper__slide">
+                <div class="rehab-swiper__item">
+                  <a class="rehab-swiper__link" data-rehab-id='1' href="rehab-page.html">
+                    <div class="rehab-swiper__text-wrap">
+                      <p class="rehab-swiper__title">Архангел Гавриил</p>
+                      <p class="rehab-swiper__desc section-desc">Россия, Москва</p>
+                      <p class="rehab-swiper__cost">80 000 руб./мес.</p>
+                    </div>
+
+                    <div class="rehab-swiper__img-wrap">
+                      <img class="rehab-swiper__img" src="img/swiper/reviews-swiper/2.jpg" alt="">
+                    </div>
+
+                    <div class="rehab-swiper__aside-item aside-item">
+                      <p class="aside-item__desc">Партнер портала</p>
+                    </div>
+                  </a>
+
+                  <button class="rehab-swiper__btn-compare btn-compare btn-compare-toggle-js" type="button">
+                    <svg class="btn-compare__icon icon-compare" width="15" height="15" role="img">
+                      <use xlink:href="img/sprite.svg#icon-compare"></use>
+                    </svg>
+                    <span class="btn-compare__desc btn-compare__not-selected">Сравнить центр</span>
+                    <span class="btn-compare__desc btn-compare__selected">Добавлен</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Класс "benefit" добавляет элемент "Партнёр портала".
+                Этот класс следует добавлять динамически при необходимости.
+                Для перебора через цикл этот класс можно удалить -->
+
+              <div class="swiper-slide rehab-swiper__slide">
+                <div class="benefit rehab-swiper__item">
+                  <a class="rehab-swiper__link" data-rehab-id='2' href="rehab-page.html">
+                    <div class="rehab-swiper__text-wrap">
+                      <p class="rehab-swiper__title">Решение</p>
+                      <p class="rehab-swiper__desc section-desc">Россия, Москва</p>
+                      <p class="rehab-swiper__cost">80 000 руб./мес.</p>
+                    </div>
+
+                    <div class="rehab-swiper__img-wrap">
+                      <img class="rehab-swiper__img" src="img/swiper/rehab-swiper/2.png" alt="">
+                    </div>
+
+                    <div class="rehab-swiper__aside-item aside-item">
+                      <p class="aside-item__desc">Партнер портала</p>
+                    </div>
+                  </a>
+
+                  <button class="rehab-swiper__btn-compare btn-compare btn-compare-toggle-js" type="button">
+                    <svg class="btn-compare__icon icon-compare" width="15" height="15" role="img">
+                      <use xlink:href="img/sprite.svg#icon-compare"></use>
+                    </svg>
+                    <span class="btn-compare__desc btn-compare__not-selected">Сравнить центр</span>
+                    <span class="btn-compare__desc btn-compare__selected">Добавлен</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="swiper-slide rehab-swiper__slide">
+                <div class="rehab-swiper__item">
+                  <a class="rehab-swiper__link" data-rehab-id='3' href="rehab-page.html">
+                    <div class="rehab-swiper__text-wrap">
+                      <p class="rehab-swiper__title">Архангел Гавриил</p>
+                      <p class="rehab-swiper__desc section-desc">Россия, Москва</p>
+                      <p class="rehab-swiper__cost">80 000 руб./мес.</p>
+                    </div>
+
+                    <div class="rehab-swiper__img-wrap">
+                      <img class="rehab-swiper__img" src="img/swiper/rehab-swiper/3.png" alt="">
+                    </div>
+
+                    <div class="rehab-swiper__aside-item aside-item">
+                      <p class="aside-item__desc">Партнер портала</p>
+                    </div>
+                  </a>
+
+                  <button class="rehab-swiper__btn-compare btn-compare btn-compare-toggle-js" type="button">
+                    <svg class="btn-compare__icon icon-compare" width="15" height="15" role="img">
+                      <use xlink:href="img/sprite.svg#icon-compare"></use>
+                    </svg>
+                    <span class="btn-compare__desc btn-compare__not-selected">Сравнить центр</span>
+                    <span class="btn-compare__desc btn-compare__selected">Добавлен</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Класс "benefit" добавляет элемент "Партнёр портала".
+                Этот класс следует добавлять динамически при необходимости.
+                Для перебора через цикл этот класс можно удалить -->
+
+              <div class="swiper-slide rehab-swiper__slide">
+                <div class="benefit rehab-swiper__item">
+                  <a class="rehab-swiper__link" data-rehab-id='4' href="rehab-page.html">
+                    <div class="rehab-swiper__text-wrap">
+                      <p class="rehab-swiper__title">Решение</p>
+                      <p class="rehab-swiper__desc section-desc">Россия, Москва</p>
+                      <p class="rehab-swiper__cost">80 000 руб./мес.</p>
+                    </div>
+
+                    <div class="rehab-swiper__img-wrap">
+                      <img class="rehab-swiper__img" src="img/swiper/rehab-swiper/4.png" alt="">
+                    </div>
+
+                    <div class="rehab-swiper__aside-item aside-item">
+                      <p class="aside-item__desc">Партнер портала</p>
+                    </div>
+                  </a>
+
+                  <button class="rehab-swiper__btn-compare btn-compare btn-compare-toggle-js" type="button">
+                    <svg class="btn-compare__icon icon-compare" width="15" height="15" role="img">
+                      <use xlink:href="img/sprite.svg#icon-compare"></use>
+                    </svg>
+                    <span class="btn-compare__desc btn-compare__not-selected">Сравнить центр</span>
+                    <span class="btn-compare__desc btn-compare__selected">Добавлен</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="swiper-slide rehab-swiper__slide">
+                <div class="rehab-swiper__item">
+                  <a class="rehab-swiper__link" data-rehab-id='5' href="rehab-page.html">
+                    <div class="rehab-swiper__text-wrap">
+                      <p class="rehab-swiper__title">Архангел Гавриил</p>
+                      <p class="rehab-swiper__desc section-desc">Россия, Москва</p>
+                      <p class="rehab-swiper__cost">80 000 руб./мес.</p>
+                    </div>
+
+                    <div class="rehab-swiper__img-wrap">
+                      <img class="rehab-swiper__img" src="img/swiper/rehab-swiper/1.png" alt="">
+                    </div>
+
+                    <div class="rehab-swiper__aside-item aside-item">
+                      <p class="aside-item__desc">Партнер портала</p>
+                    </div>
+                  </a>
+
+                  <button class="rehab-swiper__btn-compare btn-compare btn-compare-toggle-js" type="button">
+                    <svg class="btn-compare__icon icon-compare" width="15" height="15" role="img">
+                      <use xlink:href="img/sprite.svg#icon-compare"></use>
+                    </svg>
+                    <span class="btn-compare__desc btn-compare__not-selected">Сравнить центр</span>
+                    <span class="btn-compare__desc btn-compare__selected">Добавлен</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="swiper-slide rehab-swiper__slide">
+                <div class="benefit rehab-swiper__item">
+                  <a class="rehab-swiper__link" data-rehab-id='6' href="rehab-page.html">
+                    <div class="rehab-swiper__text-wrap">
+                      <p class="rehab-swiper__title">Решение</p>
+                      <p class="rehab-swiper__desc section-desc">Россия, Москва</p>
+                      <p class="rehab-swiper__cost">80 000 руб./мес.</p>
+                    </div>
+
+                    <div class="rehab-swiper__img-wrap">
+                      <img class="rehab-swiper__img" src="img/swiper/rehab-swiper/2.png" alt="">
+                    </div>
+
+                    <div class="rehab-swiper__aside-item aside-item">
+                      <p class="aside-item__desc">Партнер портала</p>
+                    </div>
+                  </a>
+
+                  <button class="rehab-swiper__btn-compare btn-compare btn-compare-toggle-js" type="button">
+                    <svg class="btn-compare__icon icon-compare" width="15" height="15" role="img">
+                      <use xlink:href="img/sprite.svg#icon-compare"></use>
+                    </svg>
+                    <span class="btn-compare__desc btn-compare__not-selected">Сравнить центр</span>
+                    <span class="btn-compare__desc btn-compare__selected">Добавлен</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-arrows-wrap rehab-swiper__arrows-wrap">
+              <div class="swiper-button-prev rehab-swiper__button-prev btn-link">
+                <svg class="swiper-arrow-icon swiper-arrow-icon--left icon-arrow-short icon-arrow-short--left" width="13" height="25" role="img">
+                  <use xlink:href="img/sprite.svg#icon-arrow-short-left"></use>
+                </svg>
+              </div>
+
+              <div class="swiper-button-next rehab-swiper__button-next btn-link">
+                <svg class="swiper-arrow-icon swiper-arrow-icon--right icon-arrow-short icon-arrow-short--right" width="13" height="25" role="img">
+                  <use xlink:href="img/sprite.svg#icon-arrow-short-right"></use>
+                </svg>
+              </div>
+            </div>
+
+            <div class="swiper-pagination rehab-swiper__swiper-pagination"></div>
+
+          </div>
+
+          <a href="rehabs.html" class="rehab-swiper__btn-modal btn-modal btn-modal--white btn-modal--long">
+            Все реабилитационные центры
+            <span class="btn-modal__decor-line"></span>
+          </a>
+        </div>
+
+        <a class="rehab-swiper__rehab-compare-link rehab-compare-link" href="compare-page.html">
+          <svg class="rehab-compare-link__icon icon-compare" width="15" height="15" role="img">
+            <use xlink:href="img/sprite.svg#icon-compare"></use>
+          </svg>
+          <p class="rehab-compare-link__title">Сравнить</p>
+          <p class="rehab-compare-link__desc">Реабилитационные центры</p>
+
+          <svg class="rehab-compare-link__icon-mobile icon-arrow-short icon-arrow-short--right" width="12" height="12" role="img">
+            <use xlink:href="img/sprite.svg#icon-arrow-short-right"></use>
+          </svg>
+        </a>
+      </section>
+
+      <article class="b b-four container">
+        <div class="b__content-wrap">
+          <div class="b__bg-img-wrap">
+            <picture>
+              <!-- <source media="(max-width: 750px)" srcset="img/b/b1-m.png"> -->
+              <img class="b__bg-img" src="img/b/b4-d.svg" alt="Бесплатные, анонимные консультации в вашей стране 24/7">
+            </picture>
+          </div>
+          <div class="b__text-wrap">
+            <p class="b__title section-title">
+              Мы знаем главную причину срывов, поэтому предотвращем их.
+            </p>
+            <p class="b__desc">
+              Зависимый человек прячется за обманом, чтобы вернуться к употреблению.  Мы говорим только правду и учим признавать свои ошибки. Любовь — это принятие человека таким, какой он есть. Именно так мы относимся к каждому зависимому.
+            </p>
+            <button class="b__btn-modal btn-modal btn-modal--white modal-callback" type="button">
+              Заявка на консультацию
+              <span class="btn-modal__decor-line" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <section class="services container">
+        <div class="services__title-wrap">
+          <p class="services__title section-title">Мы решаем даже самые сложные ситуации.</p>
+          <a class="services__link-page link-decoration-bottom" href="team.html">
+            Наши эксперты
+          </a>
+        </div>
+        <ul class="services__list">
+          <li class="services__item">
+            <a class="services__link" href="#">
+              <p class="services__item-title">Солевая наркомания</p>
+              <p class="services__desc section-desc">Мефедрон, Альфа-ПВП</p>
+              <div class="services__img-wrap">
+                <img class="sesrvices__img" src="img/services/s5.png" alt="Лечение наркомании">
+              </div>
+              <p class="services__subtitle">Все виды наркомании</p>
+              <p class="services__desc section-desc">10 услуг</p>
+              <div class="services__btn-link btn-link">
+                <svg class="btn-link__icon icon-arrow-short icon-arrow-short--right" width="13" height="25" role="img">
+                  <use xlink:href="img/sprite.svg#icon-arrow-short-right"></use>
+                </svg>
+              </div>
+            </a>
+          </li>
+          <li class="services__item">
+            <a class="services__link" href="#">
+              <p class="services__item-title">Подростковая наркомания</p>
+              <p class="services__desc section-desc">От 15 лет</p>
+              <div class="services__img-wrap">
+                <img class="sesrvices__img" src="img/services/s4.png" alt="Лечение алкоголизма">
+              </div>
+              <p class="services__subtitle">Все виды алкоголизма</p>
+              <p class="services__desc section-desc">10 услуг</p>
+              <div class="services__btn-link btn-link">
+                <svg class="btn-link__icon icon-arrow-short icon-arrow-short--right" width="13" height="25" role="img">
+                  <use xlink:href="img/sprite.svg#icon-arrow-short-right"></use>
+                </svg>
+              </div>
+            </a>
+          </li>
+          <li class="services__item">
+            <a class="services__link" href="#">
+              <p class="services__item-title">Зависимые под следствием</p>
+              <p class="services__desc section-desc">Заведено уголовное дело</p>
+              <div class="services__img-wrap">
+                <img class="sesrvices__img" src="img/services/s6.png" alt="Лечение игромании">
+              </div>
+              <p class="services__subtitle">Все виды игромании</p>
+              <p class="services__desc section-desc">10 услуг</p>
+              <div class="services__btn-link btn-link">
+                <svg class="btn-link__icon icon-arrow-short icon-arrow-short--right" width="13" height="25" role="img">
+                  <use xlink:href="img/sprite.svg#icon-arrow-short-right"></use>
+                </svg>
+              </div>
+            </a>
+          </li>
+          <li class="services__item">
+            <a class="services__link" href="#">
+              <p class="services__item-title">Двойной диагноз</p>
+              <p class="services__desc section-desc">Зависимость + психиатрия</p>
+              <div class="services__img-wrap">
+                <img class="sesrvices__img" src="img/services/s7.png" alt="Лечение созависимости">
+              </div>
+              <p class="services__subtitle">Лечение родителей</p>
+              <p class="services__desc section-desc">10 услуг</p>
+              <div class="services__btn-link btn-link">
+                <svg class="btn-link__icon icon-arrow-short icon-arrow-short--right" width="13" height="25" role="img">
+                  <use xlink:href="img/sprite.svg#icon-arrow-short-right"></use>
+                </svg>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <article class="article-part article-part-two container">
+        <div class="article-part__column-wrap">
+          <div class="article-part__aside">
+
+            <div class="article-part__aside-content-wrap">
+              <div class="article-part__aside-img-wrap">
+                <img class="article-part__aside-img" src="img/article/article-part/article2.svg" alt="">
+              </div>
+
+              <p class="article-part__aside-title">
+                Реабилитация в любой стране мира. Самая большая база <span class="article-part__aside-title-item blaster blaster--green">DRUG FREE</span> центров.
+              </p>
+              <p class="article-part__aside-desc">
+                Поможем подобрать лучший вариант на бесплатной и анонимной консультации.
+              </p>
+            </div>
+
+            <button class="article-part__aside-btn-modal btn-modal btn-modal--white btn-modal--long modal-callback" type="button">
+              Мне нужна помощь!
+              <span class="btn-modal__decor-line" aria-hidden="true"></span>
+            </button>
+          </div>
+          <div class="article-part__content">
+            <h2>
+              Лечение наркомании и алкоголизма по всему миру. Способы лечения.
+            </h2>
+            <p>
+              История наркомании насчитывает не одну тысячу лет, однако, за последние 150 лет из-за изобретения синтетических наркотиков, проблема зависимости обрела колоссальные масштабы.
+            </p>
+            <p>
+              Раньше наркотики были исключительно растительными: опиум – мак, гашиш- конопля, кокаин – кокаиновый куст. Из-за этого чаще всего их употребление было региональным, и было доступно не для всех. Хотя Москва в этом плане всегда отличалась от других городов.
+            </p>
+            <p>
+              Опиум стал популярен в Европе в 19-м веке как средство борьбы с алкоголизмом. Позже, для лечения опиумной зависимости был изобретен морфий, после чего героин. Разумеется, эти вещества не лечили зависимость, а только способствовали росту числа наркозависимых, о чем тогда не знали.
+            </p>
+            <p>
+              Выделение наркологии в отдельную науку произошло в начале 20-го века. В 20-е годы впервые были описаны тяга к алкоголю и опиуму. Следующим этапом развития этой области является период 1930-1970. За это время появилось описание действия различных психотропных наркотических веществ и поведения человека под ними. Толчком для рецептурного лечения наркозависимости стали многочисленные исследования мозга человека и принципов работы нейромедиаторов.
+            </p>
+            <p>
+              Кроме того, в 1971 году прошла Конвенция о психотропных веществах ООН, целью которой была борьбы с психотропными веществами. Это было осуществлено с помощью создания нескольких списков, которые различались строгостью контроля над веществами. Некоторые наркотики (амфетамин, катинон, бупринорфин) были отнесены в списки контролируемых, до этого же они продавались свободно или по рецепту.
+            </p>
+
+            <p>
+              Свободная продажа морфия, кокаина и их производных была прекращена, когда 13 стран подписали международное соглашение на Международной опиумной конвенции в 1912 году.
+            </p>
+            <p>
+              За это время, с 1970-го года наркология развилась в отдельную медицинскую дисциплину. Были изучены принципы зависимости от разных веществ, найдены способы облегчения борьбы с привыканием.
+            </p>
+            <p>
+              На сегодняшний день лечение наркозависимости - процесс с разными методиками и подходами, состоящий из нескольких этапов.
+            </p>
+            <h3>
+              Комплексное лечение наркомании состоит в решении проблемы с разных сторон.
+            </h3>
+            <p>
+              В наркомании разделяют физическую и психическую зависимости, кроме того, важны факторы, из-за которых человек начал употреблять, а также то, как зависимость повлияла на состояние его здоровья и частную жизнь (работа, отношения с родственниками и близкими).
+            </p>
+            <p>
+              Безопасное лечение химической наркозависимости может быть осуществлено только под надзором специалистов. При самостоятельном лечении или лечении нетрадиционными методами наркоман рискует нанести вред своему здоровью, не избавившись при этом от привыкания.
+            </p>
+            <p>
+              Принудительное лечение наркомании в России запрещено, поэтому мотивацией наркомана на лечение должны заняться его близкие, так как зависимый человек часто не понимает насколько серьезно он подсел.аппетит. Внутривенное введение препарата во время абстиненции также оказывает седативное действие.В наркомании разделяют физическую и психическую зависимости, кроме того, важны факторы, из-за которых человек начал употреблять, а также то, как зависимость повлияла на состояние его здоровья и частную жизнь (работа, отношения с родственниками и близкими).
+            </p>
+            <p>
+              Безопасное лечение химической наркозависимости может быть осуществлено только под надзором специалистов. При самостоятельном лечении или лечении нетрадиционными методами наркоман рискует нанести вред своему здоровью, не избавившись при этом от привыкания.В наркомании разделяют физическую и психическую зависимости, кроме того, важны факторы, из-за которых человек начал употреблять, а также то, как зависимость повлияла на состояние его здоровья и частную жизнь (работа, отношения с родственниками и близкими).
+            </p>
+            <p>
+              Безопасное лечение химической наркозависимости может быть осуществлено только под надзором специалистов. При самостоятельном лечении или лечении нетрадиционными методами наркоман рискует нанести вред своему здоровью, не избавившись при этом от привыкания.
+            </p>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__wrapper container">
+        <ul class="footer__list footer__list--left">
+          <li class="footer__item footer__item--light">Портал
+          </li>
+          <li class="footer__item">
+            <a class="footer__item-link" href="rehabs.html">Главная</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__item-link" href="rehabs.html">Реабилитационные центры</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__item-link" href="clinics.html">Клиники</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__item-link" href="service-detail.html">Наркомания</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__item-link" href="service-detail.html">Алкоголизм</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__item-link" href="service-detail.html">Игромания</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__item-link" href="#">Родственникам</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__item-link" href="about.html">О портале</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__item-link" href="contacts.html">Контакты</a>
+          </li>
+        </ul>
+        <div class="footer__center-column">
+          <a class="footer__logo logo logo-middle" href="index.html">
+            <div class="logo__img-wrap">
+              <img class="logo__img" src="img/logo/middle-logo.svg" width="216" height="216" alt="Логотип портала «Ji+Va»">
+            </div>
+            <p class="logo__title logo__title--absolute">
+              <span class="logo__title--red">J</span>i <span class="logo__title-decor" aria-hidden="true">
+                <svg class="logo__icon icon-logo-star" width="21" height="20" role="img">
+                  <use xlink:href="img/sprite.svg#icon-logo-star"></use>
+                </svg>
+              </span> Va
+            </p>
+          </a>
+
+          <div class="footer__text-wrap">
+            <p class="footer__text-item">
+              Помощь 24/7 в России
+            </p>
+            <p class="footer__text-item footer__text-item--gray">
+              Все звонки бесплатные и конфиденциальные.
+            </p>
+          </div>
+
+          <a class="footer__tel-link blaster" href="tel:+78006003960">
+            8 800 600-39-60
+          </a>
+
+          <button class="footer__link-modal-region btn-region-1 modal-region" type="button" title="Выбрать регион">
+            Россия
+            <span class="visually-hidden">Выбрать регион</span>
+          </button>
+
+        </div>
+        <ul class="footer__list footer__list--right">
+          <li class="footer__item footer__item--light">База знаний
+          </li>
+          <li class="footer__item">
+            <a class="footer__item-link" href="database.html">Все публикации</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__item-link" href="service-detail.html">Игромания</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__item-link" href="service-detail.html">Алкоголизм</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__item-link" href="service-detail.html">Наркомания</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__item-link" href="service-detail.html">Созависимость</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__item-link" href="service-detail.html">Международная практика</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__item-link" href="service-detail.html">Героин</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__item-link" href="service-detail.html">Мефедрон</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__item-link" href="service-detail.html">Подростковая зависимость</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- <section class="modal modal--callback">
+      <div class="modal-wrapper">
+        <p class="modal__title">Введите ваш номер телефона</p>
+        <button class="modal__close">Закрыть окно</button>
+        <form class="modal__form" action="/echo" method="post">
+          <input class="modal__input-phone phone-mask" type="tel" name="callme" placeholder="+7 ( ___ ) ___ __ - __" required>
+          <button class="modal__btn">Отправить</button>
+        </form>
+      </div>
+    </section> -->
+
+    <div class="overlay"></div>
+
+    <script src="js/libs/jquery-3.4.1.min.js"></script>
+    <script src="js/libs/jquery.custom-select.min.js"></script>
+    <script src="js/libs/jquery.maskedinput.min.js"></script>
+    <script src="js/libs/jquery.fancybox.min.js"></script>
+
+    <script src="js/libs/swiper.min.js"></script>
+
+    <script src="js/main.js"></script>
+    <script src="js/slider.js"></script>
+  </body>
+</html>
