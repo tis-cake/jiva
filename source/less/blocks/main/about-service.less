@@ -25,6 +25,11 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+
+  &-tablet,
+  &-mobile {
+    display: none;
+  }
 }
 
 .about-service__caption {
@@ -43,4 +48,70 @@
 .about-service__btn-modal {}
 
 @media (max-width: @tablet-width) {
+  .about-service {
+    padding-top: 5.2rem;
+    .padding-inline(3.5rem);
+    padding-bottom: 44rem;
+
+    text-align: center;
+  }
+
+  .about-service__img-wrap {
+    top: 29rem;
+    max-height: none;
+    width: 38rem;
+    height: 36rem;
+  }
+
+  .about-service__img {
+    &-desktop {
+      display: none;
+    }
+    &-tablet {
+      display: block;
+    }
+  }
+
+  .about-service__caption {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+  }
+
+  .about-service__title {
+    margin-bottom: 1.7rem;
+    .padding-inline(4rem);
+  }
+
+  .about-service__subtitle {
+    margin-bottom: 2.1rem;
+    font-size: 1.5rem;
+    line-height: 1.7rem;
+  }
+
+  .about-service__btn-modal {}
+}
+
+/* 420px */
+@media (max-width: 26.2em) {
+  .about-service__img-wrap {
+    top: 29.6rem;
+    // top: 79vw; /*~296px*/
+    width: 100%;
+    height: 151vw;/*~580px*/
+  }
+  .about-service__img {
+    &-tablet {
+      display: none;
+    }
+    &-mobile {
+      display: block;
+    }
+  }
+}
+
+/* 390px */
+@media (max-width: 24.4em) {
+  .about-service {
+    .padding-inline(2rem);
+  }
 }

@@ -314,10 +314,12 @@
     <main class="main">
       <section class="about-service">
         <div class="about-service__img-wrap">
-          <img class="about-service__img" src="img/about-service/4.png" alt="Услуга 1">
+          <!-- изображение битое поэтому в 3 вариантах -->
+          <img class="about-service__img about-service__img-desktop" src="img/about-service/4.png" alt="Услуга 1">
+          <img class="about-service__img about-service__img-tablet" src="img/about-service/12.png" alt="Услуга 1">
+          <img class="about-service__img about-service__img-mobile" src="img/about-service/10.png" alt="Услуга 1">
         </div>
         <p class="about-service__caption blaster blaster--green">
-          <!-- от <span class="about-service__caption-item blaster blaster--green">20 000</span> руб. -->
           от 20 000 руб.
         </p>
         <p class="about-service__title section-title .section-title--big">
@@ -635,7 +637,7 @@
         <div class="b__content-wrap">
           <div class="b__bg-img-wrap">
             <picture>
-              <!-- <source media="(max-width: 750px)" srcset="img/b/b1-m.png"> -->
+              <source media="(max-width: 750px)" srcset="img/b/b4-m.svg">
               <img class="b__bg-img" src="img/b/b4-d.svg" alt="Бесплатные, анонимные консультации в вашей стране 24/7">
             </picture>
           </div>
