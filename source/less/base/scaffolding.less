@@ -171,6 +171,10 @@ html .desktop-block {
 }
 
 @media (max-width: @tablet-width) {
+  html {
+    --container-padding-block: 3.5rem;
+  }
+
   .main {
     overflow: hidden;
     margin-top: 11rem;
@@ -180,8 +184,8 @@ html .desktop-block {
   .container-outside,
   .container-inside {
     width: @a;
-    .padding-inline(3.5rem);
-    // .padding-inline(2rem);
+    // .padding-inline(3.5rem);
+    .padding-inline(var(--container-padding-block));
   }
 
   html .desktop-block {
@@ -194,9 +198,12 @@ html .desktop-block {
 }
 
 @media (max-width: 24.4em) {
-  .container,
-  .container-outside,
-  .container-inside {
-    .padding-inline(2rem);
+  html {
+    --container-padding-block: 2rem;
   }
+  // .container,
+  // .container-outside,
+  // .container-inside {
+  //   .padding-inline(2rem);
+  // }
 }

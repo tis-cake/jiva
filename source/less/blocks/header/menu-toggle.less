@@ -26,7 +26,7 @@
   background-color: #fff;
 
   cursor: pointer;
-  // transition: 0.1s 0.1s;
+  transition: 0.1s 0.1s;
   // border-radius: 0.3rem;
 }
 
@@ -43,8 +43,10 @@
   height: 0.1rem;
 
   background-color: #fff;
-  // border-radius: 0.3rem;
-  // transition: 0.3s;
+  // transition: 0.3s 0.3s, transform 0.3s;
+  transition-property: all, transform;
+  transition-duration: 0.3s;
+  transition-delay: 0.3s, 0s;
 }
 
 .menu-toggle::before {
@@ -55,41 +57,30 @@
   bottom: 0;
 }
 
+.active.menu-toggle::before,
+.active.menu-toggle::after {
+  // transition: 0.3s, transform 0.3s 0.3s;
+  // transition-property: all, transform;
+  // transition-duration: 0.3s;
+  transition-delay: 0s, 0.3s;
+}
+
 .active.menu-toggle::before {
-  top: 1.4rem;
-  transform: rotate(-45deg);
+  top: 1rem;
+  // top: 50%;
+  transform: rotate(45deg) rotate(90deg);
   // transition: 0.3s, transform 0.3s 0.3s;
 }
 
 .active.menu-toggle::after {
-  bottom: 2rem;
+  bottom: 1rem;
+  // bottom: 50%;
   transform: rotate( 45deg);
   // transition: 0.3s, transform 0.3s 0.3s;
 }
 
-// @media (max-width: @mobile-width) {
-//   .menu-toggle {
-//     width: @m34px;
-//     height: @m30px;
-//     margin-bottom: @m10px;
-//   }
-//   .menu-toggle span {
-//     height: @m3px;
-//   }
-//   .menu-toggle::before,
-//   .menu-toggle::after {
-//     height: @m3px;
-//   }
-//   .active.menu-toggle::before {
-//     top: @m14px;
-//   }
-//   .active.menu-toggle::after {
-//     bottom: @m13px;
-//   }
-// }
-
 @media (max-width: 380px) {
   .menu-toggle {
-    margin-bottom: 0;
+    // margin-bottom: 0;
   }
 }

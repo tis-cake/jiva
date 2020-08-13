@@ -55,16 +55,16 @@
   // display: flex;
   // align-items: center;
 
-  // padding-left: 20px;
+  // padding-left: 2rem;
   // &::before {
   //   content: '';
   //   position: absolute;
-  //   top: -2px;
-  //   left: -3px;
+  //   top: -0.2rem;
+  //   left: -0.3rem;
 
 
-  //   width: 18px;
-  //   height: 22px;
+  //   width: 1.8rem;
+  //   height: 2.2rem;
 
   //   background-image: url('../img/svg/icon-region.svg');
   //   background-size: cover;
@@ -84,7 +84,7 @@
   &-icon {
     // width: 100%;
     // height: 100%;
-    // margin-right: 4px;
+    // margin-right: 0.4rem;
   }
 }
 
@@ -127,17 +127,53 @@
 
     font-size: 1.5rem;
 
+    transition-property: background-color;
+    transition-duration: 0.6s;
+
     &.active {
-      height: 100vh;
+      min-height: 100vh;
       overflow-y: scroll;
       overflow-x: hidden;
-      position: relative;
+      // position: relative;
+      position: fixed;
       z-index: 10;
-      .header__rows-wrap {
-        flex-wrap: wrap;
+      background-color: @dark;
+      .header__container {
+        padding-top: 3rem;
       }
+      .header__menu-toggle {
+        position: absolute;
+        top: 3rem;
+        left: var(--container-padding-block);
+      }
+      .header__rows-wrap {
+        // width: 100%;
+      //   flex-wrap: wrap;
+      }
+      .header__row-top {
+        // margin-left: 9.5rem;
+        // margin-right: 13rem;
+        // margin-right: 3.5rem; /* увеличить если языковых элементов больше 2 */
+        margin-bottom: 5.2rem;
+        margin-right: 0;
+        transition-duration: 0.6s;
+      }
+      // .header__logo, // без анимации
+      // .header__link-call-back {
+      //   display: none;
+      // }
       .header__main-nav {
         display: block;
+      }
+      .header__logo,
+      .header__link-call-back { // с анимацией
+        z-index: -1;
+        visibility: hidden;
+        opacity: 0;
+      }
+
+      .header__link-call-back {
+        transition-delay: 0s;
       }
     }
   }
@@ -147,14 +183,22 @@
   }
 
   .header__wrap {
-    justify-content: space-between;
+    // justify-content: space-between; // без анимации
     align-items: center;
+    // flex-wrap: wrap;
+    min-height: 8rem; // с анимацией
   }
 
   .header__logo {
     margin: 0;
-    margin-left: 1rem;
+    // margin-left: 1rem; // без анимации
     margin-right: auto;
+    &.logo { // с анимацией
+      position: absolute;
+      top: 0;
+      left: 5.7rem;
+      transition-delay: 0.4s;
+    }
   }
 
   .header__rows-wrap {
@@ -162,16 +206,22 @@
     // justify-content: space-between;
     // align-items: center;
 
-    width: auto;
+    width: 100%;
+    // width: auto;
     margin: 0;
     padding: 0;
 
   }
 
   .header__row-top {
-    // display: flex;
-    // align-items: center;
+    // display: none;
+    // position: absolute;
     margin-bottom: 0;
+    margin-right: 3.5rem;
+    margin-left: auto;
+    // transition-duration: 2s;
+    transition-duration: 1s;
+    transition-property: margin-right;
   }
 
   .header__form-lang {
@@ -185,8 +235,12 @@
   }
 
   .header__link-call-back {
+    position: absolute;
+    right: var(--container-padding-block);
+    transition-delay: 0.4s;
+
     order: 3;
-    margin-left: 0.5rem;
+    // margin-left: 0.5rem;
     .icon-tel {
       color: @brown;
     }

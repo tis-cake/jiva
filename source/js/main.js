@@ -7,6 +7,7 @@ $('.select-lang input[name=LANG]').change(function () {
 $(document).ready(function () {
 
   let selectLang = $('.select-lang__select'),
+      // formLang = $('.select-lang'), // для мобильного
       optionLang = $('.select-lang__option'),
       inputLang = $('.select-lang__input'),
       listLang = $('.select-lang__list');
@@ -18,9 +19,11 @@ $(document).ready(function () {
     if (selectLang.hasClass('active')) {
       selectLang.removeClass('active');
       listLang.slideUp();
+      // formLang.removeClass('active');
     } else {
       listLang.slideDown();
       $(this).toggleClass('active');
+      // formLang.toggleClass('active');
     }
 
     // клик вне элемента
@@ -49,29 +52,51 @@ $(document).ready(function () {
 
     console.log(inputLang.val());
   });
-
 });
-
-// $('body').on('click', '.select-lang option', function (e) {
-//   let val = $(this).val()
-//   let input = $(this).closest('.select-lang').find('input');
-//   input.val(val);
-//   input.change();
-//   console.log(input.val());
-// });
 
 // кастомный language-select
 // $('.custom-select-js').customSelect();
 // $('.custom-select').length != 0 ? $('.select-lang').addClass('custom') : $('.select-lang').removeClass('custom');
 
-$('.search-toggle').click(function() {
-  $(this).toggleClass('active');
-  $(this).blur();
-  $('.main-nav__list').toggleClass('search-active');
-  $('.search').toggleClass('active');
+// поиск
+$(document).ready(function () {
+  $('.search-toggle').click(function() {
+    $(this).toggleClass('active');
+    $(this).blur();
+    $('.main-nav__list').toggleClass('search-active');
+    $('.search').toggleClass('active');
 
-  if($('.search').hasClass('active')) {
-    $('.search__input').focus();
+    if($('.search').hasClass('active')) {
+      $('.search__input').focus();
+    }
+  });
+});
+
+// мобильное меню
+$(document).ready(function () {
+  $('.menu-toggle').click(function () {
+  $(this).toggleClass('active');
+  $('.header').toggleClass('active');
+  // $('.main-nav').toggleClass('active');
+  $('.select-lang').toggleClass('mobile-menu');
+  $('.aside-link').toggleClass('mobile-menu');
+   $("body").toggleClass('noscroll');
+  });
+});
+
+// мобильное подменю
+$(document).ready(function () {
+  if (width <= 756) {
+    $('.main-nav-sub').click(function(evt) {
+      evt.preventDefault();
+
+      let currentSublist = $(this).closest('.main-nav__item').find('.main-nav__sublist');
+      $('.main-nav__sublist').not(currentSublist).slideUp();
+      currentSublist.slideToggle();
+
+      $('.main-nav-sub').not($(this)).removeClass('active');
+      $(this).toggleClass('active');
+    });
   }
 });
 
