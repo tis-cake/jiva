@@ -144,9 +144,9 @@ $(document).ready(function () {
   // если в хранилище есть ключ items - конвертируем содержимое хранилища
   //   в массив itemsArray, иначе - оставляем массив пустым
   if (localStorage.getItem('items')) {
-    itemsArray = JSON.parse(localStorage.getItem('items'))
+    itemsArray = JSON.parse(localStorage.getItem('items'));
   } else {
-    itemsArray = []
+    itemsArray = [];
   }
 
   // записываем в хранилище массив itemsArray в виде строки
@@ -205,11 +205,19 @@ $(document).ready(function () {
 
   // показываем ссылку на страницу стравнения
   function showComparePageLink() {
-    if ($('.rehab-swiper__link').hasClass('selected')) {
+    // вне зависимости от того, есть ли на странице слайдер с центрами или нет
+    if (itemsArray.length > 0) {
       $('.rehab-compare-link').addClass('active');
     } else {
       $('.rehab-compare-link').removeClass('active');
     }
+
+    // только если на странице есть слайдер с центрами
+    // if ($('.rehab-swiper__link').hasClass('selected')) {
+    //   $('.rehab-compare-link').addClass('active');
+    // } else {
+    //   $('.rehab-compare-link').removeClass('active');
+    // }
   }
 });
 
