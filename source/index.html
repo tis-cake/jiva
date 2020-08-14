@@ -1014,7 +1014,7 @@
           <p class="database-sections__main-title section-title">
             Публикации нашей базы знаний
           </p>
-          <a href="database.html" class="database-sections__btn-modal btn-modal btn-modal--white btn-modal--long modal-callback desktop-block">
+          <a href="database.html" class="database-sections__btn-modal btn-modal btn-modal--white btn-modal--long desktop-block">
             Все статьи
             <span class="btn-modal__decor-line"></span>
           </a>
@@ -1162,16 +1162,28 @@
       </div>
     </footer>
 
-    <!-- <section class="modal modal--callback">
+    <section class="modal modal--callback comments">
       <div class="modal-wrapper">
-        <p class="modal__title">Введите ваш номер телефона</p>
-        <button class="modal__close">Закрыть окно</button>
-        <form class="modal__form" action="/echo" method="post">
-          <input class="modal__input-phone phone-mask" type="tel" name="callme" placeholder="+7 ( ___ ) ___ __ - __" required>
-          <button class="modal__btn">Отправить</button>
+        <button class="modal__close" title="Закрыть">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <p class="modal__title">Оставить анонимную заявку</p>
+        <p class="modal__desc">Мы свяжемся с вами в течение дня</p>
+
+        <form class="modal__form comments__form" action=".php" method="post">
+          <input class="modal__input-phone comments__form-input phone-mask" type="tel" value="" name="CALLME" placeholder="Ваш телефон" aria-label="Ваш телефон" required="">
+          <textarea class="modal__text comments__form-text" name="TEXT" placeholder="Сообщение" aria-label="Ваше сообщение" required=""></textarea>
+          <button class="modal__btn-sibmit comments__btn-submit btn-submit btn-submit--big" title="Отправить сообщение">
+            <span class="visually-hidden">
+              Отправить сообщение
+            </span>
+            <svg class="btn-submit__icon icon-arrow icon-arrow--right" width="13" height="11" role="img">
+              <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+            </svg>
+          </button>
         </form>
       </div>
-    </section> -->
+    </section>
 
     <div class="overlay"></div>
 

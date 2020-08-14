@@ -142,21 +142,17 @@ section {
   height: 100% !important;
 }
 .overlay {
-  z-index: -1;
+  display: none;
+  z-index: 99;
   position: fixed;
   top: 0;
   left: 0;
-  opacity: 0;
-  visibility: hidden;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  transition: var(--transition-main);
+  background-color: var(--color-main-bg);
 }
 .overlay.active {
-  z-index: 99;
-  opacity: 1;
-  visibility: visible;
+  display: block;
 }
 .hide {
   opacity: 0;
@@ -206,6 +202,9 @@ html .desktop-block {
   .main {
     overflow: hidden;
     margin-top: 11rem;
+  }
+  .overlay {
+    background-color: rgba(234, 241, 249, 0.5);
   }
   .container,
   .container-outside,
@@ -4538,6 +4537,7 @@ html {
 }
 .comments__form {
   box-sizing: border-box;
+  position: relative;
   display: flex;
   height: 7.3rem;
   margin-bottom: 6.2rem;
@@ -4550,6 +4550,7 @@ html {
 .comments__form:focus-within .comments__btn-submit {
   box-shadow: none;
 }
+.comments__form-input,
 .comments__form-text,
 .comments__form-name {
   box-sizing: border-box;
@@ -4564,6 +4565,7 @@ html {
   appearance: none;
   outline: none;
 }
+.comments__form-input:-moz-ui-invalid,
 .comments__form-text:-moz-ui-invalid,
 .comments__form-name:-moz-ui-invalid {
   box-shadow: none;
@@ -4587,6 +4589,7 @@ html {
 .comments__form-text::placeholder {
   line-height: 5.5rem;
 }
+.comments__form-input,
 .comments__form-name {
   width: 20.8%;
   margin-top: 1rem;
@@ -4673,12 +4676,10 @@ html {
     padding-right: 0;
     background-color: transparent;
   }
+  .comments__form-input,
   .comments__form-text,
   .comments__form-name {
     width: 100%;
-  }
-  .comments__form-text,
-  .comments__form-name {
     margin-bottom: 1rem;
     padding-left: 2rem;
     padding-right: 2rem;
@@ -4704,6 +4705,7 @@ html {
   .comments__form-text::placeholder {
     line-height: initial;
   }
+  .comments__form-input,
   .comments__form-name {
     height: 5rem;
     margin-top: 0;
@@ -6864,6 +6866,125 @@ html {
 @media (max-width: 23em) {
   .rehab-compare-link {
     bottom: 6rem;
+  }
+}
+.modal {
+  box-sizing: border-box;
+  display: none;
+  z-index: 100;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 38.5rem;
+  width: 70%;
+  max-width: 135rem;
+  padding-top: 9rem;
+  padding-left: 5.7rem;
+  padding-right: 5.7rem;
+  padding-bottom: 9rem;
+  background: #DAE5F6;
+  border-radius: 4rem;
+}
+.modal.active {
+  display: block;
+}
+.modal__close {
+  position: absolute;
+  top: 2.6rem;
+  right: 2.6rem;
+  display: flex;
+  justify-content: center;
+  width: 4.4rem;
+  height: 4.4rem;
+  padding: 0;
+}
+.modal__close::before,
+.modal__close::after {
+  position: absolute;
+  content: "";
+  top: 2rem;
+  width: 100%;
+  height: 0.3rem;
+  background-color: #000;
+}
+.modal__close::before {
+  transform: rotate(45deg);
+}
+.modal__close::after {
+  transform: rotate(-45deg);
+}
+.modal__title {
+  margin-bottom: 2.5rem;
+  font-weight: 700;
+  font-size: 3.5rem;
+}
+.modal__desc {
+  margin-bottom: 3.5rem;
+  font-weight: 700;
+  font-size: 2rem;
+}
+.modal__list {
+  -moz-column-count: 4;
+       column-count: 4;
+}
+.modal__item {
+  margin-bottom: 1.5rem;
+  margin-left: 4.5rem;
+  margin-right: 4.5rem;
+}
+.modal__form {
+  margin-right: 2rem;
+  margin-bottom: 0;
+  padding-right: 0;
+}
+.modal__btn-sibmit {
+  position: absolute;
+  right: -3.3rem;
+}
+@media (max-width: 48em) {
+  .modal {
+    width: 90%;
+    min-height: 45.5rem;
+    margin-bottom: 0;
+    padding: 4.5rem 1.5rem;
+  }
+  .modal__close {
+    top: 2.2rem;
+    right: 2.2rem;
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+  .modal__close::before,
+  .modal__close::after {
+    top: 1rem;
+    right: 0;
+    height: 0.2rem;
+  }
+  .modal__title {
+    margin-bottom: 1.7rem;
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+  .modal__desc {
+    margin-bottom: 2.5rem;
+    font-size: 1.5rem;
+  }
+  .modal__form {
+    margin-right: 0;
+  }
+  .modal__text {
+    margin-bottom: 0;
+  }
+  .modal__btn-sibmit {
+    right: auto;
+    bottom: -8.5rem;
+  }
+  .modal__list {
+    -moz-column-count: 1;
+         column-count: 1;
+    overflow: hidden;
+    overflow-y: scroll;
   }
 }
 .modal-sections-tab {

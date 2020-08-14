@@ -341,3 +341,70 @@ $(document).ready(function() {
 // $().fancybox({
 //   selector : '.about-person__document-wrap',
 // });
+
+// маска для поля ввода номера
+$(document).ready(function () {
+  $(".phone-mask").mask("+7 ( 999 ) 999 99 - 99");
+});
+
+// модальные окна
+$(document).ready(function () {
+
+  // открыть модальное окно
+  function openModal(modalClass, focusClass) {
+    $('.overlay').fadeIn('active');
+    $('body').addClass('noscroll');
+    $(modalClass).toggleClass('active'); // класс модалки
+    $(focusClass).focus();               // класс для фокуса
+  }
+
+  // оставить заявку (модалка 1)
+  $('.modal-callback').click(function (evt) {
+    evt.preventDefault();
+    openModal('.modal--callback', '.modal__input-phone');
+  });
+
+  // выбрать регион (модалка 2)
+  // $('.modal-region').click(function (evt) {
+  //   evt.preventDefault();
+  //   openModal('.modal--region');
+  // });
+
+  // выбрать регион (модалка 3)
+  // $('.modal-region-second').click(function (evt) {
+  //   evt.preventDefault();
+  //   openModal('.modal--region-second');
+  // });
+
+  // закрыть модальное окно
+  function closeModal() {
+    if ($(".modal").hasClass("active")) {
+      $('.modal').removeClass('active');
+      $('body').removeClass('noscroll');
+      $('.overlay').fadeOut('active');
+    }
+  }
+
+  // клик/тач вне модального окна -> закрыть окно
+  function clickOutsideModal(evt) {
+    let modal = $(".modal");
+    if (!modal.is(evt.target) && modal.has(evt.target).length === 0) {
+      closeModal();
+    }
+  }
+
+  // нажат esc -> закрыть окно
+  window.addEventListener("keydown", function (evt) {
+    if (evt.keyCode === 27) {
+      closeModal();
+    }
+  });
+
+  // слушаем клик/тач вне модального окна
+  $(document).on('mouseup touchstart', clickOutsideModal);
+
+  // кнопка закрыть
+  $('.modal__close').click(function (evt) {
+    closeModal();
+  });
+});

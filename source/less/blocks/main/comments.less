@@ -15,6 +15,7 @@
 
 .comments__form {
   box-sizing: border-box;
+  position: relative;
 
   display: flex;
   height: 7.3rem;
@@ -33,6 +34,7 @@
   }
 }
 
+.comments__form-input,
 .comments__form-text,
 .comments__form-name {
   box-sizing: border-box;
@@ -52,6 +54,7 @@
 
 }
 
+.comments__form-input:-moz-ui-invalid,
 .comments__form-text:-moz-ui-invalid,
 .comments__form-name:-moz-ui-invalid {
   box-shadow: none;
@@ -73,6 +76,7 @@
   }
 }
 
+.comments__form-input,
 .comments__form-name {
   width: 20.8%;
   margin-top: 1rem;
@@ -177,13 +181,15 @@
     background-color: transparent;
   }
 
+  // .comments__form-text,
+  // .comments__form-name {
+  //   width: 100%;
+  // }
+
+  .comments__form-input,
   .comments__form-text,
   .comments__form-name {
     width: 100%;
-  }
-
-  .comments__form-text,
-  .comments__form-name {
     margin-bottom: 1rem;
     padding-left: 2rem;
     padding-right: 2rem;
@@ -205,6 +211,7 @@
     }
   }
 
+  .comments__form-input,
   .comments__form-name {
     height: 5rem;
     margin-top: 0;
