@@ -354,26 +354,26 @@ $(document).ready(function () {
   function openModal(modalClass, focusClass) {
     $('.overlay').fadeIn('active');
     $('body').addClass('noscroll');
-    $(modalClass).toggleClass('active'); // класс модалки
+    $(modalClass).addClass('active');    // класс модального окна
     $(focusClass).focus();               // класс для фокуса
   }
 
   // оставить заявку (модалка 1)
   $('.modal-callback').click(function (evt) {
     evt.preventDefault();
-    openModal('.modal--callback', '.modal__input-phone');
+    openModal('.modal-callback', '.modal__input-phone');
   });
 
   // выбрать регион (модалка 2)
   // $('.modal-region').click(function (evt) {
   //   evt.preventDefault();
-  //   openModal('.modal--region');
+  //   openModal('.modal-region');
   // });
 
   // выбрать регион (модалка 3)
   // $('.modal-region-second').click(function (evt) {
   //   evt.preventDefault();
-  //   openModal('.modal--region-second');
+  //   openModal('.modal-region-second');
   // });
 
   // закрыть модальное окно

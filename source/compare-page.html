@@ -780,6 +780,29 @@
       </div>
     </footer>
 
+    <section class="modal modal-callback comments">
+      <div class="modal-wrapper">
+        <button class="modal__close" title="Закрыть">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <p class="modal__title">Оставить анонимную заявку</p>
+        <p class="modal__desc">Мы свяжемся с вами в течение дня</p>
+
+        <form class="modal__form comments__form" action=".php" method="post">
+          <input class="modal__input-phone comments__form-input phone-mask" type="tel" value="" name="CALLME" placeholder="Ваш телефон" aria-label="Ваш телефон" required="">
+          <textarea class="modal__text comments__form-text" name="TEXT" placeholder="Сообщение" aria-label="Ваше сообщение" required=""></textarea>
+          <button class="modal__btn-sibmit comments__btn-submit btn-submit btn-submit--big" title="Отправить сообщение">
+            <span class="visually-hidden">
+              Отправить сообщение
+            </span>
+            <svg class="btn-submit__icon icon-arrow icon-arrow--right" width="13" height="11" role="img">
+              <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </section>
+
     <div class="overlay"></div>
 
     <script src="js/libs/jquery-3.4.1.min.js"></script>
