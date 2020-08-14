@@ -360,7 +360,7 @@ $(document).ready(function () {
 
   // открыть модальное окно
   function openModal(modalClass, focusClass) {
-    $('.overlay').fadeIn('active');
+    $('.overlay').fadeIn();
     $('body').addClass('noscroll');
     $(modalClass).addClass('active');    // класс модального окна
     $(focusClass).focus();               // класс для фокуса
@@ -369,7 +369,7 @@ $(document).ready(function () {
   // оставить заявку (модалка 1)
   $('.modal-callback').click(function (evt) {
     evt.preventDefault();
-    openModal('.modal-callback', '.modal__input-phone');
+    openModal('.modal--callback', '.modal__input-phone');
   });
 
   // выбрать регион (модалка 2)
@@ -386,16 +386,16 @@ $(document).ready(function () {
 
   // закрыть модальное окно
   function closeModal() {
-    if ($(".modal").hasClass("active")) {
+    if ($('.modal').hasClass('active')) {
       $('.modal').removeClass('active');
+      $('.overlay').fadeOut();
       $('body').removeClass('noscroll');
-      $('.overlay').fadeOut('active');
     }
   }
 
   // клик/тач вне модального окна -> закрыть окно
   function clickOutsideModal(evt) {
-    let modal = $(".modal");
+    let modal = $('.modal');
     if (!modal.is(evt.target) && modal.has(evt.target).length === 0) {
       closeModal();
     }
@@ -415,4 +415,17 @@ $(document).ready(function () {
   $('.modal__close').click(function (evt) {
     closeModal();
   });
+
+  // сообщение об успешной отправке
+  // showModalAfterRequest();
+
+  function showModalAfterRequest() {
+    $('.modal:not(.modal--after)').addClass('hidden');
+    $('.modal--after').addClass('active');
+
+    setTimeout(function() {
+      closeModal();
+      $('.modal').removeClass('hidden');
+    }, 3000);
+  }
 });

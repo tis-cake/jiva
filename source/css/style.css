@@ -6885,9 +6885,14 @@ html {
   padding-bottom: 9rem;
   background: #DAE5F6;
   border-radius: 4rem;
+  transition-duration: var(--transition-main);
+  transition-property: opacity;
 }
 .modal.active {
   display: block;
+}
+.modal.hidden {
+  opacity: 0;
 }
 .modal__close {
   position: absolute;
@@ -6941,6 +6946,25 @@ html {
 .modal__btn-sibmit {
   position: absolute;
   right: -3.3rem;
+}
+.modal--after {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  z-index: -1;
+  visibility: hidden;
+  transition-property: opacity;
+}
+.modal--after .modal__desc {
+  margin-bottom: 0;
+}
+.modal--after.active {
+  display: flex;
+  z-index: 100;
+  opacity: 1;
+  visibility: visible;
 }
 @media (max-width: 48em) {
   .modal {

@@ -20,18 +20,25 @@
 
   background: #DAE5F6;
   border-radius: 4rem;
+
+  transition-duration: @s;
+  transition-property: opacity;
+
+  &.active {
+    display: block;
+  }
+
+  &.hidden {
+    opacity: 0;
+  }
 }
 
-// .modal-after.active,
-// .modal-callback.active,
-// .modal-excursion.active,
-// .modal-review.active {
+// .modal--after.active,
+// .modal--callback.active,
+// .modal--excursion.active,
+// .modal--review.active {
 //   display: block;
 // }
-
-.modal.active {
-  display: block;
-}
 
 .modal__close {
   position: absolute;
@@ -106,6 +113,30 @@
 .modal__btn-sibmit {
   position: absolute;
   right: -3.3rem;
+}
+
+.modal--after {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  opacity: 0;
+  z-index: -1;
+  visibility: hidden;
+
+  transition-property: opacity;
+
+  .modal__desc {
+    margin-bottom: 0;
+  }
+
+  &.active {
+    display: flex;
+    z-index: 100;
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 // .modal__form {
