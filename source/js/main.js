@@ -417,15 +417,17 @@ $(document).ready(function () {
   });
 
   // сообщение об успешной отправке
-  // showModalAfterRequest();
+  // showMessageAfterRequest($(this));
 
-  function showModalAfterRequest() {
-    $('.modal:not(.modal--after)').addClass('hidden');
-    $('.modal--after').addClass('active');
+  function showMessageAfterRequest(current) {
+    // $('.modal:not(.modal--after)').addClass('hidden');
+    // $('.modal--after').addClass('active');
+    current.closest('.modal').addClass('reply');
 
     setTimeout(function() {
       closeModal();
-      $('.modal').removeClass('hidden');
+      // $('.modal').removeClass('hidden');
+      $('.modal').removeClass('reply');
     }, 3000);
   }
 });

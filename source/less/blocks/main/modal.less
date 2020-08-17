@@ -139,6 +139,38 @@
   }
 }
 
+.modal-wrapper,
+.modal-wrapper-reply {
+  transition-duration: @s;
+  transition-property: opacity;
+}
+
+.modal-wrapper-reply {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, -50%);
+  transition-delay: 0.3s;
+
+  .modal__desc {
+    margin-bottom: 0;
+  }
+}
+
+.modal.reply {
+  .modal-wrapper {
+    opacity: 0;
+  }
+  .modal-wrapper-reply {
+    z-index: 0;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
 // .modal__form {
 //   box-sizing: border-box;
 //   position: relative;
