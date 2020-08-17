@@ -146,12 +146,17 @@ input[type="radio"].visually-hidden {
   width: 157rem;
 }
 
+html .mobile-flex,
 html .mobile-block {
   display: none;
 }
 
 html .desktop-block {
   display: block;
+}
+
+html .desktop-flex {
+  display: flex;
 }
 
 // .phone-mask:-moz-submit-invalid,
@@ -182,12 +187,17 @@ html .desktop-block {
     .padding-inline(var(--container-padding-block));
   }
 
+  html .desktop-flex,
   html .desktop-block {
     display: none;
   }
 
   html .mobile-block {
     display: block;
+  }
+
+  html .mobile-flex {
+    display: flex;
   }
 }
 

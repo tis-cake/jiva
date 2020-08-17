@@ -186,11 +186,15 @@ input[type="radio"].visually-hidden {
 .container-outside {
   width: 157rem;
 }
+html .mobile-flex,
 html .mobile-block {
   display: none;
 }
 html .desktop-block {
   display: block;
+}
+html .desktop-flex {
+  display: flex;
 }
 .phone-mask:-moz-ui-invalid {
   box-shadow: none;
@@ -213,11 +217,15 @@ html .desktop-block {
     padding-left: var(--container-padding-block);
     padding-right: var(--container-padding-block);
   }
+  html .desktop-flex,
   html .desktop-block {
     display: none;
   }
   html .mobile-block {
     display: block;
+  }
+  html .mobile-flex {
+    display: flex;
   }
 }
 @media (max-width: 24.4em) {
@@ -412,7 +420,7 @@ html .desktop-block {
   fill: var(--color-light-gray);
   transition: var(--transition-main);
 }
-.active .icon-triangle-bottom,
+.filter__options.active .icon-triangle-bottom,
 .active.icon-triangle-bottom {
   transform: translateY(-50%) rotate(180deg);
 }
@@ -4396,9 +4404,18 @@ html {
 .article-rating {
   display: flex;
   align-items: center;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.article-rating__wrap {
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
 .article-rating__title {
   margin-right: 1rem;
+  float: left;
 }
 .rating_count {
   width: auto !important;
@@ -4407,6 +4424,10 @@ html {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
+  width: 100%;
+}
+.article-rating__area > label:focus {
+  opacity: 0.8;
 }
 .article-rating__area:not(:checked) > input {
   display: none;
@@ -4428,6 +4449,14 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+.article-rating__area--big > label,
+.article-rating__area--big:not(:checked) > label::before {
+  width: 2.6rem;
+  height: 2.6rem;
+}
+.article-rating__area--big {
+  margin-bottom: 1rem;
 }
 .article-rating__area > input:checked ~ label::before,
 .article-rating__area:not(:checked) > label:hover,
@@ -6869,6 +6898,7 @@ html {
   }
 }
 .modal {
+  --modal-padding-block: 2.6rem;
   box-sizing: border-box;
   display: none;
   z-index: 100;
@@ -6881,10 +6911,11 @@ html {
   max-width: 135rem;
   padding-top: 9rem;
   padding-left: 5.7rem;
-  padding-right: 5.7rem;
+  padding-right: 4.7rem;
   padding-bottom: 9rem;
   background: #DAE5F6;
   border-radius: 4rem;
+  font-size: 1.6rem;
   transition-duration: var(--transition-main);
   transition-property: opacity;
 }
@@ -6893,6 +6924,14 @@ html {
 }
 .modal.hidden {
   opacity: 0;
+}
+.modal.reply .modal-wrapper {
+  opacity: 0;
+}
+.modal.reply .modal-wrapper-reply {
+  z-index: 0;
+  opacity: 1;
+  visibility: visible;
 }
 .modal__close {
   position: absolute;
@@ -6929,42 +6968,31 @@ html {
   font-weight: 700;
   font-size: 2rem;
 }
-.modal__list {
-  -moz-column-count: 4;
-       column-count: 4;
-}
-.modal__item {
-  margin-bottom: 1.5rem;
-  margin-left: 4.5rem;
-  margin-right: 4.5rem;
-}
+.modal__row-bottom,
 .modal__form {
-  margin-right: 2rem;
+  margin-right: 3rem;
   margin-bottom: 0;
-  padding-right: 0;
+  padding-right: 4rem;
+}
+.modal__text {
+  width: 100%;
+}
+.modal__text::-moz-placeholder, .modal__filter-options::-moz-placeholder {
+  opacity: 1;
+}
+.modal__text:-ms-input-placeholder, .modal__filter-options:-ms-input-placeholder {
+  opacity: 1;
+}
+.modal__text::-ms-input-placeholder, .modal__filter-options::-ms-input-placeholder {
+  opacity: 1;
+}
+.modal__text::placeholder,
+.modal__filter-options::placeholder {
+  opacity: 1;
 }
 .modal__btn-sibmit {
   position: absolute;
   right: -3.3rem;
-}
-.modal--after {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  opacity: 0;
-  z-index: -1;
-  visibility: hidden;
-  transition-property: opacity;
-}
-.modal--after .modal__desc {
-  margin-bottom: 0;
-}
-.modal--after.active {
-  display: flex;
-  z-index: 100;
-  opacity: 1;
-  visibility: visible;
 }
 .modal-wrapper,
 .modal-wrapper-reply {
@@ -6984,20 +7012,59 @@ html {
 .modal-wrapper-reply .modal__desc {
   margin-bottom: 0;
 }
-.modal.reply .modal-wrapper {
-  opacity: 0;
+.modal__filter-form {
+  padding-right: 0;
+  background-color: transparent;
+  border-radius: 0;
 }
-.modal.reply .modal-wrapper-reply {
-  z-index: 0;
-  opacity: 1;
-  visibility: visible;
+.modal__filter-options {
+  flex-shrink: 0;
+  width: 31.4rem;
+  height: 7rem;
+  margin-right: 1.2rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: var(--modal-padding-block);
+  font-size: inherit;
+  background-color: #fff;
+  border-radius: 9rem;
+  border: 0;
+}
+.modal__filter-options:first-of-type,
+.modal__filter-options:nth-of-type(2) {
+  width: 31.4rem;
+  padding-left: var(--modal-padding-block);
+}
+.modal__filter-options:nth-child(4n) {
+  margin-right: 0;
+}
+.modal__filter-handler {
+  align-items: center;
+}
+.modal__row-top {
+  display: flex;
+  margin-bottom: 1.8rem;
+}
+.modal__rating {
+  align-self: center;
+  width: 25.2rem;
+  margin-left: auto;
+}
+.modal__row-bottom {
+  padding-left: var(--modal-padding-block);
+}
+.modal--feedback .modal__form {
+  margin-right: 0;
+  padding-right: 0;
 }
 @media (max-width: 48em) {
   .modal {
+    --modal-padding-block: 2rem;
     width: 90%;
     min-height: 45.5rem;
     margin-bottom: 0;
     padding: 4.5rem 1.5rem;
+    font-size: 1.5rem;
   }
   .modal__close {
     top: 2.2rem;
@@ -7020,8 +7087,10 @@ html {
     margin-bottom: 2.5rem;
     font-size: 1.5rem;
   }
+  .modal__row-bottom,
   .modal__form {
     margin-right: 0;
+    padding-right: 0;
   }
   .modal__text {
     margin-bottom: 0;
@@ -7030,11 +7099,31 @@ html {
     right: auto;
     bottom: -8.5rem;
   }
-  .modal__list {
-    -moz-column-count: 1;
-         column-count: 1;
-    overflow: hidden;
-    overflow-y: scroll;
+  .modal__filter-options {
+    width: 100%;
+    height: 5rem;
+    margin-right: 0;
+    margin-bottom: 1rem;
+    padding-right: var(--modal-padding-block);
+    padding-left: var(--modal-padding-block);
+  }
+  .modal__filter-options:first-of-type,
+  .modal__filter-options:nth-of-type(2) {
+    width: 100%;
+  }
+  .modal__filter-handler {
+    padding-left: 0;
+  }
+  .modal__row-top {
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+  .modal__rating {
+    margin-top: 3rem;
+    margin-left: 0;
+  }
+  .modal__row-bottom {
+    padding-left: 0;
   }
 }
 .modal-sections-tab {

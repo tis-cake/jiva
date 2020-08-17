@@ -1188,6 +1188,123 @@
       </div>
     </section>
 
+    <section class="modal modal--feedback comments filter">
+      <div class="modal-wrapper">
+        <button class="modal__close" title="Закрыть">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <p class="modal__title">Оставить отзыв</p>
+        <p class="modal__desc">Спасибо за обратную связь! Вы помогаете нам улучшить качество услуг.</p>
+
+        <form class="modal__form" action=".php" method="post">
+          <div class="modal__row-top">
+            <input class="modal__filter-options modal__input-name comments__form-input" type="text" value="" name="NAME" placeholder="Ваше имя" aria-label="Ваше имя" required="">
+
+            <div class="modal__filter-options filter__options">
+              <input class="filter__input visually-hidden" type="text" name="THEME" value="" data-id="" id="filter-theme">
+              <svg class="filter__handler-icon icon-triangle-bottom" width="16" height="16" role="img">
+                <use xlink:href="img/sprite.svg#icon-triangle-bottom"></use>
+              </svg>
+              <a class="modal__filter-handler filter__handler" href="javascript:void(0);" data-id="41">Солевая зависимость</a>
+              <ul class="filter__list" data-id="41">
+                <li class="filter__list-item">
+                  <a class="filter__item" href="javascript:void(0);" data-id="0">Алкогольная зависимость</a>
+                </li>
+                <li class="filter__list-item">
+                  <a class="filter__item" href="javascript:void(0);" data-id="0">Игровая зависимость</a>
+                </li>
+                <li class="filter__list-item">
+                  <a class="filter__item" href="javascript:void(0);" data-id="0">Амфетаминовая зависимость</a>
+                </li>
+                <li class="filter__list-item">
+                  <a class="filter__item" href="javascript:void(0);" data-id="0">Героиновая зависимость</a>
+                </li>
+                <li class="filter__list-item">
+                  <a class="filter__item" href="javascript:void(0);" data-id="0">Солевая зависимость</a>
+                </li>
+                <li class="filter__list-item">
+                  <a class="filter__item" href="javascript:void(0);" data-id="0">Героиновая зависимость</a>
+                </li>
+                <li class="filter__list-item">
+                  <a class="filter__item" href="javascript:void(0);" data-id="0">Солевая зависимость</a>
+                </li>
+                <li class="filter__list-item">
+                  <a class="filter__item" href="javascript:void(0);" data-id="0">Героиновая зависимость</a>
+                </li>
+              </ul>
+            </div>
+
+            <input class="modal__filter-options modal__input-experience comments__form-input" type="text" value="" name="HOW_LONG" placeholder="Сколько времени употреблял" aria-label="Сколько времени употреблял" required="">
+
+            <fieldset class="modal__rating article-rating desktop-flex">
+              <div class="article-rating__wrap">
+                <legend class="article-rating__title">
+                  Оценить:
+                </legend>
+                <div class="article-rating__area article-rating__area--big">
+
+                  <input class="visually-hidden" type="radio" id="star-5" name="rating" value="5">
+                  <label for="star-5" title="Оценка «5»" tabindex="0"></label>
+
+                  <input class="visually-hidden" type="radio" id="star-4" name="rating" value="4">
+                  <label for="star-4" title="Оценка «4»" tabindex="0"></label>
+
+                  <input class="visually-hidden" type="radio" id="star-3" name="rating" value="3">
+                  <label for="star-3" title="Оценка «3»" tabindex="0"></label>
+
+                  <input class="visually-hidden" type="radio" id="star-2" name="rating" value="2">
+                  <label for="star-2" title="Оценка «2»" tabindex="0"></label>
+
+                  <input class="visually-hidden" type="radio" id="star-1" name="rating" value="1">
+                  <label for="star-1" title="Оценка «1»" tabindex="0"></label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="modal__row-bottom comments__form">
+            <textarea class="modal__text comments__form-text" name="TEXT" placeholder="Отзыв" aria-label="Ваш отзыв" required=""></textarea>
+
+            <!-- <div class="modal__rating article-rating mobile-flex">
+              <p class="article-rating__title">
+                Оценить:
+              </p>
+              <div class="article-rating__area article-rating__area--big">
+
+                <input type="radio" id="star-5" name="rating" value="5">
+                <label for="star-5" title="Оценка «5»"></label>
+
+                <input type="radio" id="star-4" name="rating" value="4">
+                <label for="star-4" title="Оценка «4»"></label>
+
+                <input type="radio" id="star-3" name="rating" value="3">
+                <label for="star-3" title="Оценка «3»"></label>
+
+                <input type="radio" id="star-2" name="rating" value="2">
+                <label for="star-2" title="Оценка «2»"></label>
+
+                <input type="radio" id="star-1" name="rating" value="1">
+                <label for="star-1" title="Оценка «1»"></label>
+              </div>
+            </div> -->
+
+            <button class="modal__btn-sibmit comments__btn-submit btn-submit btn-submit--big" title="Отправить отзыв">
+              <span class="visually-hidden">
+                Отправить отзыв
+              </span>
+              <svg class="btn-submit__icon icon-arrow icon-arrow--right" width="13" height="11" role="img">
+                <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+              </svg>
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="modal-wrapper-reply">
+        <p class="modal__desc">Ваш отзыв отправлен!</p>
+      </div>
+    </section>
+
+
     <!-- <section class="modal modal--after">
       <div class="modal-wrapper">
         <button class="modal__close" title="Закрыть">

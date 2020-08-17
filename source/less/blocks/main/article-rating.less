@@ -1,10 +1,22 @@
 .article-rating {
   display: flex;
   align-items: center;
+
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.article-rating__wrap {
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
 
 .article-rating__title {
   margin-right: 1rem;
+
+  float: left;
 }
 
 .rating_count {
@@ -17,6 +29,11 @@
   justify-content: space-between;
 
   // width: 17.2rem;
+  width: 100%;
+}
+
+.article-rating__area > label:focus {
+  opacity: 0.8;
 }
 
 .article-rating__area:not(:checked) > input {
@@ -32,6 +49,7 @@
   height: 2.4rem;
   padding: 0;
 }
+
 .article-rating__area:not(:checked) > label::before {
   content: '';
   position: absolute;
@@ -43,6 +61,16 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+.article-rating__area--big > label,
+.article-rating__area--big:not(:checked) > label::before {
+  width: 2.6rem;
+  height: 2.6rem;
+}
+
+.article-rating__area--big {
+  margin-bottom: 1rem;
 }
 
 .article-rating__area > input:checked ~ label::before,

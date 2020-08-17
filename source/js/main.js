@@ -358,6 +358,24 @@ $(document).ready(function () {
 // модальные окна
 $(document).ready(function () {
 
+  // оставить заявку (модалка 1)
+  $('.modal-callback').click(function (evt) {
+    evt.preventDefault();
+    openModal('.modal--callback', '.modal__input-phone');
+  });
+
+  // оставить отзыв (модалка 2)
+  $('.modal-region').click(function (evt) {
+    evt.preventDefault();
+    openModal('.modal--feedback', '.modal__input-name');
+  });
+
+  // выбрать регион (модалка 3)
+  // $('.modal-region-second').click(function (evt) {
+  //   evt.preventDefault();
+  //   openModal('.modal-region-second');
+  // });
+
   // открыть модальное окно
   function openModal(modalClass, focusClass) {
     $('.overlay').fadeIn();
@@ -365,24 +383,6 @@ $(document).ready(function () {
     $(modalClass).addClass('active');    // класс модального окна
     $(focusClass).focus();               // класс для фокуса
   }
-
-  // оставить заявку (модалка 1)
-  $('.modal-callback').click(function (evt) {
-    evt.preventDefault();
-    openModal('.modal--callback', '.modal__input-phone');
-  });
-
-  // выбрать регион (модалка 2)
-  // $('.modal-region').click(function (evt) {
-  //   evt.preventDefault();
-  //   openModal('.modal-region');
-  // });
-
-  // выбрать регион (модалка 3)
-  // $('.modal-region-second').click(function (evt) {
-  //   evt.preventDefault();
-  //   openModal('.modal-region-second');
-  // });
 
   // закрыть модальное окно
   function closeModal() {
@@ -416,6 +416,7 @@ $(document).ready(function () {
     closeModal();
   });
 
+  // !NB добавить а ajax-запрос
   // сообщение об успешной отправке
   // showMessageAfterRequest($(this));
 
