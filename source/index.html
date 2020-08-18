@@ -1196,7 +1196,7 @@
         <p class="modal__title">Оставить отзыв</p>
         <p class="modal__desc">Спасибо за обратную связь! Вы помогаете нам улучшить качество услуг.</p>
 
-        <form class="modal__form" action=".php" method="post">
+        <form class="modal__form" action="php/test.php" method="post">
           <div class="modal__row-top">
             <input class="modal__filter-options modal__input-name comments__form-input" type="text" value="" name="NAME" placeholder="Ваше имя" aria-label="Ваше имя" required="">
 
@@ -1206,7 +1206,7 @@
                 <use xlink:href="img/sprite.svg#icon-triangle-bottom"></use>
               </svg>
               <a class="modal__filter-handler filter__handler" href="javascript:void(0);" data-id="41">Солевая зависимость</a>
-              <ul class="filter__list" data-id="41">
+              <ul class="modal__filter-list filter__list" data-id="41">
                 <li class="filter__list-item">
                   <a class="filter__item" href="javascript:void(0);" data-id="0">Алкогольная зависимость</a>
                 </li>
@@ -1236,57 +1236,139 @@
 
             <input class="modal__filter-options modal__input-experience comments__form-input" type="text" value="" name="HOW_LONG" placeholder="Сколько времени употреблял" aria-label="Сколько времени употреблял" required="">
 
-            <fieldset class="modal__rating article-rating desktop-flex">
-              <div class="article-rating__wrap">
-                <legend class="article-rating__title">
-                  Оценить:
-                </legend>
-                <div class="article-rating__area article-rating__area--big">
+            <fieldset class="modal__rating-stars rating-stars desktop-flex">
+              <legend class="rating-stars__title">
+                Оценить:
+              </legend>
+              <!-- <div class="rating-stars__wrap"> -->
+                <div class="rating-stars__list">
 
-                  <input class="visually-hidden" type="radio" id="star-5" name="rating" value="5">
-                  <label for="star-5" title="Оценка «5»" tabindex="0"></label>
+                  <input class="rating-stars__input visually-hidden" type="radio" id="star-d-5" name="RATING" value="5">
+                  <label class="rating-stars__label" for="star-d-5" title="Оценка «5»" tabindex="0">
+                    <span class="visually-hidden">Оценка «5»</span>
 
-                  <input class="visually-hidden" type="radio" id="star-4" name="rating" value="4">
-                  <label for="star-4" title="Оценка «4»" tabindex="0"></label>
+                    <svg class="rating-stars__icon-star icon-star" width="28" height="27" role="img">
+                      <use xlink:href="img/sprite.svg#icon-star"></use>
+                    </svg>
+                  </label>
 
-                  <input class="visually-hidden" type="radio" id="star-3" name="rating" value="3">
-                  <label for="star-3" title="Оценка «3»" tabindex="0"></label>
+                  <input class="rating-stars__input visually-hidden" type="radio" id="star-d-4" name="RATING" value="4">
+                  <label class="rating-stars__label" for="star-d-4" title="Оценка «4»" tabindex="0">
+                    <span class="visually-hidden">Оценка «4»</span>
+                    <svg class="rating-stars__icon-star icon-star" width="28" height="27" role="img">
+                      <use xlink:href="img/sprite.svg#icon-star"></use>
+                    </svg>
+                  </label>
 
-                  <input class="visually-hidden" type="radio" id="star-2" name="rating" value="2">
-                  <label for="star-2" title="Оценка «2»" tabindex="0"></label>
+                  <input class="rating-stars__input visually-hidden" type="radio" id="star-d-3" name="RATING" value="3">
+                  <label class="rating-stars__label" for="star-d-3" title="Оценка «3»" tabindex="0">
+                    <span class="visually-hidden">Оценка «3»</span>
+                    <svg class="rating-stars__icon-star icon-star" width="28" height="27" role="img">
+                      <use xlink:href="img/sprite.svg#icon-star"></use>
+                    </svg>
+                  </label>
 
-                  <input class="visually-hidden" type="radio" id="star-1" name="rating" value="1">
-                  <label for="star-1" title="Оценка «1»" tabindex="0"></label>
+                  <input class="rating-stars__input visually-hidden" type="radio" id="star-d-2" name="RATING" value="2">
+                  <label class="rating-stars__label" for="star-d-2" title="Оценка «2»" tabindex="0">
+                    <span class="visually-hidden">Оценка «2»</span>
+                    <svg class="rating-stars__icon-star icon-star" width="28" height="27" role="img">
+                      <use xlink:href="img/sprite.svg#icon-star"></use>
+                    </svg>
+                  </label>
+
+                  <input class="rating-stars__input visually-hidden" type="radio" id="star-d-1" name="RATING" value="1">
+                  <label class="rating-stars__label" for="star-d-1" title="Оценка «1»" tabindex="0">
+                    <span class="visually-hidden">Оценка «1»</span>
+                    <svg class="rating-stars__icon-star icon-star" width="28" height="27" role="img">
+                      <use xlink:href="img/sprite.svg#icon-star"></use>
+                    </svg>
+                  </label>
                 </div>
-              </div>
+
+                <!-- <input class="rating-stars__input visually-hidden" type="text" name="RATING" value="0"> -->
+                <!-- <ul class="rating-stars__list">
+                  <li class="rating-stars__item">
+                    <button class="rating-stars__button" type="button" data-star="1" title="Оценка «1»">
+                      <span class="visually-hidden">Оценка «1»</span>
+                    </button>
+                  </li>
+                  <li class="rating-stars__item">
+                    <button class="rating-stars__button" type="button" data-star="2" title="Оценка «2»">
+                      <span class="visually-hidden">Оценка «2»</span>
+                    </button>
+                  </li>
+                  <li class="rating-stars__item">
+                    <button class="rating-stars__button" type="button" data-star="3" title="Оценка «3»">
+                      <span class="visually-hidden">Оценка «3»</span>
+                    </button>
+                  </li>
+                  <li class="rating-stars__item">
+                    <button class="rating-stars__button" type="button" data-star="4" title="Оценка «4»">
+                      <span class="visually-hidden">Оценка «4»</span>
+                    </button>
+                  </li>
+                  <li class="rating-stars__item">
+                    <button class="rating-stars__button" type="button" data-star="5" title="Оценка «5»">
+                      <span class="visually-hidden">Оценка «5»</span>
+                    </button>
+                  </li>
+                </ul> -->
+              <!-- </div> -->
             </fieldset>
           </div>
 
           <div class="modal__row-bottom comments__form">
             <textarea class="modal__text comments__form-text" name="TEXT" placeholder="Отзыв" aria-label="Ваш отзыв" required=""></textarea>
 
-            <!-- <div class="modal__rating article-rating mobile-flex">
-              <p class="article-rating__title">
+            <fieldset class="modal__rating-stars rating-stars mobile-flex">
+              <legend class="rating-stars__title">
                 Оценить:
-              </p>
-              <div class="article-rating__area article-rating__area--big">
+              </legend>
+              <!-- <div class="rating-stars__wrap"> -->
+                <div class="rating-stars__list">
+                  <input class="rating-stars__input visually-hidden" type="radio" id="star-m-5" name="RATING" value="5">
+                  <label class="rating-stars__label" for="star-m-5" title="Оценка «5»" tabindex="0">
+                    <span class="visually-hidden">Оценка «5»</span>
 
-                <input type="radio" id="star-5" name="rating" value="5">
-                <label for="star-5" title="Оценка «5»"></label>
+                    <svg class="rating-stars__icon-star icon-star" width="28" height="27" role="img">
+                      <use xlink:href="img/sprite.svg#icon-star"></use>
+                    </svg>
+                  </label>
 
-                <input type="radio" id="star-4" name="rating" value="4">
-                <label for="star-4" title="Оценка «4»"></label>
+                  <input class="rating-stars__input visually-hidden" type="radio" id="star-m-4" name="RATING" value="4">
+                  <label class="rating-stars__label" for="star-m-4" title="Оценка «4»" tabindex="0">
+                    <span class="visually-hidden">Оценка «4»</span>
+                    <svg class="rating-stars__icon-star icon-star" width="28" height="27" role="img">
+                      <use xlink:href="img/sprite.svg#icon-star"></use>
+                    </svg>
+                  </label>
 
-                <input type="radio" id="star-3" name="rating" value="3">
-                <label for="star-3" title="Оценка «3»"></label>
+                  <input class="rating-stars__input visually-hidden" type="radio" id="star-m-3" name="RATING" value="3">
+                  <label class="rating-stars__label" for="star-m-3" title="Оценка «3»" tabindex="0">
+                    <span class="visually-hidden">Оценка «3»</span>
+                    <svg class="rating-stars__icon-star icon-star" width="28" height="27" role="img">
+                      <use xlink:href="img/sprite.svg#icon-star"></use>
+                    </svg>
+                  </label>
 
-                <input type="radio" id="star-2" name="rating" value="2">
-                <label for="star-2" title="Оценка «2»"></label>
+                  <input class="rating-stars__input visually-hidden" type="radio" id="star-m-2" name="RATING" value="2">
+                  <label class="rating-stars__label" for="star-m-2" title="Оценка «2»" tabindex="0">
+                    <span class="visually-hidden">Оценка «2»</span>
+                    <svg class="rating-stars__icon-star icon-star" width="28" height="27" role="img">
+                      <use xlink:href="img/sprite.svg#icon-star"></use>
+                    </svg>
+                  </label>
 
-                <input type="radio" id="star-1" name="rating" value="1">
-                <label for="star-1" title="Оценка «1»"></label>
-              </div>
-            </div> -->
+                  <input class="rating-stars__input visually-hidden" type="radio" id="star-m-1" name="RATING" value="1">
+                  <label class="rating-stars__label" for="star-m-1" title="Оценка «1»" tabindex="0">
+                    <span class="visually-hidden">Оценка «1»</span>
+                    <svg class="rating-stars__icon-star icon-star" width="28" height="27" role="img">
+                      <use xlink:href="img/sprite.svg#icon-star"></use>
+                    </svg>
+                  </label>
+                </div>
+              <!-- </div> -->
+            </fieldset>
 
             <button class="modal__btn-sibmit comments__btn-submit btn-submit btn-submit--big" title="Отправить отзыв">
               <span class="visually-hidden">

@@ -1,0 +1,141 @@
+.rating-stars {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.rating-stars__wrap {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  // width: 17.5rem;
+  // margin-left: 7rem;
+}
+
+.rating-stars__title {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  // margin-right: 1rem;
+  // float: left;
+}
+
+.rating-stars__input {
+  display: none;
+  // visibility: hidden;
+}
+
+.rating-stars__list {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+
+  width: 100%;
+  margin-bottom: 1rem;
+
+  width: 17.5rem;
+  margin-left: 7rem;
+}
+
+// .rating-stars__item {}
+
+// .rating-stars__button {
+//   position: relative;
+//   width: 2.6rem;
+//   height: 2.6rem;
+
+//   background-image: url("../img/svg/star-gray.svg");
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   background-position: center;
+
+//   &:hover {
+//     background-image: url("../img/svg/star-green-fill.svg");
+//   }
+// }
+
+.rating-stars__label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  width: 2.6rem;
+  height: 2.6rem;
+  // padding: 0;
+  padding: 0 0.4rem;
+  // outline: 1px solid red;
+
+  &::before {
+    // content: '';
+    // position: absolute;
+
+    // width: 2.6rem;
+    // height: 2.6rem;
+
+    // background-image: url("../img/svg/star-gray.svg");
+    // background-repeat: no-repeat;
+    // background-position: center;
+    // background-size: contain;
+  }
+
+  &:focus {
+    // opacity: 0.8;
+    outline: 0;
+    .rating-stars__icon-star {
+      opacity: @opacity-hover;
+      // fill: @emerald;
+      stroke: #4B969E;
+    }
+  }
+
+  // &:first-of-type {
+  //   padding-right: 0;
+  // }
+
+  // &:last-of-type {
+  //   padding-left: 0;
+  // }
+}
+
+// .rating-stars__input:checked ~ .rating-stars__label::before,
+// .rating-stars__label:hover ~ .rating-stars__label,
+// .rating-stars__label:hover {
+//   background-image: url("../img/svg/star-green-fill.svg");
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   background-size: contain;
+// }
+
+.rating-stars__icon-star {
+  // fill: transparent;
+  // stroke: #ADB9D9;
+}
+
+.rating-stars__input:checked ~ .rating-stars__label .rating-stars__icon-star,
+.rating-stars__label:hover ~ .rating-stars__label .rating-stars__icon-star,
+.rating-stars__label:hover .rating-stars__icon-star {
+  // fill: #BBC6E3;
+  // stroke: #A6B2C6;
+  fill: @emerald;
+  stroke: #4B969E;
+}
+
+@media (max-width: @tablet-width) {
+  .rating-stars__title {
+    font-size: 1.6rem;
+  }
+
+  .rating-stars__list {
+    margin-bottom: 0.7rem;
+  }
+
+  // .rating-stars__label {
+  //   padding: 0;
+  // }
+}

@@ -197,7 +197,7 @@
   margin-bottom: 1.8rem;
 }
 
-.modal__rating {
+.modal__rating-stars {
   // position: relative;
   // right: -1rem;
   align-self: center;
@@ -321,13 +321,21 @@
     padding-left: 0;
   }
 
-  .modal__row-top {
-    flex-wrap: wrap;
-    margin-bottom: 1rem;
+  .modal__filter-list {
+    margin-top: 1rem;
+    border-radius: 1.5rem;
   }
 
-  .modal__rating {
+  .modal__row-top {
+    flex-wrap: wrap;
+    // margin-bottom: 1rem;
+    margin-bottom: 0;
+  }
+
+  .modal__rating-stars {
+    align-self: flex-start;
     // width: auto;
+    // width: 25.2rem;
     margin-top: 3rem;
     margin-left: 0;
   }
@@ -335,40 +343,26 @@
   .modal__row-bottom {
     padding-left: 0;
   }
+}
 
-  // .modal__form {
-  //   height: @a;
-  // }
+// 340px
+@media (max-width: 21.25em) {
+  .modal--feedback {
+    top: 2.5rem;
+    transform: translateX(-50%);
+    padding-top: 2rem;
+    padding-bottom: 3.5rem;
 
-  // .modal__input-phone,
-  // .modal__btn  {
-  //   height: 55px;
-  //   .padding-inline(2.2rem);
-  //   font-size: 1.8rem;
-  // }
+    .modal__text {
+      height: 16rem;
+    }
 
-  // .modal__input-phone {
-  //   // width: 50%;
-  //   // width: 244px;
-  //   margin: 0;
-  //   padding: 0;
-  //   // padding-left: 20px;
-  // }
+    .modal__rating-stars {
+      margin-top: 2rem;
+    }
 
-  // .modal__btn {
-  //   padding: 0;
-  //   padding-left: 20px;
-  // }
-
-  // .modal__textarea {
-  //   height: 30rem;
-  // }
-
-  // .modal-review {
-  //   .modal__btn {
-  //     width: 90%;
-  //     height: 5.5rem;
-  //     padding: 0;
-  //   }
-  // }
+    .modal__btn-sibmit {
+      bottom: -6.5rem;
+    }
+  }
 }

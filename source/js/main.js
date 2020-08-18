@@ -432,3 +432,22 @@ $(document).ready(function () {
     }, 3000);
   }
 });
+
+// доступный (tab/пробел) рейтинг в модальном окне
+$(document).ready(function () {
+  // let ratingInput = $('.rating-stars__input');
+  // $( '.rating-stars__button').on('click', function() {
+  //   // обновляем текущее значение input
+  //   let currentVal = $(this).data('star');
+  //   ratingInput.val(currentVal);
+
+  //   let allPrevEl = $(this).parent().prevAll('.rating-stars__item');
+  // });
+
+  $('.rating-stars__label').keydown(function (evt) {
+    if (evt.keyCode === 32) {
+      evt.preventDefault();
+      $(this).prev('.rating-stars__input').prop('checked', true);
+    }
+  });
+});
