@@ -365,7 +365,7 @@ $(document).ready(function () {
   });
 
   // оставить отзыв (модалка 2)
-  $('.modal-region').click(function (evt) {
+  $('.modal-feedback').click(function (evt) {
     evt.preventDefault();
     openModal('.modal--feedback', '.modal__input-name');
   });
@@ -449,5 +449,19 @@ $(document).ready(function () {
       evt.preventDefault();
       $(this).prev('.rating-stars__input').prop('checked', true);
     }
+  });
+});
+
+/* переключение табов с результами поиска*/
+$(document).ready(function(){
+  $('.tab-toggle__btn').click(function(e) {
+    e.preventDefault();
+    $('.tab-toggle__btn.active').removeClass('active');
+
+    $(this).addClass('active');
+    let tab = $(this).attr('href');
+
+    $('.tab-toggle__content-list').not(tab).removeClass('active');
+    $(tab).addClass('active');
   });
 });
