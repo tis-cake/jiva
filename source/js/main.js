@@ -139,22 +139,22 @@ $('.search__input').on('keyup', function (evt) {
 // сравнить центр (включая localStorage)
 $(document).ready(function () {
 
-  let itemsArray;
+  let localItemsArray;
 
   // если в хранилище есть ключ items - конвертируем содержимое хранилища
-  //   в массив itemsArray, иначе - оставляем массив пустым
-  if (localStorage.getItem('items')) {
-    itemsArray = JSON.parse(localStorage.getItem('items'));
+  //   в массив localItemsArray, иначе - оставляем массив пустым
+  if (localStorage.getItem('rehabID')) {
+    localItemsArray = JSON.parse(localStorage.getItem('rehabID'));
   } else {
-    itemsArray = [];
+    localItemsArray = [];
   }
 
-  // записываем в хранилище массив itemsArray в виде строки
-  localStorage.setItem('items', JSON.stringify(itemsArray));
+  // записываем в хранилище массив localItemsArray в виде строки
+  localStorage.setItem('rehabID', JSON.stringify(localItemsArray));
 
   // // конвертируем содержимое хранилища в новый массив для перебора
-  // const data = JSON.parse(localStorage.getItem('items'));
-  for (let itemsEl of itemsArray) {
+  // const data = JSON.parse(localStorage.getItem('rehabID'));
+  for (let itemsEl of localItemsArray) {
     let currentSlide = $('.rehab-swiper__link[data-rehab-id="'+itemsEl+'"]');
     currentSlide.addClass('selected');
     currentSlide.closest('.rehab-swiper__item').find('.rehab-swiper__btn-compare').addClass('selected');
@@ -175,12 +175,12 @@ $(document).ready(function () {
     // добавляем/удаляем текущий элемент в массив,
     //   перезаписываем хранилище обновленным массивом
     if (currentSlide.hasClass('selected')) {
-      itemsArray.push(currentDataID);
-      localStorage.setItem('items', JSON.stringify(itemsArray));
+      localItemsArray.push(currentDataID);
+      localStorage.setItem('rehabID', JSON.stringify(localItemsArray));
     } else {
-      let indexEl = itemsArray.indexOf(currentDataID);
-      itemsArray.splice(indexEl, 1);
-      localStorage.setItem('items', JSON.stringify(itemsArray));
+      let indexEl = localItemsArray.indexOf(currentDataID);
+      localItemsArray.splice(indexEl, 1);
+      localStorage.setItem('rehabID', JSON.stringify(localItemsArray));
     }
 
     showComparePageLink();
@@ -191,14 +191,14 @@ $(document).ready(function () {
     let currentSlide = $(this).closest('.rehab-swiper__item').find('.rehab-swiper__link');
     let currentDataID = currentSlide.data('rehab-id');
 
-    $(this).removeClass('selected');
+    $(this).removeClass('selecteыd');
     currentSlide.removeClass('selected');
     $(this).blur();
 
     // удаляем из хранилища
-    let indexEl = itemsArray.indexOf(currentDataID);
-    itemsArray.splice(indexEl, 1);
-    localStorage.setItem('items', JSON.stringify(itemsArray));
+    let indexEl = localItemsArray.indexOf(currentDataID);
+    localItemsArray.splice(indexEl, 1);
+    localStorage.setItem('rehabID', JSON.stringify(localItemsArray));
 
     console.log('Центр удалён');
   });
@@ -206,18 +206,11 @@ $(document).ready(function () {
   // показываем ссылку на страницу стравнения
   function showComparePageLink() {
     // вне зависимости от того, есть ли на странице слайдер с центрами или нет
-    if (itemsArray.length > 0) {
+    if (localItemsArray.length > 0) {
       $('.rehab-compare-link').addClass('active');
     } else {
       $('.rehab-compare-link').removeClass('active');
     }
-
-    // только если на странице есть слайдер с центрами
-    // if ($('.rehab-swiper__link').hasClass('selected')) {
-    //   $('.rehab-compare-link').addClass('active');
-    // } else {
-    //   $('.rehab-compare-link').removeClass('active');
-    // }
   }
 });
 
