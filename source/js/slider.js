@@ -85,6 +85,7 @@ $(document).ready(function () {
     slidesPerView: '1',
     spaceBetween: 25,
     touchRatio: 1,
+    watchSlidesVisibility: true,
 
     navigation: {
       nextEl: '.reviews-swiper__button-next',
@@ -147,6 +148,7 @@ $(document).ready(function () {
     slidesPerView: '2',
     spaceBetween: 25,
     touchRatio: 1,
+    watchSlidesVisibility: true,
 
     navigation: {
       nextEl: '.swiper-button-next',

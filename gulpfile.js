@@ -34,7 +34,7 @@ gulp.task('js', function () {
     .pipe(uglify({
       toplevel: true
     }))
-    .pipe(gulp.dest('./build/js'))
+    // .pipe(gulp.dest('./build/js'))
     .pipe(server.stream());
 });
 
