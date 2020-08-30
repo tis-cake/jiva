@@ -5822,13 +5822,15 @@ html {
   transform: translateY(-50%);
 }
 @media (max-width: 48em) {
-  .search-form__form {
-    flex-direction: column;
-    height: auto;
-    margin-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    background-color: transparent;
+  .search-form {
+    width: 80%;
+    height: 5rem;
+    margin-right: 0;
+    padding-left: 2.1rem;
+    padding-right: 2.1rem;
+  }
+  .search-form__btn-submit {
+    right: -7rem;
   }
 }
 .tab-toggle {
@@ -5912,6 +5914,72 @@ html {
   top: 50%;
   transform: translateY(-50%);
   right: 0;
+}
+@media (max-width: 48em) {
+  .tab-toggle__title-wrap {
+    align-items: flex-start;
+    margin-bottom: 2.5rem;
+  }
+  .tab-toggle__title {
+    margin-bottom: 0;
+    font-size: 2.5rem;
+  }
+  .tab-toggle__desc {
+    display: inline-block;
+    font-size: 1.3rem;
+  }
+  .tab-toggle__list {
+    overflow: initial;
+    margin-top: 3.9rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .tab-toggle__item:first-child .tab-toggle__btn {
+    padding-left: 0;
+  }
+  .tab-toggle__item:last-child .tab-toggle__btn {
+    padding-right: 0;
+  }
+  .tab-toggle__btn {
+    padding-top: 1.6rem;
+    padding-bottom: 1.6rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .tab-toggle__content-link {
+    width: auto;
+    padding-top: 3.2rem;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+    padding-bottom: 10.2rem;
+  }
+  .tab-toggle__content-title {
+    margin-bottom: 1.2rem;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+  }
+  .tab-toggle__content-desc {
+    font-size: 1.3rem;
+    line-height: 1.9rem;
+  }
+  .tab-toggle__path-wrap {
+    display: block;
+    left: 1.6rem;
+    bottom: 4.7rem;
+  }
+  .tab-toggle__path {
+    display: inline;
+    margin-right: 0;
+    font-size: 1.3rem;
+    line-height: 1.9rem;
+  }
+  .tab-toggle__btn-submit {
+    top: auto;
+    left: 50%;
+    right: auto;
+    bottom: -2.7rem;
+    transform: translateX(-50%);
+  }
 }
 /*swiper*/
 .swiper-container-big-container {
@@ -6337,6 +6405,10 @@ html {
   }
   .rehab-swiper__btn-region {
     padding-top: 0.5rem;
+  }
+  .rehab-swiper__list {
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    grid-gap: 0.8rem;
   }
   .rehab-swiper__item {
     width: 16.5rem;
