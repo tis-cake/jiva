@@ -1,7 +1,124 @@
-$('.select-lang input[name=LANG]').change(function () {
-  console.log('Язык изменён');
+// сравнить центр (включая localStorage)
+// $(document).ready(function () {
+
+  let localItemsArray;
+
+  // если в хранилище есть ключ items - конвертируем содержимое хранилища
+  //   в массив localItemsArray, иначе - оставляем массив пустым
+  if (localStorage.getItem('rehabID')) {
+    localItemsArray = JSON.parse(localStorage.getItem('rehabID'));
+  } else {
+    localItemsArray = [];
+  }
+
+  // записываем в хранилище массив localItemsArray в виде строки
+  localStorage.setItem('rehabID', JSON.stringify(localItemsArray));
+
+  // // конвертируем содержимое хранилища в новый массив для перебора
+  // const data = JSON.parse(localStorage.getItem('rehabID'));
+  for (let itemsEl of localItemsArray) {
+    let currentSlide = $('.rehab-swiper__link[data-rehab-id="'+itemsEl+'"]');
+    currentSlide.addClass('selected');
+    currentSlide.closest('.rehab-swiper__item').find('.rehab-swiper__btn-compare').addClass('selected');
+  }
+
+  showComparePageLink();
+
+  // сравнить центр (матчим .btn-compare-toggle-js для динамически добавляемых центров)
+  $('.rehab-swiper__swiper-container').click(function (evt) {
+
+    // находим кнопку
+    let targetButtonToggle = $(evt.target.closest('.btn-compare-toggle-js'));
+
+    if (targetButtonToggle.is('.btn-compare-toggle-js')) {
+
+      let currentSlide = targetButtonToggle.closest('.rehab-swiper__item').find('.rehab-swiper__link');
+      let currentDataID = currentSlide.data('rehab-id');
+
+      targetButtonToggle.toggleClass('selected');
+      currentSlide.toggleClass('selected');
+      targetButtonToggle.blur();
+
+      // добавляем/удаляем текущий элемент в массив,
+      //   перезаписываем хранилище обновленным массивом
+      if (currentSlide.hasClass('selected')) {
+        localItemsArray.push(currentDataID);
+        localStorage.setItem('rehabID', JSON.stringify(localItemsArray));
+      } else {
+        let indexEl = localItemsArray.indexOf(currentDataID);
+        localItemsArray.splice(indexEl, 1);
+        localStorage.setItem('rehabID', JSON.stringify(localItemsArray));
+      }
+
+      showComparePageLink();
+    }
+  });
+
+  // сравнить центр
+  // $('.btn-compare-toggle-js').on('click', function() {
+
+  //   let currentSlide = $(this).closest('.rehab-swiper__item').find('.rehab-swiper__link');
+  //   let currentDataID = currentSlide.data('rehab-id');
+
+  //   $(this).toggleClass('selected');
+  //   currentSlide.toggleClass('selected');
+  //   $(this).blur();
+
+  //   // добавляем/удаляем текущий элемент в массив,
+  //   //   перезаписываем хранилище обновленным массивом
+  //   if (currentSlide.hasClass('selected')) {
+  //     localItemsArray.push(currentDataID);
+  //     localStorage.setItem('rehabID', JSON.stringify(localItemsArray));
+  //   } else {
+  //     let indexEl = localItemsArray.indexOf(currentDataID);
+  //     localItemsArray.splice(indexEl, 1);
+  //     localStorage.setItem('rehabID', JSON.stringify(localItemsArray));
+  //   }
+
+  //   showComparePageLink();
+  // })
+
+  // удаляем центр (на странице сравнения)
+  $('.btn-compare-remove-js').on('click', function() {
+    let currentSlide = $(this).closest('.rehab-swiper__item').find('.rehab-swiper__link');
+    let currentDataID = currentSlide.data('rehab-id');
+
+    $(this).removeClass('selected');
+    currentSlide.removeClass('selected');
+    $(this).blur();
+
+    // удаляем из хранилища
+    let indexEl = localItemsArray.indexOf(currentDataID);
+    localItemsArray.splice(indexEl, 1);
+    localStorage.setItem('rehabID', JSON.stringify(localItemsArray));
+
+    console.log('Центр удалён');
+  });
+
+  // показываем ссылку на страницу стравнения
+  function showComparePageLink(e) {
+    // вне зависимости от того, есть ли на странице слайдер с центрами или нет
+    if (localItemsArray.length > 0) {
+      $('.rehab-compare-link').addClass('active');
+    } else {
+      $('.rehab-compare-link').removeClass('active');
+    }
+  }
+
+
+  // const dataRehab = JSON.parse(localStorage.getItem('rehabID'));
+  // console.log(dataRehab);
+
+
+  // console.log(typeof localItemsArray);
+
+// });
+
+
+// $('.select-lang input[name=LANG]').change(function () {
+  // console.log('Язык изменён');
   // location.reload();
-});
+// });
 
 // выбор языка
 $(document).ready(function () {
@@ -136,84 +253,6 @@ $('.search__input').on('keyup', function (evt) {
   });
 });
 
-// сравнить центр (включая localStorage)
-$(document).ready(function () {
-
-  let localItemsArray;
-
-  // если в хранилище есть ключ items - конвертируем содержимое хранилища
-  //   в массив localItemsArray, иначе - оставляем массив пустым
-  if (localStorage.getItem('rehabID')) {
-    localItemsArray = JSON.parse(localStorage.getItem('rehabID'));
-  } else {
-    localItemsArray = [];
-  }
-
-  // записываем в хранилище массив localItemsArray в виде строки
-  localStorage.setItem('rehabID', JSON.stringify(localItemsArray));
-
-  // // конвертируем содержимое хранилища в новый массив для перебора
-  // const data = JSON.parse(localStorage.getItem('rehabID'));
-  for (let itemsEl of localItemsArray) {
-    let currentSlide = $('.rehab-swiper__link[data-rehab-id="'+itemsEl+'"]');
-    currentSlide.addClass('selected');
-    currentSlide.closest('.rehab-swiper__item').find('.rehab-swiper__btn-compare').addClass('selected');
-  }
-
-  showComparePageLink();
-
-  // сравнить центр
-  $('.btn-compare-toggle-js').on('click', function() {
-
-    let currentSlide = $(this).closest('.rehab-swiper__item').find('.rehab-swiper__link');
-    let currentDataID = currentSlide.data('rehab-id');
-
-    $(this).toggleClass('selected');
-    currentSlide.toggleClass('selected');
-    $(this).blur();
-
-    // добавляем/удаляем текущий элемент в массив,
-    //   перезаписываем хранилище обновленным массивом
-    if (currentSlide.hasClass('selected')) {
-      localItemsArray.push(currentDataID);
-      localStorage.setItem('rehabID', JSON.stringify(localItemsArray));
-    } else {
-      let indexEl = localItemsArray.indexOf(currentDataID);
-      localItemsArray.splice(indexEl, 1);
-      localStorage.setItem('rehabID', JSON.stringify(localItemsArray));
-    }
-
-    showComparePageLink();
-  })
-
-  // удаляем центр (на странице сравнения)
-  $('.btn-compare-remove-js').on('click', function() {
-    let currentSlide = $(this).closest('.rehab-swiper__item').find('.rehab-swiper__link');
-    let currentDataID = currentSlide.data('rehab-id');
-
-    $(this).removeClass('selecteыd');
-    currentSlide.removeClass('selected');
-    $(this).blur();
-
-    // удаляем из хранилища
-    let indexEl = localItemsArray.indexOf(currentDataID);
-    localItemsArray.splice(indexEl, 1);
-    localStorage.setItem('rehabID', JSON.stringify(localItemsArray));
-
-    console.log('Центр удалён');
-  });
-
-  // показываем ссылку на страницу стравнения
-  function showComparePageLink() {
-    // вне зависимости от того, есть ли на странице слайдер с центрами или нет
-    if (localItemsArray.length > 0) {
-      $('.rehab-compare-link').addClass('active');
-    } else {
-      $('.rehab-compare-link').removeClass('active');
-    }
-  }
-});
-
 // фильтр центров над картой
 $(document).ready(function () {
   $('.filter__handler').on('click', function() {
@@ -256,7 +295,6 @@ $(document).ready(function () {
     });
   });
 });
-
 
 // табы с разделами базы знаний
 $(document).ready(function () {
