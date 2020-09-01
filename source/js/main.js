@@ -16,12 +16,8 @@
 
   // // конвертируем содержимое хранилища в новый массив для перебора
   // const data = JSON.parse(localStorage.getItem('rehabID'));
-  for (let itemsEl of localItemsArray) {
-    let currentSlide = $('.rehab-swiper__link[data-rehab-id="'+itemsEl+'"]');
-    currentSlide.addClass('selected');
-    currentSlide.closest('.rehab-swiper__item').find('.rehab-swiper__btn-compare').addClass('selected');
-  }
 
+  markSelectedRehabs();
   showComparePageLink();
 
   // сравнить центр (матчим .btn-compare-toggle-js для динамически добавляемых центров)
@@ -54,30 +50,6 @@
     }
   });
 
-  // сравнить центр
-  // $('.btn-compare-toggle-js').on('click', function() {
-
-  //   let currentSlide = $(this).closest('.rehab-swiper__item').find('.rehab-swiper__link');
-  //   let currentDataID = currentSlide.data('rehab-id');
-
-  //   $(this).toggleClass('selected');
-  //   currentSlide.toggleClass('selected');
-  //   $(this).blur();
-
-  //   // добавляем/удаляем текущий элемент в массив,
-  //   //   перезаписываем хранилище обновленным массивом
-  //   if (currentSlide.hasClass('selected')) {
-  //     localItemsArray.push(currentDataID);
-  //     localStorage.setItem('rehabID', JSON.stringify(localItemsArray));
-  //   } else {
-  //     let indexEl = localItemsArray.indexOf(currentDataID);
-  //     localItemsArray.splice(indexEl, 1);
-  //     localStorage.setItem('rehabID', JSON.stringify(localItemsArray));
-  //   }
-
-  //   showComparePageLink();
-  // })
-
   // удаляем центр (на странице сравнения)
   $('.btn-compare-remove-js').on('click', function() {
     let currentSlide = $(this).closest('.rehab-swiper__item').find('.rehab-swiper__link');
@@ -95,6 +67,15 @@
     console.log('Центр удалён');
   });
 
+  // отмечаем выбранные центры при загрузке DOM
+  function markSelectedRehabs() {
+    for (let itemsEl of localItemsArray) {
+      let currentSlide = $('.rehab-swiper__link[data-rehab-id="'+itemsEl+'"]');
+      currentSlide.addClass('selected');
+      currentSlide.closest('.rehab-swiper__item').find('.rehab-swiper__btn-compare').addClass('selected');
+    }
+  }
+
   // показываем ссылку на страницу стравнения
   function showComparePageLink(e) {
     // вне зависимости от того, есть ли на странице слайдер с центрами или нет
@@ -105,11 +86,8 @@
     }
   }
 
-
   // const dataRehab = JSON.parse(localStorage.getItem('rehabID'));
   // console.log(dataRehab);
-
-
   // console.log(typeof localItemsArray);
 
 // });
