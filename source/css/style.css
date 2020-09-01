@@ -2305,11 +2305,12 @@ html .desktop-flex {
   margin-bottom: 8rem;
 }
 .services__list {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 30rem);
+  grid-gap: 5rem;
   justify-content: space-between;
 }
 .services__item {
-  width: 30rem;
   text-align: center;
 }
 .services__link {
@@ -2346,6 +2347,7 @@ html .desktop-flex {
   margin-bottom: 4.9rem;
   border-radius: 9rem;
   box-shadow: 15px 45px 80px #ADB9D9;
+  overflow: hidden;
   transition: var(--transition-main);
 }
 .sesrvices__img {
@@ -2374,13 +2376,10 @@ html .desktop-flex {
     margin-bottom: 2.3rem;
   }
   .services__list {
-    flex-wrap: wrap;
-  }
-  .services__item {
-    width: 15.7rem;
-  }
-  .services__link {
-    margin-bottom: 5.3rem;
+    grid-template-columns: repeat(auto-fit, minmax(15.7rem, 1fr));
+    -moz-column-gap: 1.5rem;
+         column-gap: 1.5rem;
+    row-gap: 5.3rem;
   }
   .services__item-title {
     min-height: 3.6rem;
@@ -6277,8 +6276,10 @@ html {
   box-shadow: 0px 30px 50px #B7C3DF;
 }
 .rehab-swiper__text-wrap {
+  box-sizing: border-box;
   position: relative;
   z-index: 1;
+  min-height: 14.5rem;
   padding-top: 5rem;
   padding-left: 3.2rem;
   padding-right: 3.2rem;
@@ -6386,6 +6387,7 @@ html {
   padding-bottom: 0;
 }
 .rehab-swiper-list .rehab-swiper__text-wrap {
+  min-height: 0;
   padding-top: 1.8rem;
 }
 .rehab-swiper-list .rehab-swiper__text-wrap::before,
@@ -6444,6 +6446,7 @@ html {
     box-shadow: 0px 30px 50px #B7C3DF;
   }
   .rehab-swiper__text-wrap {
+    min-height: 8.2rem;
     padding-top: 2.3rem;
     padding-left: 1.3rem;
     padding-right: 1.3rem;

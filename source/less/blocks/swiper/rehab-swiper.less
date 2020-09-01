@@ -71,8 +71,10 @@
 .rehab-swiper__link {}
 
 .rehab-swiper__text-wrap {
+  box-sizing: border-box;
   position: relative;
   z-index: 1;
+  min-height: 14.5rem;
   padding-top: 5rem;
   padding-left: 3.2rem;
   padding-right: 3.2rem;
@@ -244,6 +246,7 @@
   padding-top: 0;
   padding-bottom: 0;
   .rehab-swiper__text-wrap {
+    min-height: 0;
     padding-top: 1.8rem;
     &::before,
     &::after {
@@ -341,6 +344,7 @@
   .rehab-swiper__link {}
 
   .rehab-swiper__text-wrap {
+    min-height: 8.2rem;
     padding-top: 2.3rem;
     padding-left: 1.3rem;
     padding-right: 1.3rem;

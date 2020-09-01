@@ -17,12 +17,15 @@
 .services__link-page {}
 
 .services__list {
-  display: flex;
+  // display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 30rem);
+  grid-gap: 5rem;
   justify-content: space-between;
 }
 
 .services__item {
-  width: 30rem;
+  // width: 30rem;
   text-align: center;
 }
 
@@ -68,6 +71,7 @@
 
   border-radius: 9rem;
   box-shadow: 15px 45px 80px #ADB9D9;
+  overflow: hidden;
 
   transition: @s;
 }
@@ -106,16 +110,20 @@
   .services__link-page {}
 
   .services__list {
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
+
+    grid-template-columns: repeat(auto-fit, minmax(15.7rem, 1fr));
+    column-gap: 1.5rem;
+    row-gap: 5.3rem;
   }
 
   .services__item {
-    width: 15.7rem;
+    // width: 15.7rem;
     // width: 47%;
   }
 
   .services__link {
-    margin-bottom: 5.3rem;
+    // margin-bottom: 5.3rem;
   }
 
   .services__item-title {
