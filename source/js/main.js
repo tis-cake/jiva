@@ -396,8 +396,6 @@ $(document).ready(function() {
 });
 
 // модальные окна
-// $(document).ready(function () {
-
 // оставить заявку (модалка 1)
 $('.modal-callback').click(function(evt) {
   evt.preventDefault();
@@ -471,7 +469,6 @@ function showMessageAfterRequest(current) {
     $('.modal').removeClass('reply');
   }, 3000);
 }
-// });
 
 // доступный (tab/пробел) рейтинг в модальном окне
 $(document).ready(function() {

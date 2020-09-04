@@ -104,45 +104,53 @@ $(document).ready(function () {
 });
 
 // слайдер рехабов в 2 строки (с числовой пагинацией, НЕ учитывая переполнение)
+// $(document).ready(function () {
+
+//   let rehabSwiperTwo = new Swiper('#rehab-swiper-two-rows', {
+//     slidesPerView: '2',
+//     slidesPerColumn: '4',
+//     slidesPerColumnFill: 'row',
+
+//     spaceBetween: 25,
+//     touchRatio: 1,
+
+//     navigation: {
+//       nextEl: '.rehab-swiper__button-next',
+//       prevEl: '.rehab-swiper__button-prev',
+//     },
+//     pagination: {
+//       el: '.rehab-swiper__swiper-pagination',
+//       clickable: true,
+//       renderBullet: function (index, className) {
+//         return '<span class="' + className + '">' + (index + 1) + '</span>';
+//       }
+//     },
+
+//     breakpoints: {
+//       756: {
+//         slidesPerView: '4',
+//         slidesPerColumn: '2',
+//         spaceBetween: 30,
+//       },
+//       550: {
+//         slidesPerView: '3',
+//         slidesPerColumn: '2',
+//         spaceBetween: 30,
+//       }
+//     }
+//   });
+// });
+
+// слайдеры авторов/редаторов/экспертов (с числовой пагинацией,
+//  ПРИ ПЕРЕПОЛНЕНИИ пагинация становится не числовой (...) и динамической)
 $(document).ready(function () {
 
-  let rehabSwiperTwo = new Swiper('#rehab-swiper-two-rows', {
-    slidesPerView: '2',
-    slidesPerColumn: '4',
-    slidesPerColumnFill: 'row',
+  // локальный лимит только для этого слайдера
+  limitForOverflow = 26;
 
-    spaceBetween: 25,
-    touchRatio: 1,
-
-    navigation: {
-      nextEl: '.rehab-swiper__button-next',
-      prevEl: '.rehab-swiper__button-prev',
-    },
-    pagination: {
-      el: '.rehab-swiper__swiper-pagination',
-      clickable: true,
-      renderBullet: function (index, className) {
-        return '<span class="' + className + '">' + (index + 1) + '</span>';
-      }
-    },
-
-    breakpoints: {
-      756: {
-        slidesPerView: '4',
-        slidesPerColumn: '2',
-        spaceBetween: 30,
-      },
-      550: {
-        slidesPerView: '3',
-        slidesPerColumn: '2',
-        spaceBetween: 30,
-      }
-    }
-  });
-});
-
-// слайдеры авторов/редаторов/экспертов (с числовой пагинацией, НЕ учитывая переполнение)
-$(document).ready(function () {
+  if (width <= 750) {
+    limitForOverflow = 10;
+  }
 
   let teamSwiperParam = {
     slidesPerView: '2',
@@ -185,6 +193,15 @@ $(document).ready(function () {
   for (let i = 0; i < teamSwiperArr.length; i++) {
     let teamSwiperID = teamSwiperArr[i].id;
     let teamSwiperCurrent = `#${teamSwiperID}`;
+
+    // если элементов слишком много - убираем числовую пагинацию, оставляем "...", делаем пагинацию динамической
+    let currentSlidesLength = $(teamSwiperCurrent+' .swiper-slide:not(.swiper-slide-duplicate)').length;
+    if (currentSlidesLength > limitForOverflow) {
+      teamSwiperParam.pagination.dynamicBullets = true;
+      $(teamSwiperCurrent).find('.swiper-pagination').removeClass('swiper-pagination-numeric');
+    } else {
+      teamSwiperParam.pagination.dynamicBullets = false;
+    }
 
     teamSwiper = new Swiper (teamSwiperCurrent, teamSwiperParam);
   }
