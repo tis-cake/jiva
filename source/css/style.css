@@ -2188,7 +2188,7 @@ html .desktop-flex {
   margin-right: auto;
   font-family: var(--font-decor-first);
   font-style: italic;
-  font-size: 3rem;
+  font-size: 2.8rem;
   line-height: 3.5rem;
 }
 .stages__title-count {
@@ -4449,7 +4449,6 @@ html {
 .article-rating {
   display: flex;
   align-items: center;
-  margin: 0;
   padding: 0;
   border: 0;
 }
@@ -6283,6 +6282,9 @@ html {
   padding-top: 5rem;
   padding-left: 3.2rem;
   padding-right: 3.2rem;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
 }
 .rehab-swiper__text-wrap::before,
 .rehab-swiper__text-wrap::after {
