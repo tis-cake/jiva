@@ -1,114 +1,145 @@
+$('.callme').submit(function() {
+  var data = $(this).serialize();
+  var currentForm = $(this);
+
+  $.ajax({
+    type: 'post',
+    url: './php/callme.php',
+    data: data,
+    dataType: 'json',
+    success: function(e) {
+      console.log(e);
+      console.log(true);
+
+      resetFormForCall();
+      showMessageAfterRequest(currentForm);
+    },
+    error: function(e) {
+      console.log(e);
+      console.log(false);
+    }
+  });
+  return false;
+});
+
+function resetFormForCall() {
+  $('.callme').find('input').each(function() {
+    $('input').val('');
+  });
+  $('.callme').find('textarea').val('');
+};
+
 // сравнить центр (включая localStorage)
 // $(document).ready(function () {
 
-  let localItemsArray;
+let localItemsArray;
 
-  // если в хранилище есть ключ items - конвертируем содержимое хранилища
-  //   в массив localItemsArray, иначе - оставляем массив пустым
-  if (localStorage.getItem('rehabID')) {
-    localItemsArray = JSON.parse(localStorage.getItem('rehabID'));
-  } else {
-    localItemsArray = [];
-  }
+// если в хранилище есть ключ items - конвертируем содержимое хранилища
+//   в массив localItemsArray, иначе - оставляем массив пустым
+if (localStorage.getItem('rehabID')) {
+  localItemsArray = JSON.parse(localStorage.getItem('rehabID'));
+} else {
+  localItemsArray = [];
+}
 
-  // записываем в хранилище массив localItemsArray в виде строки
-  localStorage.setItem('rehabID', JSON.stringify(localItemsArray));
+// записываем в хранилище массив localItemsArray в виде строки
+localStorage.setItem('rehabID', JSON.stringify(localItemsArray));
 
-  // // конвертируем содержимое хранилища в новый массив для перебора
-  // const data = JSON.parse(localStorage.getItem('rehabID'));
+// // конвертируем содержимое хранилища в новый массив для перебора
+// const data = JSON.parse(localStorage.getItem('rehabID'));
 
-  markSelectedRehabs();
-  showComparePageLink();
+markSelectedRehabs();
+showComparePageLink();
 
-  // сравнить центр (матчим .btn-compare-toggle-js для динамически добавляемых центров)
-  $('.rehab-swiper__swiper-container').click(function (evt) {
+// сравнить центр (матчим .btn-compare-toggle-js для динамически добавляемых центров)
+$('.rehab-swiper__swiper-container').click(function(evt) {
 
-    // находим кнопку
-    let targetButtonToggle = $(evt.target.closest('.btn-compare-toggle-js'));
+  // находим кнопку
+  let targetButtonToggle = $(evt.target.closest('.btn-compare-toggle-js'));
 
-    if (targetButtonToggle.is('.btn-compare-toggle-js')) {
+  if (targetButtonToggle.is('.btn-compare-toggle-js')) {
 
-      let currentSlide = targetButtonToggle.closest('.rehab-swiper__item').find('.rehab-swiper__link');
-      let currentDataID = currentSlide.data('rehab-id');
-
-      targetButtonToggle.toggleClass('selected');
-      currentSlide.toggleClass('selected');
-      targetButtonToggle.blur();
-
-      // добавляем/удаляем текущий элемент в массив,
-      //   перезаписываем хранилище обновленным массивом
-      if (currentSlide.hasClass('selected')) {
-        localItemsArray.push(currentDataID);
-        localStorage.setItem('rehabID', JSON.stringify(localItemsArray));
-      } else {
-        let indexEl = localItemsArray.indexOf(currentDataID);
-        localItemsArray.splice(indexEl, 1);
-        localStorage.setItem('rehabID', JSON.stringify(localItemsArray));
-      }
-
-      showComparePageLink();
-    }
-  });
-
-  // удаляем центр (на странице сравнения)
-  $('.btn-compare-remove-js').on('click', function() {
-    let currentSlide = $(this).closest('.rehab-swiper__item').find('.rehab-swiper__link');
+    let currentSlide = targetButtonToggle.closest('.rehab-swiper__item').find('.rehab-swiper__link');
     let currentDataID = currentSlide.data('rehab-id');
 
-    $(this).removeClass('selected');
-    currentSlide.removeClass('selected');
-    $(this).blur();
+    targetButtonToggle.toggleClass('selected');
+    currentSlide.toggleClass('selected');
+    targetButtonToggle.blur();
 
-    // удаляем из хранилища
-    let indexEl = localItemsArray.indexOf(currentDataID);
-    localItemsArray.splice(indexEl, 1);
-    localStorage.setItem('rehabID', JSON.stringify(localItemsArray));
-
-    console.log('Центр удалён');
-  });
-
-  // отмечаем выбранные центры при загрузке DOM
-  function markSelectedRehabs() {
-    for (let itemsEl of localItemsArray) {
-      let currentSlide = $('.rehab-swiper__link[data-rehab-id="'+itemsEl+'"]');
-      currentSlide.addClass('selected');
-      currentSlide.closest('.rehab-swiper__item').find('.rehab-swiper__btn-compare').addClass('selected');
-    }
-  }
-
-  // показываем ссылку на страницу стравнения
-  function showComparePageLink(e) {
-    // вне зависимости от того, есть ли на странице слайдер с центрами или нет
-    if (localItemsArray.length > 0) {
-      $('.rehab-compare-link').addClass('active');
+    // добавляем/удаляем текущий элемент в массив,
+    //   перезаписываем хранилище обновленным массивом
+    if (currentSlide.hasClass('selected')) {
+      localItemsArray.push(currentDataID);
+      localStorage.setItem('rehabID', JSON.stringify(localItemsArray));
     } else {
-      $('.rehab-compare-link').removeClass('active');
+      let indexEl = localItemsArray.indexOf(currentDataID);
+      localItemsArray.splice(indexEl, 1);
+      localStorage.setItem('rehabID', JSON.stringify(localItemsArray));
     }
-  }
 
-  // const dataRehab = JSON.parse(localStorage.getItem('rehabID'));
-  // console.log(dataRehab);
-  // console.log(typeof localItemsArray);
+    showComparePageLink();
+  }
+});
+
+// удаляем центр (на странице сравнения)
+$('.btn-compare-remove-js').on('click', function() {
+  let currentSlide = $(this).closest('.rehab-swiper__item').find('.rehab-swiper__link');
+  let currentDataID = currentSlide.data('rehab-id');
+
+  $(this).removeClass('selected');
+  currentSlide.removeClass('selected');
+  $(this).blur();
+
+  // удаляем из хранилища
+  let indexEl = localItemsArray.indexOf(currentDataID);
+  localItemsArray.splice(indexEl, 1);
+  localStorage.setItem('rehabID', JSON.stringify(localItemsArray));
+
+  console.log('Центр удалён');
+});
+
+// отмечаем выбранные центры при загрузке DOM
+function markSelectedRehabs() {
+  for (let itemsEl of localItemsArray) {
+    let currentSlide = $('.rehab-swiper__link[data-rehab-id="' + itemsEl + '"]');
+    currentSlide.addClass('selected');
+    currentSlide.closest('.rehab-swiper__item').find('.rehab-swiper__btn-compare').addClass('selected');
+  }
+}
+
+// показываем ссылку на страницу стравнения
+function showComparePageLink(e) {
+  // вне зависимости от того, есть ли на странице слайдер с центрами или нет
+  if (localItemsArray.length > 0) {
+    $('.rehab-compare-link').addClass('active');
+  } else {
+    $('.rehab-compare-link').removeClass('active');
+  }
+}
+
+// const dataRehab = JSON.parse(localStorage.getItem('rehabID'));
+// console.log(dataRehab);
+// console.log(typeof localItemsArray);
 
 // });
 
 
 // $('.select-lang input[name=LANG]').change(function () {
-  // console.log('Язык изменён');
-  // location.reload();
+// console.log('Язык изменён');
+// location.reload();
 // });
 
 // выбор языка
-$(document).ready(function () {
+$(document).ready(function() {
 
   let selectLang = $('.select-lang__select'),
-      // formLang = $('.select-lang'), // для мобильного
-      optionLang = $('.select-lang__option'),
-      inputLang = $('.select-lang__input'),
-      listLang = $('.select-lang__list');
+    // formLang = $('.select-lang'), // для мобильного
+    optionLang = $('.select-lang__option'),
+    inputLang = $('.select-lang__input'),
+    listLang = $('.select-lang__list');
 
   // выпадающее меню
-  selectLang.on('click', function (evt) {
+  selectLang.on('click', function(evt) {
     evt.preventDefault();
 
     if (selectLang.hasClass('active')) {
@@ -122,7 +153,7 @@ $(document).ready(function () {
     }
 
     // клик вне элемента
-    $(document).on('mouseup touchstart', function (evt) {
+    $(document).on('mouseup touchstart', function(evt) {
       let currentEl = $(".select-lang__select.active");
       if (!currentEl.is(evt.target) && currentEl.has(evt.target).length === 0) {
         selectLang.removeClass('active');
@@ -132,7 +163,7 @@ $(document).ready(function () {
   });
 
   // выбор языка
-  optionLang.on('click', function (evt) {
+  optionLang.on('click', function(evt) {
     evt.preventDefault();
 
     let val = $(this).text();
@@ -154,33 +185,33 @@ $(document).ready(function () {
 // $('.custom-select').length != 0 ? $('.select-lang').addClass('custom') : $('.select-lang').removeClass('custom');
 
 // поиск
-$(document).ready(function () {
+$(document).ready(function() {
   $('.search-toggle').click(function() {
     $(this).toggleClass('active');
     $(this).blur();
     $('.main-nav__list').toggleClass('search-active');
     $('.search').toggleClass('active');
 
-    if($('.search').hasClass('active')) {
+    if ($('.search').hasClass('active')) {
       $('.search__input').focus();
     }
   });
 });
 
 // мобильное меню
-$(document).ready(function () {
-  $('.menu-toggle').click(function () {
-  $(this).toggleClass('active');
-  $('.header').toggleClass('active');
-  // $('.main-nav').toggleClass('active');
-  $('.select-lang').toggleClass('mobile-menu');
-  $('.aside-link').toggleClass('mobile-menu');
-   $("body").toggleClass('noscroll');
+$(document).ready(function() {
+  $('.menu-toggle').click(function() {
+    $(this).toggleClass('active');
+    $('.header').toggleClass('active');
+    // $('.main-nav').toggleClass('active');
+    $('.select-lang').toggleClass('mobile-menu');
+    $('.aside-link').toggleClass('mobile-menu');
+    $("body").toggleClass('noscroll');
   });
 });
 
 // мобильное подменю
-$(document).ready(function () {
+$(document).ready(function() {
   if (width <= 756) {
     $('.main-nav-sub').click(function(evt) {
       evt.preventDefault();
@@ -196,7 +227,7 @@ $(document).ready(function () {
 });
 
 // доступное навигационное меню (enter и пробел)
-$('.main-nav-sub').on('keydown', function (evt) {
+$('.main-nav-sub').on('keydown', function(evt) {
   if (evt.keyCode === 13 || evt.keyCode === 32) {
     evt.preventDefault();
     let currentSublist = $(this).closest('.main-nav__item');
@@ -205,7 +236,7 @@ $('.main-nav-sub').on('keydown', function (evt) {
     currentSublist.toggleClass('selected-on-tab');
 
     // клик мышкой вне выпадающего меню
-    $(document).on('mouseup', function (evt) {
+    $(document).on('mouseup', function(evt) {
       if (!currentSublist.is(evt.target) && currentSublist.has(evt.target).length === 0) {
         currentSublist.removeClass('selected-on-tab');
       }
@@ -214,17 +245,17 @@ $('.main-nav-sub').on('keydown', function (evt) {
 });
 
 // блок предложений для поиска
-$('.search__input').on('keyup', function (evt) {
+$('.search__input').on('keyup', function(evt) {
   let dataList = $('.search__datalist-wrap');
   dataList.addClass('active');
 
   // скрыть если ничего нет
-  if($(this).val().length === 0) {
+  if ($(this).val().length === 0) {
     dataList.removeClass('active');
   }
 
   // скрыть если клик вне блока
-  $(document).on('mouseup', function (evt) {
+  $(document).on('mouseup', function(evt) {
     if (!dataList.is(evt.target) && dataList.has(evt.target).length === 0) {
       dataList.removeClass('active');
     }
@@ -232,7 +263,7 @@ $('.search__input').on('keyup', function (evt) {
 });
 
 // фильтр центров над картой
-$(document).ready(function () {
+$(document).ready(function() {
   $('.filter__handler').on('click', function() {
 
     $data = $(this).data('id');
@@ -240,15 +271,15 @@ $(document).ready(function () {
     // закрываем все списки, кроме текущего
     $('.filter__handler').not($(this)).removeClass('active');
     $('.filter__options').not($(this).closest('.filter__options')).removeClass('active');
-    $('.filter__list').not($('.filter__list[data-id='+$data+']')).slideUp();
+    $('.filter__list').not($('.filter__list[data-id=' + $data + ']')).slideUp();
 
     // открываем текущий список
     $(this).toggleClass('active');
     $(this).closest('.filter__options').toggleClass('active');
-    $(this).find($('.filter__list[data-id='+$data+']').slideToggle());
+    $(this).find($('.filter__list[data-id=' + $data + ']').slideToggle());
 
     // закрываем все списки при клике вне элемента
-    $(document).on('mouseup touchstart', function (evt) {
+    $(document).on('mouseup touchstart', function(evt) {
       let currentEl = $(".filter__options.active");
       if (!currentEl.is(evt.target) && currentEl.has(evt.target).length === 0) {
         $('.filter__handler').removeClass('active');
@@ -258,7 +289,7 @@ $(document).ready(function () {
     });
 
     // ловим клик внутри списка и подставляем выбранное значение
-    $('.filter__item').click(function () {
+    $('.filter__item').click(function() {
       $value = $(this).text();
       $(this).addClass('active');
 
@@ -275,7 +306,7 @@ $(document).ready(function () {
 });
 
 // табы с разделами базы знаний
-$(document).ready(function () {
+$(document).ready(function() {
   $('.topics-switch__link:not(.modal-sections)').on('click', function(evt) {
 
     let tabID = $(this).data('topic');
@@ -283,7 +314,7 @@ $(document).ready(function () {
       evt.preventDefault();
     }
 
-    let tab = $('.topics-switch__sublist[data-topic='+tabID+']');
+    let tab = $('.topics-switch__sublist[data-topic=' + tabID + ']');
 
     $('.topics-switch__link').removeClass('active');
     $(this).addClass('active');
@@ -298,7 +329,7 @@ $(document).ready(function () {
 });
 
 // комментарии под статьёй
-$(document).ready(function () {
+$(document).ready(function() {
   $('.comments__reply-btn').on('click', function() {
     $(this).addClass('hidden');
     let currentBlock = $(this).closest('.comments__block');
@@ -360,90 +391,90 @@ $(document).ready(function() {
 // });
 
 // маска для поля ввода номера
-$(document).ready(function () {
+$(document).ready(function() {
   $(".phone-mask").mask("+7 ( 999 ) 999 99 - 99");
 });
 
 // модальные окна
-$(document).ready(function () {
+// $(document).ready(function () {
 
-  // оставить заявку (модалка 1)
-  $('.modal-callback').click(function (evt) {
-    evt.preventDefault();
-    openModal('.modal--callback', '.modal__input-phone');
-  });
+// оставить заявку (модалка 1)
+$('.modal-callback').click(function(evt) {
+  evt.preventDefault();
+  openModal('.modal--callback', '.modal__input-phone');
+});
 
-  // оставить отзыв (модалка 2)
-  $('.modal-feedback').click(function (evt) {
-    evt.preventDefault();
-    openModal('.modal--feedback', '.modal__input-name');
-  });
+// оставить отзыв (модалка 2)
+$('.modal-feedback').click(function(evt) {
+  evt.preventDefault();
+  openModal('.modal--feedback', '.modal__input-name');
+});
 
-  // выбрать регион (модалка 3)
-  // $('.modal-region-second').click(function (evt) {
-  //   evt.preventDefault();
-  //   openModal('.modal-region-second');
-  // });
+// выбрать регион (модалка 3)
+// $('.modal-region-second').click(function (evt) {
+//   evt.preventDefault();
+//   openModal('.modal-region-second');
+// });
 
-  // открыть модальное окно
-  function openModal(modalClass, focusClass) {
-    $('.overlay').fadeIn();
-    $('body').addClass('noscroll');
-    $(modalClass).addClass('active');    // класс модального окна
-    $(focusClass).focus();               // класс для фокуса
+// открыть модальное окно
+function openModal(modalClass, focusClass) {
+  $('.overlay').fadeIn();
+  $('body').addClass('noscroll');
+  $(modalClass).addClass('active'); // класс модального окна
+  $(focusClass).focus(); // класс для фокуса
+}
+
+// закрыть модальное окно
+function closeModal() {
+  if ($('.modal').hasClass('active')) {
+    $('.modal').removeClass('active');
+    $('.overlay').fadeOut();
+    $('body').removeClass('noscroll');
   }
+}
 
-  // закрыть модальное окно
-  function closeModal() {
-    if ($('.modal').hasClass('active')) {
-      $('.modal').removeClass('active');
-      $('.overlay').fadeOut();
-      $('body').removeClass('noscroll');
-    }
-  }
-
-  // клик/тач вне модального окна -> закрыть окно
-  function clickOutsideModal(evt) {
-    let modal = $('.modal');
-    if (!modal.is(evt.target) && modal.has(evt.target).length === 0) {
-      closeModal();
-    }
-  }
-
-  // нажат esc -> закрыть окно
-  window.addEventListener("keydown", function (evt) {
-    if (evt.keyCode === 27) {
-      closeModal();
-    }
-  });
-
-  // слушаем клик/тач вне модального окна
-  $(document).on('mouseup touchstart', clickOutsideModal);
-
-  // кнопка закрыть
-  $('.modal__close').click(function (evt) {
+// клик/тач вне модального окна -> закрыть окно
+function clickOutsideModal(evt) {
+  let modal = $('.modal');
+  if (!modal.is(evt.target) && modal.has(evt.target).length === 0) {
     closeModal();
-  });
+  }
+}
 
-  // !NB добавить а ajax-запрос
-  // сообщение об успешной отправке
-  // showMessageAfterRequest($(this));
-
-  function showMessageAfterRequest(current) {
-    // $('.modal:not(.modal--after)').addClass('hidden');
-    // $('.modal--after').addClass('active');
-    current.closest('.modal').addClass('reply');
-
-    setTimeout(function() {
-      closeModal();
-      // $('.modal').removeClass('hidden');
-      $('.modal').removeClass('reply');
-    }, 3000);
+// нажат esc -> закрыть окно
+window.addEventListener("keydown", function(evt) {
+  if (evt.keyCode === 27) {
+    closeModal();
   }
 });
 
+// слушаем клик/тач вне модального окна
+$(document).on('mouseup touchstart', clickOutsideModal);
+
+// кнопка закрыть
+$('.modal__close').click(function(evt) {
+  closeModal();
+});
+
+// !NB добавить а ajax-запрос
+// сообщение об успешной отправке
+// showMessageAfterRequest($(this));
+
+function showMessageAfterRequest(current) {
+  // $('.modal:not(.modal--after)').addClass('hidden');
+  // $('.modal--after').addClass('active');
+  current.closest('.modal').addClass('reply');
+
+  setTimeout(function() {
+    closeModal();
+    // $('.modal').removeClass('hidden');
+    $('.modal').removeClass('reply');
+  }, 3000);
+}
+// });
+
 // доступный (tab/пробел) рейтинг в модальном окне
-$(document).ready(function () {
+$(document).ready(function() {
   // let ratingInput = $('.rating-stars__input');
   // $( '.rating-stars__button').on('click', function() {
   //   // обновляем текущее значение input
@@ -453,7 +484,7 @@ $(document).ready(function () {
   //   let allPrevEl = $(this).parent().prevAll('.rating-stars__item');
   // });
 
-  $('.rating-stars__label').keydown(function (evt) {
+  $('.rating-stars__label').keydown(function(evt) {
     if (evt.keyCode === 32) {
       evt.preventDefault();
       $(this).prev('.rating-stars__input').prop('checked', true);
@@ -462,7 +493,7 @@ $(document).ready(function () {
 });
 
 /* переключение табов с результами поиска*/
-$(document).ready(function(){
+$(document).ready(function() {
   $('.tab-toggle__btn').click(function(e) {
     e.preventDefault();
     $('.tab-toggle__btn.active').removeClass('active');
