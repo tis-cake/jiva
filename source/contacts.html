@@ -324,118 +324,185 @@
     </a>
 
     <main class="main">
-      <section class="main-info main-info-five">
+      <section class="main-info main-info-six">
+        <div class="main-info__breadcrumbs breadcrumbs container">
+          <ul class="breadcrumbs__list" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+            <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+              <a itemprop="item" href="/" class="breadcrumbs__link">
+                <span itemprop="name">Home</span>
+              </a>
+              <meta itemprop="position" content="1">
+            </li>
+
+            <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+              <a itemprop="item" href="#" class="breadcrumbs__link">
+                <span itemprop="name">Publications</span>
+              </a>
+              <meta itemprop="position" content="2">
+            </li>
+
+            <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+              <a itemprop="item" href="#" class="breadcrumbs__link breadcrumbs-current">
+                <span itemprop="name">
+                  Drugs
+                </span>
+              </a>
+              <meta itemprop="position" content="3">
+            </li>
+          </ul>
+        </div>
+
         <div class="main-info__bg"></div>
 
-        <!-- <div class="main-info__logo logo logo-big">
-          <div class="logo__img-wrap">
-            <img class="logo__img" src="img/logo/logo.png" width="92" height="92" alt="Логотип портала «Ji+Va»">
-          </div>
-          <p class="logo__title logo__title--big">
-            <span class="logo__title--red">J</span>i <span class="logo__title-decor" aria-hidden="true">
-              <svg class="logo__icon icon-logo-star" width="28" height="28" role="img">
-                <use xlink:href="img/sprite.svg#icon-logo-star"></use>
-              </svg>
-            </span> Va
+        <div class="main-info__text-wrap">
+          <p class="main-info__subtitle main-info__subtitle--green">
+            Реабилитация в любой стране мира.
           </p>
 
-          <p class="logo__desc">
-            Международный портал <span class="DaVinci">ПоМоЩи</span> зависимым и созависимым
+          <p class="main-info__title">
+            Бесплатная помощь 24/7
           </p>
-        </div> -->
 
-        <div class="main-info__logo logo logo-more-middle">
-          <div class="logo__img-wrap">
-            <img class="logo__img" src="img/logo/middle-logo.svg" width="216" height="216" alt="Логотип портала «Ji+Va»">
-          </div>
-          <p class="logo__title">
-            <span class="logo__title--red">J</span>i <span class="logo__title-decor" aria-hidden="true">
-              <svg class="logo__icon icon-logo-star" width="21" height="20" role="img">
-                <use xlink:href="img/sprite.svg#icon-logo-star"></use>
-              </svg>
-            </span> Va
+          <p class="main-info__desc">
+            101000 Москва, Покровка, 21-23/25с1
           </p>
-          <p class="logo__desc">
-            Международный портал <span class="DaVinci">ПоМоЩи</span> зависимым и созависимым
+
+          <p class="main-info__desc main-info__desc--bold">
+            <a class="main-info__contact-link" href="tel:+78006003960">тел.: 8 (800) 600-39-60</a>
+            <a class="main-info__contact-link" href="mailto:cv@nasrf.ru">email: cv@nasrf.ru</a>
           </p>
         </div>
+
+        <button class="main-info__btn-modal btn-modal btn-modal--white modal-callback" type="button">
+          Заявка на консультацию
+          <span class="btn-modal__decor-line" aria-hidden="true"></span>
+        </button>
       </section>
 
-      <article class="article-part article-part-one container">
-        <div class="article-part__column-wrap">
-          <div class="article-part__aside">
+      <section class="map-aside container">
+        <div class="map-aside__wrap">
+          <div id="map" class="map-aside__map"></div>
+          <div class="map-aside__aside filter">
 
-            <div class="article-part__aside-content-wrap">
-              <div class="article-part__aside-img-wrap">
-                <img class="article-part__aside-img" src="img/article/article-part/article1.svg" alt="Реабилитация в любой стране мира. Самая большая база DRUG FREE центров.">
+            <p class="map-aside__title">
+              Контакты в вашем регионе:
+            </p>
+
+            <form class="map-aside__filter-form filter__form" action="#" method="post">
+              <div class="map-aside__filter-options filter__options">
+                <input class="filter__input visually-hidden" type="text" name="REGION" value="" data-id="" id="filter-region">
+                <label class="filter__handler-desc" for="filter-region">
+                  Регион<span class="filter__handler-desc-mobile">:</span>
+                </label>
+                <svg class="filter__handler-icon icon-triangle-bottom" width="16" height="16" role="img">
+                  <use xlink:href="img/sprite.svg#icon-triangle-bottom"></use>
+                </svg>
+                <a class="filter__handler" href="javascript:void(0);" data-id="51">Москва и область</a>
+                <ul class="map-aside__filter-list filter__list" data-id="51">
+                  <li class="filter__list-item">
+                    <a class="filter__item" href="javascript:void(0);" data-id="0">Москва и область</a>
+                  </li>
+                  <li class="filter__list-item">
+                    <a class="filter__item" href="javascript:void(0);" data-id="0">Калужская область</a>
+                  </li>
+                  <li class="filter__list-item">
+                    <a class="filter__item" href="javascript:void(0);" data-id="0">Курская область</a>
+                  </li>
+                </ul>
               </div>
+            </form>
 
-              <p class="article-part__aside-title">
-                Реабилитация в любой стране мира. Самая большая база <span class="article-part__aside-title-item blaster blaster--green">DRUG FREE</span> центров.
+            <div class="map-aside__contacts-wrap">
+              <p class="map-aside__title map-aside__contacts-title">
+                Штаб квартира
               </p>
-              <p class="article-part__aside-desc">
-                Поможем подобрать лучший вариант на бесплатной и анонимной консультации.
+
+              <p class="map-aside__desc" tabindex="0">
+                <svg class="map-aside__icon icon-region-3" width="26" height="34" role="img">
+                  <use xlink:href="img/sprite.svg#icon-region-3"></use>
+                </svg>
+                ул. Покровка, 21-23/25с1
+              </p>
+
+              <p class="map-aside__desc">
+                <svg class="map-aside__icon icon-tel-circle" width="26" height="34" role="img">
+                  <use xlink:href="img/sprite.svg#icon-tel-circle"></use>
+                </svg>
+                <a class="map-aside__link" href="tel:+78006003960">тел. 8 800 600 39 60</a>
               </p>
             </div>
 
-            <button class="article-part__aside-btn-modal btn-modal btn-modal--dark btn-modal--long modal-callback" type="button">
-              Мне нужна помощь!
-              <span class="btn-modal__decor-line" aria-hidden="true"></span>
-            </button>
-          </div>
-          <div class="article-part__content">
-            <h2 class="article-part__caption-title">
-              Об ассоциации JiVa.
-            </h2>
-            <span class="article-part__caption">
-              Лечение наркомании и алкоголизма по всему миру.
-            </span>
-            <p>
-              История наркомании насчитывает не одну тысячу лет, однако, за последние 150 лет из-за изобретения синтетических наркотиков, проблема зависимости обрела колоссальные масштабы.
-            </p>
-            <p>
-              Раньше наркотики были исключительно растительными: опиум – мак, гашиш- конопля, кокаин – кокаиновый куст. Из-за этого чаще всего их употребление было региональным, и было доступно не для всех. Хотя Москва в этом плане всегда отличалась от других городов.
-            </p>
-            <p>
-              Опиум стал популярен в Европе в 19-м веке как средство борьбы с алкоголизмом. Позже, для лечения опиумной зависимости был изобретен морфий, после чего героин. Разумеется, эти вещества не лечили зависимость, а только способствовали росту числа наркозависимых, о чем тогда не знали.
-            </p>
-            <p>
-              Выделение наркологии в отдельную науку произошло в начале 20-го века. В 20-е годы впервые были описаны тяга к алкоголю и опиуму. Следующим этапом развития этой области является период 1930-1970. За это время появилось описание действия различных психотропных наркотических веществ и поведения человека под ними. Толчком для рецептурного лечения наркозависимости стали многочисленные исследования мозга человека и принципов работы нейромедиаторов.
-            </p>
-            <p>
-              Кроме того, в 1971 году прошла Конвенция о психотропных веществах ООН, целью которой была борьбы с психотропными веществами. Это было осуществлено с помощью создания нескольких списков, которые различались строгостью контроля над веществами. Некоторые наркотики (амфетамин, катинон, бупринорфин) были отнесены в списки контролируемых, до этого же они продавались свободно или по рецепту.
-            </p>
-
-            <p>
-              Свободная продажа морфия, кокаина и их производных была прекращена, когда 13 стран подписали международное соглашение на Международной опиумной конвенции в 1912 году.
-            </p>
-            <p>
-              За это время, с 1970-го года наркология развилась в отдельную медицинскую дисциплину. Были изучены принципы зависимости от разных веществ, найдены способы облегчения борьбы с привыканием.
-            </p>
-            <p>
-              На сегодняшний день лечение наркозависимости - процесс с разными методиками и подходами, состоящий из нескольких этапов.
-            </p>
-            <h3>
-              Комплексное лечение наркомании состоит в решении проблемы с разных сторон.
-            </h3>
-            <p>
-              В наркомании разделяют физическую и психическую зависимости, кроме того, важны факторы, из-за которых человек начал употреблять, а также то, как зависимость повлияла на состояние его здоровья и частную жизнь (работа, отношения с родственниками и близкими).
-            </p>
-            <p>
-              Безопасное лечение химической наркозависимости может быть осуществлено только под надзором специалистов. При самостоятельном лечении или лечении нетрадиционными методами наркоман рискует нанести вред своему здоровью, не избавившись при этом от привыкания.
-            </p>
-            <p>
-              Принудительное лечение наркомании в России запрещено, поэтому мотивацией наркомана на лечение должны заняться его близкие, так как зависимый человек часто не понимает насколько серьезно он подсел.аппетит. Внутривенное введение препарата во время абстиненции также оказывает седативное действие.В наркомании разделяют физическую и психическую зависимости, кроме того, важны факторы, из-за которых человек начал употреблять, а также то, как зависимость повлияла на состояние его здоровья и частную жизнь (работа, отношения с родственниками и близкими).
-            </p>
-            <p>
-              Безопасное лечение химической наркозависимости может быть осуществлено только под надзором специалистов. При самостоятельном лечении или лечении нетрадиционными методами наркоман рискует нанести вред своему здоровью, не избавившись при этом от привыкания.В наркомании разделяют физическую и психическую зависимости, кроме того, важны факторы, из-за которых человек начал употреблять, а также то, как зависимость повлияла на состояние его здоровья и частную жизнь (работа, отношения с родственниками и близкими).
-            </p>
-            <p>
-              Безопасное лечение химической наркозависимости может быть осуществлено только под надзором специалистов. При самостоятельном лечении или лечении нетрадиционными методами наркоман рискует нанести вред своему здоровью, не избавившись при этом от привыкания.
-            </p>
           </div>
         </div>
-      </article>
+      </section>
+
+      <section class="contacts-info container">
+        <ul class="contacts-info__list">
+          <li class="contacts-info__item">
+            <p class="contacts-info__item-title">Штаб квартира</p>
+            <p class="contacts-info__item-desc">ул. Покровка, 21-23/25с1</p>
+            <a class="contacts-info__item-desc" href="tel:+78006003960">тел.: 8 800 600 39 60</a>
+            <a class="contacts-info__item-desc" href="mailto:+78006003960">e-mail: cv@narsf.ru</a>
+          </li>
+
+          <li class="contacts-info__item">
+            <p class="contacts-info__item-title">Штаб квартира</p>
+            <p class="contacts-info__item-desc">ул. Покровка, 21-23/25с1</p>
+            <a class="contacts-info__item-desc" href="tel:+78006003960">тел.: 8 800 600 39 60</a>
+            <a class="contacts-info__item-desc" href="mailto:+78006003960">e-mail: cv@narsf.ru</a>
+          </li>
+
+          <li class="contacts-info__item">
+            <p class="contacts-info__item-title">Штаб квартира</p>
+            <p class="contacts-info__item-desc">ул. Покровка, 21-23/25с1</p>
+            <a class="contacts-info__item-desc" href="tel:+78006003960">тел.: 8 800 600 39 60</a>
+            <a class="contacts-info__item-desc" href="mailto:+78006003960">e-mail: cv@narsf.ru</a>
+          </li>
+
+          <li class="contacts-info__item">
+            <p class="contacts-info__item-title">Штаб квартира</p>
+            <p class="contacts-info__item-desc">ул. Покровка, 21-23/25с1</p>
+            <a class="contacts-info__item-desc" href="tel:+78006003960">тел.: 8 800 600 39 60</a>
+            <a class="contacts-info__item-desc" href="mailto:+78006003960">e-mail: cv@narsf.ru</a>
+          </li>
+
+          <li class="contacts-info__item">
+            <p class="contacts-info__item-title">Штаб квартира</p>
+            <p class="contacts-info__item-desc">ул. Покровка, 21-23/25с1</p>
+            <a class="contacts-info__item-desc" href="tel:+78006003960">тел.: 8 800 600 39 60</a>
+            <a class="contacts-info__item-desc" href="mailto:+78006003960">e-mail: cv@narsf.ru</a>
+          </li>
+
+          <li class="contacts-info__item">
+            <p class="contacts-info__item-title">Штаб квартира</p>
+            <p class="contacts-info__item-desc">ул. Покровка, 21-23/25с1</p>
+            <a class="contacts-info__item-desc" href="tel:+78006003960">тел.: 8 800 600 39 60</a>
+            <a class="contacts-info__item-desc" href="mailto:+78006003960">e-mail: cv@narsf.ru</a>
+          </li>
+
+          <li class="contacts-info__item">
+            <p class="contacts-info__item-title">Штаб квартира</p>
+            <p class="contacts-info__item-desc">ул. Покровка, 21-23/25с1</p>
+            <a class="contacts-info__item-desc" href="tel:+78006003960">тел.: 8 800 600 39 60</a>
+            <a class="contacts-info__item-desc" href="mailto:+78006003960">e-mail: cv@narsf.ru</a>
+          </li>
+
+          <li class="contacts-info__item">
+            <p class="contacts-info__item-title">Штаб квартира</p>
+            <p class="contacts-info__item-desc">ул. Покровка, 21-23/25с1</p>
+            <a class="contacts-info__item-desc" href="tel:+78006003960">тел.: 8 800 600 39 60</a>
+            <a class="contacts-info__item-desc" href="mailto:+78006003960">e-mail: cv@narsf.ru</a>
+          </li>
+
+          <li class="contacts-info__item">
+            <p class="contacts-info__item-title">Штаб квартира</p>
+            <p class="contacts-info__item-desc">ул. Покровка, 21-23/25с1</p>
+            <a class="contacts-info__item-desc" href="tel:+78006003960">тел.: 8 800 600 39 60</a>
+            <a class="contacts-info__item-desc" href="mailto:+78006003960">e-mail: cv@narsf.ru</a>
+          </li>
+        </ul>
+      </section>
+
       <article class="b b-one container">
         <div class="b__content-wrap">
           <div class="b__bg-img-wrap">
@@ -453,145 +520,6 @@
             </p>
             <button class="b__btn-modal btn-modal btn-modal--white modal-callback" type="button">
               Заявка на консультацию
-              <span class="btn-modal__decor-line" aria-hidden="true"></span>
-            </button>
-          </div>
-        </div>
-      </article>
-      <section class="reviews-swiper">
-        <div class="reviews-swiper__main-text-wrap container">
-          <p class="reviews-swiper__main-title section-title">
-            Отзывы о лечении
-          </p>
-          <p class="reviews-swiper__count-reviews section-desc">
-            Всего: 235 отзыва
-          </p>
-        </div>
-
-        <div class="reviews-swiper__big-container swiper-container-big-container container">
-          <div class="reviews-swiper__swiper-container swiper-container" id="reviews-swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <blockquote class="reviews-swiper__blockquote">
-                  <a href="review-page.html" class="reviews-swiper__link"><div class="reviews-swiper__author-block">
-                      <div class="reviews-swiper__author-photo-wrap">
-                        <img class="reviews-swiper__author-photo" src="img/swiper/reviews-swiper/1.png" alt="">
-                      </div>
-                      <cite class="reviews-swiper__author-name">Виктория Рычагова</cite>
-                      <p class="reviews-swiper__author-theme">Созависимость</p>
-
-                      <div class="reviews-swiper__btn-link btn-link">
-                        <svg class="btn-link__icon icon-arrow-short icon-arrow-short--right" width="13" height="25" role="img">
-                          <use xlink:href="img/sprite.svg#icon-arrow-short-right"></use>
-                        </svg>
-                      </div>
-                    </div>
-                    <p class="reviews-swiper__author-text">
-                      Спасибо центру за помощь нашей семье! Прошли все 12 шагов, алкоголь теперь для мужа забыт, как страшный сон. Во многом помогла творческая реабилитация, муж ушел целиком в музыку, играет на гитаре и пишет песни! Теперь мы можем жить спокойно... Я хочу помочь другим людям с этой проблемой, поэтому теперь стала организатором...
-                    </p></a>
-                </blockquote>
-              </div>
-
-              <div class="swiper-slide">
-                <blockquote class="reviews-swiper__blockquote">
-                  <a href="review-page.html" class="reviews-swiper__link"><div class="reviews-swiper__author-block">
-                      <div class="reviews-swiper__author-photo-wrap">
-                        <img class="reviews-swiper__author-photo" src="img/swiper/reviews-swiper/2.jpg" alt="">
-                      </div>
-                      <cite class="reviews-swiper__author-name">Честер Беннингтон</cite>
-                      <p class="reviews-swiper__author-theme">Созависимость</p>
-
-                      <div class="reviews-swiper__btn-link btn-link">
-                        <svg class="btn-link__icon icon-arrow-short icon-arrow-short--right" width="13" height="25" role="img">
-                          <use xlink:href="img/sprite.svg#icon-arrow-short-right"></use>
-                        </svg>
-                      </div>
-                    </div>
-                    <p class="reviews-swiper__author-text">
-                      Спасибо центру за помощь нашей семье! Прошли все 12 шагов, алкоголь теперь для мужа забыт, как страшный сон. Во многом помогла творческая реабилитация, муж ушел целиком в музыку, играет на гитаре и пишет песни! Теперь мы можем жить спокойно... Я хочу помочь другим людям с этой проблемой, поэтому теперь стала организатором...
-                    </p></a>
-                </blockquote>
-              </div>
-
-              <div class="swiper-slide">
-                <blockquote class="reviews-swiper__blockquote">
-                  <a href="review-page.html" class="reviews-swiper__link"><div class="reviews-swiper__author-block">
-                      <div class="reviews-swiper__author-photo-wrap">
-                        <img class="reviews-swiper__author-photo" src="img/swiper/reviews-swiper/1.png" alt="">
-                      </div>
-                      <cite class="reviews-swiper__author-name">Виктория Рычагова</cite>
-                      <p class="reviews-swiper__author-theme">Созависимость</p>
-
-                      <div class="reviews-swiper__btn-link btn-link">
-                        <svg class="btn-link__icon icon-arrow-short icon-arrow-short--right" width="13" height="25" role="img">
-                          <use xlink:href="img/sprite.svg#icon-arrow-short-right"></use>
-                        </svg>
-                      </div>
-                    </div>
-                    <p class="reviews-swiper__author-text">
-                      Спасибо центру за помощь нашей семье! Прошли все 12 шагов, алкоголь теперь для мужа забыт, как страшный сон. Во многом помогла творческая реабилитация, муж ушел целиком в музыку, играет на гитаре и пишет песни! Теперь мы можем жить спокойно... Я хочу помочь другим людям с этой проблемой, поэтому теперь стала организатором...
-                    </p></a>
-                </blockquote>
-              </div>
-
-              <div class="swiper-slide">
-                <blockquote class="reviews-swiper__blockquote">
-                  <a href="review-page.html" class="reviews-swiper__link"><div class="reviews-swiper__author-block">
-                      <div class="reviews-swiper__author-photo-wrap">
-                        <img class="reviews-swiper__author-photo" src="img/swiper/reviews-swiper/2.jpg" alt="">
-                      </div>
-                      <cite class="reviews-swiper__author-name">Честер Беннингтон</cite>
-                      <p class="reviews-swiper__author-theme">Созависимость</p>
-
-                      <div class="reviews-swiper__btn-link btn-link">
-                        <svg class="btn-link__icon icon-arrow-short icon-arrow-short--right" width="13" height="25" role="img">
-                          <use xlink:href="img/sprite.svg#icon-arrow-short-right"></use>
-                        </svg>
-                      </div>
-                    </div>
-                    <p class="reviews-swiper__author-text">
-                      Спасибо центру за помощь нашей семье! Прошли все 12 шагов, алкоголь теперь для мужа забыт, как страшный сон. Во многом помогла творческая реабилитация, муж ушел целиком в музыку, играет на гитаре и пишет песни! Теперь мы можем жить спокойно... Я хочу помочь другим людям с этой проблемой, поэтому теперь стала организатором...
-                    </p></a>
-                </blockquote>
-              </div>
-            </div>
-
-            <div class="swiper-arrows-wrap reviews-swiper__arrows-wrap">
-              <div class="swiper-button-prev reviews-swiper__button-prev btn-link">
-                <svg class="swiper-arrow-icon swiper-arrow-icon--left icon-arrow-short icon-arrow-short--left" width="13" height="25" role="img">
-                  <use xlink:href="img/sprite.svg#icon-arrow-short-left"></use>
-                </svg>
-              </div>
-
-              <div class="swiper-button-next reviews-swiper__button-next btn-link">
-                <svg class="swiper-arrow-icon swiper-arrow-icon--right icon-arrow-short icon-arrow-short--right" width="13" height="25" role="img">
-                  <use xlink:href="img/sprite.svg#icon-arrow-short-right"></use>
-                </svg>
-              </div>
-            </div>
-
-            <div class="swiper-pagination reviews-swiper__swiper-pagination"></div>
-          </div>
-        </div>
-      </section>
-
-      <article class="b b-three container">
-        <div class="b__content-wrap">
-          <div class="b__bg-img-wrap">
-            <picture>
-              <source media="(max-width: 750px)" srcset="img/b/b3-m.svg">
-              <img class="b__bg-img" src="img/b/b3-d.svg" alt="Бесплатный подбор программы лечения и реабилитации DRUG FREE по всему миру!">
-            </picture>
-          </div>
-          <div class="b__text-wrap">
-            <p class="b__title section-title">
-              Бесплатный подбор программы лечения и реабилитации <span class="b__title-item blaster blaster--green">DRUG FREE</span> по всему миру!
-            </p>
-            <p class="b__desc">
-              Подберем программу реабилитации и поможем уговорить зависимого на лечение! Круглосуточная горячая линия.
-            </p>
-            <button class="b__btn-modal btn-modal btn-modal--dark modal-callback" type="button">
-              Мне нужна помощь!
               <span class="btn-modal__decor-line" aria-hidden="true"></span>
             </button>
           </div>
@@ -732,5 +660,8 @@
 
     <script src="js/main.js"></script>
     <script src="js/slider.js"></script>
+
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+    <script src="js/map.js"></script>
   </body>
 </html>

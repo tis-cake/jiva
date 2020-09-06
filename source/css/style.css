@@ -378,6 +378,12 @@ html .desktop-flex {
   width: 2.6rem;
   height: 3.2rem;
 }
+.icon-region-3 {
+  color: currentColor;
+  width: 1.9rem;
+  height: 2.5rem;
+  transition: var(--transition-main);
+}
 .icon-arrow {
   width: 3.1rem;
   height: 1.1rem;
@@ -395,6 +401,12 @@ html .desktop-flex {
   --btn-tel-bg: #fff;
   width: 2.8rem;
   height: 2.8rem;
+}
+.icon-tel-circle {
+  color: currentColor;
+  width: 2.2rem;
+  height: 2.2rem;
+  transition: var(--transition-main);
 }
 .icon-shield {
   width: 5.5rem;
@@ -1844,6 +1856,9 @@ html .desktop-flex {
   font-weight: inherit;
   font-size: 2.2rem;
 }
+.main-info__subtitle--green {
+  color: var(--color-emerald);
+}
 .main-info__title {
   margin-bottom: 1.7rem;
   font-weight: inherit;
@@ -1854,9 +1869,17 @@ html .desktop-flex {
   font-size: 1.9rem;
   line-height: 2.8rem;
 }
+.main-info__desc--bold {
+  font-weight: bold;
+}
 .main-info__btn-modal {
   z-index: 1;
   margin-top: 2.8rem;
+}
+.main-info__contact-link {
+  display: inline;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 /* главная */
 .main-info-one::after {
@@ -1973,6 +1996,34 @@ html .desktop-flex {
 }
 .main-info-five .main-info__logo {
   margin-top: 2rem;
+}
+/* контакты */
+.main-info-six {
+  padding-bottom: 3.5rem;
+  color: inherit;
+}
+.main-info-six .main-info__bg {
+  top: -48.8rem;
+  width: 80.8rem;
+  height: 80.8rem;
+  background-image: linear-gradient(180deg, #FFFFFF 6.94%, #FAFBFB 85.09%);
+  box-shadow: 0px 100px 250px rgba(255, 254, 240, 0.94);
+}
+.main-info-six .main-info__text-wrap {
+  padding-top: 39.8rem;
+}
+.main-info-six .main-info__subtitle {
+  font-size: 1.9rem;
+}
+.main-info-six .main-info__desc {
+  font-size: 2rem;
+}
+.main-info-six::after {
+  top: -34.5rem;
+  transform: translateX(-47%);
+  width: 95rem;
+  height: 111.3rem;
+  background-image: url('../img/main-info/6-1-d.svg');
 }
 @media (max-width: 48em) {
   .main-info {
@@ -2146,6 +2197,7 @@ html .desktop-flex {
   .main-info-five .main-info__logo {
     margin-top: 7rem;
   }
+  /* контакты */
 }
 @media (max-width: 420px) {
   .main-info-three::before {
@@ -2333,8 +2385,6 @@ html .desktop-flex {
 .services__item-title {
   min-height: 7rem;
   margin-bottom: 1.4rem;
-  padding-left: 3.3rem;
-  padding-right: 3.3rem;
   font-weight: 700;
   font-size: 3rem;
   line-height: 3.5rem;
@@ -6001,6 +6051,94 @@ html {
     bottom: -2.7rem;
     transform: translateX(-50%);
   }
+}
+.map-aside {
+  padding-top: 6.2rem;
+  padding-bottom: 6.2rem;
+}
+.map-aside__wrap {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: 41.8rem;
+  background: rgba(255, 255, 255, 0.75);
+  box-shadow: 0.5rem 3.5rem 9rem #D7DEF1;
+  border-radius: 5rem;
+  overflow: hidden;
+}
+.map-aside__map {
+  width: 81.1rem;
+  height: 100%;
+}
+.map-aside__aside {
+  box-sizing: border-box;
+  width: 54rem;
+  height: 100%;
+  padding-top: 6.3rem;
+  padding-left: 3.9rem;
+  padding-right: 3.9rem;
+  padding-bottom: 2.9rem;
+}
+.map-aside__title {
+  font-size: 3rem;
+  font-weight: 700;
+}
+.map-aside__filter-form {
+  margin-top: 2.4rem;
+  margin-bottom: 4.7rem;
+  padding-right: 0;
+  background-color: #fff;
+}
+.map-aside__filter-options {
+  border: 0;
+}
+.map-aside__filter-options.filter__options {
+  width: 100%;
+  padding-left: 1.8rem;
+}
+.map-aside__contacts-wrap {
+  margin-left: 1.1rem;
+}
+.map-aside__contacts-title {
+  margin-bottom: 2rem;
+}
+.map-aside__desc {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 2.6rem;
+  font-size: 2rem;
+}
+.map-aside__desc:last-child {
+  margin-bottom: 0;
+}
+.map-aside__desc:hover .map-aside__icon,
+.map-aside__desc:focus-within .map-aside__icon {
+  opacity: 0.7;
+}
+.map-aside__icon {
+  margin-right: 1rem;
+}
+.map-aside__link {
+  display: inline;
+}
+.contacts-info {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+.contacts-info__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-between;
+  row-gap: 2.7rem;
+}
+.contacts-info__item-title {
+  margin-bottom: 4px;
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 4.4rem;
+}
+.contacts-info__item-desc {
+  margin-bottom: 0.6rem;
 }
 /*swiper*/
 .swiper-container-big-container {
