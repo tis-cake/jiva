@@ -50,6 +50,7 @@ localStorage.setItem('rehabID', JSON.stringify(localItemsArray));
 
 markSelectedRehabs();
 showComparePageLink();
+sendRehabsRequest();
 
 // сравнить центр (матчим .btn-compare-toggle-js для динамически добавляемых центров)
 $('.rehab-swiper__swiper-container').click(function(evt) {
@@ -78,6 +79,7 @@ $('.rehab-swiper__swiper-container').click(function(evt) {
     }
 
     showComparePageLink();
+    sendRehabsRequest();
   }
 });
 
@@ -118,8 +120,47 @@ function showComparePageLink(e) {
 }
 
 // const dataRehab = JSON.parse(localStorage.getItem('rehabID'));
-// console.log(dataRehab);
-// console.log(typeof localItemsArray);
+
+// $('.btn-compare-toggle-js').click(function() {
+  // sendRehabsRequest('json', './php/test.php')
+
+  // $.ajax({
+  //   type: 'post',
+  //   url: './php/test.php',
+  //   data: {ar: ar},
+  //   dataType: 'json',
+  //   success: function(e) {
+  //     console.log(e);
+  //     console.log(true);
+  //   },
+  //   error: function(e) {
+  //     console.log(e);
+  //     console.log(false);
+  //   }
+  // });
+  // return false;
+// });
+
+function sendRehabsRequest() {
+  var ar = []
+  ar.push(localItemsArray);
+
+  $.ajax({
+    type: 'post',
+    url: './php/test.php',
+    data: {ar: ar},
+    dataType: 'json',
+    success: function(e) {
+      console.log(e);
+      console.log(true);
+    },
+    error: function(e) {
+      console.log(e);
+      console.log(false);
+    }
+  });
+}
+
 
 // });
 

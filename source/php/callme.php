@@ -13,6 +13,7 @@ if(!empty($_REQUEST)) {
   mail($to, $subject, $massage);
 
   echo json_encode("Сообщение отправлено");
+  // echo json_encode($_REQUEST);
 }
 else {
   echo json_encode("Заполните все поля");

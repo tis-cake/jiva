@@ -8,9 +8,5 @@
   //   'Рейтинг: ' . $rating
   // );
   // print_r($_POST[NAME]);
-
+    echo json_encode($_REQUEST);
 ?>
-
-<script>
-  console.log('sss');
-</script>
