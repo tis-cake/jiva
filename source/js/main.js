@@ -30,8 +30,6 @@ function resetFormForCall() {
 };
 
 // сравнить центр (включая localStorage)
-// $(document).ready(function () {
-
 let localItemsArray;
 
 // если в хранилище есть ключ items - конвертируем содержимое хранилища
@@ -119,28 +117,6 @@ function showComparePageLink(e) {
   }
 }
 
-// const dataRehab = JSON.parse(localStorage.getItem('rehabID'));
-
-// $('.btn-compare-toggle-js').click(function() {
-  // sendRehabsRequest('json', './php/test.php')
-
-  // $.ajax({
-  //   type: 'post',
-  //   url: './php/test.php',
-  //   data: {ar: ar},
-  //   dataType: 'json',
-  //   success: function(e) {
-  //     console.log(e);
-  //     console.log(true);
-  //   },
-  //   error: function(e) {
-  //     console.log(e);
-  //     console.log(false);
-  //   }
-  // });
-  // return false;
-// });
-
 function sendRehabsRequest() {
   var ar = []
   ar.push(localItemsArray);
@@ -160,10 +136,6 @@ function sendRehabsRequest() {
     }
   });
 }
-
-
-// });
-
 
 // $('.select-lang input[name=LANG]').change(function () {
 // console.log('Язык изменён');

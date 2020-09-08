@@ -8,5 +8,6 @@
   //   'Рейтинг: ' . $rating
   // );
   // print_r($_POST[NAME]);
-    echo json_encode($_REQUEST);
+
+  echo json_encode($_REQUEST);
 ?>
