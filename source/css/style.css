@@ -2773,6 +2773,11 @@ html .desktop-flex {
 .article-part__content ul li {
   position: relative;
 }
+.article-part__content p li::before,
+.article-part__content ul li::before {
+  content: '-';
+  margin-right: 0.4rem;
+}
 .article-part__content h3 {
   margin-bottom: 2.7rem;
   font-weight: 700;
