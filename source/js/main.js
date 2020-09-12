@@ -422,10 +422,10 @@ $('.modal-feedback').click(function(evt) {
 });
 
 // выбрать регион (модалка 3)
-// $('.modal-region-second').click(function (evt) {
-//   evt.preventDefault();
-//   openModal('.modal-region-second');
-// });
+$('.modal-region').click(function (evt) {
+  evt.preventDefault();
+  openModal('.modal--region');
+});
 
 // открыть модальное окно
 function openModal(modalClass, focusClass) {

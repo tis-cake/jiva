@@ -7651,9 +7651,63 @@ html {
 .modal__row-bottom {
   padding-left: var(--modal-padding-block);
 }
+.modal__container-big {
+  box-sizing: border-box;
+  width: 161rem;
+}
+.modal__list {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  -moz-column-count: 3;
+       column-count: 3;
+}
+.modal__item {
+  margin-bottom: 2.4rem;
+}
+.modal__link {
+  font-weight: 700;
+}
+.modal__link.active {
+  color: var(--color-light-gray);
+}
 .modal--feedback .modal__form {
   margin-right: 0;
   padding-right: 0;
+}
+.modal--region {
+  top: 0;
+  left: 0;
+  transform: none;
+  width: 100%;
+  height: 100%;
+  min-height: none;
+  max-width: none;
+  padding: 0;
+  padding-top: 11.5rem;
+  background-color: #fff;
+  border-radius: 0;
+}
+.modal--region .modal__title {
+  margin-bottom: 8rem;
+}
+.modal--region .modal__close {
+  top: -4rem;
+  right: -8rem;
+  width: 8.4rem;
+  height: 8.4rem;
+}
+.modal--region .modal__close::before,
+.modal--region .modal__close::after {
+  top: 4rem;
+  height: 0.2rem;
+}
+@media (max-width: 1340px) {
+  .modal__container-big {
+    width: 100%;
+  }
+  .modal--region .modal__close {
+    right: 10px;
+  }
 }
 @media (max-width: 48em) {
   .modal {
@@ -7727,6 +7781,40 @@ html {
   }
   .modal__row-bottom {
     padding-left: 0;
+  }
+  .modal__container-big {
+    width: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .modal__list {
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+    -moz-column-count: 2;
+         column-count: 2;
+  }
+  .modal__item {
+    margin-bottom: 2.4rem;
+  }
+  .modal--region {
+    width: 100%;
+    padding-top: 6.6rem;
+    padding-left: var(--container-padding-block);
+    padding-right: var(--container-padding-block);
+  }
+  .modal--region .modal__title {
+    margin-bottom: 5.3rem;
+  }
+  .modal--region .modal__close {
+    top: -1rem;
+    right: -0.7rem;
+    width: 4rem;
+    height: 4rem;
+  }
+  .modal--region .modal__close::before,
+  .modal--region .modal__close::after {
+    top: 2rem;
+    height: 0.2rem;
   }
 }
 @media (max-width: 21.25em) {
@@ -7919,5 +8007,3 @@ html {
     } */
   }
 }
-
-/*# sourceMappingURL=style.css.map */
