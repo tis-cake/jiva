@@ -13,7 +13,7 @@
 .contacts-info__item {}
 
 .contacts-info__item-title {
-  margin-bottom: 4px;
+  margin-bottom: 0.4rem;
   font-weight: 700;
   font-size: 3rem;
   line-height: 4.4rem;
@@ -24,4 +24,28 @@
 }
 
 @media (max-width: @tablet-width) {
+  .contacts-info {
+    padding-top: 2rem;
+    // padding-bottom: 4rem;
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+  }
+
+  .contacts-info__list {
+    // grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    row-gap: 1.9rem;
+  }
+
+  .contacts-info__item {}
+
+  .contacts-info__item-title {
+    margin-bottom: 0;
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+  }
+
+  .contacts-info__item-desc {
+    margin-bottom: 0;
+  }
 }
