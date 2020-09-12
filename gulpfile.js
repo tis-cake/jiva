@@ -17,13 +17,13 @@ const webp = require("gulp-webp");
 gulp.task("css", function () {
   return gulp.src("source/less/style.less")
     .pipe(plumber())
-    .pipe(sourcemap.init())             //*min
+    // .pipe(sourcemap.init())             //*min
     .pipe(less())
     .pipe(postcss([autoprefixer()]))
     // .pipe(gulp.dest("source/css"))      //*source
     // .pipe(cleanCSS({level: 2}))         //*min
     // .pipe(rename("style.min.css"))      //*min
-    .pipe(sourcemap.write("."))         //*min
+    // .pipe(sourcemap.write("."))         //*min
     .pipe(gulp.dest("source/css"))      //*source
     // .pipe(gulp.dest("build/css"))       //*build
     .pipe(server.stream());
