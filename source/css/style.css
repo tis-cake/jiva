@@ -972,14 +972,18 @@ html .desktop-flex {
     min-height: 8rem;
   }
   .header__logo {
+    top: 0.5rem;
+    left: 6.7rem;
     margin: 0;
     margin-right: auto;
   }
   .header__logo.logo {
     position: absolute;
-    top: 0;
-    left: 7.7rem;
     transition-delay: 0.4s;
+  }
+  .header__logo .logo__img-wrap {
+    width: 13rem;
+    height: 7rem;
   }
   .header__rows-wrap {
     width: 100%;
@@ -1016,6 +1020,11 @@ html .desktop-flex {
   .header__menu-toggle,
   .header__link-call-back {
     display: block;
+  }
+}
+@media (max-width: 24.4em) {
+  .header__logo {
+    left: 5rem;
   }
 }
 @media (max-width: 21.25em) {

@@ -166,15 +166,21 @@
   }
 
   .header__logo {
+    top: 0.5rem;
+    left: 6.7rem;
     margin: 0;
     // margin-left: 1rem; // без анимации
     margin-right: auto;
     &.logo { // с анимацией
       position: absolute;
-      top: 0;
+      // top: 0;
       // left: 5.7rem;
-      left: 7.7rem;
+      // left: 6.7rem;
       transition-delay: 0.4s;
+    }
+    .logo__img-wrap {
+      width: 13rem;
+      height: 7rem;
     }
   }
 
@@ -236,6 +242,13 @@
 
   .header__main-nav {
     // margin-top: 3.1rem;
+  }
+}
+
+// 390px
+@media (max-width: 24.4em) {
+  .header__logo {
+    left: 5rem;
   }
 }
 
