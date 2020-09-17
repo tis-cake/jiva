@@ -876,7 +876,14 @@ html .desktop-flex {
   display: flex;
 }
 .header__logo {
-  margin-left: 2rem;
+  top: 1.5rem;
+}
+.header__logo .logo__img-wrap {
+  width: 16rem;
+  height: 8rem;
+}
+.header__logo.logo {
+  position: absolute;
 }
 .header__rows-wrap {
   display: flex;
@@ -951,6 +958,9 @@ html .desktop-flex {
     visibility: hidden;
     opacity: 0;
   }
+  .header.active .header__logo {
+    transition: 0s;
+  }
   .header.active .header__link-call-back {
     transition-delay: 0s;
   }
@@ -968,7 +978,7 @@ html .desktop-flex {
   .header__logo.logo {
     position: absolute;
     top: 0;
-    left: 5.7rem;
+    left: 7.7rem;
     transition-delay: 0.4s;
   }
   .header__rows-wrap {
@@ -1628,10 +1638,6 @@ html .desktop-flex {
   color: inherit;
 }
 .search__input:-ms-input-placeholder {
-  opacity: 1;
-  color: inherit;
-}
-.search__input::-ms-input-placeholder {
   opacity: 1;
   color: inherit;
 }
@@ -3259,9 +3265,6 @@ html .desktop-flex {
 .filter__input-range:-ms-input-placeholder {
   opacity: 1;
 }
-.filter__input-range::-ms-input-placeholder {
-  opacity: 1;
-}
 .filter__input-range::placeholder {
   opacity: 1;
 }
@@ -4767,9 +4770,6 @@ html {
 .comments__form-text:-ms-input-placeholder {
   line-height: 5.5rem;
 }
-.comments__form-text::-ms-input-placeholder {
-  line-height: 5.5rem;
-}
 .comments__form-text::placeholder {
   line-height: 5.5rem;
 }
@@ -4881,9 +4881,6 @@ html {
     line-height: initial;
   }
   .comments__form-text:-ms-input-placeholder {
-    line-height: initial;
-  }
-  .comments__form-text::-ms-input-placeholder {
     line-height: initial;
   }
   .comments__form-text::placeholder {
@@ -5039,8 +5036,7 @@ html {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
-  -webkit-filter: drop-shadow(2px 25px 35px #BAC2CE);
-          filter: drop-shadow(2px 25px 35px #BAC2CE);
+  filter: drop-shadow(2px 25px 35px #BAC2CE);
 }
 .about-person__subject-desc {
   margin-bottom: 0.7rem;
@@ -6589,8 +6585,7 @@ html {
   width: 100%;
   height: 39.8rem;
   /* свг-маска */
-  -webkit-filter: url(../img/sprite.svg#filter-small-top);
-          filter: url(../img/sprite.svg#filter-small-top);
+  filter: url(../img/sprite.svg#filter-small-top);
 }
 .rehab-swiper__img-wrap::before,
 .rehab-swiper__img-wrap::after {
@@ -7579,9 +7574,6 @@ html {
   opacity: 1;
 }
 .modal__text:-ms-input-placeholder, .modal__filter-options:-ms-input-placeholder {
-  opacity: 1;
-}
-.modal__text::-ms-input-placeholder, .modal__filter-options::-ms-input-placeholder {
   opacity: 1;
 }
 .modal__text::placeholder,
