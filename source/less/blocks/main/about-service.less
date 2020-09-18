@@ -3,22 +3,34 @@
   flex-direction: column;
   align-items: center;
 
-  padding-top: 51.5rem;
+  // padding-top: 51.5rem;
+  padding-top: 52.4rem;
   padding-bottom: 9rem;
+
+  overflow: hidden;
+}
+
+.about-service__img-wrap,
+.about-service__img-wrap-second,
+.about-service__img-second {
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 // изображение битое? пока сделаю в лоб
 .about-service__img-wrap {
-  z-index: -1;
-  position: absolute;
   top: -8.3rem;
-  left: 50%;
-  transform: translateX(-50%);
-
   max-width: 1920px;
   max-height: 893px;
   width: 100%;
   height: 46.510vw;
+}
+
+.about-service__img,
+.about-service__img-second {
+  .no-select;
 }
 
 .about-service__img {
@@ -30,6 +42,45 @@
   &-mobile {
     display: none;
   }
+}
+
+// если изображение не битое
+.about-service__img-wrap-second {
+  top: 6.2rem;
+
+  width: 40rem;
+  height: 40rem;
+
+  background-image: radial-gradient(97.36% 97.36% at 50% 46.02%, #F0F7FF 0%, #DCE8F6 100%);
+  // box-shadow: 0 10rem 25rem rgba(255, 254, 240, 0.94);
+  border: 0.1rem solid #fff;
+  border-radius: 50%;
+
+  filter: drop-shadow(0 10rem 25rem rgba(255, 254, 240, 0.94));
+
+  &::before {
+    z-index: -1;
+    position: absolute;
+    content: '';
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 192.0rem;
+    height: 23.9rem;
+    background-image: url('../img/figure/about-decor-line.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    // background-size: contain;
+
+    mix-blend-mode: multiply;
+  }
+}
+
+.about-service__img-second {
+  bottom: -2rem;
+  width: 35.7rem;
+  height: 34.6rem;
+  object-fit: contain;
 }
 
 .about-service__caption {
@@ -46,6 +97,11 @@
 }
 
 .about-service__btn-modal {}
+
+.about-service__breadcrumbs {
+  position: absolute;
+  top: 0;
+}
 
 @media (max-width: @tablet-width) {
   .about-service {
@@ -73,6 +129,42 @@
     }
   }
 
+  .about-service__img-wrap-second {
+    // top: 6.2rem;
+
+    // width: 40rem;
+    // height: 40rem;
+
+    // background-image: radial-gradient(97.36% 97.36% at 50% 46.02%, #F0F7FF 0%, #DCE8F6 100%);
+    // border: 0.1rem solid #fff;
+    // border-radius: 50%;
+
+    // filter: drop-shadow(0 10rem 25rem rgba(255, 254, 240, 0.94));
+
+    &::before {
+      // z-index: -1;
+      // position: absolute;
+      // content: '';
+      // left: 50%;
+      // bottom: 0;
+      // transform: translateX(-50%);
+      // width: 192.0rem;
+      // height: 23.9rem;
+      // background-image: url('../img/figure/about-decor-line.svg');
+      // background-repeat: no-repeat;
+      // background-position: center;
+
+      // mix-blend-mode: multiply;
+    }
+  }
+
+  .about-service__img-second {
+    // bottom: -2rem;
+    // width: 35.7rem;
+    // height: 34.6rem;
+    // object-fit: contain;
+  }
+
   .about-service__caption {
     margin-bottom: 1.5rem;
     font-size: 1.5rem;
@@ -90,6 +182,18 @@
   }
 
   .about-service__btn-modal {}
+
+  .about-service__breadcrumbs {
+    box-sizing: border-box;
+    position: relative;
+    top: auto;
+    width: 100%;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 /* 420px */

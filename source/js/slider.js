@@ -73,36 +73,7 @@ $(document).ready(function () {
   });
 });
 
-// слайдер отзывов
-$(document).ready(function () {
-
-  // локальный лимит только для этого слайдера
-  // limitForOverflow = 10;
-
-  renderPagination('.reviews-swiper', limitForOverflow);
-
-  let reviewsSwiper = new Swiper('#reviews-swiper', {
-    slidesPerView: '1',
-    spaceBetween: 25,
-    touchRatio: 1,
-    watchSlidesVisibility: true,
-
-    navigation: {
-      nextEl: '.reviews-swiper__button-next',
-      prevEl: '.reviews-swiper__button-prev',
-    },
-
-    pagination: paginationParam,
-
-    breakpoints: {
-      756: {
-        slidesPerView: '2',
-        spaceBetween: 30,
-      }
-    }
-  });
-});
-
+// (!) ПЕРЕНЕСЛИ В dev.js
 // слайдер рехабов в 2 строки (с числовой пагинацией, НЕ учитывая переполнение)
 // $(document).ready(function () {
 
@@ -140,6 +111,77 @@ $(document).ready(function () {
 //     }
 //   });
 // });
+
+// слайдер отзывов
+$(document).ready(function () {
+
+  // локальный лимит только для этого слайдера
+  // limitForOverflow = 10;
+
+  renderPagination('.reviews-swiper', limitForOverflow);
+
+  let reviewsSwiper = new Swiper('#reviews-swiper', {
+    slidesPerView: '1',
+    spaceBetween: 25,
+    touchRatio: 1,
+    watchSlidesVisibility: true,
+
+    navigation: {
+      nextEl: '.reviews-swiper__button-next',
+      prevEl: '.reviews-swiper__button-prev',
+    },
+
+    pagination: paginationParam,
+
+    breakpoints: {
+      756: {
+        slidesPerView: '2',
+        spaceBetween: 30,
+      }
+    }
+  });
+});
+
+// слайдер отзывов в 2 строки
+$(document).ready(function () {
+
+  // локальный лимит только для этого слайдера
+  // limitForOverflow = 10;
+
+  renderPagination('#reviews-swiper-two-rows', limitForOverflow);
+
+  let reviewsSwiper = new Swiper('#reviews-swiper-two-rows', {
+    slidesPerView: '1',
+    // slidesPerColumn: '3',
+    slidesPerColumn: '2',
+    slidesPerColumnFill: 'row',
+
+    spaceBetween: 25,
+    touchRatio: 1,
+    watchSlidesVisibility: true,
+
+    navigation: {
+      nextEl: '.reviews-swiper__button-next',
+      prevEl: '.reviews-swiper__button-prev',
+    },
+
+    pagination: paginationParam,
+
+    breakpoints: {
+      600: {
+        slidesPerView: '2',
+        slidesPerColumn: '3',
+      }
+    }
+
+    // breakpoints: {
+    //   756: {
+    //     slidesPerView: '2',
+    //     spaceBetween: 30,
+    //   }
+    // }
+  });
+});
 
 // слайдеры авторов/редаторов/экспертов (с числовой пагинацией,
 //  ПРИ ПЕРЕПОЛНЕНИИ пагинация становится не числовой (...) и динамической)
