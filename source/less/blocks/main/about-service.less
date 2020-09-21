@@ -105,12 +105,18 @@
 
 @media (max-width: @tablet-width) {
   .about-service {
-    padding-top: 5.2rem;
+    // padding-top: 5.2rem;
+    padding-top: 4.5rem;
+    padding-bottom: 6.5rem;
     // .padding-inline(3.5rem);
     .padding-inline(var(--container-padding-block));
-    padding-bottom: 44rem;
+    // padding-bottom: 44rem;
 
     text-align: center;
+
+    &--pb {
+      padding-bottom: 44rem;
+    }
   }
 
   .about-service__img-wrap {
@@ -130,39 +136,29 @@
   }
 
   .about-service__img-wrap-second {
-    // top: 6.2rem;
+    order: 1;
 
-    // width: 40rem;
-    // height: 40rem;
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
 
-    // background-image: radial-gradient(97.36% 97.36% at 50% 46.02%, #F0F7FF 0%, #DCE8F6 100%);
-    // border: 0.1rem solid #fff;
-    // border-radius: 50%;
-
-    // filter: drop-shadow(0 10rem 25rem rgba(255, 254, 240, 0.94));
+    width: 30.8rem;
+    height: 30.8rem;
+    margin-top: 5rem;
 
     &::before {
-      // z-index: -1;
-      // position: absolute;
-      // content: '';
-      // left: 50%;
-      // bottom: 0;
-      // transform: translateX(-50%);
       // width: 192.0rem;
       // height: 23.9rem;
       // background-image: url('../img/figure/about-decor-line.svg');
-      // background-repeat: no-repeat;
-      // background-position: center;
-
       // mix-blend-mode: multiply;
     }
   }
 
   .about-service__img-second {
-    // bottom: -2rem;
-    // width: 35.7rem;
-    // height: 34.6rem;
-    // object-fit: contain;
+    bottom: -1.3rem;
+    width: 27.5rem;
+    height: 26.6rem;
   }
 
   .about-service__caption {
@@ -191,6 +187,7 @@
     margin-top: 0;
     margin-left: 0;
     margin-right: 0;
+    margin-bottom: 7.2rem;
     padding-left: 0;
     padding-right: 0;
   }

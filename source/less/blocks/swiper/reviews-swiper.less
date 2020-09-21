@@ -219,16 +219,38 @@
   }
 
   .reviews-swiper-two-rows {
-    .swiper-slide-visible {
+  //   .swiper-slide-visible {
+  //     .reviews-swiper__blockquote {
+  //       margin-bottom: 8rem;
+  //     }
+  //     &:nth-last-child(1),
+  //     &:nth-last-child(2) {
+  //       .reviews-swiper__blockquote {
+  //         margin-bottom: 0;
+  //       }
+  //     }
+  //   }
+
+    // &.reviews-swiper-two-rows {
+    //   .swiper-slide {
+    //     .reviews-swiper__blockquote {
+    //       margin-bottom: 8rem;
+    //     }
+    //   }
+    // }
+
+    .swiper-slide {
       .reviews-swiper__blockquote {
-        // margin-bottom: 8rem;
+        margin-bottom: 8rem;
       }
-      &:nth-last-child(1),
-      &:nth-last-child(2) {
-        .reviews-swiper__blockquote {
-          // margin-bottom: 0;
-        }
-      }
+    }
+
+    .reviews-swiper__arrows-wrap {
+      bottom: 4.5rem;
+    }
+
+    .reviews-swiper__swiper-pagination {
+      bottom: 6rem;
     }
   }
 }

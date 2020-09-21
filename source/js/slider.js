@@ -173,13 +173,6 @@ $(document).ready(function () {
         slidesPerColumn: '3',
       }
     }
-
-    // breakpoints: {
-    //   756: {
-    //     slidesPerView: '2',
-    //     spaceBetween: 30,
-    //   }
-    // }
   });
 });
 

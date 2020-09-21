@@ -5459,11 +5459,14 @@ html {
 }
 @media (max-width: 48em) {
   .about-service {
-    padding-top: 5.2rem;
+    padding-top: 4.5rem;
+    padding-bottom: 6.5rem;
     padding-left: var(--container-padding-block);
     padding-right: var(--container-padding-block);
-    padding-bottom: 44rem;
     text-align: center;
+  }
+  .about-service--pb {
+    padding-bottom: 44rem;
   }
   .about-service__img-wrap {
     top: 29rem;
@@ -5476,6 +5479,21 @@ html {
   }
   .about-service__img-tablet {
     display: block;
+  }
+  .about-service__img-wrap-second {
+    order: 1;
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 30.8rem;
+    height: 30.8rem;
+    margin-top: 5rem;
+  }
+  .about-service__img-second {
+    bottom: -1.3rem;
+    width: 27.5rem;
+    height: 26.6rem;
   }
   .about-service__caption {
     margin-bottom: 1.5rem;
@@ -5499,6 +5517,7 @@ html {
     margin-top: 0;
     margin-left: 0;
     margin-right: 0;
+    margin-bottom: 7.2rem;
     padding-left: 0;
     padding-right: 0;
   }
@@ -7011,6 +7030,15 @@ html {
   .reviews-swiper__author-text {
     font-size: 1.5rem;
     line-height: 2.2rem;
+  }
+  .reviews-swiper-two-rows .swiper-slide .reviews-swiper__blockquote {
+    margin-bottom: 8rem;
+  }
+  .reviews-swiper-two-rows .reviews-swiper__arrows-wrap {
+    bottom: 4.5rem;
+  }
+  .reviews-swiper-two-rows .reviews-swiper__swiper-pagination {
+    bottom: 6rem;
   }
 }
 .team-swiper-list {
