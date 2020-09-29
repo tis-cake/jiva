@@ -2325,6 +2325,7 @@ html .desktop-flex {
   color: var(--color-emerald);
 }
 .stages__subtitle {
+  margin-top: 1.4rem;
   margin-bottom: 1.4rem;
   font-weight: 700;
   font-size: 2rem;
@@ -6260,14 +6261,12 @@ html {
   padding-left: 1.8rem;
 }
 .map-aside__contacts-wrap {
-  margin-left: 1.1rem;
-}
-.map-aside__contacts-title {
-  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 .map-aside__desc {
   display: inline-flex;
   align-items: center;
+  width: 100%;
   margin-bottom: 2.6rem;
   font-size: 2rem;
 }
@@ -7525,11 +7524,13 @@ html {
   box-shadow: -20px -20px 30px #FFFFFF, 20px 20px 70px #8D9DBA, 10px 10px 30px rgba(230, 241, 253, 0.46);
   z-index: -1;
   opacity: 0;
+  visibility: hidden;
   transition: 0.6s;
 }
 .rehab-compare-link.active {
   z-index: 10;
   opacity: 1;
+  visibility: visible;
 }
 .rehab-compare-link:hover,
 .rehab-compare-link:focus {
