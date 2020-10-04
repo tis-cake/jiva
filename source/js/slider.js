@@ -191,6 +191,7 @@ $(document).ready(function () {
     slidesPerView: '2',
     spaceBetween: 25,
     touchRatio: 1,
+    // autoHeight: true,
     watchSlidesVisibility: true,
 
     navigation: {

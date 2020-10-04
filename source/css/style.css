@@ -7081,6 +7081,8 @@ html {
 }
 .team-swiper__swiper-container {
   padding-top: 9.8rem;
+  /* если у слайдера нет пагинации */
+  padding-bottom: 4rem;
 }
 .team-swiper__item {
   box-sizing: border-box;
@@ -7127,6 +7129,14 @@ html {
   margin-bottom: 0.3rem;
   font-size: 1.6rem;
   color: var(--color-light-gray);
+}
+/* если у слайдера нет пагинации */
+.team-swiper__arrows-wrap {
+  margin-bottom: 0;
+}
+/* если у слайдера нет пагинации */
+.swiper-container-horizontal > .team-swiper__swiper-pagination {
+  bottom: 7.2rem;
 }
 .team-swiper__list {
   display: flex;

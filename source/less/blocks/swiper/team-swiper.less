@@ -57,6 +57,9 @@
 
 .team-swiper__swiper-container {
   padding-top: 9.8rem;
+
+  /* если у слайдера нет пагинации */
+  padding-bottom: 4rem;
 }
 
 .team-swiper__slide {}
@@ -120,13 +123,21 @@
   color: @light-gray;
 }
 
-.team-swiper__arrows-wrap {}
+/* если у слайдера нет пагинации */
+.team-swiper__arrows-wrap {
+  margin-bottom: 0;
+}
 
 .team-swiper__button-prev {}
 
 .team-swiper__button-next {}
 
 .team-swiper__swiper-pagination {}
+
+/* если у слайдера нет пагинации */
+.swiper-container-horizontal > .team-swiper__swiper-pagination {
+  bottom: 7.2rem;
+}
 
 .team-swiper__list {
   display: flex;
