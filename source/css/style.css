@@ -1362,7 +1362,7 @@ html .desktop-flex {
   }
   .main-nav__list {
     flex-direction: column;
-    margin-bottom: 8rem;
+    margin-bottom: 20rem;
     font-size: 1.6rem;
   }
   .main-nav__item {
